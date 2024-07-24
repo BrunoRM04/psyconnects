@@ -1,0 +1,64 @@
+{
+    "psicologos": [
+        {
+            "id": 1,
+            "nombre": "Ana María",
+            "apellido": "González",
+            "fotoPerfil": "./public/img/banner/banner-1.jpg",
+            "correoElectronico": "ana.gonzalez@example.com",
+            "telefono": "+598 1234 5678",
+            "edad": 35,
+            "pais": "Uruguay",
+            "ciudad": "Montevideo",
+            "descripcion": "Psicóloga con más de 10 años de experiencia en terapia cognitivo-conductual.",
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Pareja"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad de la República",
+                    "añoGraduacion": 2008
+                },
+                {
+                    "grado": "Maestría en Psicología Clínica",
+                    "institucion": "Universidad de Buenos Aires",
+                    "añoGraduacion": 2012
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Centro de Salud Mental",
+                    "añoInicio": 2012,
+                    "añoFin": 2018
+                },
+                {
+                    "puesto": "Psicoterapeuta",
+                    "institucion": "Consultorio Privado",
+                    "añoInicio": 2018,
+                    "añoFin": "Presente"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Certificación en Terapia Cognitivo-Conductual",
+                    "institucion": "Asociación Uruguaya de Psicología",
+                    "año": 2015
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/anamariagonzalez",
+                "facebook": "https://www.facebook.com/anamaria.gonzalez",
+                "twitter": "https://twitter.com/anamaria_psico"
+            },
+            "verMas": "psicologo-1.html"
+        }
+    ]
+}

@@ -62,7 +62,7 @@ nav {
 .nav-links li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 8px 12px;
     position: relative;
     transition: color 0.3s ease, background-color 0.3s ease;
     background-color: transparent;
@@ -82,7 +82,7 @@ nav {
     left: 0;
     width: 100%;
     background-color: #1358B4;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .nav-icons li {
@@ -93,11 +93,11 @@ nav {
     color: white;
     font-size: 20px;
     text-decoration: none;
-    padding: 5px 5px;
+    padding: 8px 8px;
     position: relative;
     transition: color 0.3s ease, background-color 0.3s ease;
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .nav-icons li a:hover {
@@ -127,6 +127,8 @@ nav {
         display: flex;
     }
 }
+
+
 
 /* HEADER */
 
@@ -210,8 +212,13 @@ nav {
         padding: 20px;
     }
 
-    .sección-index-h1 {
-        font-size: 2rem;
+    @media (max-width: 768px) {
+        .sección-index-h1, .sección-index-2-h1 {
+            font-size: 1.8rem; 
+        }
+        .sección-index-p, .sección-index-2-p {
+            font-size: 1rem;
+        }
     }
 
     .sección-index-p {
@@ -460,13 +467,155 @@ nav {
 
 
 
+/* TITULOS */
+.titulo-con-linea {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titulo {
+    font-size: 32px;
+    margin: 5px 0;
+    color: #FFFFFF;
+    background-color: #1358B4;
+    padding: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 425px) {
+    .titulo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .titulo {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    .titulo {
+        font-size: 16px;
+    }
+}
+/* TITULOS */
 
 
 
 
+/* PSICOLOGOS DISPONIBLES */
+#contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.tarjeta {
+    background-color: white;
+    overflow: hidden;
+    margin: 20px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #1358B4;
+}
 
+.cabecera-tarjeta {
+    background-color: #1358B4;
+    padding: 40px 40px;
+    position: relative;
+}
 
+.foto-perfil {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+}
+
+.cuerpo-tarjeta {
+    padding: 65px 20px 20px;
+}
+
+.cuerpo-tarjeta h2 {
+    margin: 10px 0;
+    color: #1358B4;
+}
+
+.cuerpo-tarjeta .detalles {
+    margin: 10px 0;
+}
+
+.cuerpo-tarjeta .insignia {
+    background-color: #1358B4;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.cuerpo-tarjeta .especialidades {
+    margin: 10px 0;
+}
+
+.cuerpo-tarjeta .especialidad {
+    border: 2px solid #1358B4;
+    color: #1358B4;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.cuerpo-tarjeta .iconos-sociales {
+    margin: 15px 0;
+}
+
+.cuerpo-tarjeta .iconos-sociales a {
+    margin: 0 10px;
+    color: #1358B4;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.cuerpo-tarjeta .boton {
+    background-color: transparent;
+    color: #1358B4;
+    border: 2px solid #1358B4;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cuerpo-tarjeta .boton:hover {
+    color: white;
+    background-color: #1358B4;
+}
+/* PSICOLOGOS DISPONIBLES */
 
 
 
@@ -621,7 +770,7 @@ footer {
     margin: 0 10px;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .footer-social {
