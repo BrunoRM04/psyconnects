@@ -61,7 +61,7 @@
                 "facebook": "https://www.facebook.com/anamaria.gonzalez",
                 "twitter": "https://twitter.com/anamaria_psico"
             },
-            "verMas": "psicologo-1.html"
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }

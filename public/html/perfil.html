@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsyConnects | Inicio</title>
+    <link rel="stylesheet" href="../../public/css/styles.css">
+    <link rel="shortcut icon" href="../../public/img/marca/icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <div class="logo"> 
+            <img src="../../public/img/marca/logo cuatro.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../../psicologos.html">Psicólogos Disponibles</a></li>
+                <li><a href="#services">Investigaciones</a></li>
+                <li><a href="#test">Test Práctico</a></li>
+                <li><a href="#jobs">Ofertas Laborales</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <ul class="nav-icons">
+                <li><a href="../../index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="../../psicologos.html"><i class="fas fa-user-md"></i></a></li>
+                <li><a href="#services"><i class="fas fa-book"></i></a></li>
+                <li><a href="#test"><i class="fas fa-pencil-alt"></i></a></li>
+                <li><a href="#jobs"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <main>
+
+        <div class="perfil-container">
+            <div class="perfil-info">
+                <h2 id="nombre"></h2>
+                <div class="detalles-container">
+                    <div class="detalles-inline">
+                        <div class="detalles" id="edad"></div>
+                        <div class="detalles" id="pais"></div>
+                        <div class="detalles" id="fechaNacimiento"></div>
+                    </div>
+                    <div class="detalles" id="correoElectronico"></div>
+                    <a class="detalles" id="telefono" href="#"></a>
+                    <div class="detalles" id="añosExperiencia"></div>
+                    <div class="detalles" id="idiomas"></div>
+                    <div class="detalles" id="precioServicioHora"></div>
+                </div>
+                <div class="redes-sociales">
+                    <a id="linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a id="facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a id="twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="perfil-descripcion">
+                <h3>Descripción</h3>
+                <p id="descripcion"></p>
+                <h3>Experiencia</h3>
+                <ul id="experiencia"></ul>
+                <h3>Certificaciones</h3>
+                <ul id="certificaciones"></ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="#">INICIO</a>
+                <a href="#">PARA EMPRESAS</a>
+                <a href="#">REALIZAR PREGUNTA</a>
+                <a href="#">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">CONTÁCTANOS</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const psicologoId = parseInt(urlParams.get('id'), 10);
+
+    fetch('../../json/psicologos.json')
+    .then(response => response.json())
+        .then(data => {
+            const psicologo = data.psicologos.find(psic => psic.id === psicologoId);
+
+            if (psicologo) {
+                document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
+                document.getElementById('edad').textContent = `${psicologo.edad} Años`;
+                document.getElementById('pais').textContent = psicologo.pais;
+                document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
+                document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
+
+                const telefonoElement = document.getElementById('telefono');
+                telefonoElement.textContent = psicologo.telefono;
+                telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
+
+                document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
+                document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
+                document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
+                document.getElementById('descripcion').textContent = psicologo.descripcion;
+
+                const experienciaList = document.getElementById('experiencia');
+                psicologo.experiencia.forEach(exp => {
+                    const li = document.createElement('li');
+                    li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
+                    experienciaList.appendChild(li);
+                });
+
+                const certificacionesList = document.getElementById('certificaciones');
+                psicologo.certificaciones.forEach(cert => {
+                    const li = document.createElement('li');
+                    li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
+                    certificacionesList.appendChild(li);
+                });
+
+                document.getElementById('linkedin').href = psicologo.redesSociales.linkedin;
+                document.getElementById('facebook').href = psicologo.redesSociales.facebook;
+                document.getElementById('twitter').href = psicologo.redesSociales.twitter;
+            } else {
+                // Manejo de caso cuando no se encuentra el psicólogo con el ID proporcionado
+                alert('Psicólogo no encontrado');
+            }
+        });
+});
+    </script>
+
+</body>
+</html>
+
