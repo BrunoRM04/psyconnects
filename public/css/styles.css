@@ -11,6 +11,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Josefin Sans", sans-serif;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* GENERAL */
 
@@ -783,6 +796,23 @@ nav {
     border-radius: 50%;
 }
 
+.reservar-btn {
+    background-color: white;
+    color: #1358B4;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservar-btn:hover {
+    background-color: #1358B4;
+    border: solid 1px white;
+    color: white;
+}
+
 @media (max-width: 1024px) {
     .perfil-info,
     .perfil-descripcion {
@@ -874,7 +904,7 @@ nav {
 
 
 
-
+/* INVESTIGACIONES */
 .investigaciones-container {
     display: flex;
     flex-wrap: wrap;
@@ -1010,7 +1040,7 @@ nav {
         padding: 5px 8px;
     }
 }
-
+/* INVESTIGACIONES */
 
 
 

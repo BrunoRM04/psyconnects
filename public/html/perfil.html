@@ -49,6 +49,7 @@
                     <div class="detalles" id="idiomas"></div>
                     <div class="detalles" id="precioServicioHora"></div>
                 </div>
+                <button id="reservar-cita" class="reservar-btn">Reservar Cita ></button>
                 <div class="redes-sociales">
                     <a id="linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a id="facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -70,15 +71,12 @@
     <footer>
         <div class="footer-container">
             <div class="footer-nav">
-                <a href="#">INICIO</a>
-                <a href="#">PARA EMPRESAS</a>
-                <a href="#">REALIZAR PREGUNTA</a>
-                <a href="#">TÉRMINOS Y CONDICIONES</a>
-                <a href="#">CONTÁCTANOS</a>
+                <a href="#">EMPRESAS</a>
+                <a href="https://forms.gle/xZERw5gE8yzQELDc8">REGISTRARSE</a>
+                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">QUIENES SOMOS</a>
             </div>
             <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
@@ -94,47 +92,53 @@
 
     fetch('../../json/psicologos.json')
     .then(response => response.json())
-        .then(data => {
-            const psicologo = data.psicologos.find(psic => psic.id === psicologoId);
+    .then(data => {
+        const psicologo = data.psicologos.find(psic => psic.id === psicologoId);
 
-            if (psicologo) {
-                document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
-                document.getElementById('edad').textContent = `${psicologo.edad} Años`;
-                document.getElementById('pais').textContent = psicologo.pais;
-                document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
-                document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
+        if (psicologo) {
+            document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
+            document.getElementById('edad').textContent = `${psicologo.edad} Años`;
+            document.getElementById('pais').textContent = psicologo.pais;
+            document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
+            document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
 
-                const telefonoElement = document.getElementById('telefono');
-                telefonoElement.textContent = psicologo.telefono;
-                telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
+            const telefonoElement = document.getElementById('telefono');
+            telefonoElement.textContent = psicologo.telefono;
+            telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
 
-                document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
-                document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
-                document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
-                document.getElementById('descripcion').textContent = psicologo.descripcion;
+            document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
+            document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
+            document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
+            document.getElementById('descripcion').textContent = psicologo.descripcion;
 
-                const experienciaList = document.getElementById('experiencia');
-                psicologo.experiencia.forEach(exp => {
-                    const li = document.createElement('li');
-                    li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
-                    experienciaList.appendChild(li);
-                });
+            const experienciaList = document.getElementById('experiencia');
+            psicologo.experiencia.forEach(exp => {
+                const li = document.createElement('li');
+                li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
+                experienciaList.appendChild(li);
+            });
 
-                const certificacionesList = document.getElementById('certificaciones');
-                psicologo.certificaciones.forEach(cert => {
-                    const li = document.createElement('li');
-                    li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
-                    certificacionesList.appendChild(li);
-                });
+            const certificacionesList = document.getElementById('certificaciones');
+            psicologo.certificaciones.forEach(cert => {
+                const li = document.createElement('li');
+                li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
+                certificacionesList.appendChild(li);
+            });
 
-                document.getElementById('linkedin').href = psicologo.redesSociales.linkedin;
-                document.getElementById('facebook').href = psicologo.redesSociales.facebook;
-                document.getElementById('twitter').href = psicologo.redesSociales.twitter;
-            } else {
-                // Manejo de caso cuando no se encuentra el psicólogo con el ID proporcionado
-                alert('Psicólogo no encontrado');
-            }
-        });
+            document.getElementById('linkedin').href = psicologo.redesSociales.linkedin;
+            document.getElementById('facebook').href = psicologo.redesSociales.facebook;
+            document.getElementById('twitter').href = psicologo.redesSociales.twitter;
+
+            // Botón de reservar cita
+            const reservarCitaBtn = document.getElementById('reservar-cita');
+            reservarCitaBtn.addEventListener('click', function() {
+                const mensajeWhatsApp = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.%20Me%20gustaría%20reservar%20una%20cita.`;
+                window.location.href = mensajeWhatsApp;
+            });
+        } else {
+            alert('Psicólogo no encontrado');
+        }
+    });
 });
     </script>
 
