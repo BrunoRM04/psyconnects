@@ -2,64 +2,155 @@
     "psicologos": [
         {
             "id": 1,
-            "nombre": "Ana María",
-            "apellido": "González",
-            "fechaNacimiento": "1989-03-15",
-            "fotoPerfil": "./public/img/banner/banner-1.jpg",
-            "correoElectronico": "ana.gonzalez@example.com",
-            "telefono": "+598 1234 5678",
-            "edad": 35,
-            "pais": "Uruguay",
-            "ciudad": "Montevideo",
-            "añosExperiencia": 12,
-            "descripcion": "Psicóloga con más de 10 años de experiencia en terapia cognitivo-conductual.",
-            "precioServicioHora": 50,
+            "nombre": "Lizbeth Rashel",
+            "apellido": "Rodriguez Navarro",
+            "fechaNacimiento": "1999-09-03",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "rodrigueznavarrolizbethrashel@gmail.com",
+            "telefono": "+59176628985",
+            "edad": 24,
+            "pais": "Bolivia",
+            "ciudad": "Cochabamba",
+            "añosExperiencia": 2,
+            "descripcion": "Soy una psicóloga con experiencia en tratamiento de Trastornos de la Conducta Alimentaria, brindado terapia integral a pacientes y apoyo familiar. Además, he liderado un proyecto en psicología deportiva para un equipo de fútbol, enfocado en optimizar el rendimiento y el bienestar psicológico de los jugadores mediante técnicas de gestión del estrés, motivación, mindfulness y trabajo en equipo. Mi enfoque profesional se centra en la atención integral de la salud mental, tanto en el ámbito clínico como deportivo, adaptándome a las necesidades específicas de cada contexto para promover el bienestar emocional, la salud mental, el desarrollo personal y el éxito de mis clientes.",
+            "precioServicioHora": 30,
             "especializacion": [
                 "Terapia Cognitivo-Conductual",
-                "Terapia Familiar",
-                "Terapia de Pareja"
+                "Terapia de Grupo"
             ],
             "idiomas": [
-                "Español",
-                "Inglés"
+                "Español"
             ],
             "educacion": [
                 {
-                    "grado": "Licenciatura en Psicología",
-                    "institucion": "Universidad de la República",
-                    "añoGraduacion": 2008
+                    "grado": "Bachillerato en Humanidades",
+                    "institucion": "Instituto de Educación Secundaria",
+                    "añoInicio": 2004,
+                    "añoFin": 2016
                 },
                 {
-                    "grado": "Maestría en Psicología Clínica",
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad de la República",
+                    "añoInicio": 2017,
+                    "añoFin": 2023
+                },
+                {
+                    "grado": "Diplomado en Docencia en Educación Superior: Metodología Basada en Competencias",
                     "institucion": "Universidad de Buenos Aires",
-                    "añoGraduacion": 2012
+                    "añoInicio": 2023,
+                    "añoFin": 2023
                 }
             ],
             "experiencia": [
                 {
-                    "puesto": "Psicóloga Clínica",
-                    "institucion": "Centro de Salud Mental",
-                    "añoInicio": 2012,
-                    "añoFin": 2018
+                    "puesto": "Voluntaria",
+                    "institucion": "Centro de Educación Permanente CEPJA",
+                    "añoInicio": 2019,
+                    "añoFin": 2020
                 },
                 {
-                    "puesto": "Psicoterapeuta",
-                    "institucion": "Consultorio Privado",
-                    "añoInicio": 2018,
+                    "puesto": "Proyectista",
+                    "institucion": "Academia de fútbol Gran Moxos",
+                    "añoInicio": 2021,
+                    "añoFin": 2023
+                },
+                {
+                    "puesto": "Pasante de psicología clínica",
+                    "institucion": "Centro ABB Anorexia Bulimia Bolivia",
+                    "añoInicio": 2022,
+                    "añoFin": 2023
+                },
+                {
+                    "puesto": "Psicóloga clínica",
+                    "institucion": "Centro ABB Anorexia Bulimia Bolivia",
+                    "añoInicio": 2023,
+                    "añoFin": 2024
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/lizbeth-rashel-rodriguez-navarro-bb8034217"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 2,
+            "nombre": "María",
+            "apellido": "Martínez",
+            "fechaNacimiento": "1989-09-02",
+            "fotoPerfil": "./public/img/users/maria de los angeles martinez.jpg",
+            "correoElectronico": "maria.martinez.caraballo@gmail.com",
+            "telefono": "+5804122010951",
+            "edad": 34,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 12,
+            "descripcion": "Psicóloga humanista con enfoque centrado en la persona. Formación en Neuropsicología y psicología de la salud.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia Gestalt",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Educación Primaria",
+                    "institucion": "Escuela Primaria",
+                    "añoInicio": 1995,
+                    "añoFin": 2001
+                },
+                {
+                    "grado": "Educación Secundaria",
+                    "institucion": "Instituto de Educación Secundaria",
+                    "añoInicio": 2001,
+                    "añoFin": 2006
+                },
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad de la República",
+                    "añoInicio": 2006,
+                    "añoFin": 2012
+                },
+                {
+                    "grado": "Postgrados y más",
+                    "institucion": "Diversas Instituciones",
+                    "añoInicio": 2012,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga de Unidad de Cuidados Intensivos de Adultos",
+                    "institucion": "Hospital General",
+                    "añoInicio": 2010,
+                    "añoFin": 2017
+                },
+                {
+                    "puesto": "Psicóloga Educativa",
+                    "institucion": "Instituto Educativo",
+                    "añoInicio": 2017,
+                    "añoFin": "Presente"
+                },
+                {
+                    "puesto": "Psicóloga clínica",
+                    "institucion": "Centro de Salud Mental",
+                    "añoInicio": 2012,
                     "añoFin": "Presente"
                 }
             ],
             "certificaciones": [
                 {
-                    "nombre": "Certificación en Terapia Cognitivo-Conductual",
-                    "institucion": "Asociación Uruguaya de Psicología",
-                    "año": 2015
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad de la República",
+                    "año": 2012
                 }
             ],
             "redesSociales": {
-                "linkedin": "https://www.linkedin.com/in/anamariagonzalez",
-                "facebook": "https://www.facebook.com/anamaria.gonzalez",
-                "twitter": "https://twitter.com/anamaria_psico"
+                "instagram": "https://www.instagram.com/maria.marti/"
             },
             "verPerfil": "./public/html/perfil.html"
         }
