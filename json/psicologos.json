@@ -363,7 +363,7 @@
             "edad": 24,
             "pais": "Venezuela",
             "ciudad": "Caracas",
-            "añosExperiencia": "6 meses",
+            "añosExperiencia": 1,
             "descripcion": "Estudiante de Psicología, 10mo semestre, mención Asesoramiento y Orientación Psicológica. Universidad Central de Venezuela.",
             "precioServicioHora": 10,
             "especializacion": [
@@ -461,6 +461,395 @@
             ],
             "redesSociales": {
                 "linkedin": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 9,
+            "nombre": "Samuel",
+            "apellido": "Pereda",
+            "fechaNacimiento": "1997-01-20",
+            "fotoPerfil": "./public/img/users/samuel pereda.jpg",
+            "correoElectronico": "samuelpgomez13@gmail.com",
+            "telefono": "+5804141184717",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 2,
+            "descripcion": "Apasionado por la psicólogia, proactivo y con ganas de aprender sobre el campo laboral, actualmente soy tesista y próximo a graduarme en diciembre del 2024, me encuentro de voluntario en el servicio de asesoramiento psicológico de la UCV.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Tesista Carrera De Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasantías en la división de atención integral al atleta",
+                    "institucion": "UCV",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantías en la división de atención integral al atleta de la UCV."
+                },
+                {
+                    "puesto": "Prácticas y voluntariado en el servicio de asesoramiento psicológico",
+                    "institucion": "UCV",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Prácticas y voluntariado en el servicio de asesoramiento psicológico de la UCV."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "División De Atención Integral Al Atleta UCV",
+                    "institucion": "DAIA",
+                    "año": 2024
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/samuelpereda13/",
+                "facebook": "https://www.facebook.com/reg/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzIyNDM4MTQyLCJjYWxsc2l0ZV9pZCI6MzYzOTY5MDQ0ODc4OTI4fQ%3D%3D"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 10,
+            "nombre": "Yeluanny",
+            "apellido": "Rodríguez",
+            "fechaNacimiento": "1995-01-27",
+            "fotoPerfil": "./public/img/users/yeluanny rodriguez.jpg",
+            "correoElectronico": "yeluannyr@gmail.com",
+            "telefono": "+580034697258931",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga clínica de orientación cognitivo conductual con más de 2 años de experiencia en atención a pacientes en servicios educativos y sanitarios. Más de 4 Años de experienciaeninfancia, comprometida a trabajar efectivamente el desarrollo emocional, social e intelectualde personas jóvenes, niños y adultas.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Tutora",
+                    "institucion": "Domicilio",
+                    "ubicacion": "España",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Evaluación continua en ambiente natural de conductas desafiantes e implementación de técnicas de intervención, establecimiento de relaciones positivas y de confianza con los niños y sus padres, reconocimiento de etapa de desarrollo, creación de juegos y actividades educativas acordes a cada edad."
+                },
+                {
+                    "puesto": "Auxiliar en Psicología",
+                    "institucion": "Colegio Nazaret",
+                    "ubicacion": "España",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Evaluación y diagnóstico en entorno educativo, acompañamiento en aula, intervención ante las necesidades educativas de los estudiantes, apoyo y administración de reforzadores que permitan desarrollar habilidades existentes."
+                },
+                {
+                    "puesto": "Psicóloga Infantil",
+                    "institucion": "Domicilio",
+                    "ubicacion": "Suiza",
+                    "añoInicio": 2020,
+                    "añoFin": 2020,
+                    "descripcion": "Observación de las etapas de desarrollo, estimulación sensoriomotriz, manejo saludable de vínculos afectivos, manejo conductual a temprana edad."
+                },
+                {
+                    "puesto": "Pasante de Psicología",
+                    "institucion": "Asociación Civil de Planificación Familiar",
+                    "ubicacion": "",
+                    "añoInicio": 2018,
+                    "añoFin": 2018,
+                    "descripcion": "Evaluación, diagnóstico e intervención psicológica infantil, juvenil y adultos, creación y ponencia de talleres, psicoeducación familiar."
+                },
+                {
+                    "puesto": "Psicóloga Institucional",
+                    "institucion": "Instituto de Psicología Clínica de la Universidad Central de Venezuela",
+                    "ubicacion": "Venezuela",
+                    "añoInicio": 2016,
+                    "añoFin": 2018,
+                    "descripcion": "Atención psicológica, apertura y organización de historias clínicas, asistencia telefónica a clientes, entrenamiento a familias, diagnóstico, intervención y seguimiento de pacientes."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "ColLegi Oficial De Psicología de Catalunya",
+                    "institucion": "ColLegi",
+                    "año": "Presente"
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/yeluanny-rodr%C3%ADguez-496a90136?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 11,
+            "nombre": "Karen",
+            "apellido": "Romero",
+            "fechaNacimiento": "2000-11-20",
+            "fotoPerfil": "./public/img/users/karen romero.jpg",
+            "correoElectronico": "rkarenelisbeth20@gmail.com",
+            "telefono": "+5804120932680",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Acarigua",
+            "añosExperiencia": 4,
+            "descripcion": "Psicóloga Social, con experiencia con grupos familiares, adolescentes y mujeres en situación de violencia.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Familiar",
+                "Terapia de Grupo",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "IDENNA",
+                    "añoInicio": 2020,
+                    "añoFin": 2020,
+                    "descripcion": "Atención psicológica y apoyo a jóvenes en el Instituto Nacional del Menor."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Juvenil Domingo Savio",
+                    "añoInicio": 2019,
+                    "añoFin": 2024,
+                    "descripcion": "Intervención psicológica y soporte emocional a jóvenes en situación de vulnerabilidad."
+                },
+                {
+                    "puesto": "Pasante de Psicología",
+                    "institucion": "Defensoría Juanita Ortega",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantías enfocadas en la evaluación y apoyo psicológico a jóvenes y familias en la Defensoría Juanita Ortega."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Psicología Social",
+                    "institucion": "Universidad Nacional Experimental De Lara Martín Luther King",
+                    "año": "2024"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/karenelisbeth/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 12,
+            "nombre": "Daniella",
+            "apellido": "Briceño",
+            "fechaNacimiento": "1997-08-19",
+            "fotoPerfil": "./public/img/users/daniella briceño.webp",
+            "correoElectronico": "daniellajbo193@gmail.com",
+            "telefono": "+5804144348224",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 3,
+            "descripcion": "Psicologo Clínico",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Parroquia Sagrado Corazón de Jesús",
+                    "añoInicio": 2020,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica y soporte emocional a miembros de la parroquia."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Parroquia Espíritu Santo",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Intervención psicológica y apoyo comunitario en la Parroquia Espíritu Santo."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Sabim",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Evaluación psicológica y soporte emocional en Sabim."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psi.daniellab/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 13,
+            "nombre": "Irvimar",
+            "apellido": "Sequera",
+            "fechaNacimiento": "2000-09-07",
+            "fotoPerfil": "./public/img/users/irvimar sequera.jpg",
+            "correoElectronico": "irvisequera@gmail.com",
+            "telefono": "+5804124551659",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Carabobo",
+            "añosExperiencia": 2,
+            "descripcion": "Hola, un gusto poder ayudarte, en este espacio siente en total confianza y seguridad de ser escuchado sin ningún prejuicio. Juntos comenzaremos un camino de autoconocimiento y sanación mental.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Prácticas Universitarias",
+                    "institucion": "U-E Santa Sofía",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Prácticas universitarias en U-E Santa Sofía desde agosto a noviembre 2019."
+                },
+                {
+                    "puesto": "Prácticas Universitarias",
+                    "institucion": "Hospital Psiquiátrico de Barbula",
+                    "añoInicio": 2020,
+                    "añoFin": 2020,
+                    "descripcion": "Prácticas universitarias en el Hospital Psiquiátrico de Barbula de febrero a junio de 2020."
+                },
+                {
+                    "puesto": "Pasante de Psicología",
+                    "institucion": "Sistema de Protección del Niño, Niña y Adolescentes",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en el Sistema de Protección del Niño, Niña y Adolescentes desde marzo a agosto del 2022."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Consulta Privada",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Experiencia en consulta privada desde 2023 hasta el presente."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Arturo Michelena",
+                    "año": "2022"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic_irvis/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 14,
+            "nombre": "Sofia",
+            "apellido": "Hernandez",
+            "fechaNacimiento": "2000-12-29",
+            "fotoPerfil": "./public/img/users/sofia hernandez.jpeg",
+            "correoElectronico": "sofiahlb@hotmail.com",
+            "telefono": "+584246790700",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 2,
+            "descripcion": "Psicologo clínico infanto-juvenil y de adultos.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "IADI - Instituto de Atención al Desarrollo Infanto-Juvenil",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención y desarrollo de terapias psicológicas para infantes y jóvenes."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Tarde de Terapias, CEIP Chiquilines",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Intervención psicológica y terapias para niños en CEIP Chiquilines."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicofilosofi/",
+                "tiktok": "https://www.tiktok.com/@psicofilosofi"
             },
             "verPerfil": "./public/html/perfil.html"
         }
