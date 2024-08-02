@@ -153,6 +153,316 @@
                 "instagram": "https://www.instagram.com/maria.marti/"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 3,
+            "nombre": "Silvana",
+            "apellido": "Muriana",
+            "fechaNacimiento": "1989-04-10",
+            "fotoPerfil": "./public/img/users/silvana muriana.jpg",
+            "correoElectronico": "silvanamuriana@gmail.com",
+            "telefono": "+584122584322",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 20,
+            "descripcion": "Psicóloga sobre todo para personas con Tea, condiciones o discapacidad.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                
+            ],
+            "experiencia": [
+                
+            ],
+            "certificaciones": [
+                
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/petya_venezuela/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 4,
+            "nombre": "Marvioly",
+            "apellido": "Duarte",
+            "fechaNacimiento": "1987-11-06",
+            "fotoPerfil": "./public/img/users/marvioly duarte.jpg",
+            "correoElectronico": "marvioly6@gmail.com",
+            "telefono": "+5804245721728",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 8,
+            "descripcion": "Psicólogo clínico.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                
+            ],
+            "experiencia": [
+                
+            ],
+            "certificaciones": [
+                
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicovive_/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 5,
+            "nombre": "Francis Javier",
+            "apellido": "Rodríguez",
+            "fechaNacimiento": "1993-05-28",
+            "fotoPerfil": "./public/img/users/francis rodríguez torres.jpg.png",
+            "correoElectronico": "francisjavier.rodriguez@gmail.com",
+            "telefono": "+593987202784",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Portoviejo",
+            "añosExperiencia": 4,
+            "descripcion": "Soy Francis Rodriguez, Psicólogo clínico y puedo acompañarte a superar estos desafíos y alcanzar tu bienestar. Creo que todos tenemos derecho de vivir en bienestar y ese es el objetivo de la terapia, brindar plenitud y equilibrio a nuestras vidas. Desde la psicoterapia te comparto las técnicas necesarias para enfrentar las situaciones más difíciles de nuestras vidas, proporcionando una actitud nueva ante la vida.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura",
+                    "institucion": "Universidad Católica de Santo Domingo",
+                    "añoInicio": 2015,
+                    "añoFin": 2021
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo clínico independiente",
+                    "institucion": "Promedica",
+                    "añoInicio": "Diciembre 2023",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Brindar atención psicológica a adolescentes, jóvenes y adultos que presentan síntomas relacionados a la depresión, ansiedad, duelo, autoestima, entre otros. Terapia individual y de pareja. Evaluación psicológica."
+                },
+                {
+                    "puesto": "Dirigente de grupos de apoyo / Capacitador",
+                    "institucion": "Fundación Grupos de Apoyo en Salud Mental",
+                    "añoInicio": "Septiembre 2020",
+                    "añoFin": 2024,
+                    "descripcion": "Dirigir grupos de apoyo / Terapia grupal, Intervención en crisis, Impartir charlas y talleres relacionados al área de la Psicología y la Salud Mental. Asesoramiento psicológico a migrantes, población LGBTIQ+ y pacientes psiquiátricos."
+                },
+                {
+                    "puesto": "Apoyo psicológico empresarial",
+                    "institucion": "Ser Salud",
+                    "añoInicio": "Septiembre 2022",
+                    "añoFin": "Diciembre 2022",
+                    "descripcion": "Acompañamiento psicológico a empleados de la empresa UNILEVER. (presencial y virtual)"
+                },
+                {
+                    "puesto": "Psicólogo clínico- psicoterapeuta",
+                    "institucion": "Unidad de Trauma y Rehabilitación (UNITRAUMA) y Centro Preventive LTH",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Brindar atención psicológica a adolescentes, jóvenes y adultos que presentan síntomas relacionados a la depresión, ansiedad, duelo, autoestima, entre otros. Realizar procesos de reclutamiento de personal. Evaluación psicológica clínica y laboral."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciado en Psicología Clínica",
+                    "institucion": "Universidad Católica Santo Domingo",
+                    "año": 2020
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/sosbienestar/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 6,
+            "nombre": "Romina",
+            "apellido": "Bongianino",
+            "fechaNacimiento": "1991-11-11",
+            "fotoPerfil": "./public/img/users/romina bongianino.jpg",
+            "correoElectronico": "rominabongianino11@gmail.com",
+            "telefono": "+543512302799",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 7,
+            "descripcion": "Acompaño a todo aquell@s personas que deseen generar un espacio de co-construcción , autoconocimiento y crecimiento personal/transpersonal.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2010,
+                    "añoFin": 2015
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo clínico en consultorio privado",
+                    "institucion": "Consultorio Privado",
+                    "añoInicio": 2019,
+                    "añoFin": "Actualidad",
+                    "descripcion": "6 años de experiencia en consultorio psicológico privado para niños, adolescentes y adultos."
+                },
+                {
+                    "puesto": "Especialista en neurorehabilitación de discapacidad en niños y adolescentes",
+                    "institucion": "Centro de Neurorehabilitación",
+                    "añoInicio": 2016,
+                    "añoFin": 2020,
+                    "descripcion": "Experiencia en neurorehabilitación de discapacidad en niños y adolescentes."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "año": 2015
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/romina-bongianino-b87242143/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 7,
+            "nombre": "Anthony",
+            "apellido": "Trejo",
+            "fechaNacimiento": "1998-06-08",
+            "fotoPerfil": "./public/img/users/anthony trejo.jpg",
+            "correoElectronico": "anthonytrejo649@gmail.com",
+            "telefono": "+5804247201266",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": "6 meses",
+            "descripcion": "Estudiante de Psicología, 10mo semestre, mención Asesoramiento y Orientación Psicológica. Universidad Central de Venezuela.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad Central de Venezuela",
+                    "añoInicio": 2016,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/anthofred/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 8,
+            "nombre": "Dinalva",
+            "apellido": "Rojas",
+            "fechaNacimiento": "1962-12-13",
+            "fotoPerfil": "./public/img/users/dinalva rojas.jpg",
+            "correoElectronico": "dinalvarojas@gmail.com",
+            "telefono": "+584245676079",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 35,
+            "descripcion": "Psicóloga con Maestría en Educación. Mención Orientación. Atención a Adolescentes y Adultos.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Pregrado",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 1979,
+                    "añoFin": 2004
+                },
+                {
+                    "grado": "Postgrado",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 1979,
+                    "añoFin": 2004
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Profesional en el ámbito educativo",
+                    "institucion": "Diversas Instituciones Educativas",
+                    "añoInicio": 1979,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Experiencia profesional desde 1979 en el ámbito educativo con niños, adolescentes, y padres."
+                },
+                {
+                    "puesto": "Psicólogo clínico",
+                    "institucion": "Diversas Instituciones Clínicas",
+                    "añoInicio": 2015,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Experiencia a nivel clínico con adolescentes y adultos."
+                },
+                {
+                    "puesto": "Docente en el área de Psicología del Desarrollo y Educativa",
+                    "institucion": "Diversas Universidades",
+                    "añoInicio": 2000,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Experiencia docente en el área de Psicología del Desarrollo y Educativa desde el año 2000."
+                },
+                {
+                    "puesto": "Jefe de Departamento de Psicología",
+                    "institucion": "Diversas Instituciones",
+                    "añoInicio": 2018,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Experiencia como Jefe de Departamento de Psicología desde el 2018."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "linkedin": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
