@@ -919,6 +919,505 @@
                 "linkedin": "https://www.linkedin.com/in/mar%C3%ADa-quero-0b997b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 16,
+            "nombre": "Orianna",
+            "apellido": "Morillo",
+            "fechaNacimiento": "2001-04-26",
+            "fotoPerfil": "./public/img/users/orianna morillo.webp",
+            "correoElectronico": "psi.oriannamh@gmail.com",
+            "telefono": "+5804123851024",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 2,
+            "descripcion": "Psicólogo clínico en formación.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psi.oriannamh/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 17,
+            "nombre": "María",
+            "apellido": "Sifontes",
+            "fechaNacimiento": "1999-12-19",
+            "fotoPerfil": "./public/img/users/maria sifontes.jpeg",
+            "correoElectronico": "mariasifontes41@gmail.com",
+            "telefono": "+584129446781",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 1,
+            "descripcion": "Soy psicóloga clínica, especializada en proporcionar atención psicológica integral y basada en evidencia. Mi enfoque terapéutico se centra en la terapia de aceptación y compromiso, con un interés particular en el apoyo a pacientes con enfermedades crónicas, como la diabetes tipo 2. A lo largo de mi formación y experiencia profesional, he desarrollado habilidades avanzadas en la evaluación, diagnóstico y tratamiento de una variedad de trastornos psicológicos. Trabajo con adolescentes y adultos, diseñando intervenciones personalizadas que promuevan el bienestar emocional, la resiliencia y la mejora de la calidad de vida. Mi compromiso con la continua actualización y formación me permite ofrecer las mejores prácticas y técnicas terapéuticas actuales. Creo firmemente en el poder de la relación terapéutica y me esfuerzo por crear un ambiente seguro y empático donde los pacientes puedan explorar sus emociones y desarrollar estrategias efectivas para enfrentar sus desafíos. Con una fuerte ética profesional y un enfoque compasivo, mi objetivo es acompañar a mis pacientes en su camino hacia el crecimiento personal y la salud mental óptima.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Servicio de Psicología Clínica UCV",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Atención y desarrollo de terapias psicológicas en el Servicio de Psicología Clínica UCV."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Dirección de Desarrollo Social de la Alcaldía de Chacao",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Intervención psicológica y apoyo social en la Dirección de Desarrollo Social de la Alcaldía de Chacao."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Dirección de Deportes UCV",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Atención psicológica a deportistas en la Dirección de Deportes UCV."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Centro Psicológico Docente del Hombre",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Desarrollo de terapias y apoyo psicológico en el Centro Psicológico Docente del Hombre."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Central de Venezuela",
+                    "año": "2017 - 2024" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicologiasifontes/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 18,
+            "nombre": "Yésica",
+            "apellido": "Villa",
+            "fechaNacimiento": "1991-02-05",
+            "fotoPerfil": "./public/img/users/yesica villa.jpeg",
+            "correoElectronico": "yesiv17@hotmail.com",
+            "telefono": "+543468555888",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Rosario",
+            "añosExperiencia": 2,
+            "descripcion": "Soy Terapueta Cognitivo Conductual. Ofrezco una escucha activa e interacción para poder ayudar al paciente a construir juntos herramientas para encontrar su bienestar.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Argentina",
+                    "año": "2016 - 2022" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicologia.yv/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 19,
+            "nombre": "Sicdy",
+            "apellido": "Villasmil",
+            "fechaNacimiento": "1991-11-10",
+            "fotoPerfil": "./public/img/users/sicdy villasmil.jpg",
+            "correoElectronico": "psicsicdyvillasmil@gmail.com",
+            "telefono": "+584146229053",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Zulia",
+            "añosExperiencia": 9,
+            "descripcion": "Psicólogo venezolano, Atención individualizada y familiar.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/sicdycarolina/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 20,
+            "nombre": "Maxibel",
+            "apellido": "Ruiz",
+            "fechaNacimiento": "1997-02-16",
+            "fotoPerfil": "./public/img/users/maxibel ruiz.jpg",
+            "correoElectronico": "psicologamaxibelruiz@gmail.com",
+            "telefono": "+5804125059762",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 3,
+            "descripcion": "Maxibel Ruiz psicóloga clínica, especializada en el cuidado emocional y mental de niños, adolescentes y adultos, ofrezco un enfoque integral y empático para cada etapa de la vida. Con un diplomado en Psicología Infantil y Psicoterapia Infantil, estoy capacitada para abordar una amplia gama de desafíos que enfrentan los más jóvenes, desde problemas de conducta hasta dificultades emocionales. Además, cuento con un diplomado en Autismo y TDAH, lo que le permite brindar intervenciones especializadas para estos trastornos del desarrollo, ayudando a las familias a comprender y gestionar estas condiciones de manera efectiva. Tengo formación en Terapia Cognitivo-Conductual (TCC) proporciona un marco sólido para trabajar con adolescentes y adultos, facilitando el manejo de la ansiedad, la depresión, los trastornos del comportamiento y otros problemas de salud mental.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Consultorio Especializado Virgen del Valle",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Atención psicológica en el Consultorio Especializado Virgen del Valle."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Consultorio Privado",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en consultorio privado."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.maxibelsalome/",
+                "facebook": "https://www.facebook.com/Psicóloga Maxibel Ruiz/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 21,
+            "nombre": "Darlys",
+            "apellido": "Pineda",
+            "fechaNacimiento": "1983-06-10",
+            "fotoPerfil": "./public/img/users/darlys pineda.jpg",
+            "correoElectronico": "psic.dpineda@gmail.com",
+            "telefono": "+593963604152",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Cuenca",
+            "añosExperiencia": 17,
+            "descripcion": "Psicóloga Clínica, Sexóloga. Terapia de pareja, terapia individual. Tratamiento para la ansiedad y depresión.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicomentis/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 22,
+            "nombre": "Abril",
+            "apellido": "Solórzano",
+            "fechaNacimiento": "2000-08-12",
+            "fotoPerfil": "./public/img/users/abril solorzano.webp",
+            "correoElectronico": "psicooabs@gmail.com",
+            "telefono": "+584124917913",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 2,
+            "descripcion": "Hola, soy Abril, psicólogo, y estoy aquí para enseñarte y brindarte herramientas necesarias para enfrentar tu incertidumbre. Deja que las emociones salgan a flote y aprendamos a identificarlas. Déjame ayudarte a detectar esos pensamientos que están fuera de tu realidad. Las emociones pueden ser difíciles de gestionarse, y eso puede influir en pensamientos y toma de decisiones erradas. Estoy aquí para servirte y brindarte los mejores resultados según tu necesidad. ¡Un abrazo!",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología Organizacional",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en Psicología Organizacional."
+                },
+                {
+                    "puesto": "Voluntaria en Psicología Clínica",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención para pacientes con cáncer de mama, atención para adolescentes y adultos jóvenes, y atención para niños con autismo."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaría De Aragua",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicoabs?igsh=MTV6eWpzdnY3dXlrdw=="
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 23,
+            "nombre": "Jofre",
+            "apellido": "Duarte",
+            "fechaNacimiento": "1995-09-24",
+            "fotoPerfil": "./public/img/users/jofre duarte.jpg",
+            "correoElectronico": "jofrealej@gmail.com",
+            "telefono": "+5804122665622",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 6,
+            "descripcion": "Hola, soy Jofre Duarte licenciado en psicología y estoy aquí para escucharte y ayudarte. Nos vemos.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia Gestalt",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Colegio 19 de Abril",
+                    "añoInicio": 2018,
+                    "añoFin": 2020,
+                    "descripcion": "Atención psicológica en el Colegio 19 de Abril."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Clínica Acosta Ortiz",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Clínica Acosta Ortiz."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Centro Psicológico Psicotutora",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en el Centro Psicológico Psicotutora."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Fundación Sembrando Esperanza",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Fundación Sembrando Esperanza."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Yacambu",
+                    "año": "2013 - 2018" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicjofred/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 24,
+            "nombre": "Aitana",
+            "apellido": "Parrilla",
+            "fechaNacimiento": "1995-04-02",
+            "fotoPerfil": "./public/img/users/aitana parrilla.jpeg",
+            "correoElectronico": "aitanaparrilla@gmail.com",
+            "telefono": "+5804242720271",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga",
+            "precioServicioHora": 3,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Escolar (Preescolar)",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Trabajo actual como psicóloga escolar en preescolar desde octubre 2023 hasta el momento."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "IDENNA",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Evaluación de adultos e infantojuvenil durante 6 meses."
+                },
+                {
+                    "puesto": "Especialista en Reclutamiento y Selección",
+                    "institucion": "Corfin",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Trabajo en reclutamiento y selección durante 1 mes."
+                },
+                {
+                    "puesto": "Coordinadora de Recursos Humanos",
+                    "institucion": "ÁvilaVA",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Coordinación de recursos humanos durante 6 meses."
+                },
+                {
+                    "puesto": "Pasante de Psicología Escolar",
+                    "institucion": "Colegio Santa Cecilia",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Pasantías de psicología escolar durante 1 año."
+                },
+                {
+                    "puesto": "Pasante de Psicología Clínica",
+                    "institucion": "UPLA",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Pasantías de psicología clínica durante 5 meses."
+                },
+                {
+                    "puesto": "Pasante de Asesoramiento Psicológico",
+                    "institucion": "Colegio San Agustín / UCAB",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Pasantías de asesoramiento psicológico durante 1 año."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Católica Andrés Bello",
+                    "año": "2014 - 2024" 
+                }
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
