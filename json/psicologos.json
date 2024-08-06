@@ -852,6 +852,73 @@
                 "tiktok": "https://www.tiktok.com/@psicofilosofi"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 15,
+            "nombre": "María",
+            "apellido": "Quero",
+            "fechaNacimiento": "1996-09-20",
+            "fotoPerfil": "./public/img/users/maria estefanía.png",
+            "correoElectronico": "psic.mariaeqb@gmail.com",
+            "telefono": "+584245151474",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 2,
+            "descripcion": "Atención psicológica online para adolescentes y adultos. Te ofrezco un espacio seguro en el cual podrás expresarte libremente, comprenderte mejor, adquirir aprendizajes y herramientas significativas para tu salud mental. Poseo experiencia en el abordaje de ansiedad, duelo, depresión, estrés, procesos de autoconocimiento, gestión emocional y adquisición de hábitos saludables.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante de Psicología Clínica",
+                    "institucion": "Instituto Municipal para la Mujer e Igualdad de Género de Iribarren (IMMI)",
+                    "ubicacion": "Venezuela",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantías de Psicología Clínica en IMMI, Venezuela, de febrero a mayo de 2023."
+                },
+                {
+                    "puesto": "Psicóloga Clínica Voluntaria",
+                    "institucion": "Instituto Municipal para la Mujer e Igualdad de Género de Iribarren (IMMI)",
+                    "ubicacion": "Venezuela",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Psicóloga Clínica Voluntaria en IMMI, Venezuela, desde febrero de 2024 hasta la actualidad."
+                },
+                {
+                    "puesto": "Psicóloga Independiente",
+                    "institucion": "",
+                    "ubicacion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Trabajo como psicóloga independiente desde 2023 hasta la actualidad."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Centrooccidental Lisandro Alvarado",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.instagram.com/psicofilosofi/"
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
