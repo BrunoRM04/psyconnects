@@ -73,6 +73,18 @@
             </div>
         </div>
 
+        <div class="comentarios-container">
+            <h3>Comentarios</h3>
+            <form id="comentarios-form">
+                <input type="text" id="nombreComentario" placeholder="Nombre" required>
+                <input type="text" id="apellidoComentario" placeholder="Apellido" required>
+                <input type="text" id="paisComentario" placeholder="País" required>
+                <textarea id="mensajeComentario" placeholder="Escribe tu comentario aquí" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="comentarios-list"></div>
+        </div>
+
     </main>
 
     <footer>
@@ -210,6 +222,73 @@
                 return edad;
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const comentariosForm = document.getElementById('comentarios-form');
+    const comentariosList = document.getElementById('comentarios-list');
+
+    // Cargar comentarios desde Local Storage al cargar la página
+    cargarComentarios();
+
+    // Evento para manejar el envío del formulario de comentarios
+    comentariosForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const nombre = document.getElementById('nombreComentario').value;
+        const apellido = document.getElementById('apellidoComentario').value;
+        const pais = document.getElementById('paisComentario').value;
+        const mensaje = document.getElementById('mensajeComentario').value;
+
+        const comentario = {
+            id: Date.now(),  // Añadir un identificador único basado en la fecha y hora actual
+            nombre,
+            apellido,
+            pais,
+            mensaje
+        };
+
+        // Guardar comentario en Local Storage
+        guardarComentario(comentario);
+
+        // Añadir comentario a la lista
+        añadirComentario(comentario);
+
+        // Limpiar el formulario
+        comentariosForm.reset();
+    });
+
+    function guardarComentario(comentario) {
+        let comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentarios.push(comentario);
+        localStorage.setItem('comentarios', JSON.stringify(comentarios));
+    }
+
+    function cargarComentarios() {
+        let comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentarios.forEach(añadirComentario);
+    }
+
+    function añadirComentario(comentario) {
+        const comentarioElement = document.createElement('div');
+        comentarioElement.className = 'comentario';
+        comentarioElement.innerHTML = `
+            <h4>${comentario.nombre} ${comentario.apellido} (${comentario.pais})</h4>
+            <p>${comentario.mensaje}</p>
+            <button onclick="eliminarComentario(${comentario.id})">Eliminar</button>
+        `;
+        comentarioElement.setAttribute('data-id', comentario.id);
+        comentariosList.appendChild(comentarioElement);
+    }
+
+    window.eliminarComentario = function(id) {
+        let comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentarios = comentarios.filter(comentario => comentario.id !== id);
+        localStorage.setItem('comentarios', JSON.stringify(comentarios));
+        const comentarioElement = document.querySelector(`.comentario[data-id='${id}']`);
+        if (comentarioElement) {
+            comentarioElement.remove();
+        }
+    };
+});
 
     </script>
 

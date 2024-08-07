@@ -889,6 +889,84 @@ nav {
 /* PERFILES */
 
 
+/* COMENTARIOS */
+.comentarios-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.comentarios-container h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#comentarios-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#comentarios-form input,
+#comentarios-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#comentarios-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1358B4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#comentarios-form button:hover {
+    background-color: #0d3b8b;
+}
+
+#comentarios-list {
+    margin-top: 20px;
+}
+
+.comentario {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comentario h4 {
+    margin: 0;
+    color: #1358B4;
+}
+
+.comentario p {
+    margin: 5px 0 0;
+}
+
+.comentario button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.comentario button:hover {
+    background-color: darkred;
+}
+
 /* INVESTIGACIONES */
 .investigaciones-container {
     display: flex;
