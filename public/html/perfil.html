@@ -7,106 +7,6 @@
     <link rel="stylesheet" href="../../public/css/styles.css">
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore, collection, addDoc, onSnapshot, orderBy, query, serverTimestamp, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAn6PR9361-d1oSPhBQFKEUEw015SxM1HM",
-            authDomain: "prueba-545bd.firebaseapp.com",
-            projectId: "prueba-545bd",
-            storageBucket: "prueba-545bd.appspot.com",
-            messagingSenderId: "649110694072",
-            appId: "1:649110694072:web:e37a4a7f63f271f4a8ac4d"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        // Function to load comments
-        async function cargarComentarios() {
-            const q = query(collection(db, "comentarios"), orderBy("timestamp"));
-            onSnapshot(q, (querySnapshot) => {
-                const comentariosList = document.getElementById('comentarios-list');
-                comentariosList.innerHTML = "";
-                querySnapshot.forEach((doc) => {
-                    const comentario = doc.data();
-                    comentario.id = doc.id;
-                    añadirComentario(comentario);
-                });
-            });
-        }
-
-        // Function to add a comment
-        async function guardarComentario(comentario) {
-            try {
-                const docRef = await addDoc(collection(db, "comentarios"), comentario);
-                comentario.id = docRef.id;
-                añadirComentario(comentario);
-            } catch (e) {
-                console.error("Error adding comment: ", e);
-            }
-        }
-
-        // Function to delete a comment
-        async function eliminarComentario(id) {
-            try {
-                await deleteDoc(doc(db, "comentarios", id));
-                const comentarioElement = document.querySelector(`.comentario[data-id='${id}']`);
-                if (comentarioElement) {
-                    comentarioElement.remove();
-                }
-            } catch (e) {
-                console.error("Error removing comment: ", e);
-            }
-        }
-
-        // Function to add a comment to the DOM
-        function añadirComentario(comentario) {
-            const comentariosList = document.getElementById('comentarios-list');
-            const comentarioElement = document.createElement('div');
-            comentarioElement.className = 'comentario';
-            comentarioElement.innerHTML = `
-                <h4>${comentario.nombre} ${comentario.apellido} (${comentario.pais})</h4>
-                <p>${comentario.mensaje}</p>
-                <button onclick="eliminarComentario('${comentario.id}')">Eliminar</button>
-            `;
-            comentarioElement.setAttribute('data-id', comentario.id);
-            comentariosList.appendChild(comentarioElement);
-        }
-
-        // Event listener for form submission
-        document.addEventListener('DOMContentLoaded', function () {
-            const comentariosForm = document.getElementById('comentarios-form');
-            comentariosForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                const nombre = document.getElementById('nombreComentario').value;
-                const apellido = document.getElementById('apellidoComentario').value;
-                const pais = document.getElementById('paisComentario').value;
-                const mensaje = document.getElementById('mensajeComentario').value;
-
-                const comentario = {
-                    nombre,
-                    apellido,
-                    pais,
-                    mensaje,
-                    timestamp: serverTimestamp()
-                };
-
-                guardarComentario(comentario);
-                comentariosForm.reset();
-            });
-
-            // Load comments when the page loads
-            cargarComentarios();
-        });
-
-        // Make the delete function available globally
-        window.eliminarComentario = eliminarComentario;
-    </script>
 </head>
 <body>
 
@@ -171,18 +71,6 @@
                 <h3>Certificaciones</h3>
                 <ul id="certificaciones"></ul>
             </div>
-        </div>
-
-        <div class="comentarios-container">
-            <h3>Comentarios</h3>
-            <form id="comentarios-form">
-                <input type="text" id="nombreComentario" placeholder="Nombre" required>
-                <input type="text" id="apellidoComentario" placeholder="Apellido" required>
-                <input type="text" id="paisComentario" placeholder="País" required>
-                <textarea id="mensajeComentario" placeholder="Escribe tu comentario aquí" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="comentarios-list"></div>
         </div>
 
     </main>
@@ -322,79 +210,6 @@
                 return edad;
             }
         });
-
-        document.addEventListener('DOMContentLoaded', function () {
-    const comentariosForm = document.getElementById('comentarios-form');
-    const comentariosList = document.getElementById('comentarios-list');
-
-    // Cargar comentarios desde Firestore al cargar la página
-    cargarComentarios();
-
-    // Evento para manejar el envío del formulario de comentarios
-    comentariosForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const nombre = document.getElementById('nombreComentario').value;
-        const apellido = document.getElementById('apellidoComentario').value;
-        const pais = document.getElementById('paisComentario').value;
-        const mensaje = document.getElementById('mensajeComentario').value;
-
-        const comentario = {
-            nombre,
-            apellido,
-            pais,
-            mensaje,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        };
-
-        // Guardar comentario en Firestore
-        db.collection("comentarios").add(comentario)
-            .then(function(docRef) {
-                comentario.id = docRef.id;
-                añadirComentario(comentario);
-                comentariosForm.reset();
-            })
-            .catch(function(error) {
-                console.error("Error adding comment: ", error);
-            });
-    });
-
-    function cargarComentarios() {
-        db.collection("comentarios").orderBy("timestamp").onSnapshot(function(querySnapshot) {
-            comentariosList.innerHTML = "";
-            querySnapshot.forEach(function(doc) {
-                let comentario = doc.data();
-                comentario.id = doc.id;
-                añadirComentario(comentario);
-            });
-        });
-    }
-
-    function añadirComentario(comentario) {
-        const comentarioElement = document.createElement('div');
-        comentarioElement.className = 'comentario';
-        comentarioElement.innerHTML = `
-            <h4>${comentario.nombre} ${comentario.apellido} (${comentario.pais})</h4>
-            <p>${comentario.mensaje}</p>
-            <button onclick="eliminarComentario('${comentario.id}')">Eliminar</button>
-        `;
-        comentarioElement.setAttribute('data-id', comentario.id);
-        comentariosList.appendChild(comentarioElement);
-    }
-
-    window.eliminarComentario = function(id) {
-        db.collection("comentarios").doc(id).delete()
-            .then(function() {
-                const comentarioElement = document.querySelector(`.comentario[data-id='${id}']`);
-                if (comentarioElement) {
-                    comentarioElement.remove();
-                }
-            })
-            .catch(function(error) {
-                console.error("Error removing comment: ", error);
-            });
-    };
-});
-
     </script>
 
 </body>
