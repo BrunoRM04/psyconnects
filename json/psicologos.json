@@ -1418,6 +1418,342 @@
             "redesSociales": {
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 25,
+            "nombre": "Keliame",
+            "apellido": "Pariacota",
+            "fechaNacimiento": "1988-10-26",
+            "fotoPerfil": "./public/img/users/keliame pariacota.png",
+            "correoElectronico": "kelicpp@gmail.com",
+            "telefono": "+584243702461",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracay",
+            "añosExperiencia": 12,
+            "descripcion": "Psicóloga Clínico",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Diagnóstico Niños Especiales",
+                    "añoInicio": 2012,
+                    "añoFin": 2012,
+                    "descripcion": "Atención psicológica en el Centro Diagnóstico Niños Especiales."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Casa de la Mujer",
+                    "añoInicio": 2012,
+                    "añoFin": 2012,
+                    "descripcion": "Atención psicológica en la Casa de la Mujer."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "UNES",
+                    "añoInicio": 2013,
+                    "añoFin": 2013,
+                    "descripcion": "Atención psicológica en UNES."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "SAPANNA",
+                    "añoInicio": 2013,
+                    "añoFin": 2013,
+                    "descripcion": "Atención psicológica en SAPANNA."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "CORPOELEC",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Atención psicológica en CORPOELEC."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Policía Municipal de Girardot",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Policía Municipal de Girardot."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicokeliame/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 26,
+            "nombre": "Daniela",
+            "apellido": "Medina",
+            "fechaNacimiento": "1998-11-13",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "alemega98@gmail.com",
+            "telefono": "+5930992799645",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Ambato",
+            "añosExperiencia": 2,
+            "descripcion": "Soy una persona profesional, responsable, puntual, organizada, Respetuosa. Me adapto fácilmente a un grupo de trabajo y tareas, además de estar interesada en aportar los conocimientos que he adquirido durante mi carrera universitaria. Poder guiar, orientar y que se sientan escuchas las personas.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/alemedinag98/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 27,
+            "nombre": "Valeria",
+            "apellido": "Romero",
+            "fechaNacimiento": "2002-03-29",
+            "fotoPerfil": "./public/img/users/valeria romero.jpg",
+            "correoElectronico": "psicvaleriaa@gmail.com",
+            "telefono": "+584140927357",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 1,
+            "descripcion": "Soy psicóloga con un enfoque psicoanalítico relacional, especializada en el trabajo con adolescentes y adultos. Cuento con un año de experiencia en el campo y me encuentro en constante formación para enriquecer mis conocimientos y habilidades. Tengo capacitación en primeros auxilios psicológicos, lo que me permite brindar apoyo en situaciones críticas. Mi trabajo titulado “Abordaje terapéutico psicoanalítico funcional ante pacientes con falso self patológico” fue publicado en CeIR, una revista dedicada a la clínica e investigación relacional. Me enfoco en tratar la ansiedad, la depresión y problemas relacionales, buscando siempre ofrecer un espacio seguro y comprensivo para mis pacientes.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología Social",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en psicología social."
+                },
+                {
+                    "puesto": "Pasante en Psicología Organizacional",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en psicología organizacional."
+                },
+                {
+                    "puesto": "Pasante en Psicología Educativa",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en psicología educativa."
+                },
+                {
+                    "puesto": "Pasante en Psicología Clínica",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantías en psicología clínica."
+                },
+                {
+                    "puesto": "Psicóloga en Libre Ejercicio",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Libre ejercicio de la profesión desde 2023 hasta la actualidad."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.valeriaromero/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 28,
+            "nombre": "Zuleima",
+            "apellido": "Romero",
+            "fechaNacimiento": "1969-04-08",
+            "fotoPerfil": "./public/img/users/zuleima romero.jpg",
+            "correoElectronico": "zuleima18.romero@gmail.com",
+            "telefono": "+574145494661",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 7,
+            "descripcion": "Psicoterapeuta facilitadora psico-corporal, terapeuta humanista Análisis Transaccional, terapeuta en EMDR",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia Familiar",
+                "Terapia EMDR"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                
+            ],
+            "certificaciones": [
+
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicoromerito/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 29,
+            "nombre": "Evelyn",
+            "apellido": "Salgado",
+            "fechaNacimiento": "1977-09-16",
+            "fotoPerfil": "./public/img/users/evelyn salgado.jpg",
+            "correoElectronico": "lynsalgado13@gmail.com",
+            "telefono": "+50379866883 ",
+            "edad": 24,
+            "pais": "El Salvador",
+            "ciudad": "San Salvador",
+            "añosExperiencia": 20,
+            "descripcion": "Psicóloga  Infantil y Juvenil",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                
+            ],
+            "certificaciones": [
+
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicoromerito/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 30,
+            "nombre": "Maria",
+            "apellido": "Vegas",
+            "fechaNacimiento": "1997-06-20",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "mariavegas12@hotmail.com",
+            "telefono": "+584144496767",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 4,
+            "descripcion": "Psicóloga Clínica Especializada en jovenes, adultos y parejas.  Mi misión siempre será, apoyarte en gestión de tus emociones, ser una guía que te haga sentir en un lugar cómodo, para poder así encontrarte a ti mism@.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante de Psicología",
+                    "institucion": "Hospital Militar de Maracay",
+                    "añoInicio": 2017,
+                    "añoFin": 2017,
+                    "descripcion": "Pasantías en el Hospital Militar de Maracay durante cuatro meses."
+                },
+                {
+                    "puesto": "Pasante de Psicología",
+                    "institucion": "Hospital de Santa Cruz",
+                    "añoInicio": 2018,
+                    "añoFin": 2018,
+                    "descripcion": "Pasantías en el Hospital de Santa Cruz durante medio año."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaría De Aragua",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.yourself/"
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
