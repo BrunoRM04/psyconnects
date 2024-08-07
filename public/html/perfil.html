@@ -7,6 +7,151 @@
     <link rel="stylesheet" href="../../public/css/styles.css">
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore, collection, doc, addDoc, query, orderBy, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
+            authDomain: "psyconnects-7be13.firebaseapp.com",
+            projectId: "psyconnects-7be13",
+            storageBucket: "psyconnects-7be13.appspot.com",
+            messagingSenderId: "299531221809",
+            appId: "1:299531221809:web:c6bba4831be2d70d910e10",
+            measurementId: "G-FKC5P4PE6V"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const psicologoId = parseInt(urlParams.get('id'), 10);
+
+            fetch('../../json/psicologos.json')
+                .then(response => response.json())
+                .then(data => {
+                    const psicologo = data.psicologos.find(psic => psic.id === psicologoId);
+
+                    if (psicologo) {
+                        document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
+                        document.getElementById('edad').textContent = `${calcularEdad(psicologo.fechaNacimiento)} Años`;
+                        document.getElementById('pais').textContent = psicologo.pais;
+                        document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
+                        document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
+
+                        const telefonoElement = document.getElementById('telefono');
+                        telefonoElement.textContent = psicologo.telefono;
+                        telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
+
+                        document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
+                        document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
+                        document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
+                        document.getElementById('descripcion').textContent = psicologo.descripcion;
+
+                        const experienciaList = document.getElementById('experiencia');
+                        psicologo.experiencia.forEach(exp => {
+                            const li = document.createElement('li');
+                            li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
+                            experienciaList.appendChild(li);
+                        });
+
+                        const certificacionesList = document.getElementById('certificaciones');
+                        psicologo.certificaciones.forEach(cert => {
+                            const li = document.createElement('li');
+                            li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
+                            certificacionesList.appendChild(li);
+                        });
+
+                        const socialMedia = ['linkedin', 'facebook', 'twitter', 'instagram', 'youtube', 'whatsapp', 'tiktok', 'snapchat'];
+                        socialMedia.forEach(media => {
+                            const element = document.getElementById(media);
+                            if (psicologo.redesSociales[media]) {
+                                element.href = psicologo.redesSociales[media];
+                            } else {
+                                element.style.display = 'none';
+                            }
+                        });
+
+                        const reservarCitaBtn = document.getElementById('reservar-cita');
+                        reservarCitaBtn.addEventListener('click', function() {
+                            const mensajeWhatsApp = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.%20Me%20gustaría%20reservar%20una%20cita.`;
+                            window.location.href = mensajeWhatsApp;
+                        });
+
+                        // Cargar comentarios guardados
+                        loadComments(psicologoId);
+                    } else {
+                        alert('Psicólogo no encontrado');
+                    }
+                });
+
+            function calcularEdad(fechaNacimiento) {
+                const hoy = new Date();
+                const fechaNac = new Date(fechaNacimiento);
+                let edad = hoy.getFullYear() - fechaNac.getFullYear();
+                const mes = hoy.getMonth() - fechaNac.getMonth();
+                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                    edad--;
+                }
+                return edad;
+            }
+
+            // Guardar comentario en Firestore
+            document.getElementById('commentForm').addEventListener('submit', async function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const country = document.getElementById('country').value;
+                const comment = document.getElementById('comment').value;
+                const newComment = { name, country, comment, timestamp: serverTimestamp() };
+                
+                try {
+                    await addDoc(collection(db, 'comments', `psicologo_${psicologoId}`, 'commentsList'), newComment);
+                    appendComment(newComment);
+                    document.getElementById('commentForm').reset();
+                } catch (error) {
+                    console.error("Error adding comment: ", error);
+                }
+            });
+
+            async function loadComments(psicologoId) {
+                const q = query(collection(db, 'comments', `psicologo_${psicologoId}`, 'commentsList'), orderBy('timestamp'));
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                    appendComment(doc.data());
+                });
+            }
+
+            function appendComment(comment) {
+                const commentList = document.getElementById('commentList');
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+
+                const commentHeader = document.createElement('div');
+                commentHeader.className = 'comment-item-header';
+
+                const commentName = document.createElement('strong');
+                commentName.textContent = `${comment.name}`;
+
+                const commentCountry = document.createElement('small');
+                commentCountry.innerHTML = `<i class="fas fa-globe"></i> ${comment.country}`;
+
+                const commentText = document.createElement('p');
+                commentText.textContent = comment.comment;
+
+                commentHeader.appendChild(commentName);
+                commentHeader.appendChild(commentCountry);
+                commentItem.appendChild(commentHeader);
+                commentItem.appendChild(commentText);
+
+                commentList.appendChild(commentItem);
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -73,6 +218,26 @@
             </div>
         </div>
 
+        <div class="comment-box-section">
+            <h2 class="comment-box-title">Valorar Psicólogo/a</h2>
+            <form id="commentForm" class="comment-form">
+                <div class="input-group comment-input-group">
+                    <i class="fas fa-user comment-icon"></i>
+                    <input type="text" id="name" class="comment-input" placeholder="Nombre y apellido" required>
+                </div>
+                <div class="input-group comment-input-group">
+                    <i class="fas fa-globe comment-icon"></i>
+                    <input type="text" id="country" class="comment-input" placeholder="País" required>
+                </div>
+                <div class="input-group comment-input-group">
+                    <i class="fas fa-comment comment-icon"></i>
+                    <textarea id="comment" class="comment-textarea" placeholder="Comentario" required></textarea>
+                </div>
+                <button type="submit" class="comment-submit">Publicar</button>
+            </form>
+            <div id="commentList" class="comment-list"></div>
+        </div>
+
     </main>
 
     <footer>
@@ -91,126 +256,6 @@
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
     </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const psicologoId = parseInt(urlParams.get('id'), 10);
-    
-            fetch('../../json/psicologos.json')
-            .then(response => response.json())
-            .then(data => {
-                const psicologo = data.psicologos.find(psic => psic.id === psicologoId);
-    
-                if (psicologo) {
-                    document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
-                    document.getElementById('edad').textContent = `${calcularEdad(psicologo.fechaNacimiento)} Años`;
-                    document.getElementById('pais').textContent = psicologo.pais;
-                    document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
-                    document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
-    
-                    const telefonoElement = document.getElementById('telefono');
-                    telefonoElement.textContent = psicologo.telefono;
-                    telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
-    
-                    document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
-                    document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
-                    document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
-                    document.getElementById('descripcion').textContent = psicologo.descripcion;
-    
-                    const experienciaList = document.getElementById('experiencia');
-                    psicologo.experiencia.forEach(exp => {
-                        const li = document.createElement('li');
-                        li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
-                        experienciaList.appendChild(li);
-                    });
-    
-                    const certificacionesList = document.getElementById('certificaciones');
-                    psicologo.certificaciones.forEach(cert => {
-                        const li = document.createElement('li');
-                        li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
-                        certificacionesList.appendChild(li);
-                    });
-    
-                    const linkedinElement = document.getElementById('linkedin');
-                    if (psicologo.redesSociales.linkedin) {
-                        linkedinElement.href = psicologo.redesSociales.linkedin;
-                    } else {
-                        linkedinElement.style.display = 'none';
-                    }
-    
-                    const facebookElement = document.getElementById('facebook');
-                    if (psicologo.redesSociales.facebook) {
-                        facebookElement.href = psicologo.redesSociales.facebook;
-                    } else {
-                        facebookElement.style.display = 'none';
-                    }
-    
-                    const twitterElement = document.getElementById('twitter');
-                    if (psicologo.redesSociales.twitter) {
-                        twitterElement.href = psicologo.redesSociales.twitter;
-                    } else {
-                        twitterElement.style.display = 'none';
-                    }
-    
-                    const instagramElement = document.getElementById('instagram');
-                    if (psicologo.redesSociales.instagram) {
-                        instagramElement.href = psicologo.redesSociales.instagram;
-                    } else {
-                        instagramElement.style.display = 'none';
-                    }
-    
-                    const youtubeElement = document.getElementById('youtube');
-                    if (psicologo.redesSociales.youtube) {
-                        youtubeElement.href = psicologo.redesSociales.youtube;
-                    } else {
-                        youtubeElement.style.display = 'none';
-                    }
-    
-                    const whatsappElement = document.getElementById('whatsapp');
-                    if (psicologo.redesSociales.whatsapp) {
-                        whatsappElement.href = `https://wa.me/${psicologo.redesSociales.whatsapp.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
-                    } else {
-                        whatsappElement.style.display = 'none';
-                    }
-    
-                    const tiktokElement = document.getElementById('tiktok');
-                    if (psicologo.redesSociales.tiktok) {
-                        tiktokElement.href = psicologo.redesSociales.tiktok;
-                    } else {
-                        tiktokElement.style.display = 'none';
-                    }
-    
-                    const snapchatElement = document.getElementById('snapchat');
-                    if (psicologo.redesSociales.snapchat) {
-                        snapchatElement.href = psicologo.redesSociales.snapchat;
-                    } else {
-                        snapchatElement.style.display = 'none';
-                    }
-    
-                    // Botón de reservar cita
-                    const reservarCitaBtn = document.getElementById('reservar-cita');
-                    reservarCitaBtn.addEventListener('click', function() {
-                        const mensajeWhatsApp = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.%20Me%20gustaría%20reservar%20una%20cita.`;
-                        window.location.href = mensajeWhatsApp;
-                    });
-                } else {
-                    alert('Psicólogo no encontrado');
-                }
-            });
-    
-            function calcularEdad(fechaNacimiento) {
-                const hoy = new Date();
-                const fechaNac = new Date(fechaNacimiento);
-                let edad = hoy.getFullYear() - fechaNac.getFullYear();
-                const mes = hoy.getMonth() - fechaNac.getMonth();
-                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
-                    edad--;
-                }
-                return edad;
-            }
-        });
-    </script>
 
 </body>
 </html>

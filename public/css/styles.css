@@ -888,6 +888,115 @@ nav {
 }
 /* PERFILES */
 
+/* COMENTARIOS */
+.comment-box-section {
+    max-width: 600px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.comment-box-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #1358B4;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.comment-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #1358B4;
+}
+
+.comment-input, .comment-textarea {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #1358B4;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.comment-input:focus, .comment-textarea:focus {
+    border-color: black;
+}
+
+.comment-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.comment-submit {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1358B4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-submit:hover {
+    background-color: white;
+    color: #1358B4;
+    border: solid 1px #1358B4;
+}
+
+.comment-list {
+    margin-top: 20px;
+}
+
+.comment-item {
+    border-bottom: 1px solid #1358B4;
+    padding: 15px 0;
+    font-size: 16px;
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-item strong {
+    font-size: 18px;
+    color: #1358B4;
+}
+
+.comment-item small {
+    font-size: 14px;
+    color: #1358B4;
+}
+
+.comment-item p {
+    margin: 15px 0 0;
+    color: black;
+    white-space: pre-wrap; 
+}
+
+.comment-item i {
+    color: #1358B4;
+}
+/* COMENTARIOS */
+
 /* INVESTIGACIONES */
 .investigaciones-container {
     display: flex;
