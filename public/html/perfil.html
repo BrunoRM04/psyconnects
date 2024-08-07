@@ -72,18 +72,6 @@
                 <ul id="certificaciones"></ul>
             </div>
         </div>
-        <div class="comentarios-container">
-            <div class="comentarios-inner">
-                <h3 class="comentarios-titulo">Valoración De Psicólogo/a</h3>
-                <form id="commentForm" class="comentarios-form">
-                    <input type="text" id="name" class="comentarios-input" placeholder="Nombre" required>
-                    <input type="text" id="country" class="comentarios-input" placeholder="País" required>
-                    <textarea id="comment" class="comentarios-textarea" placeholder="Comentario" required></textarea>
-                    <button type="submit" class="comentarios-boton">Valorar ></button>
-                </form>
-                <div id="commentsContainer" class="comentarios-lista"></div>
-            </div>
-        </div>
 
     </main>
 
@@ -223,74 +211,6 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const psicologoId = urlParams.get('id');
-        const commentForm = document.getElementById('commentForm');
-        const commentsContainer = document.getElementById('commentsContainer');
-        const secretCode = 'PSYCONNECTS DELETE';
-
-        loadComments(psicologoId);
-
-        commentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const country = document.getElementById('country').value;
-            const comment = document.getElementById('comment').value;
-
-            if (name && country && comment) {
-                addComment(psicologoId, name, country, comment);
-                commentForm.reset();
-            }
-        });
-
-        commentsContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('comentarios-eliminar-boton')) {
-                const commentElement = e.target.parentElement;
-                const code = prompt('Ingresa el código secreto para eliminar este comentario:');
-
-                if (code === secretCode) {
-                    commentElement.remove();
-                    saveComments(psicologoId);
-                } else {
-                    alert('Código incorrecto.');
-                }
-            }
-        });
-
-        function addComment(psicologoId, name, country, comment) {
-            const commentElement = document.createElement('div');
-            commentElement.classList.add('comentarios-item');
-            commentElement.innerHTML = `
-                <div class="comentarios-avatar">${name.charAt(0)}</div>
-                <div class="comentarios-contenido">
-                    <p class="comentarios-autor">${name}</p>
-                    <p class="comentarios-pais">${country}</p>
-                    <p class="comentarios-texto">${comment}</p>
-                </div>
-                <button class="comentarios-eliminar-boton">&times;</button>
-            `;
-            commentsContainer.appendChild(commentElement);
-            saveComments(psicologoId);
-        }
-
-        function saveComments(psicologoId) {
-            const comments = [];
-            document.querySelectorAll('.comentarios-item').forEach(commentElement => {
-                const name = commentElement.querySelector('.comentarios-autor').innerText;
-                const country = commentElement.querySelector('.comentarios-pais').innerText;
-                const comment = commentElement.querySelector('.comentarios-texto').innerText;
-                comments.push({ name, country, comment });
-            });
-            localStorage.setItem(`comments_${psicologoId}`, JSON.stringify(comments));
-        }
-
-        function loadComments(psicologoId) {
-            const comments = JSON.parse(localStorage.getItem(`comments_${psicologoId}`)) || [];
-            comments.forEach(({ name, country, comment }) => addComment(psicologoId, name, country, comment));
-        }
-    });
     </script>
 
 </body>
