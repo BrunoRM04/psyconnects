@@ -1754,6 +1754,513 @@
                 "instagram": "https://www.instagram.com/psic.yourself/"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 31,
+            "nombre": "Harry",
+            "apellido": "Lemus",
+            "fechaNacimiento": "2000-02-28",
+            "fotoPerfil": "./public/img/users/harry lemus.jpg",
+            "correoElectronico": "harrylemus.zr@gmail.com",
+            "telefono": "+50497770701",
+            "edad": 24,
+            "pais": "Honduras",
+            "ciudad": "Tegucigalpa",
+            "añosExperiencia": 2,
+            "descripcion": "Soy un Psicólogo Clínico Educativo con experiencia especializada en Terapia Cognitivo-Conductual (TCC) y Terapia Racional Emotiva Conductual (TREC). 💡 Mi misión es ayudar a las personas a desarrollar estrategias emocionales y cognitivas efectivas para superar desafíos y alcanzar su máximo potencial en la vida personal y profesional. ✅ Con experiencia clínica, he trabajado con individuos de diversas edades y trasfondos, brindando apoyo en áreas como ansiedad, depresión, manejo del estrés, habilidades sociales, entre otros. 🎓 Además de mi práctica clínica, soy un apasionado por la educación y el desarrollo humano. He colaborado con instituciones educativas y empresas, impartiendo talleres y capacitaciones sobre inteligencia emocional, manejo del conflicto y bienestar mental y académico. 🌟 Estoy comprometido con el aprendizaje continuo y la aplicación de enfoques basados en la evidencia para ofrecer un servicio de calidad y empático a mis clientes.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Coordinador de Practicantes",
+                    "institucion": "Centro de Asistencia Psicológica CAP'S",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Coordinación de practicantes en el Centro de Asistencia Psicológica CAP'S."
+                },
+                {
+                    "puesto": "Pasante de Psicología",
+                    "institucion": "Hospital María de Especialidades Pediátricas",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantías en el área de psicología del Hospital María de Especialidades Pediátricas."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/harry-zamyr-lemus-151737241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 32,
+            "nombre": "Virginia",
+            "apellido": "Barrientos",
+            "fechaNacimiento": "1982-06-10",
+            "fotoPerfil": "./public/img/users/virginia barrientos.png",
+            "correoElectronico": "virginiabarrientos45@gmail.com",
+            "telefono": "+54385154117196",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Santiago del Estero",
+            "añosExperiencia": 8,
+            "descripcion": "Psicologa Cognitiva Integrativa.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lic.virginiabarrientos/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 33,
+            "nombre": "Camila",
+            "apellido": "Albanés",
+            "fechaNacimiento": "1998-09-29",
+            "fotoPerfil": "./public/img/users/camila albanés.jpg",
+            "correoElectronico": "camialbanes@gmail.com",
+            "telefono": "+542634719057",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Mendoza",
+            "añosExperiencia": 1,
+            "descripcion": "Hola, soy licenciada en Psicología. Realizo terapia Cognitiva Conductual Integrativa, trabajo con adolescentes, adultos y adultos mayores. Me especializo en trastornos de ansiedad, TOC, fobias y TCA.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Residencia de Salud Mental",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en la Residencia de Salud Mental."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro de Día de Discapacidad",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en el Centro de Día de Discapacidad."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Médico Onix",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en el Centro Médico Onix."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención en rehabilitación y estimulación cognitiva."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                                "instagram": "https://www.instagram.com/psico_camialbanes/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 34,
+            "nombre": "Lismarys",
+            "apellido": "Stabilito",
+            "fechaNacimiento": "1992-10-13",
+            "fotoPerfil": "./public/img/users/lismarys stabilito.jpeg",
+            "correoElectronico": "stabilitolismarysj@gmail.com",
+            "telefono": "+5804148675205",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Miranda",
+            "añosExperiencia": 0,
+            "descripcion": "Estudiante de psicología comprometida en trabajar por el bienestar de las personas.",
+            "precioServicioHora": 0,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            "instagram": "https://www.instagram.com/lismajsm/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 35,
+            "nombre": "Isabel Cristina",
+            "apellido": "Restrepo Ramírez",
+            "fechaNacimiento": "2001-04-07",
+            "fotoPerfil": "./public/img/users/isabel cristina restrepo ramírez.jpg",
+            "correoElectronico": "isabel.cristina0407@gmail.com",
+            "telefono": "+573053378855",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Medellín",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga egresada del Tecnológico de Antioquia con más de un año de experiencia en atención individual a adolescentes y adultos frente a temáticas como ansiedad, depresión, duelo y separación.",
+            "precioServicioHora": 22,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Tu Psicóloga en Casa",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica a domicilio."
+                },
+                {
+                    "puesto": "Psicóloga Unidad de Duelo",
+                    "institucion": "TdeA",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en la unidad de duelo de TdeA."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            "instagram": "https://www.instagram.com/ps_isabelrestrepo/",
+            "linkedin": "https://www.linkedin.com/in/isabel-cristina-restrepo-ram%C3%ADrez-85ab27226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 36,
+            "nombre": "Maria Camila",
+            "apellido": "Herrón Arango",
+            "fechaNacimiento": "1995-02-27",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "psicologamariacamilaherron@gmail.com",
+            "telefono": "+573505730896",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Medellín",
+            "añosExperiencia": 5,
+            "descripcion": "Hola mi nombre es Maria Camila Herrón soy Psicóloga Especialista en Psicologia Clínica y Salud Mental formada en los fenómenos del aprendizaje y técnicas para mejorar la enseñanza humana y en la investigación, evaluación, diagnóstico, tratamiento y prevención de los factores que afectan la salud mental y la conducta adaptativa. Capacitada y con la experiencia laboral necesaria para desarrollar competencias para el análisis, evaluación e intervención de problemáticas psicológicas en ámbitos clínicos y educativos, integrando métodos y herramientas investigativas acordes con los contextos socioculturales y en diálogo con las ciencias sociales, humanas y de la salud.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Pontifica Bolivariana",
+                    "año": "2019"
+                }
+            ],
+            "redesSociales": {
+            "instagram": "https://www.instagram.com/psicodesarrollo_/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 37,
+            "nombre": "Nohelia",
+            "apellido": "Peñaloza",
+            "fechaNacimiento": "1996-02-16",
+            "fotoPerfil": "./public/img/users/nohelia peñaloza.jpeg",
+            "correoElectronico": "noheliaalejandrap@gmail.com",
+            "telefono": "+584129925279",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 3,
+            "descripcion": "Psicóloga Clínica FVP. 19.041, egresada de la reconocida Universidad Central de Venezuela, con pre-especialización en terapia de la conducta y cognitivo-conductual. Ofrezco servicios psicológicos a adolescentes y adultos, abordando una amplia gama de dificultades emocionales y conductuales, tales como depresión, ansiedad, trastornos del espectro autista, trastornos alimenticios, del sueño y dificultades en habilidades sociales. Asimismo, cuento con experiencia en el acompañamiento terapéutico en procesos de duelo y otras situaciones de crisis.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Servicio de Psicología Clínica de la UCV",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Atención de casos clínicos de niños, adolescentes y adultos."
+                },
+                {
+                    "puesto": "Profesora Universitaria",
+                    "institucion": "Escuela de Psicología, UCV",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Profesora de los últimos semestres (8vo, 9no y 10mo) para la materia de Rehabilitación y Tratamientos Psicológicos."
+                },
+                {
+                    "puesto": "Asesora Vocacional",
+                    "institucion": "Programa Samuel Robinson, Universidad Central de Venezuela",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Asesora vocacional para el ingreso de estudiantes."
+                },
+                {
+                    "puesto": "Coordinadora y Especialista de Reclutamiento y Selección",
+                    "institucion": "JSL Crustissimo (Panificadora) y Vocem Teleservicios",
+                    "añoInicio": 2020,
+                    "añoFin": 2024,
+                    "descripcion": "Coordinadora y especialista en reclutamiento y selección de personal en reconocidas empresas venezolanas."
+                },
+                {
+                    "puesto": "Pasante",
+                    "institucion": "Cruz Roja de Venezuela",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías dictando talleres y acompañando a los socorristas en formación."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            "instagram": "https://www.instagram.com/Psico.Operante/",
+            "linkedin": "https://www.linkedin.com/in/nohelia-pe%C3%B1aloza-72a0821b4/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 38,
+            "nombre": "Yaribeth",
+            "apellido": "Páez",
+            "fechaNacimiento": "2001-07-11",
+            "fotoPerfil": "./public/img/users/yaribeth paez.jpg",
+            "correoElectronico": "yaribethpaezpsicologa11@gmail.com",
+            "telefono": "+573222014310",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 1,
+            "descripcion": "Licenciada en psicología Yaribeth Páez, FPV 18.223 atención online y presencial. Tu salud mental es prioridad, siempre al servicio de quién lo necesite en cualquier lugar y circunstancia",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Practicante Profesional",
+                    "institucion": "Hospital Padre Justo Pastor de Arias de Rubio",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Prácticas profesionales desde septiembre hasta diciembre de 2022."
+                },
+                {
+                    "puesto": "Tallerista",
+                    "institucion": "Fundación Frontera Viva",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Dictado de talleres de formación desde febrero hasta junio de 2023."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica Especialidades Médicas Center Rubio",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención psicológica en la Clínica Especialidades Médicas Center Rubio desde septiembre de 2023 hasta julio de 2024."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Universidad Pedagógica Experimental Libertador",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Actualmente laborando como psicóloga."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            "facebook": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 39,
+            "nombre": "Maite",
+            "apellido": "Calles",
+            "fechaNacimiento": "1975-03-02",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "maitecalles@gmail.com",
+            "telefono": "+5804143774136",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 24,
+            "descripcion": "Psicóloga egresada de la UCV con gran experiencia, mística, compromiso y calidez en la atención psicológica de adolescentes y adultos.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicomaiale/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 40,
+            "nombre": "Nicole",
+            "apellido": "Lemaître",
+            "fechaNacimiento": "1998-03-05",
+            "fotoPerfil": "./public/img/users/Nicole Lemaître Ávila.jpg",
+            "correoElectronico": "nicole.lemavi98@gmail.com",
+            "telefono": "+59167649003",
+            "edad": 24,
+            "pais": "Bolivia",
+            "ciudad": "Sucre",
+            "añosExperiencia": 1,
+            "descripcion": "Lic. En Psicología, titulada en la Universidad Privada del Valle.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
