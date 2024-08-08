@@ -2009,7 +2009,7 @@
             "nombre": "Maria Camila",
             "apellido": "Herrón Arango",
             "fechaNacimiento": "1995-02-27",
-            "fotoPerfil": "./public/img/users/default.jpg",
+            "fotoPerfil": "./public/img/users/maria herron.jpg",
             "correoElectronico": "psicologamariacamilaherron@gmail.com",
             "telefono": "+573505730896",
             "edad": 24,
@@ -2033,12 +2033,31 @@
                 }
             ],
             "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Medismart",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en Medismart."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "NeuroTherapy",
+                    "añoInicio": 2021,
+                    "añoFin": 2024,
+                    "descripcion": "Brindé atención personalizada a pacientes en consulta, ofreciendo asesoría psicológica adaptada a las necesidades individuales de cada persona. Mi enfoque se centró en proporcionar un tratamiento terapéutico particular, acompañando a mis pacientes en sus procesos psicológicos para promover su bienestar emocional y mental. Consulté a pacientes de diversas edades, atendiendo una amplia gama de necesidades y situaciones, lo que me permitió desarrollar una visión integral y comprensiva en mi práctica clínica."
+                }
             ],
             "certificaciones": [
                 {
                     "nombre": "Licenciada en Psicología",
                     "institucion": "Universidad Pontifica Bolivariana",
                     "año": "2019"
+                },
+                {
+                    "nombre": "Especialista En Psicología Clínica y Salud Mental",
+                    "institucion": "Universidad Pontifica Bolivariana",
+                    "año": "2022"
                 }
             ],
             "redesSociales": {
@@ -2259,6 +2278,862 @@
             "certificaciones": [
             ],
             "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 41,
+            "nombre": "Stephane",
+            "apellido": "Piedrahita Reyes ",
+            "fechaNacimiento": "1995-04-26",
+            "fotoPerfil": "./public/img/users/stephane piedrahita reyes.jpg",
+            "correoElectronico": "stephaneprpsico@gmail.com",
+            "telefono": "+573214880551",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Ibagué",
+            "añosExperiencia": 3,
+            "descripcion": "Psicóloga diplomada en pruebas psicológicas clínicas, con más de 3 años de experiencia en valoración, aplicación de pruebas, intervención y tratamiento desde el enfoque cognitivo-conductual. Comprometida con el bienestar integral del ser humano, con una amplia experiencia en entornos Individuales y comunitarios. Mi carrera se ha centrado en brindar apoyo psicológico y herramientas para fortalecer la salud mental y emocional de las personas en todas las etapas de la vida.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 42,
+            "nombre": "Lesley",
+            "apellido": "Landaverde",
+            "fechaNacimiento": "1994-02-03",
+            "fotoPerfil": "./public/img/users/lesley landaverde.jpg",
+            "correoElectronico": "lesley_elisa@hotmail.es",
+            "telefono": "+50372427363",
+            "edad": 24,
+            "pais": "El Salvador",
+            "ciudad": "San Salvador",
+            "añosExperiencia": 2,
+            "descripcion": "Conocimiento y experiencia en la realización de psicoterapia y evaluaciones psicológicas. Además de poseer habilidad en la comunicación",
+            "precioServicioHora": 5,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Coordinadora Administrativa",
+                    "institucion": "Grupo H & H SA de CV",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Responsable de envíos y coordinación de entrega de órdenes dentales. Control de ventas, contacto de proveedores y coordinación de envíos con mensajería local y departamental. Facturación y cobros. Control de horarios."
+                },
+                {
+                    "puesto": "Pasante Laboral",
+                    "institucion": "Fundación la Niñez Primero, Ludoteca NAVES Hospitalaria Hospital de Niños Benjamín Bloom",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Coordinación de terapia según la especialidad en piso asignada y ubicación de alumnos en servicio social o voluntariado. Apoyo con trabajo de guardado y desinfección de material lúdico utilizado en piso. Realización de técnicas para el manejo de estrés en cuidadores de las diferentes especialidades del hospital. Realización de manualidades y relleno de materiales a utilizar. Descarga de material fotográfico y toma de asistencia de pacientes."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Francisco Gavidia",
+                    "año": "2023"
+                }
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 43,
+            "nombre": "Angeles Jacqueline",
+            "apellido": "Santucho",
+            "fechaNacimiento": "1998-03-31",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "angelesjsantucho@gmail.com",
+            "telefono": "+543513077090",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 1,
+            "descripcion": "Mi nombre es Angeles Jacqueline, tengo 26 años y soy Licenciada y profesora en psicología, recibida en la Universidad Nacional de Córdoba. Actualmente me encuentro trabajando en la clínica, mediante la terapia cognitivo conductual. Continuamente me capacito en la misma, y en terapias basadas en la evidencia científica, para poder presentar a mis consultantes las mejores herramientas para llevar a cabo su proceso terapéutico conmigo de la mejor manera posible.",
+            "precioServicioHora": 14,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en práctica clínica."
+                },
+                {
+                    "puesto": "Adscripción en Cátedra de Psicoterapia",
+                    "institucion": "Facultad de Psicología, UNC",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Adscripción en la cátedra de psicoterapia en la Facultad de Psicología, UNC."
+                },
+                {
+                    "puesto": "Ayudante en Cátedra de Teoría y Técnica de Grupos",
+                    "institucion": "Facultad de Psicología, UNC",
+                    "añoInicio": 2021,
+                    "añoFin": 2023,
+                    "descripcion": "Ayudantía en la cátedra de teoría y técnica de grupos en la Facultad de Psicología, UNC."
+                },
+                {
+                    "puesto": "Miembro de la Red Social y Solidaria de Atención Psicológica",
+                    "institucion": "Facultad de Psicología, UNC",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Participación en la Red Social y Solidaria de Atención Psicológica de la Facultad de Psicología, UNC."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad De Córdoba",
+                    "año": "2022"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Psi.angelesjsantucho/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 44,
+            "nombre": "Santiago",
+            "apellido": "Jorge",
+            "fechaNacimiento": "1996-09-03",
+            "fotoPerfil": "./public/img/users/santiago jorge.jpeg",
+            "correoElectronico": "lic.santiagojorge@gmail.com",
+            "telefono": "+598099163328",
+            "edad": 24,
+            "pais": "Uruguay",
+            "ciudad": "Maldonado",
+            "añosExperiencia": 4,
+            "descripcion": "Hola! Soy el Lic. Santaigo Jorge. Como psicólogo clínico con un enfoque en Terapia Cognitivo Conductual (TCC), estoy comprometido en ayudarte a alcanzar un estado de bienestar integral y reducir el sufrimiento emocional. La TCC es una metodología efectiva que se centra en identificar y cambiar patrones de pensamiento y comportamiento disfuncionales, promoviendo cambios positivos en tu vida diaria. Mi objetivo es brindarte un espacio seguro y de apoyo, donde juntos podamos trabajar para superar desafíos, desarrollar habilidades de afrontamiento y mejorar tu calidad de vida. Con un enfoque práctico y orientado a resultados, la TCC te ofrece herramientas concretas para enfrentar problemas, mejorar tu bienestar y lograr tus metas personales. Estoy aquí para acompañarte en cada paso del camino hacia una vida más equilibrada y satisfactoria. Te mando un fuerte abrazo!",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Clínico y Deportivo",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención psicológica clínica y deportiva."
+                },
+                {
+                    "puesto": "Productor de Eventos",
+                    "institucion": "",
+                    "añoInicio": 2016,
+                    "añoFin": 2020,
+                    "descripcion": "Producción y coordinación de eventos."
+                },
+                {
+                    "puesto": "Profesor Adscripto Universitario",
+                    "institucion": "",
+                    "añoInicio": 2021,
+                    "añoFin": 2023,
+                    "descripcion": "Enseñanza y desarrollo de contenidos académicos a nivel universitario."
+                },
+                {
+                    "puesto": "Profesor de Deporte (Rugby)",
+                    "institucion": "",
+                    "añoInicio": 2015,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Entrenamiento y formación de jugadores de rugby."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad de la República",
+                    "año": "2023"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psico.santiagojorge/",
+                "facebook": "https://www.facebook.com/profile.php?id=61561275987135",
+                "tiktok": "https://www.tiktok.com/@lic.santiagojorge?_t=8og9gGhpnHC&_r=1"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 45,
+            "nombre": "María Pía",
+            "apellido": "Stoll Márquez",
+            "fechaNacimiento": "1997-08-26",
+            "fotoPerfil": "./public/img/users/María Pía Stoll Márquez.jpg",
+            "correoElectronico": "mp.stoll.marquez@gmail.com",
+            "telefono": "+543513026424",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga con una excelente capacidad de organización, amplias habilidades de comunicación, asertividad y empatía. Comprometida a trabajar en la salud mental. Me caracterizó por ser una persona trabajadora y comprometida. En busca de una nueva oportunidad laboral con la que desarrollar mi carrera en un centro profesional.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Practicante Supervisado",
+                    "institucion": "Hospital General",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Prácticas supervisadas en un hospital general desde abril hasta diciembre de 2023."
+                },
+                {
+                    "puesto": "Practicante de Orientación Vocacional",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Prácticas de orientación vocacional durante el año 2022."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lic.piastoll/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 46,
+            "nombre": "Solmar Elizabeth",
+            "apellido": "Delgado Parra",
+            "fechaNacimiento": "1997-01-11",
+            "fotoPerfil": "./public/img/users/solmar delgado.jpg",
+            "correoElectronico": "solmardelgado@gmail.com",
+            "telefono": "+584129567696",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 5,
+            "descripcion": "Psicologo con experiencia en Neurodiversidad, NNA y VBG desde un enfoque Psicoeducativo Trabajo con áreas Vulnerabilidad  Formación para la atención en Autismo",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Tutora Psicoeducativa",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": 2024,
+                    "descripcion": "Prácticas supervisadas en un hospital general desde abril hasta diciembre de 2023."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": "2019" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Sold_luna1/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 47,
+            "nombre": "Maira",
+            "apellido": "Díaz",
+            "fechaNacimiento": "1987-12-15",
+            "fotoPerfil": "./public/img/users/maira diaz.jpg",
+            "correoElectronico": "dimaira87@gmail.com",
+            "telefono": "+542215361679",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "San Martin De Los Andes",
+            "añosExperiencia": 1,
+            "descripcion": "Psicologo con experiencia en Neurodiversidad, NNA y VBG desde un enfoque Psicoeducativo Trabajo con áreas Vulnerabilidad  Formación para la atención en Autismo",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Psicoanalítica",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Orientadora Educacional",
+                    "institucion": "Jardín Maternal Espacio Meraki",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Orientación educacional en jardín maternal Espacio Meraki desde enero 2024 hasta la actualidad."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Univeridad Nacional De La Plata",
+                    "año": "2024" 
+                }
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 48,
+            "nombre": "Adrielis Ángel",
+            "apellido": "Soto",
+            "fechaNacimiento": "2001-05-13",
+            "fotoPerfil": "./public/img/users/adrielis soto.png",
+            "correoElectronico": "psic.adrisoto@gmail.com",
+            "telefono": "+584121005646",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga orientada en el área clínica infantojuvenil, de adultos jóvenes y mayores, con formación en neuropsicología y un enfoque cognitivo-conductual. Soy una profesional autodidacta y creativa, en busca de promover el bienestar emocional y el desarrollo personal y profesional en diversos contextos.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "Fundación Alzheimer Zulia",
+                    "ubicacion": "Maracaibo",
+                    "añoInicio": 2023,
+                    "añoFin": "Presente",
+                    "descripcion": "Proporciono psicoterapia individualizada para pacientes de diversas edades. Contribuyo en la participación activa de los pacientes en los talleres de estimulación cognitiva, promoviendo su bienestar emocional y social, utilizando técnicas de animación y fortaleciendo la autoestima de los participantes."
+                },
+                {
+                    "puesto": "Psicólogo Educativo",
+                    "institucion": "U.E. Rubén Suárez",
+                    "ubicacion": "Maracaibo",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente",
+                    "descripcion": "Observación y evaluación de dinámicas familiares, entrevistas a padres y docentes, aplicación de pruebas psicológicas, selección de personal y atención individualizada a niños con necesidades especiales."
+                },
+                {
+                    "puesto": "Psicóloga Clínico Infantil (Pasante)",
+                    "institucion": "Centro de Atención Neuro-Conductual del Zulia (NeuroCognitive)",
+                    "ubicacion": "Maracaibo",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Realicé evaluaciones a niños con trastornos del espectro autista y síndrome de Down, proporcionando diagnósticos precisos y planes de intervención individualizados. Expuse talleres de capacitación para cuidadores, enfocados en técnicas de manejo conductual y autocuidado."
+                },
+                {
+                    "puesto": "Psicólogo Organizacional (Pasante)",
+                    "institucion": "Farmacias Unidas, S.A (FUSA) - Grupo Cobeca",
+                    "ubicacion": "Maracaibo",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Evalué y seleccioné empleados mediante análisis de CV, entrevistas y pruebas psicológicas, gestionando su contratación y procesos administrativos. Además de realizar DNA y capacitaciones/talleres a los empleados."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/PsicCreativa/",
+                "linkedin": " https://www.linkedin.com/in/adrielis-soto-03a631300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 49,
+            "nombre": "Endrina",
+            "apellido": "Rojo Puche",
+            "fechaNacimiento": "",
+            "fotoPerfil": "./public/img/users/endrina rojo puche.jpg",
+            "correoElectronico": "psicopalabra2024@gmail.com",
+            "telefono": "+5804149693330",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 3,
+            "descripcion": "Atención psicológica via remota📱 Maestrante de Psicología Clínica de la Universidad Rafael Urdaneta Decente universitaria con más de 2 años de experiencia. La terapia es el espacio que se regala uno mismo✨",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Fundarenace",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Atención psicológica en Fundarenace."
+                },
+                {
+                    "puesto": "Directora de Gestión Humana y Planificación Estratégica",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Dirección de gestión humana y planificación estratégica."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Fundación CAIRUS",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Fundación CAIRUS."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Psico_palabra/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 50,
+            "nombre": "Gabriel",
+            "apellido": "Fajardo Rivera",
+            "fechaNacimiento": "1994-10-09",
+            "fotoPerfil": "./public/img/users/gabriel fajardo.jpg",
+            "correoElectronico": "gfajardoriv@gmail.com",
+            "telefono": "+573186864512",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Bogotá",
+            "añosExperiencia": 3,
+            "descripcion": "Terapeuta Gestalt",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia Gestalt",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Terapeuta Gestalt Independiente",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Presente",
+                    "descripcion": "Atención terapéutica independiente basada en la terapia Gestalt."
+                },
+                {
+                    "puesto": "Tallerista Consultor",
+                    "institucion": "Sanum Bienestar Emocional",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente",
+                    "descripcion": "Facilitación de talleres enfocados en el bienestar emocional."
+                },
+                {
+                    "puesto": "Counselor",
+                    "institucion": "Tools Afterschool",
+                    "añoInicio": 2023,
+                    "añoFin": "Presente",
+                    "descripcion": "Asesoramiento y apoyo emocional en Tools Afterschool."
+                },
+                {
+                    "puesto": "Consultor en Educación Experiencial",
+                    "institucion": "Andares Colombia",
+                    "añoInicio": 2022,
+                    "añoFin": "Presente",
+                    "descripcion": "Consultoría en metodologías de educación experiencial."
+                },
+                {
+                    "puesto": "Mentor",
+                    "institucion": "Kalapa Comunidad de Aprendizaje",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Mentoría en Kalapa Comunidad de Aprendizaje."
+                },
+                {
+                    "puesto": "Docente",
+                    "institucion": "Colegio Bauhaus",
+                    "añoInicio": 2019,
+                    "añoFin": 2021,
+                    "descripcion": "Docencia en Colegio Bauhaus."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Nacional De Colombia",
+                    "año": "2019" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/gabrielfajardoterapeuta/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 51,
+            "nombre": "Tomás",
+            "apellido": "Nieto",
+            "fechaNacimiento": "1995-09-04",
+            "fotoPerfil": "./public/img/users/tomas nieto.jpeg",
+            "correoElectronico": "lic.tomasnieto@gmail.com",
+            "telefono": "+5492932534421",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Bahía Blanca",
+            "añosExperiencia": 2,
+            "descripcion": "Soy lic. en psicología graduado de la USAL. M.P. 2185. Me dedico al estudio y práctica del psicoanálisis lacaniano, atendiendo de forma presencial en mí consultorio particular en el centro de Bahía Blanca y también de forma virtual a personas de todo el país y de diversos países. Me dedico a la atención de adolescentes, jóvenes y adultos sin distinción del motivo de consulta que traigan. Aquí le daremos lugar a todo tipo de malestar que se esté transitando. Me considero un profesional dedicado, muy responsable y comprometido con un ejercicio ético de la profesión. He formado parte de grupos de supervisión clínica y de grupos de estudio.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "MotusDAO",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Grupo de trabajo y atención psicológica en consultorio virtual en MotusDAO, comunidad de psicoterapia aplicando tecnologías de punta a la atención de salud mental."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Consultorio Particular",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en consultorio particular de forma presencial y virtual."
+                },
+                {
+                    "puesto": "Acompañamiento Terapéutico",
+                    "institucion": "",
+                    "añoInicio": 2021,
+                    "añoFin": 2023,
+                    "descripcion": "Acompañamiento terapéutico a joven de 19 años con diagnóstico de Epilepsia Refractaria, síndrome Lennox-Gastaut."
+                },
+                {
+                    "puesto": "Acompañamiento Terapéutico",
+                    "institucion": "",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Acompañamiento terapéutico a niño de 10 años con diagnóstico de Trastorno Severo de la Conducta."
+                },
+                {
+                    "puesto": "Acompañamiento Terapéutico",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": 2020,
+                    "descripcion": "Acompañamiento Terapéutico a niño de 11 años con diagnóstico de Trastorno Específico del Lenguaje."
+                },
+                {
+                    "puesto": "Practicante Profesional Tutoriado en Clínica",
+                    "institucion": "Servicio de Salud Mental del HIG “DR. José Penna”",
+                    "añoInicio": 2018,
+                    "añoFin": 2018,
+                    "descripcion": "Prácticas Profesionales Tutoriadas en Clínica. Dispositivos: Interconsulta de Salud mental; Internación de Salud Mental; Hospital de día; P.R.E.A."
+                },
+                {
+                    "puesto": "Practicante Profesional Tutoriado en Intervenciones Empresariales",
+                    "institucion": "COUL Argentina",
+                    "añoInicio": 2018,
+                    "añoFin": 2018,
+                    "descripcion": "Prácticas Profesionales Tutoriadas en Intervenciones Empresariales."
+                },
+                {
+                    "puesto": "Practicante Profesional Tutoriado en Intervenciones Jurídicas",
+                    "institucion": "Asesoría Pericial",
+                    "añoInicio": 2018,
+                    "añoFin": 2018,
+                    "descripcion": "Prácticas Profesionales Tutoriadas en Intervenciones Jurídicas."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Del Salvador",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "www.linkedin.com/in/tomás-nieto-58b8b8272"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 52,
+            "nombre": "Stephanie",
+            "apellido": "Parra Arrubla",
+            "fechaNacimiento": "1993-02-07",
+            "fotoPerfil": "./public/img/users/STEPHANIE PARRA ARRUBLA.jpg",
+            "correoElectronico": "stephanie.parraar@amigo.edu.co",
+            "telefono": "+573213507812",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Manizales",
+            "añosExperiencia": 1,
+            "descripcion": "Cuento con un perfil basado en la filosofía amigoniana, la cual me ha permitido desarrollar y fortalecer el pensamiento crítico y reflexivo, la creatividad, la iniciativa, el compromiso, el trabajo interdisciplinario, entre otros. Con el fin de mediar en soluciones más acordes ante las necesidades identificadas en el entorno en el cual me desempeñe, desde un enfoque psicosocial direccionado al bienestar, cambio y compromiso social, a partir del desarrollo de habilidades y creencias potencia.",
+            "precioServicioHora": 22,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia de Grupo",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Católica Luis Amigo",
+                    "año": "2024" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/stephanieparraa/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 53,
+            "nombre": "Josseline",
+            "apellido": "León",
+            "fechaNacimiento": "1999-04-29",
+            "fotoPerfil": "./public/img/users/Josseline León Sánchez.jpeg",
+            "correoElectronico": "joso.2904@gmail.com",
+            "telefono": "+593995585751",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Cuenca",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga clínica, cursando maestría en Salud Mental",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Grupo",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "ONG Aldeas Infantiles SOS Ecuador",
+                    "añoInicio": 2021,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en ONG Aldeas Infantiles SOS Ecuador."
+                },
+                {
+                    "puesto": "Promotora Social",
+                    "institucion": "ONG HIAS Ecuador",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Promoción social en ONG HIAS Ecuador."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 54,
+            "nombre": "Sebastian",
+            "apellido": "Barba",
+            "fechaNacimiento": "2001-08-03",
+            "fotoPerfil": "./public/img/users/sebastian barba.jpg",
+            "correoElectronico": "joso.2904@gmail.com",
+            "telefono": "+5930959405783",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 1,
+            "descripcion": "Como licenciado en Psicología, me caracterizo por mi alto compromiso en la dinámica del trabajo en grupo e individual, He demostrado habilidad en la planificación y ejecución de talleres en distintas ramas de Psicología. Estoy enfocado en la colaboración continua que favorezca mi crecimiento tanto a nivel personal , como profesional.",
+            "precioServicioHora": 18,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Grupo",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Prácticas Preprofesionales",
+                    "institucion": "PsycoSensory",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/juan-sebastian-barba-tamayo-0477b0311"
             },
             "verPerfil": "./public/html/perfil.html"
         }
