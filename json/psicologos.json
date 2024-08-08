@@ -3136,6 +3136,368 @@
                 "linkedin": "https://www.linkedin.com/in/juan-sebastian-barba-tamayo-0477b0311"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 55,
+            "nombre": "Alondra",
+            "apellido": "Agelvis",
+            "fechaNacimiento": "1997-01-17",
+            "fotoPerfil": "./public/img/users/alomental.jpeg",
+            "correoElectronico": "soyalomental@gmail.com",
+            "telefono": "+584127170024",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 4,
+            "descripcion": "Hooola! Mi nombre es Alondra Agelvis, como bien sabes, Soy Psicóloga con 4 años de experiencia, acompañando a múltiples personas alrededor del mundo en sus procesos personales, relacionados con duelo, autoestima, ansiedad, depresión y diversos factores que pueden generar malestar. Trabajo desde un enfoque integrativo, entre la terapia cognitivo conductual con una postura humanista. Mi objetivo principal es brindarte comodidad, que la terapia represente un lugar seguro para ti, donde tú eres la prioridad y todo lo que sientas es bienvenido. Me comprometo contigo a avanzar en los objetivos que nos iremos planteando a medida de iniciar nuestro proceso. Te mando un fuerte abrazo! Y espero verte pronto, desde cualquier parte del mundo❤️‍🩹🫂🌎",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga y Pedagoga",
+                    "institucion": "U.E. Clorinda Azcunes",
+                    "añoInicio": 2018,
+                    "añoFin": 2019,
+                    "descripcion": "Asistencia psicológica y pedagógica."
+                },
+                {
+                    "puesto": "Psicóloga Adjunta y Coordinadora de la Unidad de Psicotrauma",
+                    "institucion": "Sistema Integrado de Protección Civil y Bomberos del Estado Carabobo",
+                    "añoInicio": 2020,
+                    "añoFin": 2023,
+                    "descripcion": "Coordinación de la Unidad de Psicotrauma y asistencia psicológica."
+                },
+                {
+                    "puesto": "Psicóloga en SMAPS (Salud Mental y Apoyo Psicosocial)",
+                    "institucion": "Cruz Roja Venezolana Seccional Valencia",
+                    "añoInicio": 2020,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en el programa de Salud Mental y Apoyo Psicosocial (SMAPS)."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Policlínico La Viña",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Consulta psicológica en el Centro Policlínico La Viña."
+                },
+                {
+                    "puesto": "Acompañamiento Psicológico Online",
+                    "institucion": "Mente Sana",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Acompañamiento psicológico en modalidad online."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Arturo Michelena",
+                    "año": "2019" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/alomental/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 56,
+            "nombre": "Sol",
+            "apellido": "Avendaño",
+            "fechaNacimiento": "1998-02-01",
+            "fotoPerfil": "./public/img/users/sol avendaño.jpg",
+            "correoElectronico": "solaven.998@gmail.com",
+            "telefono": "+541131038071",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Buenos Aires",
+            "añosExperiencia": 1,
+            "descripcion": "¡Hola! Mi nombre es Sol. Soy Terapeuta Cognitivo Conductual y, además, me estoy especializando en Terapia de Aceptación y Compromiso. Estoy para acompañarte en tu proceso, con calidez, empatía y utilizando estrategias adaptadas a tu motivo de consulta para que puedas ver resultados y te sentirte mejor. Anímate a consultarme!",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Coordinadora de Acompañamientos Terapéuticos",
+                    "añoInicio": 2023,
+                    "añoFin": "Presente",
+                    "descripcion": "Coordinación de acompañamientos terapéuticos."
+                },
+                {
+                    "puesto": "Integradora Escolar",
+                    "añoInicio": 2023,
+                    "añoFin": "Presente",
+                    "descripcion": "Integración escolar y apoyo a estudiantes."
+                },
+                {
+                    "puesto": "Acompañante Terapéutica",
+                    "añoInicio": 2020,
+                    "añoFin": "Presente",
+                    "descripcion": "Acompañamiento terapéutico."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad de Buenos Aires",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/desmipsicando/",
+                "linkedin": " www.linkedin.com/in/sol-avendaño-500b90220"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 57,
+            "nombre": "Johanna",
+            "apellido": "Gómez Durán",
+            "fechaNacimiento": "1997-05-21",
+            "fotoPerfil": "./public/img/users/johanna gómez durán.jpg",
+            "correoElectronico": "psicojohannagomezduran@gmail.com",
+            "telefono": "+584242355189",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 4,
+            "descripcion": "Psicólogo clínico y psicólogo deportivo. Espacio seguro para personas de la comunidad LGBT+",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Deportivo",
+                    "institucion": "Inside Beach Volley",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica deportiva en Inside Beach Volley."
+                },
+                {
+                    "puesto": "Psicólogo Deportivo Independiente",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica deportiva de forma independiente."
+                },
+                {
+                    "puesto": "Psicólogo Clínico Independiente",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica clínica de forma independiente."
+                },
+                {
+                    "puesto": "Psicólogo Deportivo",
+                    "institucion": "Selección de Carabobo Voleibol de Playa",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica deportiva para la selección de Carabobo de voleibol de playa."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Juan XXIII",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención psicológica en Juan XXIII."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Fundación Daka/Daka FC",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en la Fundación Daka/Daka FC."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Cruz Roja Valencia",
+                    "añoInicio": 2020,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en la Cruz Roja Valencia."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Unidad de Psico Trauma/Bomberos Carabobo",
+                    "añoInicio": 2020,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en la Unidad de Psico Trauma de los Bomberos Carabobo."
+                },
+                {
+                    "puesto": "Pasante Universitario",
+                    "institucion": "Juan XXIII",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Pasantías universitarias en Juan XXIII."
+                },
+                {
+                    "puesto": "Servicio Comunitario",
+                    "institucion": "Casa Hogar Don Bosco",
+                    "añoInicio": 2018,
+                    "añoFin": 2018,
+                    "descripcion": "Servicio comunitario en Casa Hogar Don Bosco."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicojohannagomez/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 58,
+            "nombre": "Damelys",
+            "apellido": "Meléndez",
+            "fechaNacimiento": "1979-04-19",
+            "fotoPerfil": "./public/img/users/damelys melendez.jpg",
+            "correoElectronico": "psic.melendezdamelys@gmail.com",
+            "telefono": "+5804124916002",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 4,
+            "descripcion": "Estoy aquí para ayudarte en tu proceso de sanación.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "",
+                "facebook": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 59,
+            "nombre": "Daniela",
+            "apellido": "Ruiz Mazo",
+            "fechaNacimiento": "1996-11-18",
+            "fotoPerfil": "./public/img/users/psicondenados psicología.png",
+            "correoElectronico": "psicondenadospsicologia@gmail.com",
+            "telefono": "+573024193963",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Envigado",
+            "añosExperiencia": 1,
+            "descripcion": "Soy psicóloga con un año y medio de experiencia en diagnóstico, intervención y terapia tanto individual como grupal. Tengo sólidos conocimientos en la promoción y prevención de la salud mental, enfocados en la creación de consentimientos informados y la gestión de historias clínicas de manera ética. Me destaco como facilitadora de dinámicas grupales e individuales orientadas al bienestar emocional, combinando habilidades técnicas con un enfoque humano.",
+            "precioServicioHora": 13,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Asesora Académica Freelance",
+                    "institucion": "Munditareas SAS",
+                    "ubicacion": "Virtual",
+                    "añoInicio": 2024,
+                    "añoFin": "",
+                    "descripcion": "Asesoría académica de forma freelance en Munditareas SAS."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Psicondenados",
+                    "ubicacion": "Virtual",
+                    "añoInicio": 2023,
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica en Psicondenados."
+                },
+                {
+                    "puesto": "Practicante Psicología Educativa",
+                    "institucion": "Alcaldía de Envigado",
+                    "ubicacion": "Envigado",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en psicología educativa en la Alcaldía de Envigado."
+                },
+                {
+                    "puesto": "Practicante Psicología Clínica",
+                    "institucion": "Institución Universitaria de Envigado",
+                    "ubicacion": "Envigado",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Pasantías en psicología clínica en la Institución Universitaria de Envigado."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Institución Universitaria de Envigado",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicondenadospsicologia/"
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
