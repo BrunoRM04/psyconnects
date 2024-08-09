@@ -3498,6 +3498,380 @@
                 "instagram": "https://www.instagram.com/psicondenadospsicologia/"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 60,
+            "nombre": "Karina",
+            "apellido": "Almengor",
+            "fechaNacimiento": "1997-11-18",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "karinaalmengor55@gmail.com",
+            "telefono": "+50767779218",
+            "edad": 24,
+            "pais": "Panamá",
+            "ciudad": "Panamá",
+            "añosExperiencia": 3,
+            "descripcion": "Psicóloga Idónea.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 61,
+            "nombre": "Paola",
+            "apellido": "Urquizo",
+            "fechaNacimiento": "1970-07-19",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "urquizopao@hotmail.com",
+            "telefono": "+541140551936",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Buenos Aires",
+            "añosExperiencia": 15,
+            "descripcion": "Prof Lic. Psicología -;Psicóloga clínica perspectiva de género y políticas de cuidados - Perinatalidad y Crianzas",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Psicoanalítica",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Concurrencia en Centro de Salud Ameghino",
+                    "institucion": "Ministerio de Salud de la Ciudad de Buenos Aires",
+                    "añoInicio": 2005,
+                    "añoFin": "",
+                    "descripcion": "Concurrencia en el Centro de Salud Ameghino bajo el Ministerio de Salud de la Ciudad de Buenos Aires."
+                },
+                {
+                    "puesto": "Psicóloga en Práctica Privada",
+                    "institucion": "",
+                    "añoInicio": 2005,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en práctica privada desde 2005 hasta la actualidad."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad de la República",
+                    "año": "2000" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/soypaolaurquizo/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 62,
+            "nombre": "Viviana",
+            "apellido": "Álvarez",
+            "fechaNacimiento": "1994-11-18",
+            "fotoPerfil": "./public/img/users/viviana alvarez.jpg",
+            "correoElectronico": "viviana.a1894@gmail.com",
+            "telefono": "+59891386639",
+            "edad": 24,
+            "pais": "Uruguay",
+            "ciudad": "Montevideo",
+            "añosExperiencia": 5,
+            "descripcion": "¡Hola! soy Viviana, psicóloga con enfoque cognitivo conductual, esto quiere decir que nos centraremos en problemas y dificultades del aquí y ahora. En lugar de centrarnos en las causas de tu angustia o síntomas del pasado, en terapia buscamos maneras de mejorar tu estado emocional del presente. Te acamparé en el proceso de entender tus problemas en partes más pequeñas. Esto te ayuda a ver cómo estas partes están conectadas entre sí y cómo te afectan. En mis años de experiencia a mis consultantes les explico ¿Cómo describo el proceso de psicoterapia?  Es como cuando estas en un cuarto oscuro, en donde sabes que para poder ver mejor tienes que encontrar el interruptor para encender la luz, pero no sabes dónde está. Ahí entro yo, con una linterna para guiar tu camino, para que tú mismo/a presiones el interruptor y tengas esa luz que tanto has buscado.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Comportamiento Dialéctico",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Consulta Independiente",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención por Telepsicología, evaluación, intervención y seguimiento (Terapia cognitivo conductual y contextual). Realización de historias clínicas, bases de datos, informes de evolución, y planificación de material para las sesiones. Logros: Ayuda a consultantes en mejorar la calidad de sus relaciones interpersonales, habilidades para la regulación emocional, establecimiento de límites, manejo de estrés, entre otras problemáticas."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Fundación Universitaria Konrad Lorenz",
+                    "año": "2019" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Habitarte.saludmentalb/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 63,
+            "nombre": "Angie",
+            "apellido": "Puentes",
+            "fechaNacimiento": "1998-08-08",
+            "fotoPerfil": "./public/img/users/angie puentes.png",
+            "correoElectronico": "angiepuentes.an@gmail.com",
+            "telefono": "+5404124203194",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Táchira",
+            "añosExperiencia": 3,
+            "descripcion": "Hola👋🏻 Soy psicóloga y te ofrezco atención psicológica online🌎 Consultas para niños, adolescentes y adultos, ya sean individuales, de pareja o familiares📋",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicoterapeuta Clínica",
+                    "añoInicio": 2020,
+                    "añoFin": "Presente",
+                    "descripcion": "Consultas presenciales y online para niños, adolescentes, adultos y adultos mayores, además en terapia de pareja y familiar."
+                },
+                {
+                    "puesto": "Productora de Material Psicopedagógico",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Elaboración de guías para la aplicación de psicoterapia infantil en casos de violencia familiar, y guías prácticas para la evaluación de la salud mental en pacientes geriátricos."
+                },
+                {
+                    "puesto": "Psicóloga Educativa",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Tutorías para niños con trastornos de aprendizaje, utilizando técnicas psicopedagógicas para el desarrollo infantil en sus diferentes etapas. Charlas psicoeducativas para niños y padres."
+                },
+                {
+                    "puesto": "Promotora de Salud Mental",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Ponencias en charlas informativas sobre temas relevantes en el ámbito de la salud mental a nivel social. Talleres con explicación de ejercicios de relajación y meditación."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaria de Aragua",
+                    "año": "2020" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.angiepuentes/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 64,
+            "nombre": "María Victoria",
+            "apellido": "Márquez",
+            "fechaNacimiento": "1996-12-11",
+            "fotoPerfil": "./public/img/users/maría victoria márquez.jpeg",
+            "correoElectronico": "angiepuentes.an@gmail.com",
+            "telefono": "+584146667497",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia":2,
+            "descripcion": "Te acompaño a Autodescubrirte y transformar tu vida.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Fundación Alzheimer Zulia",
+                    "añoInicio": 2020,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Fundación Alzheimer Zulia."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Psicovital",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en Psicovital."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": "2014" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psiconscientee_/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 65,
+            "nombre": "Paula",
+            "apellido": "Bozzo Uyén",
+            "fechaNacimiento": "1994-11-04",
+            "fotoPerfil": "./public/img/users/paula bozzo uyén.jpeg",
+            "correoElectronico": "paulabozzouyen94@gmail.com",
+            "telefono": "+51987111527",
+            "edad": 24,
+            "pais": "Perú",
+            "ciudad": "Arequipa",
+            "añosExperiencia": 4,
+            "descripcion": "Psicóloga y Psicoterapeuta con experiencia en clínica (adultos y parejas).",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Colegio De Psicólogos Del Perú",
+                    "año": "2014" 
+                }
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 66,
+            "nombre": "Ketna",
+            "apellido": "Cavanzo",
+            "fechaNacimiento": "2001-09-20",
+            "fotoPerfil": "./public/img/users/KETNA ZARAY CAVANZO PARRA.jpg",
+            "correoElectronico": "kcavanzo@unab.edu.co",
+            "telefono": "+573017832549",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "San Gil",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga dedicada y apasionada por el campo clínico y social, mi enfoque se centra en la creación de estrategias efectivas que promuevan la salud mental y el fortalecimiento de habilidades socioemocionales en las distintas poblaciones con las que trabajo. Aspiro a conseguir resultados y aprendizajes en cada experiencia, apoyar en trabajos con víctimas y población vulnerable, gracias por mi entusiasmo por instruir, enseñar, realizar psicoeducación y capacitaciones.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Practicante en Psicología Clínica",
+                    "institucion": "E.S.E. Hospital Regional de San Gil",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Prácticas en Psicología Clínica durante el primer semestre del 2023."
+                },
+                {
+                    "puesto": "Practicante en Psicología Social",
+                    "institucion": "Fundación Hogar Niño Jesús de Belén",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Práctica en Psicología Social durante el segundo semestre del 2023."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Autónoma de Bucaramanga",
+                    "año": "2024" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/ketnazaray-cavanzo-parra-075638284/",
+                "instagram": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
