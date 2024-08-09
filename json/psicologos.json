@@ -2381,7 +2381,7 @@
             "nombre": "Angeles Jacqueline",
             "apellido": "Santucho",
             "fechaNacimiento": "1998-03-31",
-            "fotoPerfil": "./public/img/users/default.jpg",
+            "fotoPerfil": "./public/img/users/jacqueline santucho.jpg",
             "correoElectronico": "angelesjsantucho@gmail.com",
             "telefono": "+543513077090",
             "edad": 24,
@@ -3870,6 +3870,142 @@
             "redesSociales": {
                 "linkedin": "https://www.linkedin.com/in/ketnazaray-cavanzo-parra-075638284/",
                 "instagram": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 67,
+            "nombre": "Andreina Nicole",
+            "apellido": "Vinces",
+            "fechaNacimiento": "2000-10-11",
+            "fotoPerfil": "./public/img/users/nicole vinces.jpeg",
+            "correoElectronico": "nicolevinces2@gmail.com",
+            "telefono": "+5930982556337",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "El Empalme",
+            "añosExperiencia": 1,
+            "descripcion": "Licenciada en Psicología.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Juego",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Unidad Educativa Israel",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en la Unidad Educativa Israel de septiembre a diciembre de 2022."
+                },
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "GAD de Manta - Patronato Municipal",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantías en el GAD de Manta - Patronato Municipal de febrero a marzo de 2023."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Dispensario Médico Nuestra Señora de Fátima",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Trabajo como psicóloga en el Dispensario Médico Nuestra Señora de Fátima desde junio de 2024 hasta la actualidad."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psych.universe_?igsh=NzdsMDE2bWNvamJm&utm_source=qr"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 68,
+            "nombre": "Maira Belén",
+            "apellido": "Ludueña",
+            "fechaNacimiento": "1995-03-02",
+            "fotoPerfil": "./public/img/users/Maira Belén Ludueña.jpeg",
+            "correoElectronico": "licenciada.luduenamaira@gmail.com",
+            "telefono": "+543517649144",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 3,
+            "descripcion": "¡Hola a todos/as! Mi nombre es Maira Ludueña, Licenciada y profesora en Psicología, M.P 14901. Me especialicé en terapia Cognitivo- Conductual y en Neuropsicología. Entre mis servicios me oriento a: - Terapia individual. - Terapia de parejas. -  Evaluaciones neuropsicológicas para jóvenes y adultos. ¡Construyamos juntos/as un lugar seguro de aprendizaje y de proceso de terapia!",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Hospital Privado",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en el área clínica y consultorio en un hospital privado."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Gabinete Psicopedagógico, IPEM 132",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en el gabinete psicopedagógico del IPEM 132."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro de Neurorehabilitación para Niños/as y Jóvenes",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en un centro de neurorehabilitación para niños/as y jóvenes."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Orientado a Trastornos de la Conducta Alimentaria",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en un centro especializado en trastornos de la conducta alimentaria."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Nacional de Córdoba",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lic.luduenamaira/"
             },
             "verPerfil": "./public/html/perfil.html"
         }
