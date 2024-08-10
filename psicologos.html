@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PsyConnects | Psicólogos Disponibles</title>
     <link rel="stylesheet" href="public/css/styles.css">
     <link rel="shortcut icon" href="public/img/marca/icono.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+
+    <div class="arrow" onclick="toggleSidebar()">&#9654;</div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">Cerrar</button>
+        <h3>Más Valorados/as</h3>
+        <div id="user-list">
+            <!-- Aquí se inyectará dinámicamente el HTML de los usuarios más valorados con los IDs 41 y 43 -->
+        </div>
+    </div>
 
     <header>
         <div class="logo">
@@ -31,7 +44,7 @@
                 <li><a href="ofertas.html"><i class="fas fa-briefcase"></i></a></li>
                 <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
             </ul>
-        </nav> 
+        </nav>
     </header>
 
     <main>
@@ -68,7 +81,7 @@
         <section id="psicologos-list">
         </section>
         <div id="contenedor-tarjetas"></div>
-        
+
     </main>
 
     <footer>
@@ -94,9 +107,10 @@
             const filterPrice = document.getElementById("filter-price");
             const filterExperience = document.getElementById("filter-experience");
             const contenedor = document.getElementById('contenedor-tarjetas');
-    
+            const userList = document.getElementById('user-list');
+
             let psicologos = [];
-    
+
             fetch('./json/psicologos.json')
                 .then(response => response.json())
                 .then(data => {
@@ -106,37 +120,38 @@
                     }));
                     shuffleArray(psicologos);
                     displayPsicologos(psicologos);
+                    populateSidebar(psicologos);
                 });
-    
+
             filterAge.addEventListener("change", () => filterPsicologos());
             filterPrice.addEventListener("change", () => filterPsicologos());
             filterExperience.addEventListener("change", () => filterPsicologos());
-    
+
             function filterPsicologos() {
                 let filteredPsicologos = [...psicologos];
-    
+
                 const ageOrder = filterAge.value;
                 const priceOrder = filterPrice.value;
                 const experienceOrder = filterExperience.value;
-    
+
                 if (ageOrder) {
                     filteredPsicologos.sort((a, b) => ageOrder === 'menor' ? a.edad - b.edad : b.edad - a.edad);
                 }
-    
+
                 if (priceOrder) {
                     filteredPsicologos.sort((a, b) => priceOrder === 'menor' ? a.precioServicioHora - b.precioServicioHora : b.precioServicioHora - a.precioServicioHora);
                 }
-    
+
                 if (experienceOrder) {
                     filteredPsicologos.sort((a, b) => experienceOrder === 'menor' ? a.añosExperiencia - b.añosExperiencia : b.añosExperiencia - a.añosExperiencia);
                 }
-    
+
                 displayPsicologos(filteredPsicologos);
             }
-    
+
             function displayPsicologos(psicologos) {
                 contenedor.innerHTML = "";
-    
+
                 psicologos.forEach(psicologo => {
                     const tarjeta = document.createElement('div');
                     tarjeta.className = 'tarjeta';
@@ -169,7 +184,29 @@
                     contenedor.appendChild(tarjeta);
                 });
             }
-    
+
+            function populateSidebar(psicologos) {
+                const userList = document.getElementById('user-list');
+                userList.innerHTML = "";
+
+                // Filtrar los psicólogos que tienen los IDs 41 y 43
+                const filteredPsicologos = psicologos.filter(psicologo => psicologo.id === 41 || psicologo.id === 43);
+
+                filteredPsicologos.forEach(psicologo => {
+                    const userInfoHTML = `
+                        <div class="user-info">
+                            <img src="${psicologo.fotoPerfil}" alt="${psicologo.nombre} ${psicologo.apellido}">
+                            <div class="user-details">
+                                <strong>${psicologo.nombre} ${psicologo.apellido}</strong><br>
+                                ${psicologo.pais}
+                            </div>
+                        </div>
+                        <a href="public/html/perfil.html?id=${psicologo.id}" class="profile-button">Ir al perfil ></a>
+                    `;
+                    userList.innerHTML += userInfoHTML;
+                });
+            }
+
             function calcularEdad(fechaNacimiento) {
                 const hoy = new Date();
                 const fechaNac = new Date(fechaNacimiento);
@@ -188,7 +225,20 @@
                 }
             }
         });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const arrow = document.querySelector(".arrow");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+                arrow.innerHTML = "&#9654;"; // Flecha apuntando a la derecha
+            } else {
+                sidebar.style.left = "0px";
+                arrow.innerHTML = "&#9664;"; // Flecha apuntando a la izquierda
+            }
+        }
     </script>
 
 </body>
+
 </html>
