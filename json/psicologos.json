@@ -2746,7 +2746,7 @@
             "id": 49,
             "nombre": "Endrina",
             "apellido": "Rojo Puche",
-            "fechaNacimiento": "",
+            "fechaNacimiento": "2000-08-14",
             "fotoPerfil": "./public/img/users/endrina rojo puche.jpg",
             "correoElectronico": "psicopalabra2024@gmail.com",
             "telefono": "+5804149693330",
@@ -4006,6 +4006,1740 @@
             ],
             "redesSociales": {
                 "instagram": "https://www.instagram.com/lic.luduenamaira/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 69,
+            "nombre": "Treisy",
+            "apellido": "Sánchez",
+            "fechaNacimiento": "1993-03-23",
+            "fotoPerfil": "./public/img/users/treisy sanchez.jpg",
+            "correoElectronico": "treisysanchez23@gmail.com",
+            "telefono": "+50370889358",
+            "edad": 24,
+            "pais": "El Salvador",
+            "ciudad": "San Salvador",
+            "añosExperiencia": 6,
+            "descripcion": "Psicóloga Treisy Sánchez",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Grupo",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 70,
+            "nombre": "Carolina Daniela",
+            "apellido": "Pinto Lavayén",
+            "fechaNacimiento": "1984-08-05",
+            "fotoPerfil": "./public/img/users/Carolina Daniela Pinto Lavayén.jpg",
+            "correoElectronico": "Linapintolavayen@gmail.com",
+            "telefono": "+59162681663",
+            "edad": 24,
+            "pais": "Bolivia",
+            "ciudad": "Cochabamba",
+            "añosExperiencia": 3,
+            "descripcion": "Comunicadora Social, Psicóloga clínica",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Ser Integral, Espacio Terapéutico",
+                    "añoInicio": 2018,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en el espacio terapéutico Ser Integral."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Hospital Materno Infantil Germán Urquidi",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica clínica en el Hospital Materno Infantil Germán Urquidi."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "",
+                    "año": "2018" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/shurca_my/",
+                "facebook": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 71,
+            "nombre": "Crisemily",
+            "apellido": "Jiménez",
+            "fechaNacimiento": "1984-05-18",
+            "fotoPerfil": "./public/img/users/Crisemily Jimenez.jpg",
+            "correoElectronico": "crisemilyjimenez@gmail.com",
+            "telefono": "+5804142948922",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracay",
+            "añosExperiencia": 14,
+            "descripcion": "Psicólogo Clínico, Magister en Orientación de la Conducta",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/crisemilyjimenez/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 72,
+            "nombre": "Mariana",
+            "apellido": "Rios",
+            "fechaNacimiento": "1998-02-10",
+            "fotoPerfil": "./public/img/users/mariana rios.jpg",
+            "correoElectronico": "lic.riosmariana@gmail.com",
+            "telefono": "+541156673328",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Buenos Aires",
+            "añosExperiencia": 1,
+            "descripcion": "Hola! Cómo estás? Soy Maru. Brindo atención con modalidad virtual para jóvenes y adultos. Tengo una mirada integrativa en torno a tu motivo de consulta con horarios y honorarios accesibles. Contactame!",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Ser Integral, Espacio Terapéutico",
+                    "añoInicio": 2018,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en el espacio terapéutico Ser Integral."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Hospital Materno Infantil Germán Urquidi",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica clínica en el Hospital Materno Infantil Germán Urquidi."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "",
+                    "año": "2018" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lic.riosmariana?igsh=MTB5dHhkeDVxaTI0OA=="
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 73,
+            "nombre": "Vanina",
+            "apellido": "Rivas Pereda",
+            "fechaNacimiento": "1987-09-29",
+            "fotoPerfil": "./public/img/users/vanina Rivas Pereda.jpg",
+            "correoElectronico": "vaninarivaspereda@gmail.com",
+            "telefono": "+543794265837",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Corrientes",
+            "añosExperiencia": 11,
+            "descripcion": "Lic. En Psicología con orientacion psicoanalítica. Atención a adolescentes, jóvenes y adultos.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Docente Terciaria",
+                    "añoInicio": 2013,
+                    "añoFin": 2019,
+                    "descripcion": "Docencia a nivel terciario."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Educativo y Terapéutico",
+                    "añoInicio": 2012,
+                    "añoFin": 2016,
+                    "descripcion": "Atención psicológica en un centro educativo y terapéutico."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Consultorio Particular",
+                    "añoInicio": 2014,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en consultorio particular."
+                },
+                {
+                    "puesto": "Psicóloga en Educación Especial",
+                    "añoInicio": 2016,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en el ámbito de la educación especial."
+                },
+                {
+                    "puesto": "Coordinadora y Directora",
+                    "institucion": "Centro Educativo y Terapéutico",
+                    "añoInicio": 2018,
+                    "añoFin": 2023,
+                    "descripcion": "Coordinación y dirección de un centro educativo y terapéutico."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 74,
+            "nombre": "Victoria",
+            "apellido": "D'silva",
+            "fechaNacimiento": "1996-09-10",
+            "fotoPerfil": "./public/img/users/Victoria Dsilva.jpg",
+            "correoElectronico": "psicoflexible@gmail.com",
+            "telefono": "+584125120185",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 5,
+            "descripcion": "Profesional de la salud mental, Psicóloga Clínica con atención a adultos y adolescentes, desde un enfoque humanista y integrador.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Arturo Michelena",
+                    "año": "2019" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicoflexible/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 75,
+            "nombre": "Juan",
+            "apellido": "Bitriaga",
+            "fechaNacimiento": "1999-05-02",
+            "fotoPerfil": "./public/img/users/Juan Bitriaga.jpg",
+            "correoElectronico": "psico.optimismo2020@gmail.com",
+            "telefono": "+5804243286688",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Calabozo",
+            "añosExperiencia": 3,
+            "descripcion": "Psicólogo profesional, con experiencia en psicología clínica para la evaluación y tratamiento psicoterapéutico de pacientes que solicitan atención.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Universidad Arturo Michelena",
+                    "añoInicio": 2018,
+                    "añoFin": 2020,
+                    "descripcion": "Elaboración de entrevistas psicológicas en casos infantiles, aplicación de instrumentos de recolección de datos en casos infantiles, elaboración de historia clínica, aplicación de test proyectivos y psicométricos en casos infantiles, elaboración y redacción de informes psicológicos. Aplicación de técnicas de recolección de datos en adolescentes y adultos, elaboración y aplicación de cuestionarios psicológicos, entrevistas estructuradas, semi-estructuradas y mixtas, redacción de informes psicológicos. Manejo de redes sociales como herramienta profesional y marketing digital en redes sociales."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "IPASME",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Evaluación psicológica para aspirantes a vacantes de trabajo, aplicación y corrección de pruebas psicotécnicas, entrevistas laborales, redacción de informes psicológicos. Evaluación psicológica y psicoterapia para niños, adolescentes, adultos y familias. Aplicación y corrección de pruebas psicológicas, redacción de informes psicológicos."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Arturo Michelena",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/juan-bitriaga-593745196?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 76,
+            "nombre": "Amishorih",
+            "apellido": "Muñoz",
+            "fechaNacimiento": "1996-10-11",
+            "fotoPerfil": "./public/img/users/Amishorih Muñoz.jpeg",
+            "correoElectronico": "amishorihm@outlook.com",
+            "telefono": "+584242266314",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga con sólida formación académica y experiencia práctica en diversas áreas de la psicología. Habilidades destacadas en evaluación psicológica, intervención individual y grupal, y diseño de programas de prevención y promoción de la salud mental. Comprometida con el bienestar de las personas y con el desarrollo de comunidades más saludables.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Profesional en constante crecimiento, con experiencia adquirida durante pasantías en reconocidas instituciones de salud mental. Sólidas bases en la evaluación psicológica, diagnóstico y tratamiento de diversas patologías. Habilidades desarrolladas en la entrevista clínica, elaboración de informes psicológicos e implementación de intervenciones basadas en evidencia. Actualmente, brindo atención individualizada a niños, adolescentes y adultos."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Católica Andrés Bello",
+                    "año": "2018" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/centrointegralph/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 77,
+            "nombre": "Mariam",
+            "apellido": "Padilla",
+            "fechaNacimiento": "2001-09-02",
+            "fotoPerfil": "./public/img/users/Sobrelaraiz.jpeg",
+            "correoElectronico": "sobrelaraiz@gmail.com",
+            "telefono": "+5804124339662",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 1,
+            "descripcion": "Psic. Mariam Padilla •Atención psicológica infanto-juvenil •Regulación de ansiedad  •Duelo  •Gestión de emociones •Evaluación psicológica infantil •Estimulación temprana  Agenda tu cita/ Terapia Online ",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Gestalt",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Asistente de Ventas y Encargada de Panadería",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención al público, asistencia en ventas y encargada de una panadería durante los años de estudios universitarios."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Circuito Judicial Penal con Competencia en Delitos de Violencia contra la Mujer del Estado Carabobo (TSJ)",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en el circuito judicial penal con competencia en delitos de violencia contra la mujer del estado Carabobo."
+                },
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Colegio Saulo de Tarso",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en el Colegio Saulo de Tarso durante 5 meses, de agosto a diciembre de 2022."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Arturo Michelena",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/sobrelaraiz/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 78,
+            "nombre": "Yanela",
+            "apellido": "Loor",
+            "fechaNacimiento": "2001-10-13",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "yylp.1208243970@gmail.com",
+            "telefono": "+5930967302454",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Portoviejo",
+            "añosExperiencia": 1,
+            "descripcion": "Es importante para mí mejorar la calidad de vida de todos los pacientes, evaluar los factores que generan conflictos en sus vidas, hacerles ver qué tener un psicólogo debería de empezar a considerarse igual de importante que un médico.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Circuito Judicial Penal con Competencia en Delitos de Violencia contra la Mujer del Estado Carabobo (TSJ)",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en el circuito judicial penal con competencia en delitos de violencia contra la mujer del estado Carabobo."
+                },
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Colegio Saulo de Tarso",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Pasantías en el Colegio Saulo de Tarso durante 5 meses, de agosto a diciembre de 2022."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Institución Educativa Francés",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Trabajo en la Institución Educativa Francés durante 3 meses, de mayo a agosto de 2024."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Técnica De Babahoyo",
+                    "año": "2023" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/virtualmindcare/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 79,
+            "nombre": "Mariella",
+            "apellido": "Muñoz",
+            "fechaNacimiento": "2001-04-08",
+            "fotoPerfil": "./public/img/users/Mariella Muñoz.jpeg",
+            "correoElectronico": "mariella.munoz.ch@gmail.com",
+            "telefono": "+5930967027315",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 1,
+            "descripcion": "Soy Mariella Muñoz, psicóloga clínica comprometida con el bienestar mental y emocional de mis pacientes. Cuento con un título de tercer nivel en psicología clínica y una certificación en primeros auxilios psicológicos. En mi práctica, mi objetivo es proporcionar a los pacientes herramientas que les permitan explorar sus emociones, pensamientos y comportamientos, y entender cómo estos se relacionan con su entorno. Ofrezco un ambiente seguro, empático y colaborativo para desarrollar estrategias que ayuden a los pacientes a superar desafíos y alcanzar sus metas personales. Tengo experiencia en el acompañamiento durante procesos de duelo, manejo emocional, intervención en crisis, toma de tests y abordaje del protocolo SPIKES. Además, estoy comprometida con el crecimiento académico continuo y la actualización constante de mis conocimientos en salud mental y psicología clínica.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Cuidados Paliativos",
+                    "institucion": "Hospice San Camilo",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantías en cuidados paliativos en el Hospice San Camilo de agosto 2023 a enero 2024."
+                },
+                {
+                    "puesto": "Pasante en Terapia Psicológica",
+                    "institucion": "Fundación Bienestar Emocional",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantías en terapia psicológica en la Fundación Bienestar Emocional de febrero 2023 a agosto 2024."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 80,
+            "nombre": "Adelaida",
+            "apellido": "Ladino",
+            "fechaNacimiento": "1985-06-19",
+            "fotoPerfil": "./public/img/users/Alexandra Ladino.jpg",
+            "correoElectronico": "alexandraladinoladino@gmail.com",
+            "telefono": "+5804127497063",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 8,
+            "descripcion": "Psicólogo clínico",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica San Sebastián",
+                    "ubicacion": "Edo. Amazonas",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica en la Clínica San Sebastián en el Estado Amazonas."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica IEQ",
+                    "ubicacion": "Edo. Valencia",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica en la Clínica IEQ en el Estado Valencia."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Damas Salesianas",
+                    "ubicacion": "Edo. Amazonas",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica para la organización Damas Salesianas en el Estado Amazonas."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "INAMUJER",
+                    "ubicacion": "Edo. Amazonas",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica para INAMUJER en el Estado Amazonas."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "FAIMA",
+                    "ubicacion": "Edo. Amazonas",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica para FAIMA en el Estado Amazonas."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "CARITAS Parroquial",
+                    "ubicacion": "Edo. Amazonas",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica en CARITAS Parroquial en el Estado Amazonas."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 81,
+            "nombre": "Ana Carolina",
+            "apellido": "Montero Cruz",
+            "fechaNacimiento": "1988-06-24",
+            "fotoPerfil": "./public/img/users/Ana Carolina Montero.webp",
+            "correoElectronico": "Psic.anamontero@gmail.com",
+            "telefono": "+584120706707",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 5,
+            "descripcion": "Psicóloga especialista en mujeres victima de violencia basada en genero. ",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Grupo",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Hospital Psiquiátrico de Maracaibo",
+                    "añoInicio": 2018,
+                    "añoFin": 2019,
+                    "descripcion": "Realicé mis pasantías en el Hospital Psiquiátrico de Maracaibo desde agosto 2018 hasta mayo 2019."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Organizaciones dedicadas a la atención de emigrantes y refugiados en Venezuela",
+                    "añoInicio": 2019,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Me desempeño como psicóloga desde septiembre 2019 hasta la actualidad, con un año de experiencia en el área clínica con una población de niños, niñas y adolescentes, y 5 años de experiencia en atención de mujeres víctimas de violencia basada en género."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicanamontero/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 82,
+            "nombre": "María",
+            "apellido": "Lissett",
+            "fechaNacimiento": "1981-04-02",
+            "fotoPerfil": "./public/img/users/lissett arocha.jpeg",
+            "correoElectronico": "info.psicotools.ve@gmail.com",
+            "telefono": "+584243056665",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 5,
+            "descripcion": "Soy Psicólogo Clínico con Maestría en Orientación a la Sexología, Psicoterapeuta Gestáltico, Diplomado en Terapia de Parejas Diplomado en Abordaje al TDAH. Cinco (05) años en el Diseño de programas de tratamiento acorde con las necesidades y problemas que presenta el paciente. Aplicación de técnicas de intervención psicológica y marcos teóricos (cognitivo-conductual y enfoque gestáltico). Seguimiento de mantenimiento de logros y prevención de recaídas. Elaboración de Informes. Consulta Online y Presencial",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Servicio de Protección al Menor de Aragua",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Pasantías en el Servicio de Protección al Menor de Aragua durante 4 meses."
+                },
+                {
+                    "puesto": "Psicóloga del Personal",
+                    "institucion": "Mente Sana Psicología Empresa",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Desempeño como psicóloga del personal de la empresa durante 13 meses."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Consulta Privada y Online",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en consulta privada y online durante 5 años."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaría De Aragua",
+                    "año": "2017" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicotools.ve/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 83,
+            "nombre": "Diego",
+            "apellido": "La Rosa",
+            "fechaNacimiento": "1980-04-21",
+            "fotoPerfil": "./public/img/users/Diego La Rosa.jpg",
+            "correoElectronico": "diego_lr@live.com",
+            "telefono": "+541165355956",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Buenos Aires",
+            "añosExperiencia": 6,
+            "descripcion": "Soy graduado en la Facultad de Psicología (Universidad de Buenos Aires-UBA-) matrícula profesional del ministerio de salud de la nación nro 76217, sumado a esto, me forme en una carrera de especialización de posgrado en psicoanálisis con atención clínica en el Instituto Fernando Ulloa. Con experiencia en la docencia en Psicoanálisis Freud en la Universidad de Buenos Aires y con trayectoria profesional tanto en el ámbito particular como en el Institucional; brindo tratamientos psicológicos a adolescentes, adultos, mayores y parejas. Mi vocación es ayudar a las personas a gestionar sus emociones para que puedan desarrollar el bienestar y alcanzar su máximo potencial. Tengo como popósito que se tome conciencia de cuidar la salud mental al igual que cuidamos la salud física! Me caracterizo por un trato ameno, cálido y profesional donde deseo que podamos cultivar una relación paciente-profesional de contención y confianza de forma tal que te sientas a gusto trabajando en tu proceso . Concibo la terapia psicológica como un trabajo donde tanto el paciente como el profesional tienen la misma trascendencia y, con el trabajo conjunto, se podrá encontrar la fuente de las problemáticas en la búsqueda de la mitigación del malestar. La propuesta de esta labor conjunta es transitar un camino con la finalidad de encontrar una respuesta, sentirse mejor, producir un alivio que genere bienestar, para recuperar la estabilidad anímica y producir herramientas que permitan enfrentar de forma más eficiente los avatares de la vida misma. Considero que lo más lindo de mi profesión es poder aprender de cada una de las personas con las que trabajo, todas las personas que han pasado por mi consulta me han enriquecido tanto a nivel profesional como personal lo cual me vuelve muy agradecido por el tránsito de cada una de ellas.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Consultorio Particular",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en consultorio particular durante 6 años."
+                },
+                {
+                    "puesto": "Psicólogo Hospitalaria",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica en un entorno hospitalario durante 1 año."
+                },
+                {
+                    "puesto": "Pasante en Docencia",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Pasantía en docencia durante 1 año."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lic.diegolarosa/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 84,
+            "nombre": "María",
+            "apellido": "Arellano",
+            "fechaNacimiento": "2000-02-10",
+            "fotoPerfil": "./public/img/users/Luna Mora.jpg",
+            "correoElectronico": "mariaarella1@gmail.com",
+            "telefono": "+584242194633",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Miranda",
+            "añosExperiencia": 3,
+            "descripcion": "Psicóloga Clínica, Especialista en Psicoterapia Cognitivo- Conductual y atención a niños con condiciones especiales y adultos con depresión o ansiedad. Tu salud mental debe ser tú prioridad, enfócate y escuchate. Contáctame!",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Gestalt",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Portugués"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Asistente de Terapia Geriátrica",
+                    "institucion": "Geriátrico Villa Pompey",
+                    "añoInicio": 2018,
+                    "añoFin": 2020,
+                    "descripcion": "Asistencia en terapia geriátrica en el Geriátrico Villa Pompey."
+                },
+                {
+                    "puesto": "Asistente de Intervención en Salud Mental Infantil",
+                    "institucion": "Instituto de Educación Especial Paula Correa",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Asistencia en intervención en salud mental infantil en el Instituto de Educación Especial Paula Correa."
+                },
+                {
+                    "puesto": "Asistente de Investigación en Salud Mental",
+                    "institucion": "Oficentro el Picacho",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Asistencia en investigación en salud mental en Oficentro el Picacho."
+                },
+                {
+                    "puesto": "Psicólogo Clínico Independiente",
+                    "institucion": "Consultorio Propio",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención psicológica en consultas presenciales en consultorio propio."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaria De Aragua",
+                    "año": "2022" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psico_arel/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 85,
+            "nombre": "Maria José",
+            "apellido": "Millán Blanco",
+            "fechaNacimiento": "1986-11-05",
+            "fotoPerfil": "./public/img/users/María José Millán Blanco.jpg",
+            "correoElectronico": "mariajosemillanblanco20@gmail.com",
+            "telefono": "+5804241518933",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 15,
+            "descripcion": "Psicóloga con amplia experiencia en el área psicosocial y grupos terapéuticos. Orientación para padres y atención de adolescentes",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga de Desarrollo Estudiantil",
+                    "institucion": "Universidad Simón Bolívar",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención y apoyo psicológico para el desarrollo estudiantil en la Universidad Simón Bolívar."
+                },
+                {
+                    "puesto": "Psicóloga para Atención de Niños, Niñas y Adolescentes en Comunidades Vulnerables",
+                    "institucion": "UNICEF - Tinta Violeta",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica para niños, niñas y adolescentes en comunidades vulnerables bajo el programa UNICEF - Tinta Violeta."
+                },
+                {
+                    "puesto": "Psicóloga del Programa Todos y Todas a la Escuela",
+                    "institucion": "UNICEF - Fe y Alegría",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Atención psicológica en el programa Todos y Todas a la Escuela bajo la colaboración de UNICEF y Fe y Alegría."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Central de Venezuela",
+                    "año": "2010" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/marijo_millan/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 86,
+            "nombre": "Andrea Isabel",
+            "apellido": "Fernández Escobar",
+            "fechaNacimiento": "1995-10-02",
+            "fotoPerfil": "./public/img/users/Andrea Fernandez Escobar.jpg",
+            "correoElectronico": "andrea.fernandez0295@gmail.com",
+            "telefono": "+51992112894",
+            "edad": 24,
+            "pais": "Perú",
+            "ciudad": "Lima",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga clínica con formación en Terapia cognitivo conductual y en proceso de formación de Terapia Dialéctica conductual. Con experiencia en el área clínica con niños neurodiversos, adolescentes, adultos y adultos mayores. ",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Comportamiento Dialéctico",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés",
+                "Francés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Kimi Centro Psicológico y Psicoterapéutico",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en Kimi Centro Psicológico y Psicoterapéutico."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Colegio Ancila Dei-Cpplac",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica en el Colegio Ancila Dei-Cpplac."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Mahei Centro de Terapias y Salud Mental",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención psicológica en Mahei Centro de Terapias y Salud Mental."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Inside Servicios Psicológicos",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en Inside Servicios Psicológicos."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Nacional Federico Villarreal",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Andreaf0210/",
+                "facebook": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 87,
+            "nombre": "Maricruz",
+            "apellido": "Prado",
+            "fechaNacimiento": "1982-07-30",
+            "fotoPerfil": "./public/img/users/Maricruz Prado.jpg",
+            "correoElectronico": "maricruz.prado@gmail.com",
+            "telefono": "+584269542571",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 5,
+            "descripcion": "",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "",
+                "facebook": ""
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 88,
+            "nombre": "Erika",
+            "apellido": "Guerrero",
+            "fechaNacimiento": "1991-03-31",
+            "fotoPerfil": "./public/img/users/Erika Guerrero.jpg",
+            "correoElectronico": "psic.erikaguerrero@gmail.com",
+            "telefono": "+584241354190",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 9,
+            "descripcion": "Psicólogo con más de 8 años de experiencia en el área clínica. Atención a jóvenes y adultos hasta la tercera edad. Terapia individual, terapia familiar y terapia de parejas. Ansiedad. Depresión. Estrés. Ataques de pánico. Dificultad para conciliar el sueño. Adicciones. Psicooncología. Duelos y pérdidas. Orientación vocacional. Autoestima.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "Ambulatorio Urbano de Turmero",
+                    "ubicacion": "Aragua",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Pasantías en el Ambulatorio Urbano de Turmero, Aragua."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro de Desarrollo Infantil CREYÓN KIDS",
+                    "añoInicio": 2014,
+                    "añoFin": 2016,
+                    "descripcion": "Atención psicológica en el Centro de Desarrollo Infantil CREYÓN KIDS."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica Especialidades Médicas Turmero",
+                    "añoInicio": 2015,
+                    "añoFin": 2016,
+                    "descripcion": "Atención psicológica en la Clínica Especialidades Médicas Turmero."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro de Atención Integral a Personas con Discapacidad Visual (CAIDV-CAPITAL)",
+                    "ubicacion": "Sede Hospital Vargas",
+                    "añoInicio": 2016,
+                    "añoFin": 2019,
+                    "descripcion": "Atención psicológica en el Centro de Atención Integral a Personas con Discapacidad Visual (CAIDV-CAPITAL) en la sede del Hospital Vargas."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica LOPCYMASTER",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Clínica LOPCYMASTER. Trabajo por honorarios."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Instituto Venezolano de los Seguros Sociales (IVSS) - Antímano",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en el Instituto Venezolano de los Seguros Sociales - IVSS Antímano."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica ADELMED",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Clínica ADELMED. Trabajo por honorarios."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica VIDAMED",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Clínica VIDAMED. Trabajo por honorarios."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica CCCT",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en la Clínica CCCT. Trabajo por honorarios."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro de Salud Integral AREHS",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en el Centro de Salud Integral AREHS. Trabajo por honorarios."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaria de Aragua",
+                    "año": "2015" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicoflexible/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 89,
+            "nombre": "Kenneth",
+            "apellido": "Hansen",
+            "fechaNacimiento": "1990-06-29",
+            "fotoPerfil": "./public/img/users/kenneth david hansen marcano.jpg",
+            "correoElectronico": "kamellozen@gmail.com",
+            "telefono": "+5804243475617",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Maracay",
+            "añosExperiencia": 8,
+            "descripcion": "Psicologo Clínico,  Abocado al trabajo de psicopatologia y abordaje de adicciones.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Bicentenaria de Aragua",
+                    "año": "" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicologo.kennethhansen/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 90,
+            "nombre": "Andrés",
+            "apellido": "Posada",
+            "fechaNacimiento": "1992-06-14",
+            "fotoPerfil": "./public/img/users/Libbera sv.jpg",
+            "correoElectronico": "andre.posada92@gmail.com",
+            "telefono": "+50378903503",
+            "edad": 24,
+            "pais": "El Salvador",
+            "ciudad": "San Salvador",
+            "añosExperiencia": 6,
+            "descripcion": "Psicólogo con 6 años de experiencia en el campo de la psicoterapia, especializado en brindar apoyo a adolescentes y adultos que enfrentan una variedad de desafíos emocionales y psicológicos. Mi trayectoria profesional abarca el tratamiento de problemas como desesperanza, búsqueda de sentido de vida, ansiedad, depresión, trastornos del sueño, problemas alimenticios, separaciones, rupturas, conflictos de pareja y consejería puntual. Me especializo en terapias cognitivo-conductuales, psicoterapias dinámicas e integrativas, aplicando un enfoque riguroso que abarca las tres áreas fundamentales de la personalidad: afectiva, cognitiva y conductual. ",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/andr%C3%A9s-posada-00a038175/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 91,
+            "nombre": "Valeria",
+            "apellido": "Rondón",
+            "fechaNacimiento": "1998-01-06",
+            "fotoPerfil": "./public/img/users/Valeria Rondón Crespo.jpg",
+            "correoElectronico": "vcrcp1@gmail.com",
+            "telefono": "+5804127722736",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Lara",
+            "añosExperiencia": 3,
+            "descripcion": "Atención psicológica en el área infantil, juvenil y adulto. Manejo de emociones y restructuración cognitiva, formación en el área deportiva para mejora de actitudes y destrezas conductivas",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Gestalt",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Promotora, Protocolo, Organización y Coordinación",
+                    "institucion": "SCANNVEN Marketing y Tecnología",
+                    "ubicacion": "Barquisimeto, Estado Lara",
+                    "añoInicio": 2011,
+                    "añoFin": 2015,
+                    "descripcion": "Promoción, protocolo, organización y coordinación de eventos."
+                },
+                {
+                    "puesto": "Interventora Psicológica",
+                    "institucion": "Hospital Militar Dr. José Ángel Álamo",
+                    "ubicacion": "Barquisimeto, Estado Lara",
+                    "añoInicio": 2019,
+                    "añoFin": 2020,
+                    "descripcion": "Intervención psicológica en las áreas clínicas, comunitarias y organizacional."
+                },
+                {
+                    "puesto": "Pasante y Psicóloga Deportiva",
+                    "institucion": "Invictus FH, C.A, Consultoría Privada",
+                    "ubicacion": "Barquisimeto, Estado Lara",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Pasante y psicóloga en el área deportiva."
+                },
+                {
+                    "puesto": "Asistente de Psicopedagoga y Pasante de Psicología Infantil",
+                    "institucion": "C.E.I Ale Limón",
+                    "ubicacion": "Barquisimeto, Estado Lara",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Asistencia psicopedagógica y pasantías en psicología infantil."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Consultorio Lisi Médico-Odontológico Ceccano",
+                    "ubicacion": "Barinas, Estado Barinas",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Consulta privada psicológica."
+                },
+                {
+                    "puesto": "Psicóloga y Bienestar Estudiantil",
+                    "institucion": "Universidad Politécnica Territorial del Estado Barinas 'José Félix Ribas'",
+                    "ubicacion": "Barinas, Estado Barinas",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Psicóloga y miembro del cuerpo de bienestar estudiantil."
+                },
+                {
+                    "puesto": "Psicóloga y Coordinadora de Bienestar Estudiantil",
+                    "institucion": "Universidad Nacional Experimental Francisco de Miranda",
+                    "ubicacion": "Barinas, Estado Barinas",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Psicóloga y coordinadora del cuerpo de bienestar estudiantil."
+                },
+                {
+                    "puesto": "Psicóloga de Área",
+                    "institucion": "Hospital Central Universitario Antonio María Pineda",
+                    "ubicacion": "",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Psicóloga en el área correspondiente del hospital."
+                },
+                {
+                    "puesto": "Guía de Parque y Atención Infantil en Neurodivergencia",
+                    "institucion": "Country Park Barquisimeto",
+                    "ubicacion": "Barquisimeto",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Guía de parque y atención especializada en neurodivergencia infantil."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Yacambú",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psivalogia/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 92,
+            "nombre": "Astrid",
+            "apellido": "Navidad",
+            "fechaNacimiento": "1995-08-30",
+            "fotoPerfil": "./public/img/users/asti.jpeg",
+            "correoElectronico": "astrid.navidad14@hotmail.com",
+            "telefono": "+50377452894",
+            "edad": 24,
+            "pais": "El Salvador",
+            "ciudad": "San Salvador",
+            "añosExperiencia": 4,
+            "descripcion": "Soy psicóloga con 4 años de experiencia, especializada en terapias cognitivo-conductuales. Mi formación incluye una maestría en Psicología Clínica y de la Salud, lo que me permite abordar de manera integral una amplia gama de problemáticas emocionales y psicológicas. He trabajado extensamente en la atención de problemáticas diversas relacionadas con la ansiedad, depresión, trastornos del sueño, conflictos de pareja y salud mental en general. Mi enfoque terapéutico está centrado en crear espacios de intervención éticos y respetuosos, siempre apegados a la búsqueda de la homeostasis emocional y mental de cada paciente. Mi práctica está guiada por un compromiso firme con el bienestar integral, proporcionando herramientas y estrategias personalizadas que promuevan el equilibrio y la mejora continua en la vida de quienes acuden a mí en busca de apoyo psicológico.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/astrid_navidad/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 93,
+            "nombre": "Maria Gabriela",
+            "apellido": "Mendoza Vierma",
+            "fechaNacimiento": "1999-08-07",
+            "fotoPerfil": "./public/img/users/Gabriela.jpg",
+            "correoElectronico": "mdzamariag77@gmail.com",
+            "telefono": "+584143909517",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 0,
+            "descripcion": "Estudiante de psicología.",
+            "precioServicioHora": 0,
+            "especializacion": [
+                "Terapia de Comportamiento Dialéctico",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante de Psicología Clínica",
+                    "institucion": "Instituto Psicopedagógico El Ávila",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantías en psicología clínica en el Instituto Psicopedagógico El Ávila de marzo a julio de 2023."
+                },
+                {
+                    "puesto": "Pasante de Psicología Escolar",
+                    "institucion": "U.E. María Antonia Bolívar",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantías en psicología escolar en U.E. María Antonia Bolívar de octubre 2023 a julio 2024."
+                },
+                {
+                    "puesto": "Pasante de Asesoramiento Psicológico",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantías en asesoramiento psicológico de marzo a julio de 2024."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Católica Andrés Bello",
+                    "año": "2025" 
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/magabrielamendoza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 94,
+            "nombre": "Edgardo Josué",
+            "apellido": "Ramírez Martínez",
+            "fechaNacimiento": "1998-01-11",
+            "fotoPerfil": "./public/img/users/Edgardo Ramírez.jpg",
+            "correoElectronico": "psico.edgardo.ramirez@gmail.com",
+            "telefono": "+50364390701",
+            "edad": 24,
+            "pais": "El Salvador",
+            "ciudad": "San Salvador",
+            "añosExperiencia": 3,
+            "descripcion": "Tu salud mental es mi prioridad. Terapia psicológica para adultos presencial y virtual. ",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicoterapeuta Voluntario",
+                    "institucion": "Alcaldía Municipal de Ilopango",
+                    "añoInicio": "",
+                    "añoFin": "1 año",
+                    "descripcion": "Desempeño como psicoterapeuta voluntario en la Alcaldía Municipal de Ilopango durante 1 año."
+                },
+                {
+                    "puesto": "Propietario y Psicólogo Clínico",
+                    "institucion": "Clínica de Atención Psicológica Psique",
+                    "añoInicio": "",
+                    "añoFin": "3 años",
+                    "descripcion": "Propietario y psicólogo clínico en la Clínica de Atención Psicológica Psique durante 3 años."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología Clínica",
+                    "institucion": "",
+                    "año": "2021" 
+                }
+            ],
+            "redesSociales": {
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 95,
+            "nombre": "Juliana",
+            "apellido": "Posada Burgos",
+            "fechaNacimiento": "1986-06-19",
+            "fotoPerfil": "./public/img/users/Juliana Posada.jpeg",
+            "correoElectronico": "julianapbpsicologa@gmail.com",
+            "telefono": "+573232153681",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Bogotá",
+            "añosExperiencia": 3,
+            "descripcion": "Te acompaño a comprender tú malestar emocional. Psicóloga con más de 3 años de experiencia en psicoterapia, psicoeducación, enfoque cognitivo conductual, terapia breve. Te acompañare en tú viaje hacia el bienestar emocional y el crecimiento personal, en mi consulta te recibiré con empatía y confidencialidad, cada persona es única por lo que adapto mis enfoques terapéuticos a tus necesidades específicas para garantizar un tratamiento eficaz personalizado.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "",
+                    "añoInicio": "2020",
+                    "añoFin": "Actualidad",
+                    "descripcion": "Desempeño como psicoterapeuta voluntario en la Alcaldía Municipal de Ilopango durante 1 año."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología Clínica",
+                    "institucion": "",
+                    "año": "2020" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicojuliposada/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 96,
+            "nombre": "Marianela",
+            "apellido": "Fernandez Armesto",
+            "fechaNacimiento": "1995-06-08",
+            "fotoPerfil": "./public/img/users/Marianela Fernández Armesto.jpg",
+            "correoElectronico": "msfa0806@gmail.com",
+            "telefono": "+543512399036",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 4,
+            "descripcion": "Hola! Trabajo desde la corriente cognitivo-conductual, la cual implica un trabajo en equipo, para que aprendas a gestionar tus pensamientos y emociones para lograr el bienestar que estás buscando.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Reclutamiento y Selección de Personal",
+                    "añoInicio": 2018,
+                    "añoFin": 2023,
+                    "descripcion": "Responsable de reclutamiento y selección de personal durante 5 años."
+                },
+                {
+                    "puesto": "Psicoterapeuta",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Práctica como psicoterapeuta desde 2021."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología Clínica",
+                    "institucion": "Universidad De Córdoba",
+                    "año": "2019" 
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psico.marianfer/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 97,
+            "nombre": "Fabiola",
+            "apellido": "Guerrero",
+            "fechaNacimiento": "",
+            "fotoPerfil": "./public/img/users/Fabiola Guerrero.jpeg",
+            "correoElectronico": "fabiolaguerreroc@hotmail.com",
+            "telefono": "+50496048468",
+            "edad": 24,
+            "pais": "Honduras",
+            "ciudad": "Tegucigalpa",
+            "añosExperiencia": 1,
+            "descripcion": "Brindo un espacio seguro y libre de juicios brindándote mis servicios para poder ayudarte a sentir libertad de expresión y emociones.",
+            "precioServicioHora": 45,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "educacion": [
+                {
+                    "grado": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología",
+                    "añoInicio": 2024,
+                    "añoFin": "Presente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Atención e Intervención Psicológica",
+                    "institucion": "Chat UNAH Te Escucha",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantía brindando atención e intervención psicológica, así como primeros auxilios psicológicos en modalidad virtual bajo el proyecto de Chat UNAH Te Escucha."
+                },
+                {
+                    "puesto": "Pasante en Primeros Auxilios Psicológicos",
+                    "institucion": "Cuerpo de Bomberos",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantía brindando primeros auxilios psicológicos, atención y evaluación psicológica en el Cuerpo de Bomberos."
+                }
+            ],
+            "certificaciones": [
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/fabioolaguerrero/"
             },
             "verPerfil": "./public/html/perfil.html"
         }

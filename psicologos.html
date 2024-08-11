@@ -19,7 +19,7 @@
         <button class="close-btn" onclick="toggleSidebar()">Cerrar</button>
         <h3>Más Valorados/as</h3>
         <div id="user-list">
-            <!-- Aquí se inyectará dinámicamente el HTML de los usuarios más valorados con los IDs 41 y 43 -->
+            
         </div>
     </div>
 
@@ -189,8 +189,7 @@
                 const userList = document.getElementById('user-list');
                 userList.innerHTML = "";
 
-                // Filtrar los psicólogos que tienen los IDs 41 y 43
-                const filteredPsicologos = psicologos.filter(psicologo => psicologo.id === 41 || psicologo.id === 43);
+                const filteredPsicologos = psicologos.filter(psicologo => psicologo.id === 41 || psicologo.id === 43 || psicologo.id === 59);
 
                 filteredPsicologos.forEach(psicologo => {
                     const userInfoHTML = `
@@ -231,10 +230,10 @@
             const arrow = document.querySelector(".arrow");
             if (sidebar.style.left === "0px") {
                 sidebar.style.left = "-250px";
-                arrow.innerHTML = "&#9654;"; // Flecha apuntando a la derecha
+                arrow.innerHTML = "&#9654;"; 
             } else {
                 sidebar.style.left = "0px";
-                arrow.innerHTML = "&#9664;"; // Flecha apuntando a la izquierda
+                arrow.innerHTML = "&#9664;"; 
             }
         }
     </script>
