@@ -8443,6 +8443,226 @@
             ],
             "redesSociales": {},
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 143,
+            "nombre": "Guadalupe",
+            "apellido": "Sanchez",
+            "fechaNacimiento": "2000-04-16",
+            "fotoPerfil": "./public/img/users/Maria Guadalupe Sanchez Aguiñiga.jpeg",
+            "correoElectronico": "maguadalupesanchez187@gmail.com",
+            "telefono": "+525631179139",
+            "edad": 24,
+            "pais": "México",
+            "ciudad": "Ciudad de México",
+            "añosExperiencia": 1,
+            "descripcion": "Soy psicóloga en el área de la terapia cognitivo-conductual. Me especializo en alcanzar el bienestar emocional de cada paciente y me comprometo a proporcionar un entorno de apoyo y comprensión. Utilizo técnicas basadas en evidencia para guiar a mis pacientes hacia sus metas personales.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Grupo",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Practicante Profesional",
+                    "institucion": "Ilumina Ceguera y Baja Visión",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Desarrollé el proyecto 'Atención Psicológica y Emocional para Familias y Cuidadores de Infantes y Adolescentes con Discapacidad Visual'."
+                },
+                {
+                    "puesto": "Integrativa Profesional",
+                    "institucion": "Escuela Secundaria Oficial No. 0649 'Jacinto López Moreno'",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Diseñé programas educativos y fortalecimiento de las herramientas de aprendizaje de los alumnos."
+                },
+                {
+                    "puesto": "Proyecto en Terapia Cognitivo-Conductual",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Aplicación de técnicas de intervención cognitivo-conductuales en casos específicos."
+                },
+                {
+                    "puesto": "Proyecto en Intervención Clínica",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Evaluación de propuestas de intervención en el ámbito educativo."
+                },
+                {
+                    "puesto": "Proyecto de Intervención en Terapia de Juego",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Aplicación de estrategias de terapia de juego de acuerdo al diagnóstico."
+                },
+                {
+                    "puesto": "Proyecto de Intervención en Terapia Breve e Intervención en Crisis",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Entrevistas iniciales y estudios de caso enfocados en estrategias de la terapia breve centrada en soluciones y problemas."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Autónoma Del Estado De México",
+                    "año": "2023"
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/maria-guadalupe-sanchez-aguiñiga-54a9792bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 144,
+            "nombre": "María Victoria",
+            "apellido": "Pocorena",
+            "fechaNacimiento": "1989-02-26",
+            "fotoPerfil": "./public/img/users/María Victoria Pocorena.jpg",
+            "correoElectronico": "mvictoriapocorena@hotmail.com",
+            "telefono": "+542235430853",
+            "edad": 35,
+            "pais": "Argentina",
+            "ciudad": "Mar del Plata",
+            "añosExperiencia": 10,
+            "descripcion": "Esp. en Psicología Clínica con orientación Cognitiva.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Residencia en Psicología Clínica",
+                    "institucion": "Instituto Nacional de Rehabilitación Psicofisica del Sur (INAREPS)",
+                    "añoInicio": 2014,
+                    "añoFin": 2017,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Psicoterapeuta de Adultos",
+                    "institucion": "CAPsi Mar del Plata",
+                    "añoInicio": 2018,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Psicoterapeuta",
+                    "institucion": "Red de Derivación PsicoPsimple",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Nacional de Mar del Plata",
+                    "año": "2007-2013"
+                },
+                {
+                    "nombre": "Especialización en Psicoterapia Cognitiva Integrativa",
+                    "institucion": "Fundación Aiglé - Universidad Nacional de Mar del Plata",
+                    "año": "2016-2017"
+                },
+                {
+                    "nombre": "Tramo de Formación Docente Nivel Superior",
+                    "institucion": "Instituto de Formación Docente N°19",
+                    "año": "2019-2020"
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/mar%C3%ADa-victoria-pocorena-685132226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 145,
+            "nombre": "Karlenis",
+            "apellido": "Aguilar",
+            "fechaNacimiento": "1994-10-12",
+            "fotoPerfil": "./public/img/users/Karlenis Maria Aguilar Hidalgo.jpg",
+            "correoElectronico": "aguilar.karlenis2@gmail.com",
+            "telefono": "+584124583497",
+            "edad": 29,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 1,
+            "descripcion": "Soy licenciada en psicología clínica dinámica. Poseo experiencia en las áreas clínicas, educativas y corporativas.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Psicoanalítica",
+                "Terapia de Grupo",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante",
+                    "institucion": "UAPA",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Pasantía de 6 meses en 2019."
+                },
+                {
+                    "puesto": "Pasante Ambulatoria",
+                    "institucion": "HCU",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Pasantía de 6 meses en 2019."
+                },
+                {
+                    "puesto": "Analista de Reclutamiento y Selección",
+                    "institucion": "Directa Group",
+                    "añoInicio": 2020,
+                    "añoFin": 2021,
+                    "descripcion": "Año y medio de experiencia."
+                },
+                {
+                    "puesto": "Psicóloga Escolar",
+                    "institucion": "Colegio Schonthal",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "1 año y 8 meses de experiencia."
+                },
+                {
+                    "puesto": "Psicóloga Infantil",
+                    "institucion": "Instituto LeRobotica",
+                    "añoInicio": 2024,
+                    "añoFin": 2024,
+                    "descripcion": "6 meses de experiencia."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Consulta Privada",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Psicóloga clínica desde agosto de 2023."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología Clínica Dinámica",
+                    "institucion": "",
+                    "año": "2017-2023"
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
