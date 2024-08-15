@@ -8663,6 +8663,636 @@
             ],
             "redesSociales": {},
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 146,
+            "nombre": "Anyoli",
+            "apellido": "Zambrano",
+            "fechaNacimiento": "1998-03-02",
+            "fotoPerfil": "./public/img/users/Anyoli Zambrano.jpg",
+            "correoElectronico": "anyolizambrano.psi@gmail.com",
+            "telefono": "+584246919386",
+            "edad": 26,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 2,
+            "descripcion": "Maestrante en Psicología Clínica. Entrenamiento en terapia sistémica y TCC. ¡Te acompaño en la ruta del bienestar!💚",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Servicio Ambulatorio de Psicología",
+                    "institucion": "Hospital Dr. Pedro Iturbe",
+                    "añoInicio": 2020,
+                    "añoFin": 2020,
+                    "descripcion": "Pasantías de 6 meses en el servicio ambulatorio de psicología."
+                },
+                {
+                    "puesto": "Psicóloga de Selección",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "1 año de experiencia."
+                },
+                {
+                    "puesto": "Psicóloga Online",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": "2020"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psi.anyolizambrano/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 147,
+            "nombre": "Jairo",
+            "apellido": "Aguilar",
+            "fechaNacimiento": "1990-11-29",
+            "fotoPerfil": "./public/img/users/Jairo Aguilar.jpg",
+            "correoElectronico": "aguilar.jairo0@gmail.com",
+            "telefono": "+50378793278",
+            "edad": 33,
+            "pais": "El Salvador",
+            "ciudad": "Santa Ana",
+            "añosExperiencia": 6,
+            "descripcion": "Licdo. En Psicología",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [],
+            "certificaciones": [],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 148,
+            "nombre": "Fernando Alexander",
+            "apellido": "Guanipa Gomez",
+            "fechaNacimiento": "1989-07-29",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "guanipafernando@gmail.com",
+            "telefono": "+593962961685",
+            "edad": 35,
+            "pais": "Ecuador",
+            "ciudad": "Ibarra",
+            "añosExperiencia": 5,
+            "descripcion": "Psicólogo Clínico",
+            "precioServicioHora": 12.00,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Bicentenaria de Aragua, Venezuela",
+                    "año": 2014
+                }
+            ],
+            "experiencia": [],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 149,
+            "nombre": "Luis",
+            "apellido": "Palacios",
+            "fechaNacimiento": "1996-09-14",
+            "fotoPerfil": "./public/img/users/Luis Ignacio Palacios Suarez.png",
+            "correoElectronico": "luisipalacios@gmail.com",
+            "telefono": "+59162327778",
+            "edad": 27,
+            "pais": "Bolivia",
+            "ciudad": "La Paz",
+            "añosExperiencia": 2,
+            "descripcion": "Soy psicoterapeuta sistémico especializado en la terapia individual y de pareja. Me he especializado en temas como ruptura amorosa, celos, elección de pareja, duelo, problemas de comunicación. Tengo mi emprendimiento propio desde el 2020, llamado Lutzu Psicólogo. Un espacio digital confiable para aprender, hablar y enseñar sobre la psicología detrás del amor de pareja y otros aspectos relacionados con el bienestar mental. Con el objetivo de consolidarlo con un apoyo integral para todo aquel que lo necesite.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en el Área de Gestión de Personas",
+                    "institucion": "IRUPANA ANDEAN FOOD ORGANIC SA",
+                    "añoInicio": 2018,
+                    "añoFin": 2019,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Pasante en Evaluación/Apoyo Psicopedagógico y Rehabilitación",
+                    "institucion": "Mente Activa: Centro Neuropsicológico",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Consultor Externo",
+                    "institucion": "ETIKA SRL: Empresa de Gestión del Talento Humano",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Católica Boliviana San Pablo",
+                    "año": 2021
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lutzupsicologo/",
+                "facebook": "https://www.facebook.com/lutzupsicologo/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 150,
+            "nombre": "Eva Julieta",
+            "apellido": "Guillen",
+            "fechaNacimiento": "1998-06-27",
+            "fotoPerfil": "./public/img/users/Julieta Guillen.jpeg",
+            "correoElectronico": "psicevajguillen@gmail.com",
+            "telefono": "+584246778363",
+            "edad": 26,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 4,
+            "descripcion": "Psicóloga en atención a niños, adolescentes y adultos. Prevención, diagnóstico y tratamiento, realización de informes psicológicos.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Psicontento Consultorio Virtual",
+                    "añoInicio": 2020,
+                    "añoFin": 2021,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Hospital Victorino Santaella",
+                    "añoInicio": 2020,
+                    "añoFin": 2023,
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicevaguillen/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 151,
+            "nombre": "Mileny",
+            "apellido": "Socorro",
+            "fechaNacimiento": "1975-10-01",
+            "fotoPerfil": "./public/img/users/Mileny Socorro.jpeg",
+            "correoElectronico": "luisevilchez@me.com",
+            "telefono": "+584246750830",
+            "edad": 48,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 26,
+            "descripcion": "Psicóloga con 26 años de experiencia, especialista en terapia cognitiva conductual, comprometida a lograr tu bienestar con la adquisición de herramientas aplicables para todas las áreas de tu vida.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": 1998
+                }
+            ],
+            "experiencia": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/milementesana/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 152,
+            "nombre": "Eduardo",
+            "apellido": "Ascanio",
+            "fechaNacimiento": "1999-12-11",
+            "fotoPerfil": "./public/img/users/Eduardo Ascanio.jpeg",
+            "correoElectronico": "psic.eduardoascanio11@gmail.com",
+            "telefono": "+584244646675",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 3,
+            "descripcion": "Hola! Soy Eduardo Ascanio, licenciado en psicología mención clínica. Me especializo en la terapia cognitivo-conductual y en un abordaje en contra del suicidio. Espero poder acompañarte en tu proceso terapéutico.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Acompañamiento Psicológico",
+                    "institucion": "",
+                    "añoInicio": 2021,
+                    "añoFin": "Presente",
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Pasante Universitario",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": 2020,
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.eduardoascanio/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 153,
+            "nombre": "Karina",
+            "apellido": "Ramirez",
+            "fechaNacimiento": "1996-12-29",
+            "fotoPerfil": "./public/img/users/Karina Ramirez.webp",
+            "correoElectronico": "karina.ramirezleon29@gmail.com",
+            "telefono": "+573222168545",
+            "edad": 27,
+            "pais": "Colombia",
+            "ciudad": "Zipaquirá",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga Colombiana. Trabajo con jóvenes y adultos en gestión de emociones, sanación de heridas y autoestima, autopercepción y amor propio.",
+            "precioServicioHora": 13,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Prácticas Profesionales",
+                    "institucion": "Secretaría de Educación",
+                    "añoInicio": "",
+                    "añoFin": ""
+                },
+                {
+                    "puesto": "Centro de Escucha y Acompañamiento Psicológico",
+                    "institucion": "",
+                    "añoInicio": "",
+                    "añoFin": ""
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Colegio Francisco José de Caldas",
+                    "añoInicio": "",
+                    "añoFin": ""
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicokari_29/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 154,
+            "nombre": "Nathaly",
+            "apellido": "Vinueza",
+            "fechaNacimiento": "2002-01-03",
+            "fotoPerfil": "./public/img/users/Nathaly Vinueza.jpg",
+            "correoElectronico": "vinuezanathaly018@gmail.com",
+            "telefono": "+593984276648",
+            "edad": 22,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga empática, perceptiva, con escucha activa y positiva.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante",
+                    "institucion": "Unidad Educativa Gonzáles Zumárraga",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Experiencia en prácticas psicológicas con adolescentes."
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/nathaly-nicole-vinueza-jimenez-701143266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 155,
+            "nombre": "Leidy",
+            "apellido": "Triana",
+            "fechaNacimiento": "1986-05-09",
+            "fotoPerfil": "./public/img/users/Leidy Triana.jpg",
+            "correoElectronico": "leidyyuranytriana@gmail.com",
+            "telefono": "+50763642213",
+            "edad": 38,
+            "pais": "Colombia",
+            "ciudad": "Bogotá",
+            "añosExperiencia": 5,
+            "descripcion": "Psicóloga con amplia experiencia en psicología positiva y terapias de tercera generación, enfocadas en la aceptación y el cambio. Especialista en E.M.D.R., neurofeedback y mindfulness, con un enfoque integral en fomentar la resiliencia como principal objetivo terapéutico.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia EMDR",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicoeducadora",
+                    "institucion": "Fundación Hechos con el Corazón",
+                    "añoInicio": "",
+                    "añoFin": ""
+                },
+                {
+                    "puesto": "Psicóloga de Proyecto Educativo",
+                    "institucion": "Tierra de Niños",
+                    "añoInicio": "",
+                    "añoFin": ""
+                },
+                {
+                    "puesto": "Educadora de Primera Infancia",
+                    "institucion": "Nannys S.A.S",
+                    "añoInicio": "",
+                    "añoFin": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Nacional Abierta y a Distancia",
+                    "año": 2018
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/leidy.psicologa.educadora?igsh=MTdxYTJmbWxiMXB4MA==",
+                "facebook": "https://www.facebook.com/share/Ls6yaE4wo6iNHP38/?mibextid=qi2Omg",
+                "linkedin": "https://www.linkedin.com/in/leidy-yurany-triana-santofinio-454075169?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 156,
+            "nombre": "Ariana",
+            "apellido": "Alvarado",
+            "fechaNacimiento": "1991-04-08",
+            "fotoPerfil": "./public/img/users/Ariana Alvarado.jpg",
+            "correoElectronico": "mypsicobien@gmail.com",
+            "telefono": "+584125257270",
+            "edad": 33,
+            "pais": "Venezuela",
+            "ciudad": "Portuguesa",
+            "añosExperiencia": 7,
+            "descripcion": "Psicóloga con 7 años de ejercicio profesional de manera autónoma brindando primeros auxilios psicológicos y acompañamiento.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Autónoma",
+                    "institucion": "",
+                    "añoInicio": 2018,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Brindando acompañamiento psicológico online."
+                },
+                {
+                    "puesto": "Reclutamiento y Selección de Personal",
+                    "institucion": "Empresa en Estados Unidos",
+                    "añoInicio": 2020,
+                    "añoFin": 2023,
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "facebook": "https://www.facebook.com/Mypsicobien",
+                "instagram": "https://www.instagram.com/mypsicobien/?hl=es-es",
+                "linkedin": "https://www.linkedin.com/in/psicoariana/",
+                "x": "https://x.com/mypsicobien"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 157,
+            "nombre": "Matias",
+            "apellido": "Rodriguez",
+            "fechaNacimiento": "1991-07-10",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "matii.rodriguez.1991@gmail.com",
+            "telefono": "+542932507072",
+            "edad": 33,
+            "pais": "Argentina",
+            "ciudad": "La Plata",
+            "añosExperiencia": 5,
+            "descripcion": "Profesor y Licenciado en Psicología (UNLP, Argentina).",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Trabajos de Auditoría, Recursos Humanos, y Clínica",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/lic.matiasrodriguez/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 158,
+            "nombre": "Johanna",
+            "apellido": "Márquez",
+            "fechaNacimiento": "1998-09-15",
+            "fotoPerfil": "./public/img/users/Johanna Marquez.jpg",
+            "correoElectronico": "johannamarquez7@gmail.com",
+            "telefono": "+584247567797",
+            "edad": 25,
+            "pais": "Venezuela",
+            "ciudad": "San Cristóbal",
+            "añosExperiencia": 3,
+            "descripcion": "Terapia dirigida a niños, jóvenes y adultos. Trastornos depresivos, ansiosos y de dependencia emocional.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Laboral",
+                    "institucion": "Celsmoca",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Bicentenaria de Aragua",
+                    "año": 2019
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/joyhjm/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 159,
+            "nombre": "Sofía",
+            "apellido": "Silva",
+            "fechaNacimiento": "1994-09-14",
+            "fotoPerfil": "./public/img/users/Sofia Silva.jpg",
+            "correoElectronico": "sofiasilvadob@gmail.com",
+            "telefono": "+59898380895",
+            "edad": 29,
+            "pais": "Uruguay",
+            "ciudad": "Rivera",
+            "añosExperiencia": 2,
+            "descripcion": "Cuento con 2 años de experiencia ofreciendo servicios de Psicoterapia, de forma virtual y presencial. Durante este tiempo, he tenido el placer de conocer a varias personas, y de acompañarlas en sus procesos, con muy buenos resultados. Cuento con un posgrado clínico en Logoterapia y Análisis Existencial, formación en Terapia Cognitivo Conductual, y actualmente, estoy haciendo un Máster en Psicoterapia, para continuar integrando conocimientos a mi práctica. Se tratará de un espacio construido en conjunto, donde te sientas en la comodidad de expresarte, y entre ambos, podremos encontrarle otra perspectiva a las situaciones, trabajar herramientas para superarlas, y darles un sentido. También cuento con experiencia trabajando con adicciones, discapacidad, depresión, ansiedad, duelos, habilidades sociales, falta de sentido, estrés, entre otros.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad de la República",
+                    "año": "2014-2020"
+                },
+                {
+                    "nombre": "Especialización Clínica en Logoterapia y Análisis Existencial",
+                    "institucion": "Sociedad de Logoterapia del Uruguay",
+                    "año": "2021-2022"
+                },
+                {
+                    "nombre": "Diplomado en Terapia Cognitivo Conductual con Niños y Adolescentes",
+                    "institucion": "IMCEPRO",
+                    "año": 2023
+                },
+                {
+                    "nombre": "Maestría en Psicoterapia: Terapias de Tercera Generación",
+                    "institucion": "Universidad Internacional La Rioja",
+                    "año": "2024 - cursando actualmente"
+                }
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Operadora Terapéutica en Adicciones",
+                    "institucion": "Centro Izcali",
+                    "añoInicio": 2021,
+                    "añoFin": 2023,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Ofreciendo psicoterapia y psicodiagnóstico."
+                },
+                {
+                    "puesto": "Psicóloga Institucional",
+                    "institucion": "ADIS - Amigos de los Discapacitados de Rivera",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.sofiasilva/",
+                "linkedin": "https://www.linkedin.com/in/psicologasofiasilva/"
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
