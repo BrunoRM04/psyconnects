@@ -32,7 +32,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="psicologos.html">Psicólogos Disponibles</a></li>
                 <li><a href="investigacion.html">Investigaciones</a></li>
-                <li><a href="test.html">Test Práctico</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
                 <li><a href="ofertas.html">Ofertas Laborales</a></li>
                 <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
             </ul>
@@ -40,11 +40,11 @@
                 <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                 <li><a href="psicologos.html"><i class="fas fa-user-md"></i></a></li>
                 <li><a href="investigacion.html"><i class="fas fa-book"></i></a></li>
-                <li><a href="test.html"><i class="fas fa-pencil-alt"></i></a></li>
+                <li><a href="reseñas.html"><i class="fa-solid fa-comments"></i></a></li>
                 <li><a href="ofertas.html"><i class="fas fa-briefcase"></i></a></li>
                 <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
             </ul>
-        </nav>
+        </nav> 
     </header>
 
     <main>
@@ -76,6 +76,32 @@
                     <option value="mayor">Mayor a Menor</option>
                 </select>
             </div>
+            <div>
+                <label for="filter-country">Filtrar por País:</label>
+                <select id="filter-country">
+                    <option value="">Seleccionar</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="España">España</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="México">México</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="República Dominicana">República Dominicana</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+            </div>
         </section>
 
         <section id="psicologos-list">
@@ -103,139 +129,147 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const filterAge = document.getElementById("filter-age");
-            const filterPrice = document.getElementById("filter-price");
-            const filterExperience = document.getElementById("filter-experience");
-            const contenedor = document.getElementById('contenedor-tarjetas');
-            const userList = document.getElementById('user-list');
+    const filterAge = document.getElementById("filter-age");
+    const filterPrice = document.getElementById("filter-price");
+    const filterExperience = document.getElementById("filter-experience");
+    const filterCountry = document.getElementById("filter-country"); // AÑADIDO
+    const contenedor = document.getElementById('contenedor-tarjetas');
+    const userList = document.getElementById('user-list');
 
-            let psicologos = [];
+    let psicologos = [];
 
-            fetch('./json/psicologos.json')
-                .then(response => response.json())
-                .then(data => {
-                    psicologos = data.psicologos.map(psicologo => ({
-                        ...psicologo,
-                        edad: calcularEdad(psicologo.fechaNacimiento)
-                    }));
-                    shuffleArray(psicologos);
-                    displayPsicologos(psicologos);
-                    populateSidebar(psicologos);
-                });
-
-            filterAge.addEventListener("change", () => filterPsicologos());
-            filterPrice.addEventListener("change", () => filterPsicologos());
-            filterExperience.addEventListener("change", () => filterPsicologos());
-
-            function filterPsicologos() {
-                let filteredPsicologos = [...psicologos];
-
-                const ageOrder = filterAge.value;
-                const priceOrder = filterPrice.value;
-                const experienceOrder = filterExperience.value;
-
-                if (ageOrder) {
-                    filteredPsicologos.sort((a, b) => ageOrder === 'menor' ? a.edad - b.edad : b.edad - a.edad);
-                }
-
-                if (priceOrder) {
-                    filteredPsicologos.sort((a, b) => priceOrder === 'menor' ? a.precioServicioHora - b.precioServicioHora : b.precioServicioHora - a.precioServicioHora);
-                }
-
-                if (experienceOrder) {
-                    filteredPsicologos.sort((a, b) => experienceOrder === 'menor' ? a.añosExperiencia - b.añosExperiencia : b.añosExperiencia - a.añosExperiencia);
-                }
-
-                displayPsicologos(filteredPsicologos);
-            }
-
-            function displayPsicologos(psicologos) {
-                contenedor.innerHTML = "";
-
-                psicologos.forEach(psicologo => {
-                    const tarjeta = document.createElement('div');
-                    tarjeta.className = 'tarjeta';
-                    tarjeta.innerHTML = `
-                        <div class="cabecera-tarjeta">
-                            <img src="${psicologo.fotoPerfil}" alt="${psicologo.nombre} ${psicologo.apellido}" class="foto-perfil">
-                        </div>
-                        <div class="cuerpo-tarjeta">
-                            <h2>${psicologo.nombre} ${psicologo.apellido}</h2>
-                            <div class="detalles">
-                                <span class="insignia">${psicologo.edad} Años</span>
-                                <span class="insignia">${psicologo.pais}</span>
-                            </div>
-                            <div class="especialidades">
-                                ${psicologo.especializacion.map(esp => `<div class="especialidad">${esp}</div>`).join('')}
-                            </div>
-                            <div class="iconos-sociales">
-                                ${psicologo.redesSociales.linkedin ? `<a href="${psicologo.redesSociales.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>` : ''}
-                                ${psicologo.redesSociales.facebook ? `<a href="${psicologo.redesSociales.facebook}" target="_blank"><i class="fab fa-facebook"></i></a>` : ''}
-                                ${psicologo.redesSociales.twitter ? `<a href="${psicologo.redesSociales.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>` : ''}
-                                ${psicologo.redesSociales.instagram ? `<a href="${psicologo.redesSociales.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
-                                ${psicologo.redesSociales.youtube ? `<a href="${psicologo.redesSociales.youtube}" target="_blank"><i class="fab fa-youtube"></i></a>` : ''}
-                                ${psicologo.redesSociales.whatsapp ? `<a href="https://wa.me/${psicologo.redesSociales.whatsapp.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects." target="_blank"><i class="fab fa-whatsapp"></i></a>` : ''}
-                                ${psicologo.redesSociales.tiktok ? `<a href="${psicologo.redesSociales.tiktok}" target="_blank"><i class="fab fa-tiktok"></i></a>` : ''}
-                                ${psicologo.redesSociales.snapchat ? `<a href="${psicologo.redesSociales.snapchat}" target="_blank"><i class="fab fa-snapchat"></i></a>` : ''}
-                            </div>
-                            <a href="public/html/perfil.html?id=${psicologo.id}" class="boton">Ver Perfil ></a>
-                        </div>
-                    `;
-                    contenedor.appendChild(tarjeta);
-                });
-            }
-
-            function populateSidebar(psicologos) {
-                const userList = document.getElementById('user-list');
-                userList.innerHTML = "";
-
-                const filteredPsicologos = psicologos.filter(psicologo => psicologo.id === 41 || psicologo.id === 43 || psicologo.id === 59 || psicologo.id === 46 || psicologo.id === 98);
-
-                filteredPsicologos.forEach(psicologo => {
-                    const userInfoHTML = `
-                        <div class="user-info">
-                            <img src="${psicologo.fotoPerfil}" alt="${psicologo.nombre} ${psicologo.apellido}">
-                            <div class="user-details">
-                                <strong>${psicologo.nombre} ${psicologo.apellido}</strong><br>
-                                ${psicologo.pais}
-                            </div>
-                        </div>
-                        <a href="public/html/perfil.html?id=${psicologo.id}" class="profile-button">Ir al perfil ></a>
-                    `;
-                    userList.innerHTML += userInfoHTML;
-                });
-            }
-
-            function calcularEdad(fechaNacimiento) {
-                const hoy = new Date();
-                const fechaNac = new Date(fechaNacimiento);
-                let edad = hoy.getFullYear() - fechaNac.getFullYear();
-                const mes = hoy.getMonth() - fechaNac.getMonth();
-                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
-                    edad--;
-                }
-                return edad;
-            }
-
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-            }
+    fetch('./json/psicologos.json')
+        .then(response => response.json())
+        .then(data => {
+            psicologos = data.psicologos.map(psicologo => ({
+                ...psicologo,
+                edad: calcularEdad(psicologo.fechaNacimiento)
+            }));
+            shuffleArray(psicologos);
+            displayPsicologos(psicologos);
+            populateSidebar(psicologos);
         });
 
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const arrow = document.querySelector(".arrow");
-            if (sidebar.style.left === "0px") {
-                sidebar.style.left = "-250px";
-                arrow.innerHTML = "&#9654;"; 
-            } else {
-                sidebar.style.left = "0px";
-                arrow.innerHTML = "&#9664;"; 
-            }
+    filterAge.addEventListener("change", () => filterPsicologos());
+    filterPrice.addEventListener("change", () => filterPsicologos());
+    filterExperience.addEventListener("change", () => filterPsicologos());
+    filterCountry.addEventListener("change", () => filterPsicologos()); // AÑADIDO
+
+    function filterPsicologos() {
+        let filteredPsicologos = [...psicologos];
+
+        const ageOrder = filterAge.value;
+        const priceOrder = filterPrice.value;
+        const experienceOrder = filterExperience.value;
+        const countryFilter = filterCountry.value; // AÑADIDO
+
+        if (ageOrder) {
+            filteredPsicologos.sort((a, b) => ageOrder === 'menor' ? a.edad - b.edad : b.edad - a.edad);
         }
+
+        if (priceOrder) {
+            filteredPsicologos.sort((a, b) => priceOrder === 'menor' ? a.precioServicioHora - b.precioServicioHora : b.precioServicioHora - a.precioServicioHora);
+        }
+
+        if (experienceOrder) {
+            filteredPsicologos.sort((a, b) => experienceOrder === 'menor' ? a.añosExperiencia - b.añosExperiencia : b.añosExperiencia - a.añosExperiencia);
+        }
+
+        if (countryFilter) { // AÑADIDO
+            filteredPsicologos = filteredPsicologos.filter(psicologo => psicologo.pais === countryFilter); // AÑADIDO
+        }
+
+        displayPsicologos(filteredPsicologos);
+    }
+
+    function displayPsicologos(psicologos) {
+        contenedor.innerHTML = "";
+
+        psicologos.forEach(psicologo => {
+            const tarjeta = document.createElement('div');
+            tarjeta.className = 'tarjeta';
+            tarjeta.innerHTML = `
+                <div class="cabecera-tarjeta">
+                    <img src="${psicologo.fotoPerfil}" alt="${psicologo.nombre} ${psicologo.apellido}" class="foto-perfil">
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h2>${psicologo.nombre} ${psicologo.apellido}</h2>
+                    <div class="detalles">
+                        <span class="insignia">${psicologo.edad} Años</span>
+                        <span class="insignia">${psicologo.pais}</span>
+                    </div>
+                    <div class="especialidades">
+                        ${psicologo.especializacion.map(esp => `<div class="especialidad">${esp}</div>`).join('')}
+                    </div>
+                    <div class="iconos-sociales">
+                        ${psicologo.redesSociales.linkedin ? `<a href="${psicologo.redesSociales.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>` : ''}
+                        ${psicologo.redesSociales.facebook ? `<a href="${psicologo.redesSociales.facebook}" target="_blank"><i class="fab fa-facebook"></i></a>` : ''}
+                        ${psicologo.redesSociales.twitter ? `<a href="${psicologo.redesSociales.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>` : ''}
+                        ${psicologo.redesSociales.instagram ? `<a href="${psicologo.redesSociales.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
+                        ${psicologo.redesSociales.youtube ? `<a href="${psicologo.redesSociales.youtube}" target="_blank"><i class="fab fa-youtube"></i></a>` : ''}
+                        ${psicologo.redesSociales.whatsapp ? `<a href="https://wa.me/${psicologo.redesSociales.whatsapp.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects." target="_blank"><i class="fab fa-whatsapp"></i></a>` : ''}
+                        ${psicologo.redesSociales.tiktok ? `<a href="${psicologo.redesSociales.tiktok}" target="_blank"><i class="fab fa-tiktok"></i></a>` : ''}
+                        ${psicologo.redesSociales.snapchat ? `<a href="${psicologo.redesSociales.snapchat}" target="_blank"><i class="fab fa-snapchat"></i></a>` : ''}
+                    </div>
+                    <a href="public/html/perfil.html?id=${psicologo.id}" class="boton">Ver Perfil ></a>
+                </div>
+            `;
+            contenedor.appendChild(tarjeta);
+        });
+    }
+
+    function populateSidebar(psicologos) {
+        const userList = document.getElementById('user-list');
+        userList.innerHTML = "";
+
+        const filteredPsicologos = psicologos.filter(psicologo => psicologo.id === 41 || psicologo.id === 43 || psicologo.id === 59 || psicologo.id === 46 || psicologo.id === 98);
+
+        filteredPsicologos.forEach(psicologo => {
+            const userInfoHTML = `
+                <div class="user-info">
+                    <img src="${psicologo.fotoPerfil}" alt="${psicologo.nombre} ${psicologo.apellido}">
+                    <div class="user-details">
+                        <strong>${psicologo.nombre} ${psicologo.apellido}</strong><br>
+                        ${psicologo.pais}
+                    </div>
+                </div>
+                <a href="public/html/perfil.html?id=${psicologo.id}" class="profile-button">Ir al perfil ></a>
+            `;
+            userList.innerHTML += userInfoHTML;
+        });
+    }
+
+    function calcularEdad(fechaNacimiento) {
+        const hoy = new Date();
+        const fechaNac = new Date(fechaNacimiento);
+        let edad = hoy.getFullYear() - fechaNac.getFullYear();
+        const mes = hoy.getMonth() - fechaNac.getMonth();
+        if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+            edad--;
+        }
+        return edad;
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+});
+
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const arrow = document.querySelector(".arrow");
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+        arrow.innerHTML = "&#9654;"; 
+    } else {
+        sidebar.style.left = "0px";
+        arrow.innerHTML = "&#9664;"; 
+    }
+}
+
     </script>
 
 </body>
