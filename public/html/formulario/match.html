@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsyConnects | Match</title>
+    <link rel="stylesheet" href="../../../public/css/styles.css">
+    <link rel="shortcut icon" href="../../../public/img/marca/icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../../../public/img/marca/logo cuatro.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../../psicologos.html">Psicólogos Disponibles</a></li>
+                <li><a href="../../../investigacion.html">Investigaciones</a></li>
+                <li><a href="../../../reseñas.html">Reseñas</a></li>
+                <li><a href="../../../ofertas.html">Ofertas Laborales</a></li>
+                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
+            </ul>
+            <ul class="nav-icons">
+                <li><a href="../../../index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="../../../psicologos.html"><i class="fas fa-user-md"></i></a></li>
+                <li><a href="../../../investigacion.html"><i class="fas fa-book"></i></a></li>
+                <li><a href="../../../reseñas.html"><i class="fa-solid fa-comments"></i></a></li>
+                <li><a href="../../../ofertas.html"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="form-container">
+            <h2>Encuentra al Psicólogo Ideal</h2>
+            <form id="match-form">
+                <label for="pais">Selecciona tu país:</label>
+                <select id="pais" name="pais" required>
+                    <option value="Cualquiera">Cualquiera</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="México">México</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+        
+                <label>Responde las siguientes preguntas:</label>
+                <div class="preguntas">
+                    <div class="pregunta-grupo">
+                        <label>¿Te sientes ansioso frecuentemente?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta1-si" name="pregunta1" value="sí">
+                            <label for="pregunta1-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta1-no" name="pregunta1" value="no">
+                            <label for="pregunta1-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Te resulta difícil concentrarte en tareas diarias?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta2-si" name="pregunta2" value="sí">
+                            <label for="pregunta2-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta2-no" name="pregunta2" value="no">
+                            <label for="pregunta2-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Experimentas cambios de humor repentinos?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta3-si" name="pregunta3" value="sí">
+                            <label for="pregunta3-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta3-no" name="pregunta3" value="no">
+                            <label for="pregunta3-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Te sientes frecuentemente triste o deprimido?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta4-si" name="pregunta4" value="sí">
+                            <label for="pregunta4-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta4-no" name="pregunta4" value="no">
+                            <label for="pregunta4-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Sientes miedo o pánico en situaciones cotidianas?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta5-si" name="pregunta5" value="sí">
+                            <label for="pregunta5-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta5-no" name="pregunta5" value="no">
+                            <label for="pregunta5-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Evitas situaciones sociales por temor o incomodidad?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta6-si" name="pregunta6" value="sí">
+                            <label for="pregunta6-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta6-no" name="pregunta6" value="no">
+                            <label for="pregunta6-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Tienes pensamientos negativos recurrentes?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta7-si" name="pregunta7" value="sí">
+                            <label for="pregunta7-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta7-no" name="pregunta7" value="no">
+                            <label for="pregunta7-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Sientes que tus preocupaciones afectan tu vida diaria?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta8-si" name="pregunta8" value="sí">
+                            <label for="pregunta8-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta8-no" name="pregunta8" value="no">
+                            <label for="pregunta8-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Te resulta difícil relajarte o desconectarte?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta9-si" name="pregunta9" value="sí">
+                            <label for="pregunta9-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta9-no" name="pregunta9" value="no">
+                            <label for="pregunta9-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Te preocupas excesivamente por tu salud o la de otros?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta10-si" name="pregunta10" value="sí">
+                            <label for="pregunta10-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta10-no" name="pregunta10" value="no">
+                            <label for="pregunta10-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Sientes que tienes poca energía o te cansas fácilmente?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta11-si" name="pregunta11" value="sí">
+                            <label for="pregunta11-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta11-no" name="pregunta11" value="no">
+                            <label for="pregunta11-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta-grupo">
+                        <label>¿Te sientes con baja autoestima o sin confianza en ti mismo?</label>
+                        <div class="opciones-pildora">
+                            <input type="radio" id="pregunta12-si" name="pregunta12" value="sí">
+                            <label for="pregunta12-si" class="pildora">Sí</label>
+                            <input type="radio" id="pregunta12-no" name="pregunta12" value="no">
+                            <label for="pregunta12-no" class="pildora">No</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <input type="submit" value="Buscar Psicólogos">
+            </form>
+        </div>
+        
+        <div class="resultados-container" id="resultados-container">
+            <!-- Aquí se mostrarán los resultados -->
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="#">EMPRESAS</a>
+                <a href="https://forms.gle/xZERw5gE8yzQELDc8">REGISTRARSE</a>
+                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">QUIENES SOMOS</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
+        </div>
+    </footer>
+
+    <script>
+document.getElementById("match-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Verificar que todas las preguntas estén contestadas
+    const preguntasRespondidas = Array.from(document.querySelectorAll(".pregunta-grupo input[type='radio']:checked")).length;
+    const totalPreguntas = document.querySelectorAll(".pregunta-grupo").length;
+
+    if (preguntasRespondidas < totalPreguntas) {
+        alert("Por favor, responde todas las preguntas antes de continuar.");
+        return;
+    }
+
+    const paisSeleccionado = document.getElementById("pais").value;
+
+    fetch("/json/psicologos.json")
+        .then(response => response.json())
+        .then(data => {
+            let psicologosFiltrados;
+
+            if (paisSeleccionado === "Cualquiera") {
+                psicologosFiltrados = data.psicologos;
+            } else {
+                psicologosFiltrados = data.psicologos.filter(psicologo => psicologo.pais === paisSeleccionado);
+            }
+
+            // Ordenar aleatoriamente y limitar a 5 psicólogos
+            psicologosFiltrados = psicologosFiltrados.sort(() => 0.5 - Math.random()).slice(0, 5);
+
+            const resultadosContainer = document.getElementById("resultados-container");
+            resultadosContainer.innerHTML = ""; // Limpiar resultados previos
+
+            psicologosFiltrados.forEach(psicologo => {
+                const tarjeta = document.createElement("div");
+                tarjeta.classList.add("tarjeta-psicologo");
+
+                // Generar enlaces a redes sociales
+                const redesSocialesHTML = `
+                    ${psicologo.redesSociales.linkedin ? `<a href="${psicologo.redesSociales.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>` : ''}
+                    ${psicologo.redesSociales.facebook ? `<a href="${psicologo.redesSociales.facebook}" target="_blank"><i class="fab fa-facebook"></i></a>` : ''}
+                    ${psicologo.redesSociales.twitter ? `<a href="${psicologo.redesSociales.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>` : ''}
+                    ${psicologo.redesSociales.instagram ? `<a href="${psicologo.redesSociales.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
+                    ${psicologo.redesSociales.youtube ? `<a href="${psicologo.redesSociales.youtube}" target="_blank"><i class="fab fa-youtube"></i></a>` : ''}
+                    ${psicologo.redesSociales.whatsapp ? `<a href="https://wa.me/${psicologo.redesSociales.whatsapp.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects." target="_blank"><i class="fab fa-whatsapp"></i></a>` : ''}
+                    ${psicologo.redesSociales.tiktok ? `<a href="${psicologo.redesSociales.tiktok}" target="_blank"><i class="fab fa-tiktok"></i></a>` : ''}
+                    ${psicologo.redesSociales.snapchat ? `<a href="${psicologo.redesSociales.snapchat}" target="_blank"><i class="fab fa-snapchat"></i></a>` : ''}
+                `;
+
+                tarjeta.innerHTML = `
+                    <div class="icono-psicologo"><i class="fa-solid fa-user-doctor" style="color: #ffffff;"></i></div>
+                    <h3>${psicologo.nombre} ${psicologo.apellido}</h3>
+                    <p>${psicologo.pais}</p>
+                    <p class="precio">Precio (hora): USD ${psicologo.precioServicioHora}</p>
+                    <div class="redes-sociales">${redesSocialesHTML}</div>
+                    <button onclick="verPerfil(${psicologo.id})">Ver Perfil</button>
+                `;
+
+                resultadosContainer.appendChild(tarjeta);
+            });
+
+            // Bloquear el formulario para que no se pueda usar otra vez sin recargar la página
+            document.getElementById("match-form").reset();
+            document.getElementById("match-form").style.pointerEvents = "none";
+            document.querySelector("input[type='submit']").value = "Formulario Completado";
+        });
+});
+
+function verPerfil(id) {
+    window.location.href = `/public/html/perfil.html?id=${id}`;
+}
+    </script>
+
+</body>
+
+</html>

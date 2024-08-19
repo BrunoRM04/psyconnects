@@ -179,7 +179,285 @@ img.rounded-full {
 }
 /* RESEÑAS */
 
+/* MATCH */
+.form-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1358B4; 
+    border-radius: 12px;
+    border: 2px solid white; 
+    width: 90%;
+}
+.form-container h2 {
+    text-align: center;
+    color: white; 
+    margin-bottom: 25px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.form-container label {
+    font-weight: bold;
+    color: white; 
+    margin-bottom: 10px;
+    display: block;
+}
+.form-container select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid white; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background-color: #1358B4; 
+    color: white; 
+}
+.form-container .preguntas {
+    margin-bottom: 20px;
+}
+.form-container .pregunta-grupo {
+    margin-bottom: 15px;
+}
+.form-container .opciones-pildora {
+    display: flex;
+    gap: 10px;
+}
+.pildora {
+    padding: 10px 20px;
+    border: 2px solid white; 
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    color: white; 
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + .pildora {
+    background-color: white; 
+    color: #1358B4; 
+}
+.pildora:hover {
+    background-color: white; 
+    color: #1358B4; 
+}
+.form-container input[type="submit"] {
+    background-color: white; 
+    color: #1358B4;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #1358B4; 
+    color: white; 
+}
+.resultados-container {
+    margin: 30px auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+}
+.tarjeta-psicologo {
+    background: #1358B4;
+    color: white;
+    border: none;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.tarjeta-psicologo h3 {
+    color: #1358B4;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.tarjeta-psicologo p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 500;
+}
+.tarjeta-psicologo .precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+.tarjeta-psicologo .redes-sociales {
+    margin: 10px 0; 
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
 
+.tarjeta-psicologo .redes-sociales a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+.tarjeta-psicologo .redes-sociales a:hover {
+    color: #d1d1d1;
+}
+.tarjeta-psicologo button {
+    background-color: white;
+    color: #1358B4;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+.tarjeta-psicologo button:hover {
+    background-color: #1358B4;
+    color: white;
+    border: solid 1px white;
+}
+.tarjeta-psicologo .icono-psicologo {
+    font-size: 3rem;
+    color: white; 
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .resultados-container {
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-psicologo {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+/* MATCH */
+
+/* POPUPS */
+.popup-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.popup-content {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+}
+.popup-img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #1358B4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.popup-show.show {
+    visibility: visible;
+    opacity: 1;
+}
+@media (max-width: 1024px) {
+    .popup-content {
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .popup-content {
+        width: 350px;
+        height: 350px;
+    }
+    .popup-close-btn {
+        top: 8px;
+        right: 8px;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 425px) {
+    .popup-content {
+        width: 300px;
+        height: 300px;
+    }
+    .popup-close-btn {
+        top: 5px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 375px) {
+    .popup-content {
+        width: 280px;
+        height: 280px;
+    }
+    .popup-close-btn {
+        top: 5px;
+        right: 5px;
+        width: 18px;
+        height: 18px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 320px) {
+    .popup-content {
+        width: 260px;
+        height: 260px;
+    }
+    .popup-close-btn {
+        top: 5px;
+        right: 5px;
+        width: 16px;
+        height: 16px;
+        font-size: 12px;
+    }
+}
+/* POPUPS */
 
 /* SECCIÓN INDEX 1 */
 .sección-index {
