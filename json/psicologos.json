@@ -9293,6 +9293,958 @@
                 "linkedin": "https://www.linkedin.com/in/psicologasofiasilva/"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 160,
+            "nombre": "Marina",
+            "apellido": "Iudicello",
+            "fechaNacimiento": "1991-12-13",
+            "fotoPerfil": "./public/img/users/Marina Iudicello.jpeg",
+            "correoElectronico": "marinaiudicello@hotmail.com",
+            "telefono": "+5493513802789",
+            "edad": 32,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 8,
+            "descripcion": "Mi nombre es Marina Iudicello, estoy formada en psicología sistémica y cognitiva conductual. Trabajé en distintas instituciones y actualmente coordino un centro terapéutico y trabajo online. Ofrezco en la sesión un espacio cálido y respetuoso en donde la persona pueda sentirse acogida para visibilizar y comprender su historia personal; sus patrones de comportamiento; la identificación de pensamiento y el mundo emocional que las habita. Desde este registro, acompaño en la toma de consciencia y en la gestión emocional que permita poder relacionarse de manera saludable con su propia historia, su cuerpo, mente y con su entorno. En este transitar vamos integrando las narrativas viejas y co-construyendo nuevas narrativas que amplíen la mirada para vivir un presente más pleno. Confío en el rol protagónico y comprometido que las personas pueden asumir con su propia vida para acercarse a vivir una vida que sientan que merece ser vivida.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Terapeuta Grupal de Adolescentes y Asistencia Psicológica Individual de Adultos",
+                    "institucion": "Secretaría de Asistencia de las Adicciones de la Provincia de Córdoba",
+                    "añoInicio": 2017,
+                    "añoFin": 2020,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Coordinadora de Equipo",
+                    "institucion": "Complejo Esperanza",
+                    "añoInicio": 2018,
+                    "añoFin": 2020,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Atención Clínica",
+                    "institucion": "Centro Terapéutico Mil Grullas Psicología",
+                    "añoInicio": 2020,
+                    "añoFin": 2024,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Atención Online",
+                    "institucion": "Tusnua Psicología y Particular",
+                    "añoInicio": 2020,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Nacional de Córdoba",
+                    "año": 2016
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psico.marinaiudicello"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 161,
+            "nombre": "Flavia",
+            "apellido": "Ghiotti",
+            "fechaNacimiento": "1994-09-14",
+            "fotoPerfil": "./public/img/users/Flavia Ghiotti.png",
+            "correoElectronico": "fla.ghiotti@gmail.com",
+            "telefono": "+542477348496",
+            "edad": 29,
+            "pais": "Argentina",
+            "ciudad": "Rosario",
+            "añosExperiencia": 5,
+            "descripcion": "Hola! Mi nombre es Flavia, y soy Psicóloga. Actualmente trabajo presencialmente en Argentina en consultorio privado y también en un hospital público. Siempre me interesó la Psicología ya que siempre quise comprender las emociones y la conducta humana, y lo que me enamoró de esta profesión es poder ayudar a las personas a tener una mejor calidad de vida; pudiendo preguntarse por sus malestares y direccionarse hacia sus deseos para vivir más felices. Trabajo desde el Psicoanálisis, que es una escuela muy amplia de la Psicología. Me interesa poder trabajar con lo singular de quien consulta, su subjetividad única y lo que lo/la aqueja para poder sentirse mejor. Así, trato sobre múltiples temas, destacando mi experiencia en el abordaje de situaciones de angustia, depresión, ansiedad, estrés, consumos problemáticos y relaciones familiares, entre otras. Si estás buscando un espacio de confianza, en el que puedas ser vos mismo/a y puedas tratar lo que te trajo hasta acá, te invito a que tengamos una sesión para conocernos, para escucharte y aconsejarte. Se puede vivir mejor, se puede estar mejor.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Servicio Asistencial en Drogodependencias",
+                    "institucion": "Hospital Regional Agudo Avila de Rosario",
+                    "añoInicio": 2018,
+                    "añoFin": 2020,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Trabajo en Equipo Transversal con Pacientes Internados",
+                    "institucion": "Hospital Regional Agudo Avila en Rosario",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Consultorio Privado Presencial y Virtual",
+                    "institucion": "",
+                    "añoInicio": 2020,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Nacional de Rosario",
+                    "año": 2020
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/flavia-ghiotti/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 162,
+            "nombre": "Lismar",
+            "apellido": "Barco",
+            "fechaNacimiento": "1996-06-19",
+            "fotoPerfil": "./public/img/users/lismar barco.jpg",
+            "correoElectronico": "psic.menteysalud@gmail.com",
+            "telefono": "+584262514333",
+            "edad": 28,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga con formación en terapia de pareja y sexualidad, duelo, autoestima, y ansiedad bajo el enfoque cognitivo-conductual. Te ofrezco un espacio de acompañamiento para el cuidado de tu salud mental.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Área Clínica",
+                    "institucion": "Ambulatorio San José",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Duración de 4 meses"
+                },
+                {
+                    "puesto": "Programa de Atención a Niños, Niñas y Adolescentes en Situación de Riesgo",
+                    "institucion": "Institución Berea Internacional",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "Duración de 4 meses"
+                },
+                {
+                    "puesto": "Psicóloga Online",
+                    "institucion": "AMED (Ecuador)",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Psicóloga Activa",
+                    "institucion": "Ambulatorio Rafael Pereira",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Centroccidental Lisandro Alvarado (UCLA)",
+                    "año": "2013-2022"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.menteysalud/",
+                "facebook": "https://www.facebook.com/psic.menteysalud"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 163,
+            "nombre": "Saraí",
+            "apellido": "García",
+            "fechaNacimiento": "2001-02-14",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "mirnasaraigarcia101@gmail.com",
+            "telefono": "+50371879543",
+            "edad": 23,
+            "pais": "El Salvador",
+            "ciudad": "San Miguel",
+            "añosExperiencia": 1,
+            "descripcion": "Soy una psicóloga apasionada por ayudar a las personas a alcanzar su máximo potencial emocional y mental. Con experiencia trabajando con una variedad de usuarios, desde niños y adolescentes hasta adultos y personas mayores, abordando problemas como ansiedad, depresión, estrés, trastornos del aprendizaje, etc. Mi enfoque terapéutico está basado en terapia cognitivo-conductual, adaptada a las necesidades de cada paciente, y estoy comprometida con crear un espacio seguro y acogedor donde los pacientes se sientan escuchados y comprendidos.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Atención Infantil, Adolescentes y Adultos",
+                    "institucion": "Centro Escolar Sagrado Corazón",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad de El Salvador - Facultad Multidisciplinaria",
+                    "año": ""
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 164,
+            "nombre": "Nayibe",
+            "apellido": "Aguilera",
+            "fechaNacimiento": "",
+            "fotoPerfil": "./public/img/users/Nayibe Aguilera.jpg",
+            "correoElectronico": "sistemasenmovimiento@gmail.com",
+            "telefono": "+584143984752",
+            "edad": 0,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 34,
+            "descripcion": "Psicóloga Clínica con formación en Psicoterapia Cognitiva, Psicocorporal y Energética. Constelaciones Familiares. Biodescodificación de Enfermedades. Terapias Energéticas complementarias. Masaje Psicocorporal. Reiki.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Cargos Gerenciales en el Área de Recursos Humanos",
+                    "institucion": "",
+                    "añoInicio": 1988,
+                    "añoFin": 2010,
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Libre Ejercicio",
+                    "institucion": "",
+                    "añoInicio": 2010,
+                    "añoFin": 2024,
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Central de Venezuela",
+                    "año": "1981-1987"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/muevetusistema",
+                "facebook": "https://www.facebook.com/MoviendoSistemas"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 165,
+            "nombre": "Brenda",
+            "apellido": "Huenz",
+            "fechaNacimiento": "1992-04-14",
+            "fotoPerfil": "./public/img/users/Brenda Huenz.jpeg",
+            "correoElectronico": "lic.brendahuenz@gmail.com",
+            "telefono": "+543516840902",
+            "edad": 32,
+            "pais": "Argentina",
+            "ciudad": "Córdoba",
+            "añosExperiencia": 1,
+            "descripcion": "¡Hola y bienvenidos! Soy Brenda, psicóloga formada por la Universidad Nacional de Córdoba. Mi pasión por la psicología y mi formación académica me han brindado una sólida base para apoyar a mis pacientes en su camino hacia el bienestar y el crecimiento personal. En mi práctica, me comprometo profundamente con cada uno de mis pacientes, buscando siempre su avance y desarrollo. Mi objetivo es proporcionar un espacio seguro y empático, donde juntos podamos identificar y trabajar en las áreas que requieren atención. Mi enfoque en la Terapia Cognitiva Conductual me permite ofrecer estrategias prácticas y efectivas para superar desafíos y mejorar la calidad de vida. Estoy aquí para acompañarte en cada paso de tu proceso, apoyándote para que logres tus metas y te sientas mejor contigo mismo. Si estás buscando un apoyo profesional comprometido y cercano, no dudes en contactarme. ¡Gracias por tu confianza!",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasante en Neuropsiquiátrico Provincial León Morra",
+                    "institucion": "",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Docente de Apoyo y Terapeuta de Niños y Adultos",
+                    "institucion": "Centro Integral Grupo Almas",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Nacional de Córdoba",
+                    "año": "2010-2024"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/clinicavirtual.psicologia/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 166,
+            "nombre": "Andres",
+            "apellido": "Solano",
+            "fechaNacimiento": "1994-12-27",
+            "fotoPerfil": "./public/img/users/Andres S.jpg",
+            "correoElectronico": "l04ded@gmail.com",
+            "telefono": "+593963685642",
+            "edad": 29,
+            "pais": "Ecuador",
+            "ciudad": "",
+            "añosExperiencia": 2,
+            "descripcion": "Como Psicólogo Clínico te ofrezco un enfoque profesional y empático basado en la Terapia Cognitivo-Conductual (TCC), una metodología probada y eficaz para superar una variedad de desafíos emocionales y psicológicos. Mi objetivo es ayudarte a identificar y cambiar patrones de pensamiento disfuncionales y conductas que afectan tu bienestar, facilitando herramientas prácticas para que puedas enfrentar tus problemas de manera constructiva y lograr un cambio duradero.\n\n¿Qué puedes esperar de nuestras sesiones?\n\nEvaluación Personalizada: Comprenderemos juntos tus preocupaciones y objetivos para desarrollar un plan de tratamiento adaptado a tus necesidades específicas.\nTécnicas Basadas en Evidencia: Utilizo estrategias cognitivas y conductuales que te ayudarán a gestionar la ansiedad, la depresión, el estrés y otros problemas emocionales.\nEntorno Seguro y Apoyo Continuo: Crearé un espacio de confianza y apoyo donde podrás explorar tus pensamientos y sentimientos sin juicio.\nHabilidades para la Vida: Aprenderás herramientas prácticas para mejorar tu bienestar general y mantener el progreso a largo plazo.\n\nTu bienestar es mi prioridad. Si estás listo para tomar el control de tu vida y comenzar el camino hacia una mayor felicidad y equilibrio, te invito a contactarme para agendar una primera consulta.\n\nContáctame hoy y da el primer paso hacia una vida más plena y satisfactoria.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "MindlySpace (Trabajo remoto/ Particular)",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualmente",
+                    "descripcion": ""
+                },
+                {
+                    "puesto": "Pasante en Psicología Clínica",
+                    "institucion": "Consultorio de Traumatología, Pasaje",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Católica Santiago de Guayaquil",
+                    "año": "2010-2014"
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://linkedin.com/in/andres-solano-alvear"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 167,
+            "nombre": "Emili",
+            "apellido": "Natera",
+            "fechaNacimiento": "1994-11-22",
+            "fotoPerfil": "./public/img/users/Emili Natera.enc",
+            "correoElectronico": "emilinatera5@gmail.com",
+            "telefono": "+584241224260",
+            "edad": 29,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 5,
+            "descripcion": "Psicóloga clínica especializada en psicoterapia con tendencia psicoanalítica para adultos.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Social",
+                    "institucion": "PLAFAM Asociación Civil de Planificación Familiar",
+                    "añoInicio": 2016,
+                    "añoFin": 2016,
+                    "descripcion": "Pasantías (4 meses)"
+                },
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "Institución Educativa Santa Luisa",
+                    "añoInicio": 2017,
+                    "añoFin": 2017,
+                    "descripcion": "Pasantías (4 meses)"
+                },
+                {
+                    "puesto": "Redactora de Contenido Psicológico para Maternidad",
+                    "institucion": "Revista Somos Mamás",
+                    "añoInicio": 2017,
+                    "añoFin": 2018,
+                    "descripcion": "1 año y 2 meses"
+                },
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "Hogar Bambi Venezuela",
+                    "añoInicio": 2017,
+                    "añoFin": 2019,
+                    "descripcion": "1 año y 11 meses"
+                },
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "FUNDANA",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "4 meses"
+                },
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "Consulta Privada",
+                    "añoInicio": 2019,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Metropolitana",
+                    "año": "2012-2018"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/palabrasendivan"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 168,
+            "nombre": "María Soledad",
+            "apellido": "Arguello",
+            "fechaNacimiento": "1995-04-19",
+            "fotoPerfil": "./public/img/users/María Soledad Arguello.jpg",
+            "correoElectronico": "mariasolbustamante@gmail.com",
+            "telefono": "+593979194217",
+            "edad": 29,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 2,
+            "descripcion": "Soy psicóloga clínica enfocada en el bienestar de mis pacientes.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga en Guardería",
+                    "institucion": "",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "1 año"
+                },
+                {
+                    "puesto": "Pasante en Psicología",
+                    "institucion": "",
+                    "añoInicio": "",
+                    "añoFin": "",
+                    "descripcion": "2 años"
+                },
+                {
+                    "puesto": "Psicóloga en Consultorio de Bienestar y Psicología",
+                    "institucion": "",
+                    "añoInicio": "",
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad de las Américas",
+                    "año": "5 años"
+                }
+            ],
+            "redesSociales": {
+                "facebook": "https://www.facebook.com/sol19cito?mibextid=ZbWKwL",
+                "linkedin": "https://www.linkedin.com/in/mariaarguelloatapuma?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 169,
+            "nombre": "Alicia",
+            "apellido": "Demaria Bagu",
+            "fechaNacimiento": "1963-02-05",
+            "fotoPerfil": "./public/img/users/Alicia Demaria Bagu.jpg",
+            "correoElectronico": "alesdeba@gmail.com",
+            "telefono": "+541158850546",
+            "edad": 61,
+            "pais": "Argentina",
+            "ciudad": "",
+            "añosExperiencia": 5,
+            "descripcion": "Terapia psicoanalítica para acompañar adolescentes y niños. Problemas de aprendizaje, discapacidad y diferentes temáticas que impactan en la vida de esta franja etaria.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga en Equipos de Integración Escolar",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": "Actualidad",
+                    "descripcion": ""
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "UBA",
+                    "año": "2019-2023"
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 170,
+            "nombre": "Isabel",
+            "apellido": "Pérez Salazar",
+            "fechaNacimiento": "2000-10-29",
+            "fotoPerfil": "./public/img/users/Isabel Pérez.jpeg",
+            "correoElectronico": "perezisabel1029@gmail.com",
+            "telefono": "+593984407374",
+            "edad": 23,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 2,
+            "descripcion": "Soy una profesional capacitada y enfocada en acompañar y crear un ambiente de escucha y autoconciencia, que permita a los pacientes vivir una vida significativa a sus necesidades y objetivos a través de herramientas adaptativas que aporten a su bienestar.",
+            "precioServicioHora": 15.00,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Practicante de Psicología Clínica",
+                    "institucion": "Centro de Psicología Aplicada PUCE",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Organizar y crear talleres psicoeducativos, elaborar contenido multimedia, realizar procesos de psicoterapia breve y elaboración de informes psicológicos."
+                },
+                {
+                    "puesto": "Interna en el Área de Psicología Clínica",
+                    "institucion": "Hospital Gineco Obstétrico Pediátrico Luz Elena Arizmendi",
+                    "añoInicio": 2022,
+                    "añoFin": 2022,
+                    "descripcion": "Acompañamiento terapéutico, evaluación psicológica clínica, intervención en crisis, acompañamiento en procesos de duelo y cuidados paliativos."
+                },
+                {
+                    "puesto": "Asistente Académica",
+                    "institucion": "Pontificia Universidad Católica del Ecuador",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Brindar apoyo al docente en tareas académicas, organizar agenda de actividades docentes y gestionar registros académicos."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "ORGAEPSI",
+                    "añoInicio": 2022,
+                    "añoFin": 2024,
+                    "descripcion": "Acompañamiento psicológico virtual mediante psicoterapia breve, psicoeducación, contención emocional y PAP."
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Centro de Psicología Aplicada PUCE",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica a población universitaria y público general, realización de informes psicológicos y supervisión de casos clínicos."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Unidad Educativa Santo Tomás Apóstol Riobamba",
+                    "año": "2005-2018"
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "http://linkedin.com/in/isabel-p%C3%A9rez-salazar-773625212"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 171,
+            "nombre": "Matías",
+            "apellido": "Alfaro",
+            "fechaNacimiento": "1999-11-11",
+            "fotoPerfil": "./public/img/users/Matías Alfaro.jpg",
+            "correoElectronico": "matiasalfaro.psico@gmail.com",
+            "telefono": "+56933074709",
+            "edad": 24,
+            "pais": "Chile",
+            "ciudad": "Valparaíso",
+            "añosExperiencia": 1,
+            "descripcion": "Hola, soy Matías y me especializo en ofrecer psicoterapia individual. Mi objetivo es ser de ayuda para aquellas personas que están atravesando momentos difíciles en sus vidas o que desean realizar cambios significativos, asumiendo un rol activo como protagonistas de su proceso psicoterapéutico. Mi enfoque está en comprender las dificultades de los consultantes y utilizar prácticas narrativas para colaborar en la búsqueda de distintas formas de significar y enfrentar los desafíos que enfrentan. Si estás buscando apoyo para realizar cambios o atraviesas un momento difícil, no dudes en ponerte en contacto conmigo para una consulta. Estaré encantado de trabajar contigo en este proceso :).",
+            "precioServicioHora": 16,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasantía en Psicología",
+                    "institucion": "Centro para el Desarrollo Psicosocial Universidad de Playa Ancha",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Pasantía finalizada."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad de Playa Ancha",
+                    "año": "2019-2024"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Ps_Alfaro/"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 172,
+            "nombre": "Rodrigo Alejandro",
+            "apellido": "Valdenegro",
+            "fechaNacimiento": "1976-06-21",
+            "fotoPerfil": "./public/img/users/Imaginaria Mente (Zephirot).jpg",
+            "correoElectronico": "zephirot76@gmail.com",
+            "telefono": "+593996737027",
+            "edad": 48,
+            "pais": "Ecuador",
+            "ciudad": "Guayaquil",
+            "añosExperiencia": 20,
+            "descripcion": "Hola, soy psicólogo con más de veinte años de experiencia. Conmigo puedes hablar muchas cosas que te harán reflexionar y encontrar las respuestas a muchas gratas e ingratas preguntas.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Psicoanalítica",
+                "Terapia Humanista",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "redesSociales": {
+                "instagram": "@rodrigoavc.ec"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 173,
+            "nombre": "Alejandra",
+            "apellido": "Flores",
+            "fechaNacimiento": "2000-02-05",
+            "fotoPerfil": "./public/img/users/default.jpg",
+            "correoElectronico": "estefiflo5@gmail.com",
+            "telefono": "+593992636060",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 2,
+            "descripcion": "La psicología se ha vuelto más que mi profesión mi pasión. Apasionada por la escritura y el arte.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Niñera",
+                    "institucion": "Servicio Privado",
+                    "añoInicio": 2018,
+                    "añoFin": 2021,
+                    "descripcion": "Cuidado y atención de niños."
+                },
+                {
+                    "puesto": "Cuidado y atención del adulto mayor",
+                    "institucion": "Servicio Privado",
+                    "añoInicio": 2021,
+                    "añoFin": 2021,
+                    "descripcion": "Cuidado y atención a personas de la tercera edad."
+                },
+                {
+                    "puesto": "Centro de neuroestimulación",
+                    "institucion": "Ismart",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Atención y terapia en neuroestimulación."
+                },
+                {
+                    "puesto": "Centro de atención psicológica",
+                    "institucion": "Capya",
+                    "añoInicio": 2023,
+                    "añoFin": "Presente",
+                    "descripcion": "Atención psicológica en un centro especializado."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Politécnica Salesiana (UPS)",
+                    "año": "2019-2023"
+                }
+            ],
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 174,
+            "nombre": "Mónica",
+            "apellido": "Simón",
+            "fechaNacimiento": "1992-09-11",
+            "fotoPerfil": "./public/img/users/Monica Simon Ovalle.png",
+            "correoElectronico": "monicalso92@gmail.com",
+            "telefono": "+50253847746",
+            "edad": 31,
+            "pais": "Guatemala",
+            "ciudad": "Guatemala",
+            "añosExperiencia": 5,
+            "descripcion": "Psicóloga Clínica con un enfoque integral en el bienestar emocional y mental. Cuento con 5 años de experiencia ayudando a personas a enfrentar y superar desafíos emocionales y psicológicos. Mi objetivo es proporcionar un espacio seguro y de confianza donde los pacientes puedan explorar sus pensamientos y emociones.",
+            "precioServicioHora": 200,
+            "especializacion": [
+                "Terapia Humanista",
+                "Terapia Gestalt",
+                "Terapia de Comportamiento Dialéctico"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "Práctica Privada",
+                    "añoInicio": 2018,
+                    "añoFin": "Presente",
+                    "descripcion": "Atención y apoyo psicológico a personas para enfrentar y superar desafíos emocionales y psicológicos."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad de San Carlos de Guatemala",
+                    "año": "2013-2018"
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "www.linkedin.com/in/mónica-simón-ovalle-477651173"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 175,
+            "nombre": "Angelica",
+            "apellido": "Amaya",
+            "fechaNacimiento": "1996-09-10",
+            "fotoPerfil": "./public/img/users/Angelica Amaya.jpg",
+            "correoElectronico": "psicologa.angelica.amaya@gmail.com",
+            "telefono": "+58 424 6125412",
+            "edad": 27,
+            "pais": "Venezuela",
+            "ciudad": "Maracaibo",
+            "añosExperiencia": 6,
+            "descripcion": "Psicóloga con amplia experiencia en el abordaje terapéutico de adolescentes y adultos.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Hospital Dr Manuel Noriega Trigo",
+                    "añoInicio": 2019,
+                    "añoFin": "Presente",
+                    "descripcion": "Atención psicológica a adolescentes y adultos en contexto hospitalario."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Unidad Bolivariana de Diálisis",
+                    "añoInicio": 2019,
+                    "añoFin": 2023,
+                    "descripcion": "Atención psicológica a pacientes en tratamiento de diálisis."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Práctica Privada",
+                    "añoInicio": 2020,
+                    "añoFin": "Presente",
+                    "descripcion": "Atención psicológica a adolescentes y adultos en consulta privada."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": "2014-2018"
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 176,
+            "nombre": "Natalia",
+            "apellido": "Aguirre",
+            "fechaNacimiento": "1997-03-01",
+            "fotoPerfil": "./public/img/users/natalia aguirre.jpg",
+            "correoElectronico": "nataliaaguirre052@gmail.com",
+            "telefono": "+54 342 5217114",
+            "edad": 27,
+            "pais": "Argentina",
+            "ciudad": "Santa Fe",
+            "añosExperiencia": 2,
+            "descripcion": "Mi nombre es Natalia Aguirre, trabajo desde una orientación psicoanalítica. Me especializo en trastornos de ansiedad, estados de ánimo depresivos, problemas conductuales y crisis de angustia. Soy egresada de la UCSF.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica médica Luz y Fuerza",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica a pacientes en contexto clínico."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Clínica privada",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica en consultorio privado."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Católica de Santa Fe (UCSF)",
+                    "año": "2016-2023"
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 177,
+            "nombre": "Liam",
+            "apellido": "Ricaurte",
+            "fechaNacimiento": "1999-12-23",
+            "fotoPerfil": "./public/img/users/Liam Gyaltzen Ricaurte.jpg",
+            "correoElectronico": "psicliamricaurtee@gmail.com",
+            "telefono": "+593983094941",
+            "edad": 24,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 1,
+            "descripcion": "Mi nombre es Liam y soy egresado de la Universidad Tecnológica Indoamérica. Durante mi tiempo de formación académica y como profesional, he ido adquiriendo conocimiento y habilidades para brindarte un servicio de calidad.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Comportamiento Dialéctico",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "redesSociales": {
+                "Instagram": "@psicliamr"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 178,
+            "nombre": "Ivana Agostina",
+            "apellido": "García Otta",
+            "fechaNacimiento": "1989-11-08",
+            "fotoPerfil": "./public/img/users/Ivana Otta.jpeg",
+            "correoElectronico": "ivana.og89@gmail.com",
+            "telefono": "+54 3865 447574",
+            "edad": 34,
+            "pais": "Argentina",
+            "ciudad": "Tucumán",
+            "añosExperiencia": 1,
+            "descripcion": "Soy psicóloga con un año de experiencia en la atención de pacientes de diversas edades, desde niños hasta adultos mayores. Mi formación incluye una amplia variedad de cursos especializados y prácticas en entornos como hospitales y fundaciones. Actualmente trabajo en un centro de discapacidad y atiendo pacientes de manera privada. Estoy comprometida con el bienestar emocional de mis pacientes; me caracterizo por una escucha activa y un trato empático, lo que me permite acompañar a mis pacientes de manera cercana y efectiva en su proceso terapéutico.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                "Voluntariado psicooncología infantojuvenil Fundación Natali Dafne Flexer año 2022 al presente",
+                "Prácticas profesionales Hospital Aguilares, Tucumán año 2022",
+                "Prácticas profesionales Dispositivo de cuidados institucionales Concepción, Tucumán año 2022",
+                "Práctica clínica profesional supervisada intensiva- Especificidad Niños año 2022",
+                "Práctica clínica profesional supervisada intensiva-Especificidad Adolescentes- Adultos año 2023",
+                "Psicóloga en Centro de Rehabilitación IPRA año 2023 al presente"
+            ],
+            "certificados": [
+                "Licenciatura en Psicología año 2018 a 2023"
+            ],
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
