@@ -1592,3 +1592,24 @@ footer {
     animation-delay: 0.4s;
 }
 /* CARGAR PANTALLA */
+
+/* BOTON DE "TU HISTORIA" */
+.historia-boton {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 12px;
+    background-color: transparent;
+    color: #1358B4;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.historia-boton:hover {
+    color: white;
+    background-color: #1358B4;
+    border: white 1px solid;
+}
+/* BOTON DE "TU HISTORIA" */

@@ -18,7 +18,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="psicologos.html">Psicólogos Disponibles</a></li>
-                <li><a href="investigacion.html">Investigaciones</a></li>
+                <li><a href="historia.html">Tu Historia</a></li>
                 <li><a href="reseñas.html">Reseñas</a></li>
                 <li><a href="ofertas.html">Ofertas Laborales</a></li>
                 <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
@@ -26,12 +26,12 @@
             <ul class="nav-icons">
                 <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                 <li><a href="psicologos.html"><i class="fas fa-user-md"></i></a></li>
-                <li><a href="investigacion.html"><i class="fas fa-book"></i></a></li>
+                <li><a href="historia.html"><i class="fas fa-book"></i></a></li>
                 <li><a href="reseñas.html"><i class="fa-solid fa-comments"></i></a></li>
                 <li><a href="ofertas.html"><i class="fas fa-briefcase"></i></a></li>
                 <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
             </ul>
-        </nav> 
+        </nav>
     </header>
 
     <main>
@@ -62,10 +62,10 @@
             <img src="public/img/banner/banner-2.jpg" alt="Imagen de Fondo Blanco" class="background-image sección-index-2-img">
             <div class="overlay sección-index-2-overlay"></div>
             <div class="content sección-index-2-content">
-                <h1 class="sección-index-2-h1">INVESTIGACIONES VERIFICADAS</h1>
-                <p class="sección-index-2-p">Puedes encontrar una amplia variedad de investigaciones y estudios verificados relacionados con la psicología y sus diversos campos. Cada investigación ha sido revisada y validada para asegurar su calidad y confiabilidad.</p>
-                <p class="sección-index-2-p">Explora estudios detallados, revisa sus metodologías y resultados, y mantente al día con los últimos avances y descubrimientos en el mundo de la psicología.</p>
-                <a href="investigacion.html" class="btn sección-index-2-btn">Investigaciones Aquí ></a>
+                <h1 class="sección-index-2-h1">TU HISTORIA AQUÍ</h1>
+                <p class="sección-index-2-p">En "Tu historia", te brindamos un espacio seguro donde puedes desahogarte y recibir apoyo tanto de nuestra comunidad como de profesionales registrados. Comparte lo que estás viviendo y permítenos acompañarte en tu proceso.</p>
+                <p class="sección-index-2-p">Al compartir tu experiencia, habilitas la posibilidad de que psicólogos especializados te ofrezcan ayuda. Tendrás control sobre quiénes pueden contactarte según tus preferencias de edad, experiencia, y más.</p>
+                <a href="https://forms.gle/BJcbCPkQL8eTUR1i6" target="_blank" class="btn sección-index-2-btn">Crear Historia Aquí ></a>
             </div>
         </section>
 
@@ -101,25 +101,6 @@
 
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popup");
-    const closeBtn = document.getElementById("popup-close-btn");
-    const popupLink = document.getElementById("popup-link");
-
-    if (!sessionStorage.getItem("popupClosed")) {
-        popup.classList.add("show");
-    }
-
-    closeBtn.addEventListener("click", function () {
-        popup.classList.remove("show");
-        sessionStorage.setItem("popupClosed", "true");
-    });
-
-    popupLink.addEventListener("click", function () {
-        popup.classList.remove("show");
-        sessionStorage.setItem("popupClosed", "true"); 
-    });
-});
     </script>
 </body>
 </html>
