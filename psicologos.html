@@ -14,15 +14,6 @@
 
 <body>
 
-    <div class="arrow" onclick="toggleSidebar()">&#9654;</div>
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleSidebar()">Cerrar</button>
-        <h3>Más Valorados/as</h3>
-        <div id="user-list">
-            
-        </div>
-    </div>
-
     <header>
         <div class="logo">
             <img src="public/img/marca/logo cuatro.png" alt="Logo">
@@ -48,6 +39,21 @@
     </header>
 
     <main>
+        <div class="titulo-con-linea">
+            <h1 class="titulo">PSICÓLOGOS DESTACADOS</h1>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                
+            </div>
+        </div>
         <div class="titulo-con-linea">
             <h1 class="titulo">PSICÓLOGOS DISPONIBLES</h1>
         </div>
@@ -140,11 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterExperience = document.getElementById("filter-experience");
     const filterCountry = document.getElementById("filter-country");
     const contenedor = document.getElementById('contenedor-tarjetas');
-    const loadingIndicator = document.getElementById('loading-indicator'); // Indicador de carga
+    const loadingIndicator = document.getElementById('loading-indicator'); 
 
     let psicologos = [];
     let currentIndex = 0;
-    const increment = 20; // Cantidad de psicólogos a cargar cada vez
+    const increment = 20; 
 
     fetch('./json/psicologos.json')
         .then(response => response.json())
@@ -164,12 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function applyFilters() {
         currentIndex = 0;
-        contenedor.innerHTML = ""; // Resetea el contenedor
-        displayPsicologos(); // Vuelve a cargar los psicólogos con los filtros aplicados
+        contenedor.innerHTML = ""; 
+        displayPsicologos(); 
     }
 
     function displayPsicologos() {
-        // Muestra el indicador de carga
         loadingIndicator.classList.remove('loading-hidden');
 
         setTimeout(() => {
@@ -201,9 +206,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             currentIndex += increment;
 
-            // Oculta el indicador de carga una vez que los psicólogos están cargados
             loadingIndicator.classList.add('loading-hidden');
-        }, 1000); // Simulación de un pequeño retraso para el efecto visual
+        }, 1000); 
     }
 
     function applyAllFilters(psicologos) {
@@ -232,7 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return filteredPsicologos;
     }
 
-    // Detecta cuando el usuario hace scroll al final para cargar más psicólogos
     window.addEventListener('scroll', () => {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             displayPsicologos();
@@ -258,18 +261,141 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const arrow = document.querySelector(".arrow");
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px";
-        arrow.innerHTML = "&#9654;"; 
-    } else {
-        sidebar.style.left = "0px";
-        arrow.innerHTML = "&#9664;"; 
-    }
+// Función para mezclar aleatoriamente el array de psicólogos
+function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
 }
 
+const psychologists = shuffleArray([
+    {
+        "id": 15,
+        "nombre": "María",
+        "apellido": "Quero",
+        "fotoPerfil": "./public/img/users/maria estefanía.png",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 166,
+        "nombre": "Andres",
+        "apellido": "Solano",
+        "fotoPerfil": "./public/img/users/Andres S.jpg",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 41,
+        "nombre": "Stephane",
+        "apellido": "Piedrahita Reyes",
+        "fotoPerfil": "./public/img/users/stephane piedrahita reyes.jpg",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 43,
+        "nombre": "Angeles Jacqueline",
+        "apellido": "Santucho",
+        "fotoPerfil": "./public/img/users/jacqueline santucho.jpg",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 46,
+        "nombre": "Solmar Elizabeth",
+        "apellido": "Delgado Parra",
+        "fotoPerfil": "./public/img/users/solmar delgado.jpg",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 57,
+        "nombre": "Johanna",
+        "apellido": "Gómez Durán",
+        "fotoPerfil": "./public/img/users/johanna gómez durán.jpg",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 59,
+        "nombre": "Daniela",
+        "apellido": "Ruiz Mazo",
+        "fotoPerfil": "./public/img/users/psicondenados psicología.png",
+        "verPerfil": "./public/html/perfil.html"
+    },
+    {
+        "id": 98,
+        "nombre": "Raquel",
+        "apellido": "Peralta",
+        "fotoPerfil": "./public/img/users/Raquel Peralta.jpg",
+        "verPerfil": "./public/html/perfil.html"
+    }
+]);
+
+// Shuffle function to randomize the array
+function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+const track = document.querySelector('.carousel-track');
+const indicators = document.querySelector('.carousel-nav');
+
+// Generate carousel items
+psychologists.forEach((psychologist, index) => {
+    const li = document.createElement('li');
+    li.classList.add('carousel-item');
+
+    li.innerHTML = `
+        <img src="${psychologist.fotoPerfil}" alt="${psychologist.nombre} ${psychologist.apellido}" class="profile-img">
+        <h3 class="profile-name">${psychologist.nombre} ${psychologist.apellido}</h3>
+        <p class="profile-description">Psicólogo/a</p>
+    `;
+
+    li.addEventListener('click', () => {
+        window.location.href = `${psychologist.verPerfil}?id=${psychologist.id}`;
+    });
+
+    track.appendChild(li);
+
+    const indicator = document.createElement('button');
+    if (index === 0) indicator.classList.add('active');
+    indicators.appendChild(indicator);
+
+    indicator.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+    });
+});
+
+let startPos = 0;
+let currentIndex = 0;
+const threshold = 50; // Minimum distance to trigger a swipe
+let isMoving = false; // Prevent multiple quick swipes
+
+track.addEventListener('touchstart', (e) => {
+    startPos = e.touches[0].clientX;
+    isMoving = false;
+});
+
+track.addEventListener('touchmove', (e) => {
+    const currentPos = e.touches[0].clientX;
+    const distance = startPos - currentPos;
+
+    if (!isMoving) { // Only trigger movement if not already swiping
+        if (distance > threshold && currentIndex < psychologists.length - 1) {
+            currentIndex++;
+            isMoving = true;
+            updateCarousel();
+        } else if (distance < -threshold && currentIndex > 0) {
+            currentIndex--;
+            isMoving = true;
+            updateCarousel();
+        }
+    }
+});
+
+function updateCarousel() {
+    const itemWidth = track.querySelector('li').getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    document.querySelector('.carousel-nav .active').classList.remove('active');
+    indicators.children[currentIndex].classList.add('active');
+
+    // Re-enable swiping after movement finishes
+    setTimeout(() => isMoving = false, 300); // Adjust time to match your CSS transition duration
+}
     </script>
 
 </body>
