@@ -10911,6 +10911,433 @@
             "redesSociales": {
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 191,
+            "nombre": "Jackeline",
+            "apellido": "Urdaneta",
+            "fechaNacimiento": "1997-03-13",
+            "fotoPerfil": "./public/img/users/Jackeline Urdaneta.jpg",
+            "correoElectronico": "psicologa.jackelineurdaneta@gmail.com",
+            "telefono": "+584146795104",
+            "edad": 27,
+            "pais": "Venezuela",
+            "ciudad": "Estado Zulia",
+            "añosExperiencia": 5,
+            "descripcion": "Soy psicóloga venezolana, egresada de la Universidad Rafael Urdaneta, con estudios en Talento Humano por la Universidad de los Andes y en el área de Sexología aplicada a la Pareja por la Universidad del Zulia. Cuento con sólida experiencia en la atención para adultos en el manejo de crisis, ansiedad, depresión y cualquier tipo de malestar emocional que puedas estar experimentado en este momento.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Psicoanalítica",
+                "Terapia Gestalt"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Clínico - Pasante",
+                    "institucion": "Hospital Noriega Trigo",
+                    "ubicacion": "Edo. Zulia, Venezuela",
+                    "añoInicio": 2019,
+                    "añoFin": 2019,
+                    "descripcion": "Realización de exámenes de higiene mental pre-laboral, atención a pacientes en consulta externa, aplicación y corrección de pruebas psicológicas, elaboración de informes psicológicos y seguimiento a pacientes hospitalizados."
+                },
+                {
+                    "puesto": "Psicóloga - Salud Ocupacional",
+                    "institucion": "Cámara Empresarial de la Zona Industrial de Maracaibo y San Francisco",
+                    "ubicacion": "Edo. Zulia, Venezuela",
+                    "añoInicio": 2019,
+                    "añoFin": 2023,
+                    "descripcion": "Atención a pacientes en consulta externa, realización de procesos de reclutamiento y selección de personal, aplicación y corrección de pruebas psicotécnicas, y elaboración de informes psicológicos."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Rafael Urdaneta",
+                    "año": 2019
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/trabajomental"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 192,
+            "nombre": "Nicole",
+            "apellido": "Acosta",
+            "fechaNacimiento": "2000-09-29",
+            "fotoPerfil": "./public/img/users/Nicole Acosta A.jpg",
+            "correoElectronico": "acostaedison32@gmail.com",
+            "telefono": "+593983136724",
+            "edad": 23,
+            "pais": "Ecuador",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga clínica con experiencia en asistencia psicológica a adultos y adolescentes y víctimas de violencia de género.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Voluntariado",
+                    "institucion": "Sacha Warmis",
+                    "añoInicio": 2021,
+                    "añoFin": 2021
+                },
+                {
+                    "puesto": "Pasantías",
+                    "institucion": "Casa de acogida Cotopaxi",
+                    "añoInicio": 2021,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Psicóloga clínica",
+                    "institucion": "Junta Cantonal de Cascales",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Central del Ecuador",
+                    "año": 2022
+                }
+            ],
+            "redesSociales": {
+                "facebook": "https://www.facebook.com/profile.php?id=61556840180755&mibextid=ZbWKwL",
+                "linkedin": "https://www.linkedin.com/in/nicole-acosta-a-948065283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 193,
+            "nombre": "Albert",
+            "apellido": "Tovar",
+            "fechaNacimiento": "1996-10-23",
+            "fotoPerfil": "./public/img/users/Albert Tovar Perez.jpg",
+            "correoElectronico": "albert.tovar23@gmail.com",
+            "telefono": "+584241408582",
+            "edad": 27,
+            "pais": "Venezuela",
+            "añosExperiencia": 3,
+            "descripcion": "Soy un psicólogo venezolano con más de 10 años de experiencia en la práctica clínica. Mi enfoque se basa en la terapia cognitivo-conductual, que busca identificar y modificar patrones de pensamiento y comportamiento para mejorar la salud mental.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Escolar",
+                    "institucion": "Colegio Luis Enrique Olazo",
+                    "añoInicio": 2018,
+                    "añoFin": 2019
+                },
+                {
+                    "puesto": "Psicólogo Escolar",
+                    "institucion": "Colegio Teresiano Nuestra Señora de Coromoto",
+                    "añoInicio": 2019,
+                    "añoFin": 2021
+                },
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "Colegio La Paz",
+                    "añoInicio": 2021,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Psicólogo Comunitario",
+                    "institucion": "Centro de Salud Padre Luis Azagra",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciado en Psicología",
+                    "institucion": "Universidad Católica Andrés Bello",
+                    "año": 2021
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 194,
+            "nombre": "José",
+            "apellido": "Urey",
+            "fechaNacimiento": "1995-12-26",
+            "fotoPerfil": "./public/img/users/jose urey.jpeg",
+            "correoElectronico": "joseurey1226@gmail.com",
+            "telefono": "+59173735799",
+            "edad": 28,
+            "pais": "Bolivia",
+            "añosExperiencia": 3,
+            "descripcion": "Psicólogo social-educativo, entrenado en terapia conductual cognitiva con especialización en terapia sistémica.",
+            "precioServicioHora": 15,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Grupo"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Social-Educativo",
+                    "institucion": "Aldeas Infantiles SOS",
+                    "añoInicio": 2019,
+                    "añoFin": 2022
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciado en Psicología",
+                    "institucion": "Universidad Católica Boliviana San Pablo",
+                    "año": 2023
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/jos%C3%A9-gabriel-urey-cruz-9a2aab200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 195,
+            "nombre": "Juan Alberto",
+            "apellido": "Nazario San Bartolomé",
+            "fechaNacimiento": "1975-01-05",
+            "fotoPerfil": "./public/img/users/Psicologo Albertonazario.jpg",
+            "correoElectronico": "psicoloalbertonazario@gmail.com",
+            "telefono": "+51936407279",
+            "edad": 49,
+            "pais": "Perú",
+            "añosExperiencia": 2,
+            "descripcion": "Psicólogo clínico cognitivo conductual.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español",
+                "Portugués"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Independiente",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "2 años de experiencia en abordaje e intervención de casos clínicos como psicólogo independiente."
+                },
+                {
+                    "puesto": "Asesor de Prácticas Pre-Profesionales",
+                    "institucion": "Promotores Educativos NJR",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Asesor de prácticas pre profesionales a internos de psicología educativa."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciado en Psicología",
+                    "institucion": "Universidad César Vallejo",
+                    "año": 2022
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/alberto-nazariosb6986b150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                "facebook": "https://www.facebook.com/juan.nazariosanbartolome?mibextid=ZbWKwL",
+                "instagram": "https://www.instagram.com/alberto_nazario_psicologo?utm_source=qr&igsh=MWNxMjB3azRzamxtaA=="
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 196,
+            "nombre": "Gonzalo",
+            "apellido": "Gonzalez Alvez",
+            "fechaNacimiento": "1965-02-25",
+            "fotoPerfil": "./public/img/users/Gonzalo Gonzalez.jpg",
+            "correoElectronico": "gonzalezalvez@gmail.com",
+            "telefono": "+59894362565",
+            "edad": 59,
+            "pais": "Uruguay",
+            "añosExperiencia": 23,
+            "descripcion": "Psicoterapia online o presencial.",
+            "precioServicioHora": 50,
+            "especializacion": [
+                "Terapia Psicoanalítica"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicologiaclinicahoy"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 197,
+            "nombre": "Juan Cruz",
+            "apellido": "Becerra",
+            "fechaNacimiento": "1999-09-01",
+            "fotoPerfil": "./public/img/users/Juan Cruz Becerra.jpeg",
+            "correoElectronico": "juancruzbecerra2@gmail.com",
+            "telefono": "+54942128531",
+            "edad": 24,
+            "pais": "Argentina",
+            "añosExperiencia": 2,
+            "descripcion": "Psicólogo egresado de la Facultad de Psicología de la Universidad Nacional de Rosario. Me desarrollo actualmente como Psicólogo clínico, utilizando las herramientas del Análisis Funcional de la Conducta y las terapias cognitivo-conductuales de tercera generación, especialmente a través de la Terapia de Aceptación y Compromiso para trabajar los trastornos de ansiedad y pánico, y la Terapia Dialéctico-Conductual para trabajar la desregulación emocional y el Trastorno Límite de la Personalidad.",
+            "precioServicioHora": 11,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Comportamiento Dialéctico",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Consultoría de Recursos Humanos",
+                    "institucion": "Randstad Argentina",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantía universitaria. Tareas de búsqueda y selección de personal: Screening, planificación de entrevistas, contacto con clientes y gestión de candidatos en Bucket List. Liquidación de sueldos y control de vacaciones."
+                },
+                {
+                    "puesto": "Becario de Investigación",
+                    "institucion": "Facultad de Psicología, UNR",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Investigación en el marco de la 'Beca de incentivo a la investigación' propuesta por la Secretaría de Ciencia y Tecnología de la Facultad de Psicología."
+                },
+                {
+                    "puesto": "Docente Auxiliar",
+                    "institucion": "Facultad de Psicología, UAI",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Docente en la asignatura 'Seminario I - Taller de Integración' en la Universidad Abierta Interamericana."
+                },
+                {
+                    "puesto": "Atención Psicoterapéutica a jóvenes y adultos",
+                    "institucion": "Particular",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Servicio de atención psicoterapéutica de enfoque Cognitivo-Conductual y Contextual a jóvenes y adultos. Tratamiento de Trastornos de Ansiedad, Desregulación emocional, Depresión, entre otros."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Facultad de Psicología de la Universidad Nacional de Rosario",
+                    "año": 2024
+                },
+                {
+                    "nombre": "Diplomatura en Terapias Cognitivo-Conductuales Contemporáneas",
+                    "institucion": "Facultad de Psicología de la Universidad de Buenos Aires",
+                    "año": "Actualidad"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/contextoyconducta.psi",
+                "linkedin": "https://www.linkedin.com/in/juan-cruz-becerra"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 198,
+            "nombre": "Carla",
+            "apellido": "Fernández",
+            "fechaNacimiento": "1998-01-07",
+            "fotoPerfil": "./public/img/users/Carla Fernández..png",
+            "correoElectronico": "carlafn1006@outlook.com",
+            "telefono": "+584241935602",
+            "edad": 26,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 3,
+            "descripcion": "¡Bienvenido a tu espacio terapéutico! Mi nombre es Carla Fernández, soy psicólogo clínico. Manejo un enfoque cognitivo-​conductual, lo que quiere decir que podemos ​comprender mejor tus pensamientos y ​comportamientos, y apoyarte en el cumplimiento de ​tus metas terapéuticas. ¡Nos vemos pronto!",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Prácticas Clínicas",
+                    "institucion": "Servicio de Psicología Clínica UCV",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Psicólogo bajo supervisión."
+                },
+                {
+                    "puesto": "Pasantías",
+                    "institucion": "Hospital Clínico Universitario",
+                    "añoInicio": 2022,
+                    "añoFin": 2023,
+                    "descripcion": "Psicólogo en atención primaria y secundaria del área de Infectología Pediátrica."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Hospital de Niños José Manuel de los Ríos",
+                    "añoInicio": 2023,
+                    "añoFin": 2024,
+                    "descripcion": "Atención a pacientes en el área de pediatría."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Instituto para el Desarrollo Integral del Niño (INVEDIN)",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica especializada en niños."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Red Terapéutica Gired",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica integral en una red terapéutica multidisciplinaria."
+                },
+                {
+                    "puesto": "Psicólogo",
+                    "institucion": "Paradise Kids Center",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica infantil."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología (mención Clínica Conductual)",
+                    "institucion": "Universidad Central de Venezuela",
+                    "año": 2023
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/carlagfernandez/"
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
