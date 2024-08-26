@@ -11338,6 +11338,253 @@
                 "linkedin": "https://www.linkedin.com/in/carlagfernandez/"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 199,
+            "nombre": "Eileen",
+            "apellido": "Pardo",
+            "fechaNacimiento": "1996-11-20",
+            "fotoPerfil": "./public/img/users/Eileen Pardo.jpg",
+            "correoElectronico": "eileen.p.veliz@gmail.com",
+            "telefono": "+56942575006",
+            "edad": 27,
+            "pais": "Chile",
+            "ciudad": "Santiago",
+            "añosExperiencia": 4,
+            "descripcion": "Mi labor como psicóloga está orientada a adultos, niños, niñas y adolescentes. Busco generar para ti un espacio seguro, de confianza y libre de prejuicios, enfocado en poder contribuir y acompañarte en tu camino de crecimiento personal, de autoconocimiento, de identificación de fortalezas y disminución significativa de tu sentimiento de malestar general. Destaco por mi creatividad, sentido de empatía, la escucha activa, y el procurar siempre realizar un trabajo ético y sincero, enfocado en cuidar tu bienestar en el más amplio sentido. El compromiso contigo y tu proceso es fundamental, al igual que el vínculo que iremos generando a medida que pase el tiempo. Trabajo en base a un modelo integrativo, centrado en las necesidades del paciente. Tengo experiencia en la terapia cognitivo conductual y sistémico familiar, integrando técnicas y elementos de diversos enfoques para favorecer el proceso de mejoramiento del paciente y sus familias.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Comportamiento Dialéctico",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Clínica Independiente",
+                    "institucion": "",
+                    "añoInicio": 2020,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica integral para adultos, niños, niñas y adolescentes."
+                },
+                {
+                    "puesto": "Psicóloga Infanto-Juvenil",
+                    "institucion": "Centro Terapéutico Trekan",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica especializada en población infanto-juvenil."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Psicólogos y Bienestar",
+                    "añoInicio": 2021,
+                    "añoFin": 2022,
+                    "descripcion": "Atención psicológica en un enfoque integrativo."
+                },
+                {
+                    "puesto": "Práctica Profesional",
+                    "institucion": "Centro de Atención Psicológica CAPS UST",
+                    "añoInicio": 2018,
+                    "añoFin": 2020,
+                    "descripcion": "Realización de prácticas supervisadas en atención clínica."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Santo Tomás",
+                    "año": 2020
+                },
+                {
+                    "nombre": "Diplomado en Actualización en Evaluación y Psicodiagnóstico Infanto-Juvenil",
+                    "institucion": "Universidad Santo Tomás",
+                    "año": 2020
+                },
+                {
+                    "nombre": "Diplomado en Psicoterapia Infanto-Juvenil",
+                    "institucion": "Centro Terapéutico Trekan",
+                    "año": 2022
+                },
+                {
+                    "nombre": "Diplomado en Terapia en Autoestima: Diagnóstico y Tratamiento a lo Largo del Ciclo Vital",
+                    "institucion": "Centro de Estudios Psicológicos CEPSI",
+                    "año": 2024
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/ps.epardov",
+                "linkedin": "https://www.linkedin.com/in/pseileenpardo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 200,
+            "nombre": "Diego",
+            "apellido": "Cedeño Nevárez",
+            "fechaNacimiento": "1980-07-07",
+            "fotoPerfil": "./public/img/users/DIEGO CEDEÑO NEVÁREZ.jpg",
+            "correoElectronico": "diegocedenoz10@gmail.com",
+            "telefono": "+593960165210",
+            "edad": 44,
+            "pais": "Ecuador",
+            "ciudad": "Guayaquil",
+            "añosExperiencia": 4,
+            "descripcion": "Soy psicólogo enfocado en el ámbito clínico, me distingo por mi enfoque humanista y mi firme compromiso con la comprensión profunda de las dinámicas mentales y emocionales. Mi práctica se sustenta en una metodología cognitivo conductual, enmarcada en la empatía y la constante actualización, lo que me permite establecer un vínculo terapéutico sólido y efectivo con mis pacientes. Este enlace es la piedra angular de mi intervención, siempre reconociendo la esencia humana más allá de cualquier teoría. Dedicado a la excelencia, persigo incansablemente la ampliación de mis conocimientos y habilidades, con el fin de ofrecer un servicio de atención clínica de máxima calidad y en la frontera del conocimiento psicológico.",
+            "precioServicioHora": 35,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia Familiar"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Propietario y Psicólogo Clínico",
+                    "institucion": "PSICOBIENESTAR CONSULTORIO PSICOLÓGICO",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención online y presencial, evaluación, diagnóstico e intervención."
+                },
+                {
+                    "puesto": "Psicólogo Facilitador",
+                    "institucion": "Fundación Huertos de los Olivos",
+                    "añoInicio": 2019,
+                    "añoFin": 2020,
+                    "descripcion": "Participación en el programa de 'Promoción para el Desarrollo de una Cultura de Paz y Equidad de Género'."
+                },
+                {
+                    "puesto": "Psicólogo Facilitador",
+                    "institucion": "Centro diurno 'Mi Razón de Vida' de la fundación 'Huertos de los Olivos'",
+                    "añoInicio": 2020,
+                    "añoFin": 2021,
+                    "descripcion": "Promoción de la autovaloración en personas con discapacidad y prevención de estrés familiar."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "TÍTULO DE PSICÓLOGO",
+                    "institucion": "Universidad de Guayaquil",
+                    "año": 2021
+                },
+                {
+                    "nombre": "MÁSTER EN PSICOLOGÍA",
+                    "institucion": "FMI - Madrid, España, Universidad San Gregorio de Portoviejo",
+                    "año": 2024
+                },
+                {
+                    "nombre": "Diploma de Excelencia Académica",
+                    "institucion": "Universidad de Guayaquil",
+                    "año": 2020
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicologo_diegocedenonevarez",
+                "linkedin": "https://www.linkedin.com/in/diego-cedeño-nevárez"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 201,
+            "nombre": "Camila Cristina",
+            "apellido": "Martinez",
+            "fechaNacimiento": "1999-06-11",
+            "fotoPerfil": "./public/img/users/Camila Cristina Martinez.jpg",
+            "correoElectronico": "psicocamila11@gmail.com",
+            "telefono": "+584124028596",
+            "edad": 24,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 2,
+            "descripcion": "Psicóloga clínica con experiencia de dos años en el trabajo con niños, adolescentes y adultos, en el área clínica y escolar.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Juego"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasantías Universitarias",
+                    "institucion": "Psiquiatría, Escuelas Especiales y Trabajo de Campo",
+                    "añoInicio": 2020,
+                    "añoFin": 2021,
+                    "descripcion": "Realización de pasantías en psiquiatría, escuelas especiales y trabajos de campo."
+                },
+                {
+                    "puesto": "Psicóloga Independiente",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Trabajo por cuenta propia brindando servicios psicológicos."
+                },
+                {
+                    "puesto": "Psicóloga",
+                    "institucion": "Centro Infantil",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Prestación de servicios psicológicos en un centro infantil."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad (No especificada)",
+                    "año": 2021
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/Psico_camilamh"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 202,
+            "nombre": "Karol Grey",
+            "apellido": "Vellojin Martinez",
+            "fechaNacimiento": "2000-01-08",
+            "fotoPerfil": "./public/img/users/KAROL VELLOJIN MARTINEZ.jpg",
+            "correoElectronico": "kvellojin74@gmail.com",
+            "telefono": "+573015301453",
+            "edad": 24,
+            "pais": "Colombia",
+            "ciudad": "Corozal Sucre",
+            "añosExperiencia": 1,
+            "descripcion": "Psicóloga egresada de la Universidad Nacional Abierta y a Distancia (UNAD) con 6 meses de experiencia en programas sociales y comunitarios. También me he desempeñado en el área educativa con proyectos de prevención del suicidio.",
+            "precioServicioHora": 17,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Juego",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga Social y Comunitaria",
+                    "institucion": "",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Participación en programas sociales y comunitarios con enfoque educativo y de prevención del suicidio."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Nacional Abierta y a Distancia (UNAD)",
+                    "año": 2024
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
