@@ -332,7 +332,6 @@ const psychologists = shuffleArray([
     }
 ]);
 
-// Shuffle function to randomize the array
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
 }
@@ -340,7 +339,6 @@ function shuffleArray(array) {
 const track = document.querySelector('.carousel-track');
 const indicators = document.querySelector('.carousel-nav');
 
-// Generate carousel items
 psychologists.forEach((psychologist, index) => {
     const li = document.createElement('li');
     li.classList.add('carousel-item');
@@ -369,8 +367,8 @@ psychologists.forEach((psychologist, index) => {
 
 let startPos = 0;
 let currentIndex = 0;
-const threshold = 50; // Minimum distance to trigger a swipe
-let isMoving = false; // Prevent multiple quick swipes
+const threshold = 50;
+let isMoving = false; 
 
 track.addEventListener('touchstart', (e) => {
     startPos = e.touches[0].clientX;
@@ -381,7 +379,7 @@ track.addEventListener('touchmove', (e) => {
     const currentPos = e.touches[0].clientX;
     const distance = startPos - currentPos;
 
-    if (!isMoving) { // Only trigger movement if not already swiping
+    if (!isMoving) { 
         if (distance > threshold && currentIndex < psychologists.length - 1) {
             currentIndex++;
             isMoving = true;
@@ -400,8 +398,7 @@ function updateCarousel() {
     document.querySelector('.carousel-nav .active').classList.remove('active');
     indicators.children[currentIndex].classList.add('active');
 
-    // Re-enable swiping after movement finishes
-    setTimeout(() => isMoving = false, 300); // Adjust time to match your CSS transition duration
+    setTimeout(() => isMoving = false, 300); 
 }
     </script>
 

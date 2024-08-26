@@ -1593,27 +1593,7 @@ footer {
 }
 /* CARGAR PANTALLA */
 
-/* BOTON DE "TU HISTORIA" */
-.historia-boton {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 10px 12px;
-    background-color: transparent;
-    color: #1358B4;
-    background-color: white;
-    text-decoration: none;
-    border-radius: 15px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    position: relative;
-}
-
-.historia-boton:hover {
-    color: white;
-    background-color: #1358B4;
-    border: white 1px solid;
-}
-/* BOTON DE "TU HISTORIA" */
-
+/* CARRUSEL DESTACADOS PSICOLOGOS */
 .carousel-container {
     display: flex;
     flex-direction: column;
@@ -1643,7 +1623,7 @@ footer {
     padding: 0 10px;
     box-sizing: border-box;
     flex: 0 0 auto;
-    min-width: calc(100% / 4); /* Ajusta a 4 elementos visibles en pantallas grandes */
+    min-width: calc(100% / 4); 
 }
 
 .profile-img {
@@ -1686,16 +1666,15 @@ footer {
     background-color: #1358B4;
 }
 
-/* Mejorando la responsividad */
 @media (max-width: 1024px) {
     .carousel-track li {
-        min-width: calc(100% / 3); /* 3 elementos visibles */
+        min-width: calc(100% / 3); 
     }
 }
 
 @media (max-width: 768px) {
     .carousel-track li {
-        min-width: calc(100% / 2); /* 2 elementos visibles */
+        min-width: calc(100% / 2);
     }
     .profile-img {
         width: 90px;
@@ -1705,7 +1684,7 @@ footer {
 
 @media (max-width: 425px) {
     .carousel-track li {
-        min-width: calc(100% / 1); /* 1 elemento visible */
+        min-width: calc(100% / 1); 
     }
     .profile-img {
         width: 80px;
@@ -1718,3 +1697,76 @@ footer {
         padding: 5px;
     }
 }
+/* CARRUSEL DESTACADOS PSICOLOGOS */
+
+/* TU HISTORIA */
+.story-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.story-card {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-header {
+    background-color: #1358B4;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.story-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.story-info {
+    flex: 1;
+}
+
+.story-status {
+    font-size: 14px;
+    color: white;
+    margin: 5px auto;
+}
+
+.story-author {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.story-content {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: black;
+    white-space: pre-wrap;
+    text-align: justify;
+}
+
+.story-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #1358B4;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.story-button:hover {
+    background-color: white;
+    color: #1358B4;
+    border: solid 1px #1358B4;
+}
+/* TU HISTORIA */
