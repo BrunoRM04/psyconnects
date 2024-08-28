@@ -8012,7 +8012,7 @@
             "id": 135,
             "nombre": "Rosa",
             "apellido": "Bernal Hernandez",
-            "fechaNacimiento": "2024-08-10",
+            "fechaNacimiento": "1995-08-10",
             "fotoPerfil": "./public/img/users/Rosa Bernal.jpg",
             "correoElectronico": "Psicologarousebernal@gmail.com",
             "telefono": "+573146009418",
@@ -11584,6 +11584,145 @@
                 }
             ],
             "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 203,
+            "nombre": "Marialaura",
+            "apellido": "Rivera",
+            "fechaNacimiento": "1995-04-24",
+            "fotoPerfil": "./public/img/users/Marialaura rivera.jpeg",
+            "correoElectronico": "marialaurarivera24@gmail.com",
+            "telefono": "+584129573386",
+            "edad": 29,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 1,
+            "descripcion": "Soy Licenciada en Psicología Clínica, apasionada por apoyar a adolescentes y adultos en su bienestar emocional. Mi enfoque está en proporcionar soluciones efectivas y personalizadas en áreas clave como: Ansiedad y Depresión, Trastornos del Neurodesarrollo, Desarrollo de Habilidades para la Vida, Procesos de Duelo, Habilidades Sociales y Técnicas de Estudio. Ofrezco un enfoque empático y colaborativo, centrado en tus necesidades individuales.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Juego",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Asistencia de Psicología Individual (Privada)",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad",
+                    "descripcion": "Atención psicológica individual desde 2023 hasta la actualidad."
+                },
+                {
+                    "puesto": "Pasante en el Departamento de Deporte",
+                    "institucion": "Universidad Central de Venezuela",
+                    "añoInicio": 2023,
+                    "añoFin": 2023,
+                    "descripcion": "Pasantía en el Departamento de Deporte de la Universidad Central de Venezuela."
+                },
+                {
+                    "puesto": "Prácticas Clínicas",
+                    "institucion": "Servicio de Psicología Clínica UCV",
+                    "añoInicio": 2021,
+                    "añoFin": 2024,
+                    "descripcion": "Prácticas clínicas en el Servicio de Psicología Clínica de la Universidad Central de Venezuela."
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciada en Psicología",
+                    "institucion": "Universidad Central de Venezuela",
+                    "año": 2023
+                }
+            ],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/marialaura-rivera"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 204,
+            "nombre": "Mary",
+            "apellido": "Pierral",
+            "fechaNacimiento": "1960-05-30",
+            "fotoPerfil": "./public/img/users/Mary Pierral.jpg",
+            "correoElectronico": "pierraltest@gmail.com",
+            "telefono": "+5804142309747",
+            "edad": 64,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 30,
+            "descripcion": "Psicólogo Orientador, Psicoterapeuta con una amplia experiencia de 30 años. Mi enfoque principal está basado en la Terapia Cognitivo-Conductual y la Terapia de Aceptación y Compromiso. Ofrezco sesiones enfocadas en mejorar el bienestar emocional de mis pacientes.",
+            "precioServicioHora": 50,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 205,
+            "nombre": "Abigail",
+            "apellido": "Abreu",
+            "fechaNacimiento": "2000-07-10",
+            "fotoPerfil": "./public/img/users/Abigail Abreu.jpg",
+            "correoElectronico": "Lic.abigailabreu@gmail.com",
+            "telefono": "2916454776",
+            "edad": 24,
+            "pais": "Argentina",
+            "ciudad": "Bahia Blanca",
+            "añosExperiencia": 1,
+            "descripcion": "Soy Abigail Abreu, licenciada en Psicología. Trabajo con adolescentes, jóvenes y adultos desde una corriente cognitiva integrativa. Mi especialización se basa en una combinación flexible de técnicas cognitivas y de otras orientaciones terapéuticas basadas en evidencia, que adaptadas a cada persona en particular permiten promover cambios duraderos, positivos y una mejor calidad de vida. Estoy a disposición para acompañarte en tu camino hacia el bienestar, brindando un espacio de apoyo, escucha y empatía para el logro de tus objetivos.",
+            "precioServicioHora": 9,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Consultorio Particular",
+                    "descripcion": "Consultorio psicológico privado. Atención a adolescentes, jóvenes, adultos y parejas."
+                },
+                {
+                    "puesto": "Coordinadora de Raíces. Programa Psicoeducativo.",
+                    "institucion": "ONG La Misión",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Coordinadora de Caminos. Programa Asistencial",
+                    "descripcion": "Espacio psicoterapéutico creado para mujeres que padecen situaciones de violencia familiar.",
+                    "institucion": "ONG La Misión",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "nombre": "Licenciatura en Psicología",
+                    "institucion": "Universidad Salesiana",
+                    "año": 2024
+                },
+                {
+                    "nombre": "Especialización en Psicoterapia Individual, Grupal y Familiar con Orientación Cognitiva",
+                    "institucion": "Fundación Aiglé",
+                    "año": "Actualidad"
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/espaciopensar.te/"
+            },
             "verPerfil": "./public/html/perfil.html"
         }
     ]
