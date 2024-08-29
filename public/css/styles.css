@@ -1770,3 +1770,295 @@ footer {
     border: solid 1px #1358B4;
 }
 /* TU HISTORIA */
+
+
+
+
+
+
+
+
+
+.edit-profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1358B4;
+    font-size: 2rem;
+}
+
+.edit-profile-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1358B4;
+    font-weight: bold;
+}
+
+.edit-profile-container input[type="text"],
+.edit-profile-container input[type="email"],
+.edit-profile-container input[type="tel"],
+.edit-profile-container input[type="number"],
+.edit-profile-container textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #1358B4;
+    border-radius: 20px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.edit-profile-container textarea {
+    height: 100px;
+    resize: none;
+}
+
+.edit-profile-container button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-container button[type="submit"]:hover {
+    background-color: white;
+    color: #1358B4;
+    border: solid 1px #1358B4;
+}
+
+.edit-profile-container h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1358B4;
+    font-size: 1.5rem;
+}
+
+#experiencia-container,
+#certificaciones-container {
+    margin-bottom: 1rem;
+}
+
+.experiencia-entry,
+.certificacion-entry {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(236, 236, 236);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.experiencia-entry input,
+.certificacion-entry input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #1358B4;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.experiencia-entry label,
+.certificacion-entry label {
+    flex-basis: 100%;
+    font-weight: bold;
+}
+
+/* Botón de eliminar como cruz roja */
+.eliminar-experiencia,
+.eliminar-certificacion {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar-experiencia::before,
+.eliminar-certificacion::before {
+    content: "✕"; /* Unicode for cross mark */
+    font-size: 18px;
+    color: white;
+}
+
+#agregar-experiencia,
+#agregar-certificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: white;
+    color: #1358B4;
+    border: 2px solid #1358B4;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#agregar-experiencia:hover,
+#agregar-certificacion:hover {
+    background-color: #1358B4;
+    color: white;
+}
+
+#agregar-experiencia::before,
+#agregar-certificacion::before {
+    content: "+";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .edit-profile-container {
+        padding: 1rem;
+    }
+
+    .experiencia-entry,
+    .certificacion-entry {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+#login-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+#login-form h2 {
+    text-align: center;
+    color: #1358B4;
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1358B4;
+    font-weight: bold;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 10px;
+    color: #1358B4;
+    font-size: 1rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 70px 10px 30px; 
+    border: 1px solid #1358B4;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; 
+    background: none;
+    border: none;
+    color: #1358B4;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    height: 100%;
+}
+
+#loginForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button[type="submit"]:hover {
+    background-color: white;
+    color: #1358B4;
+    border: solid 1px #1358B4;
+}
+
+#login-error {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    #login-form {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    #login-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-wrapper input {
+        padding: 8px 70px 8px 30px; 
+        font-size: 0.9rem;
+    }
+
+    #loginForm button[type="submit"] {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .toggle-password {
+        font-size: 0.8rem;
+    }
+}

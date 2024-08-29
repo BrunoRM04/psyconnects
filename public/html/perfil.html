@@ -8,11 +8,11 @@
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module">
-        // Import the functions you need from the SDKs you need
+        // Import Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore, collection, doc, addDoc, query, orderBy, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+        import { getFirestore, doc, getDoc, addDoc, collection, query, orderBy, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
         
-        // Your web app's Firebase configuration
+        // Configuración de Firebase
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
             authDomain: "psyconnects-7be13.firebaseapp.com",
@@ -23,71 +23,87 @@
             measurementId: "G-FKC5P4PE6V"
         };
         
-        // Initialize Firebase
+        // Inicializar Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', async function() {
             const urlParams = new URLSearchParams(window.location.search);
             const psicologoId = parseInt(urlParams.get('id'), 10);
 
-            fetch('../../json/psicologos.json')
-                .then(response => response.json())
-                .then(data => {
-                    const psicologo = data.psicologos.find(psic => psic.id === psicologoId);
+            // Cargar datos desde psicologos.json
+            const response = await fetch('../../json/psicologos.json');
+            const data = await response.json();
+            let psicologo = data.psicologos.find(psic => psic.id === psicologoId);
 
-                    if (psicologo) {
-                        document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
-                        document.getElementById('edad').textContent = `${calcularEdad(psicologo.fechaNacimiento)} Años`;
-                        document.getElementById('pais').textContent = psicologo.pais;
-                        document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
-                        document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
+            if (psicologo) {
+                // Intentar cargar actualizaciones desde Firestore
+                try {
+                    const docRef = doc(db, "psicologos", `psicologo_${psicologoId}`);
+                    const docSnap = await getDoc(docRef);
 
-                        const telefonoElement = document.getElementById('telefono');
-                        telefonoElement.textContent = psicologo.telefono;
-                        telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
+                    if (docSnap.exists()) {
+                        const psicologoFirestore = docSnap.data();
+                        // Mezclar los datos de json con los de Firestore
+                        psicologo = { ...psicologo, ...psicologoFirestore };
+                    }
+                } catch (error) {
+                    console.error("Error al obtener los datos actualizados desde Firestore: ", error);
+                }
 
-                        document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
-                        document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
-                        document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
-                        document.getElementById('descripcion').textContent = psicologo.descripcion;
+                // Renderizar datos en la página
+                document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
+                document.getElementById('edad').textContent = `${calcularEdad(psicologo.fechaNacimiento)} Años`;
+                document.getElementById('pais').textContent = psicologo.pais;
+                document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
+                document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
 
-                        const experienciaList = document.getElementById('experiencia');
-                        psicologo.experiencia.forEach(exp => {
-                            const li = document.createElement('li');
-                            li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
-                            experienciaList.appendChild(li);
-                        });
+                const telefonoElement = document.getElementById('telefono');
+                telefonoElement.textContent = psicologo.telefono;
+                telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
 
-                        const certificacionesList = document.getElementById('certificaciones');
-                        psicologo.certificaciones.forEach(cert => {
-                            const li = document.createElement('li');
-                            li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
-                            certificacionesList.appendChild(li);
-                        });
+                document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
+                document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
+                document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
+                document.getElementById('descripcion').textContent = psicologo.descripcion;
 
-                        const socialMedia = ['linkedin', 'facebook', 'twitter', 'instagram', 'youtube', 'whatsapp', 'tiktok', 'snapchat'];
-                        socialMedia.forEach(media => {
-                            const element = document.getElementById(media);
-                            if (psicologo.redesSociales[media]) {
-                                element.href = psicologo.redesSociales[media];
-                            } else {
-                                element.style.display = 'none';
-                            }
-                        });
+                const experienciaList = document.getElementById('experiencia');
+                experienciaList.innerHTML = '';
+                psicologo.experiencia.forEach(exp => {
+                    const li = document.createElement('li');
+                    li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
+                    experienciaList.appendChild(li);
+                });
 
-                        const reservarCitaBtn = document.getElementById('reservar-cita');
-                        reservarCitaBtn.addEventListener('click', function() {
-                            const mensajeWhatsApp = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.%20Me%20gustaría%20reservar%20una%20cita.`;
-                            window.location.href = mensajeWhatsApp;
-                        });
+                const certificacionesList = document.getElementById('certificaciones');
+                certificacionesList.innerHTML = '';
+                psicologo.certificaciones.forEach(cert => {
+                    const li = document.createElement('li');
+                    li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
+                    certificacionesList.appendChild(li);
+                });
 
-                        // Cargar comentarios guardados
-                        loadComments(psicologoId);
+                const socialMedia = ['linkedin', 'facebook', 'twitter', 'instagram', 'youtube', 'whatsapp', 'tiktok', 'snapchat'];
+                socialMedia.forEach(media => {
+                    const element = document.getElementById(media);
+                    if (psicologo.redesSociales && psicologo.redesSociales[media]) {
+                        element.href = psicologo.redesSociales[media];
                     } else {
-                        alert('Psicólogo no encontrado');
+                        element.style.display = 'none';
                     }
                 });
+
+                const reservarCitaBtn = document.getElementById('reservar-cita');
+                reservarCitaBtn.addEventListener('click', function() {
+                    const mensajeWhatsApp = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.%20Me%20gustaría%20reservar%20una%20cita.`;
+                    window.location.href = mensajeWhatsApp;
+                });
+
+                // Cargar comentarios guardados
+                loadComments(psicologoId);
+            } else {
+                alert('Psicólogo no encontrado en psicologos.json');
+            }
 
             function calcularEdad(fechaNacimiento) {
                 const hoy = new Date();
@@ -163,7 +179,7 @@
             <ul class="nav-links">
                 <li><a href="../../index.html">Inicio</a></li>
                 <li><a href="../../psicologos.html">Psicólogos Disponibles</a></li>
-                <li><a href="../../historia.html">Investigaciones</a></li>
+                <li><a href="../../historia.html">Tu Historia</a></li>
                 <li><a href="../../reseñas.html">Reseñas</a></li>
                 <li><a href="../../ofertas.html">Ofertas Laborales</a></li>
                 <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
@@ -259,5 +275,3 @@
 
 </body>
 </html>
-
-

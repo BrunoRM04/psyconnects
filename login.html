@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsyConnects | Iniciar Sesion</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="shortcut icon" href="public/img/marca/icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module">
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
+            authDomain: "psyconnects-7be13.firebaseapp.com",
+            projectId: "psyconnects-7be13",
+            storageBucket: "psyconnects-7be13.appspot.com",
+            messagingSenderId: "299531221809",
+            appId: "1:299531221809:web:c6bba4831be2d70d910e10",
+            measurementId: "G-FKC5P4PE6V"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const auth = getAuth();
+            
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                
+                signInWithEmailAndPassword(auth, email, password)
+                    .then(async (userCredential) => {
+                        const user = userCredential.user;
+                        const userEmail = user.email;
+
+                        // Buscar el ID del psicólogo basado en el correo electrónico
+                        const response = await fetch('./json/psicologos.json');
+                        const data = await response.json();
+                        const psicologo = data.psicologos.find(psic => psic.correoElectronico === userEmail);
+                        
+                        if (psicologo) {
+                            const psicologoId = psicologo.id;
+                            window.location.href = `./public/html/editar-perfil.html?id=${psicologoId}`;  // Redirigir a la página de edición del perfil con el ID
+                        } else {
+                            alert('Usuario no encontrado en psicologos.json');
+                        }
+                    })
+                    .catch((error) => {
+                        const errorMessage = error.message;
+                        document.getElementById('login-error').textContent = `Error: ${errorMessage}`;
+                    });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.textContent = type === 'password' ? 'Mostrar' : 'Ocultar';
+    });
+});
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="public/img/marca/logo cuatro.png" alt="Logo">
+        </div>
+        <!-- Menú de Navegación Principal -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="psicologos.html">Psicólogos Disponibles</a></li>
+                <li><a href="historia.html">Tu Historia</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="ofertas.html">Ofertas Laborales</a></li>
+                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
+            </ul>
+            <!-- Iconos de Navegación (Versión Compacta/Móvil) -->
+            <ul class="nav-icons">
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="psicologos.html"><i class="fas fa-user-md"></i></a></li>
+                <li><a href="historia.html"><i class="fas fa-book"></i></a></li>
+                <li><a href="reseñas.html"><i class="fa-solid fa-comments"></i></a></li>
+                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="login-form">
+            <h2>¡INICIA SESIÓN AQUÍ!</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" required>
+                        <button type="button" id="togglePassword" class="toggle-password">Mostrar</button>
+                    </div>
+                </div>
+                <button type="submit">Iniciar Sesión ></button>
+            </form>
+            <div id="login-error"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="#">EMPRESAS</a>
+                <a href="https://forms.gle/xZERw5gE8yzQELDc8">REGISTRARSE</a>
+                <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">QUIENES SOMOS</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
+        </div>
+    </footer>
+
+</body>
+</html>
