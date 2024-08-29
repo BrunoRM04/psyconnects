@@ -1784,6 +1784,8 @@ footer {
     margin: 2rem auto;
     padding: 2rem;
     background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
 .edit-profile-container h2 {
@@ -1803,20 +1805,28 @@ footer {
 .edit-profile-container input[type="text"],
 .edit-profile-container input[type="email"],
 .edit-profile-container input[type="tel"],
-.edit-profile-container input[type="number"],
+.edit-profile-container input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid #1358B4;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+}
+
 .edit-profile-container textarea {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #1358B4;
-    border-radius: 20px;
+    border: none;
+    border-bottom: 2px solid #1358B4;
     font-size: 1rem;
-    box-sizing: border-box;
-}
-
-.edit-profile-container textarea {
-    height: 100px;
+    background: none;
+    outline: none;
     resize: none;
+    height: 100px;
 }
 
 .edit-profile-container button[type="submit"] {
@@ -1866,9 +1876,11 @@ footer {
 .certificacion-entry input {
     flex: 1;
     padding: 0.5rem;
-    border: 1px solid #1358B4;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid #1358B4;
     font-size: 1rem;
+    background: none;
+    outline: none;
 }
 
 .experiencia-entry label,
