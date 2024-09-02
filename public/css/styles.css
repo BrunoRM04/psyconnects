@@ -123,6 +123,67 @@ nav {
         display: flex;
     }
 }
+
+.account-access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.account-access a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.account-access a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .account-access a {
+        font-size: 13px;
+    }
+
+    .account-access a i {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-access {
+        margin-bottom: 15px;
+    }
+
+    .account-access a {
+        font-size: 12px;
+    }
+
+    .account-access a i {
+        font-size: 16px;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-access {
+        margin-bottom: 10px;
+    }
+
+    .account-access a {
+        font-size: 11px;
+    }
+
+    .account-access a i {
+        font-size: 15px;
+        margin-right: 5px;
+    }
+}
 /* HEADER */
 
 
@@ -1779,15 +1840,15 @@ footer {
 
 
 
+/* Contenedor principal */
 .edit-profile-container {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
 }
 
+/* Títulos */
 .edit-profile-container h2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -1795,6 +1856,7 @@ footer {
     font-size: 2rem;
 }
 
+/* Etiquetas */
 .edit-profile-container label {
     display: block;
     margin-bottom: 0.5rem;
@@ -1802,6 +1864,7 @@ footer {
     font-weight: bold;
 }
 
+/* Entradas de texto */
 .edit-profile-container input[type="text"],
 .edit-profile-container input[type="email"],
 .edit-profile-container input[type="tel"],
@@ -1816,6 +1879,7 @@ footer {
     outline: none;
 }
 
+/* Área de texto */
 .edit-profile-container textarea {
     width: 100%;
     padding: 0.75rem;
@@ -1829,6 +1893,7 @@ footer {
     height: 100px;
 }
 
+/* Botón de enviar */
 .edit-profile-container button[type="submit"] {
     display: block;
     width: 100%;
@@ -1842,12 +1907,14 @@ footer {
     transition: background-color 0.3s ease;
 }
 
+/* Hover en el botón de enviar */
 .edit-profile-container button[type="submit"]:hover {
     background-color: white;
     color: #1358B4;
     border: solid 1px #1358B4;
 }
 
+/* Subtítulos */
 .edit-profile-container h3 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -1855,11 +1922,13 @@ footer {
     font-size: 1.5rem;
 }
 
+/* Contenedores de experiencia y certificaciones */
 #experiencia-container,
 #certificaciones-container {
     margin-bottom: 1rem;
 }
 
+/* Entrada de experiencia y certificación */
 .experiencia-entry,
 .certificacion-entry {
     position: relative;
@@ -1872,6 +1941,7 @@ footer {
     border-radius: 10px;
 }
 
+/* Inputs dentro de la experiencia y certificaciones */
 .experiencia-entry input,
 .certificacion-entry input {
     flex: 1;
@@ -1883,13 +1953,14 @@ footer {
     outline: none;
 }
 
+/* Etiquetas de experiencia y certificación */
 .experiencia-entry label,
 .certificacion-entry label {
     flex-basis: 100%;
     font-weight: bold;
 }
 
-/* Botón de eliminar como cruz roja */
+/* Botón de eliminar */
 .eliminar-experiencia,
 .eliminar-certificacion {
     position: absolute;
@@ -1910,11 +1981,12 @@ footer {
 
 .eliminar-experiencia::before,
 .eliminar-certificacion::before {
-    content: "✕"; /* Unicode for cross mark */
+    content: "✕"; /* Unicode para cruz */
     font-size: 18px;
     color: white;
 }
 
+/* Botones de agregar experiencia y certificación */
 #agregar-experiencia,
 #agregar-certificacion {
     display: flex;
@@ -1933,6 +2005,7 @@ footer {
     margin-bottom: 50px;
 }
 
+/* Hover en los botones de agregar */
 #agregar-experiencia:hover,
 #agregar-certificacion:hover {
     background-color: #1358B4;
@@ -1946,6 +2019,7 @@ footer {
     margin-right: 0.5rem;
 }
 
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .edit-profile-container {
         padding: 1rem;
@@ -1954,6 +2028,42 @@ footer {
     .experiencia-entry,
     .certificacion-entry {
         flex-direction: column;
+    }
+}
+
+/* Ajustes para pantallas aún más pequeñas (320px) */
+@media (max-width: 480px) {
+    .edit-profile-container {
+        max-width: 90%;
+        padding: 0.5rem;
+    }
+
+    .edit-profile-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .edit-profile-container button[type="submit"],
+    #agregar-experiencia,
+    #agregar-certificacion {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .eliminar-experiencia,
+    .eliminar-certificacion {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+    .experiencia-entry input,
+    .certificacion-entry input {
+        font-size: 0.9rem;
+    }
+
+    .edit-profile-container textarea {
+        height: 80px;
     }
 }
 
