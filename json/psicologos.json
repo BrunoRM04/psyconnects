@@ -11724,6 +11724,290 @@
                 "instagram": "https://www.instagram.com/espaciopensar.te/"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 206,
+            "nombre": "Joselyne",
+            "apellido": "Villegas",
+            "fechaNacimiento": "1999-04-23",
+            "fotoPerfil": "./public/img/users/Joselyne Villegas.jpg",
+            "correoElectronico": "psi.joselynev@gmail.com",
+            "telefono": "+584241204853",
+            "edad": 25,
+            "pais": "Venezuela",
+            "ciudad": "Lara",
+            "añosExperiencia": 4,
+            "descripcion": "Psicóloga egresada en el 2021. Te acompaño en tu proceso de autoconocimiento y superación.",
+            "precioServicioHora": 30,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicólogo Clínico",
+                    "institucion": "Centro de Especialidades Médicas Health World C.A",
+                    "añoInicio": 2021,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "titulo": "Licenciatura en Psicología",
+                    "institucion": "Universidad Yacambu",
+                    "añoFin": 2021
+                }
+            ],
+            "redesSociales": {
+                "instagram": "@josvmxv"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 207,
+            "nombre": "Mónica",
+            "apellido": "Recalde",
+            "fechaNacimiento": "1999-02-09",
+            "fotoPerfil": "./public/img/users/mony recalde.jpg",
+            "correoElectronico": "monyrecalde9@gmail.com",
+            "telefono": "+593992924219",
+            "edad": 25,
+            "pais": "Ecuador",
+            "ciudad": "Quito",
+            "añosExperiencia": 1,
+            "descripcion": "Destaco por mi confiabilidad, profesionalismo y empatía. Tengo experiencia en terapia grupal, fomentando un entorno colaborativo y de apoyo. Estoy motivada para contribuir al campo con dedicación y una actitud proactiva hacia el aprendizaje y crecimiento.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [],
+            "certificaciones": [],
+            "redesSociales": { },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 208,
+            "nombre": "Fabiola",
+            "apellido": "Valderrama",
+            "fechaNacimiento": "1975-12-13",
+            "fotoPerfil": "./public/img/users/Fabiola Valderrama.png",
+            "correoElectronico": "ps.fvalderrama@gmail.com",
+            "telefono": "+56985282206",
+            "edad": 48,
+            "pais": "Chile",
+            "ciudad": "Santiago",
+            "añosExperiencia": 20,
+            "descripcion": "Soy psicóloga, me he especializado en depresión, trauma y ansiedad en adolescentes y adultos. Trabajaremos desde el enfoque cognitivo conductual, con objetivos claros, que iremos desarrollando en conjunto durante la terapia. Construiremos un espacio seguro para la búsqueda de compresión de cada situación particular, trabajando juntos para poder avanzar en tu camino psicoterapéutico.",
+            "precioServicioHora": 33,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Ejercicio Independiente de la Profesión",
+                    "institucion": "",
+                    "añoInicio": 2004,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Psicóloga clínica infantojuvenil +12 y adultos",
+                    "institucion": "",
+                    "añoInicio": 2004,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "titulo": "Psicología",
+                    "institucion": "Universidad Nacional Andrés Bello",
+                    "añoFin": 2004
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/ps_fabiolavalderrama"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 209,
+            "nombre": "Genesis",
+            "apellido": "Cruz",
+            "fechaNacimiento": "1996-08-19",
+            "fotoPerfil": "./public/img/users/Genesis Cruz.jpg",
+            "correoElectronico": "genesis19cruz@gmail.com",
+            "telefono": "+50433271807",
+            "edad": 28,
+            "pais": "Honduras",
+            "ciudad": "Tegucigalpa",
+            "añosExperiencia": 2,
+            "descripcion": "Licenciada en psicología dirigida a la consejería.",
+            "precioServicioHora": 10,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasantía en Hospital Escuela Universitario",
+                    "institucion": "",
+                    "añoInicio": 2021,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Práctica Profesional en Go Joven Honduras",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2024
+                },
+                {
+                    "puesto": "Facilitadora en Go Joven Honduras",
+                    "institucion": "",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/gene19cruz",
+                "linkedin": "https://hn.linkedin.com/in/genesis-cruz-173190163"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 210,
+            "nombre": "Isabel",
+            "apellido": "Villarino",
+            "fechaNacimiento": "1999-08-26",
+            "fotoPerfil": "./public/img/users/Isabel Villarino.jpeg",
+            "correoElectronico": "psic.isabelvillarino@gmail.com",
+            "telefono": "+584141048931",
+            "edad": 25,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 2,
+            "descripcion": "Hola! Soy Isabel y psicóloga. Mi objetivo es crear un espacio seguro y de confianza donde te sientas escuchado, comprendido y apoyado en cada paso del camino. Con un enfoque centrado en ti y tu bienestar, juntos podemos enfrentar y superar cualquier dificultad que estés experimentando. Mi práctica terapéutica se basa en la Terapia Cognitivo-Conductual, y estoy comprometida a adaptar cada sesión a tus necesidades individuales. La confidencialidad es fundamental en mi práctica, y puedes confiar en que cualquier información compartida durante nuestras sesiones se mantendrá en privado.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Voluntaria",
+                    "institucion": "Hospital Psiquiátrico Dr. Jesús Mata De Gregorio (IVSS)",
+                    "añoInicio": 2022,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Psicóloga en Adolescentes y Adultos Online",
+                    "institucion": "Independiente",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Psicóloga en Media General",
+                    "institucion": "Colegio San Luis",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [
+                {
+                    "titulo": "Lic. en Psicología",
+                    "institucion": "Universidad Metropolitana",
+                    "añoFin": 2023
+                },
+                {
+                    "titulo": "Especialista Universitario en nuevas intervenciones en Psicosis",
+                    "institucion": "Universidad a distancia de Madrid e Itaca",
+                    "añoFin": 2023
+                },
+                {
+                    "titulo": "Taller Certificados de Salud Mental, para conducir y de Soporte Emocional",
+                    "institucion": "Colegio de Psicólogos del Distrito Capital",
+                    "añoFin": 2023
+                },
+                {
+                    "titulo": "Especialización en Terapia Cognitivo-Conductual en niños y adolescentes",
+                    "institucion": "IMA Capacitaciones",
+                    "añoInicio": 2023,
+                    "añoFin": 2024
+                },
+                {
+                    "titulo": "Curso de Técnicas de Intervención Psicológica para el abordaje de adicciones",
+                    "institucion": "Universidad de los Andes",
+                    "añoFin": 2024
+                },
+                {
+                    "titulo": "Curso Intensivo: Terapias Conductuales y Contextuales en múltiples aplicaciones clínicas",
+                    "institucion": "ITECOC",
+                    "añoFin": 2024
+                }
+            ],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.isabelvillarino"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 211,
+            "nombre": "Rosbelys",
+            "apellido": "Ramos",
+            "fechaNacimiento": "2001-12-17",
+            "fotoPerfil": "./public/img/users/Rosbelys Ramos.jpg",
+            "correoElectronico": "rosbelysramos02@gmail.com",
+            "telefono": "+584124075432",
+            "edad": 22,
+            "pais": "Venezuela",
+            "ciudad": "Valencia",
+            "añosExperiencia": 1,
+            "descripcion": "La confianza más valiosa es la que debemos tener en nosotros mismos (Psic.Rosbelys R).",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Humanista",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasantías en Hospital (Programa Corazones Felices)",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2023
+                },
+                {
+                    "puesto": "Psicóloga en Clínica",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psic.rosbelysramos"
+            },
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
