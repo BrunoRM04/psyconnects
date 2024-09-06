@@ -12008,6 +12008,367 @@
                 "instagram": "https://www.instagram.com/psic.rosbelysramos"
             },
             "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 212,
+            "nombre": "Sofia",
+            "apellido": "Rodriguez Lastra",
+            "fechaNacimiento": "1996-08-04",
+            "fotoPerfil": "./public/img/users/Sofia Rodriguez Lastra.jpg",
+            "correoElectronico": "sofiamilenarl@gmail.com",
+            "telefono": "+543764701346",
+            "edad": 28,
+            "pais": "Argentina",
+            "ciudad": "Posadas, Misiones",
+            "añosExperiencia": 3,
+            "descripcion": "Mi nombre es Sofía y soy psicóloga. Me dedico a la atención clínica de niños, adolescentes y adultos. Me interesa ayudar a mis pacientes con un sinfín de problemáticas que pueden estar atravesando, a través de la escucha activa y la empatía.",
+            "precioServicioHora": "10",
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Psicoanalítica",
+                "Terapia Humanista"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Manager de RRHH",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": 2024
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "",
+                    "añoInicio": 2020,
+                    "añoFin": 2021
+                },
+                {
+                    "puesto": "Prácticas Profesionales Supervisadas en el Área Laboral",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": 2019
+                },
+                {
+                    "puesto": "Prácticas Profesionales Supervisadas en el Área Clínica",
+                    "institucion": "",
+                    "añoInicio": 2019,
+                    "añoFin": 2019
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "linkedin": "https://www.linkedin.com/in/sofia-rodriguez-lastra-7467b81a8/",
+                "instagram": "https://www.instagram.com/sofia_milena/",
+                "facebook": "https://www.facebook.com/sofiamilena.rodriguez",
+                "x": "https://x.com/SofiaMRodriguez"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 213,
+            "nombre": "Giulietta",
+            "apellido": "Lucente",
+            "fechaNacimiento": "1999-08-03",
+            "fotoPerfil": "./public/img/users/Giuly Lucente.jpg",
+            "correoElectronico": "giuliettalucente@gmail.com",
+            "telefono": "+541151324138",
+            "edad": 25,
+            "pais": "Argentina",
+            "ciudad": "CABA",
+            "añosExperiencia": 1,
+            "descripcion": "Soy Lic. en psicología, graduada de la UBA, con orientación Cognitiva Conductual. Estoy en constante formación para poder mejorar mi práctica día a día. Tengo amplia formación en temáticas de género y diversidad. Actualmente atiendo de manera virtual a Adolescentes, Jóvenes y Adultos.",
+            "precioServicioHora": 25,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Acompañante terapéutica y acompañante personal no docente",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Psicóloga Clínica",
+                    "institucion": "",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Docente Universitaria",
+                    "institucion": "",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/psicotecnofeminista"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 214,
+            "nombre": "Isabella",
+            "apellido": "Coello",
+            "fechaNacimiento": "1995-01-04",
+            "fotoPerfil": "./public/img/users/Isabella Coello.jpg",
+            "correoElectronico": "isabellacoello2@gmail.com",
+            "telefono": "+50433927085",
+            "edad": 29,
+            "pais": "Honduras",
+            "ciudad": "San Pedro Sula",
+            "añosExperiencia": 7,
+            "descripcion": "Mi nombre es Isabella Coello, trabajo como psicóloga en consultorio privado y me encuentro certificando en Terapia Racional Emotiva Conductual y Terapia Cognitivo Conductual.",
+            "precioServicioHora": 40,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual"
+            ],
+            "idiomas": [
+                "Español",
+                "Inglés"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicóloga de planta",
+                    "institucion": "Care Solace",
+                    "añoInicio": 2022,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Voluntaria remunerada",
+                    "institucion": "ASONAPVSIDAH",
+                    "añoInicio": 2021,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Psicóloga en Golden Legacy School",
+                    "institucion": "Golden Legacy School",
+                    "añoInicio": 2018,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Psicóloga en Clínica Médica Fesitrahn (CLIDEMF)",
+                    "institucion": "CLIDEMF",
+                    "añoInicio": 2018,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Consejera en consultorio médico privado",
+                    "institucion": "",
+                    "añoInicio": 2017,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Consultora en USAID Proponte Más",
+                    "institucion": "",
+                    "añoInicio": 2017,
+                    "añoFin": 2017
+                },
+                {
+                    "puesto": "Práctica profesional en Reclutamiento y Selección",
+                    "institucion": "Gildan",
+                    "añoInicio": 2016,
+                    "añoFin": 2016
+                },
+                {
+                    "puesto": "Asistente de Infants",
+                    "institucion": "Novo School",
+                    "añoInicio": 2015,
+                    "añoFin": 2016
+                }
+            ],
+            "certificaciones": [
+                {
+                    "titulo": "Certificación en Terapia Racional Emotiva Conductual y Terapia Cognitivo Conductual en niños y adolescentes",
+                    "institucion": "Psicotrec",
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "titulo": "Terapia Racional Emotiva Conductual Nivel 1",
+                    "institucion": "IAREBT Asociación Internacional",
+                    "añoFin": 2024
+                },
+                {
+                    "titulo": "Diplomado en Psicoterapia contra el Abuso Sexual Infantil",
+                    "institucion": "",
+                    "añoFin": 2023
+                },
+                {
+                    "titulo": "Ciclo de formación en abordaje de Depresión desde enfoque de Terapia Cognitivo Conductual",
+                    "institucion": "",
+                    "añoFin": 2022
+                },
+                {
+                    "titulo": "Ciclo de formación en Terapia Familiar Sistémica",
+                    "institucion": "",
+                    "añoFin": 2021
+                },
+                {
+                    "titulo": "Ciclo de formación en técnicas terapéuticas en niños, adolescentes y adultos",
+                    "institucion": "",
+                    "añoFin": 2021
+                },
+                {
+                    "titulo": "Maestría en Psicología Clínica y Psicopatología Infanto-Juvenil",
+                    "institucion": "Tech Universidad – España",
+                    "añoFin": 2023
+                },
+                {
+                    "titulo": "Diplomado de Generalidades de Psicología Forense y Criminalística",
+                    "institucion": "",
+                    "añoFin": 2020
+                },
+                {
+                    "titulo": "Curso de Psico Oncología",
+                    "institucion": "",
+                    "añoFin": 2020
+                },
+                {
+                    "titulo": "Taller de Lenguaje en Metodología Montessori",
+                    "institucion": "Montessori Nursery",
+                    "añoFin": 2018
+                },
+                {
+                    "titulo": "Licenciada en Psicología",
+                    "institucion": "Universidad Católica de Honduras Nuestra Señora Reina de la Paz",
+                    "añoFin": 2017
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 215,
+            "nombre": "Siboney",
+            "apellido": "Pérez V.",
+            "fechaNacimiento": "1960-11-14",
+            "fotoPerfil": "./public/img/users/Siboney Pérez V..jpeg",
+            "correoElectronico": "speewee14@gmail.com",
+            "telefono": "+584142358103",
+            "edad": 63,
+            "pais": "Venezuela",
+            "ciudad": "Caracas",
+            "añosExperiencia": 40,
+            "descripcion": "Psicóloga/psicoterapeuta especialista en psicología de la salud, psiconeuroinmunología y psicooncología.",
+            "precioServicioHora": 75,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia EMDR",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Psicooncóloga",
+                    "institucion": "Oncosalud",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Psicoterapeuta",
+                    "institucion": "Servicio Psicológico Armando Janssens",
+                    "añoInicio": 2015,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Profesora Universitaria",
+                    "institucion": "Universidad Católica Andrés Bello",
+                    "añoInicio": 2021,
+                    "añoFin": 2023
+                },
+                {
+                    "puesto": "Ejercicio Privado",
+                    "institucion": "",
+                    "añoInicio": 1983,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "certificaciones": [],
+            "redesSociales": {
+                "instagram": "https://www.instagram.com/siboneyperezv"
+            },
+            "verPerfil": "./public/html/perfil.html"
+        },
+        {
+            "id": 216,
+            "nombre": "Arturo",
+            "apellido": "Medina",
+            "fechaNacimiento": "1994-10-06",
+            "fotoPerfil": "./public/img/users/Arturo David Medina.png",
+            "correoElectronico": "arturo.organizacional@gmail.com",
+            "telefono": "+584245541987",
+            "edad": 30,
+            "pais": "Venezuela",
+            "ciudad": "Barquisimeto",
+            "añosExperiencia": 1,
+            "descripcion": "Licenciado en Psicología. Actualmente cursando Especialidad en Derechos Humanos.",
+            "precioServicioHora": 20,
+            "especializacion": [
+                "Terapia Cognitivo-Conductual",
+                "Terapia Familiar",
+                "Terapia de Aceptación y Compromiso"
+            ],
+            "idiomas": [
+                "Español"
+            ],
+            "experiencia": [
+                {
+                    "puesto": "Pasantías en Psicología Clínica",
+                    "institucion": "Hospital Especial Centro de Salud de Resocialización Psiquiátrica El Pampero",
+                    "añoInicio": 2023,
+                    "añoFin": 2024
+                },
+                {
+                    "puesto": "Psicólogo Voluntario",
+                    "institucion": "",
+                    "añoInicio": 2023,
+                    "añoFin": "Actualidad"
+                },
+                {
+                    "puesto": "Pasantías en Psicología Social - Comunitaria",
+                    "institucion": "Programa de Atención al Estudiante con Discapacidad de la Universidad Centroccidental Lisandro Alvarado (PAED - UCLA)",
+                    "añoInicio": 2022,
+                    "añoFin": 2022
+                },
+                {
+                    "puesto": "Pasantías en Psicología Organizacional",
+                    "institucion": "Comercializadora Inter Mundial 2020, C.A.",
+                    "añoInicio": 2023,
+                    "añoFin": 2023
+                },
+                {
+                    "puesto": "Facilitador de Dinámicas de Grupos",
+                    "institucion": "Fundación Bel (Corporación Bel)",
+                    "añoInicio": 2019,
+                    "añoFin": 2020
+                }
+            ],
+            "certificaciones": [
+                {
+                    "titulo": "Licenciado en Psicología",
+                    "institucion": "Universidad Centroccidental Lisandro Alvarado (UCLA)",
+                    "añoFin": 2024
+                },
+                {
+                    "titulo": "Especialidad en Derechos Humanos",
+                    "institucion": "Universidad Nacional Abierta, Dirección de Investigación y Posgrado",
+                    "añoInicio": 2024,
+                    "añoFin": "Actualidad"
+                }
+            ],
+            "redesSociales": {},
+            "verPerfil": "./public/html/perfil.html"
         }
     ]
 }
