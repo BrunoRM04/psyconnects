@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN EL NAVEGADOR -->
     <title>PsyConnects | Iniciar Sesion</title>
+    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="public/css/styles.css">
+    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="public/img/marca/icono.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SCRIPT PARA MANEJAR EL INICIO DE SESIÓN -->
     <script type="module">
+        // IMPORTAR FUNCIONES DE AUTENTICACIÓN Y FIREBASE
         import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-        // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-        
-        // Your web app's Firebase configuration
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+        // CONFIGURACIÓN DE FIREBASE
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
             authDomain: "psyconnects-7be13.firebaseapp.com",
@@ -23,88 +33,109 @@
             appId: "1:299531221809:web:c6bba4831be2d70d910e10",
             measurementId: "G-FKC5P4PE6V"
         };
-        
-        // Initialize Firebase
+
+        // INICIALIZAR FIREBASE Y OBTENER FIRESTORE
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        document.addEventListener('DOMContentLoaded', function() {
+        // ESCUCHAR CUANDO EL DOCUMENTO SE CARGUE COMPLETAMENTE
+        document.addEventListener('DOMContentLoaded', function () {
             const auth = getAuth();
-            
-            document.getElementById('loginForm').addEventListener('submit', function(event) {
+
+            // MANEJAR EL EVENTO DE ENVÍO DEL FORMULARIO DE LOGIN
+            document.getElementById('loginForm').addEventListener('submit', function (event) {
                 event.preventDefault();
-                
+
+                // OBTENER LOS VALORES DEL CORREO Y CONTRASEÑA DEL FORMULARIO
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('password').value;
-                
+
+                // REALIZAR EL INICIO DE SESIÓN CON FIREBASE AUTH
                 signInWithEmailAndPassword(auth, email, password)
                     .then(async (userCredential) => {
                         const user = userCredential.user;
-                        const userEmail = user.email;
+                        const userId = user.uid;
 
-                        // Buscar el ID del psicólogo basado en el correo electrónico
-                        const response = await fetch('./json/psicologos.json');
-                        const data = await response.json();
-                        const psicologo = data.psicologos.find(psic => psic.correoElectronico === userEmail);
-                        
-                        if (psicologo) {
-                            const psicologoId = psicologo.id;
-                            window.location.href = `./public/html/editar-perfil.html?id=${psicologoId}`;  // Redirigir a la página de edición del perfil con el ID
+                        // OBTENER LOS DATOS DEL PSICÓLOGO DESDE FIRESTORE USANDO EL UID
+                        const docRef = doc(db, "psicologos", userId);
+                        const docSnap = await getDoc(docRef);
+
+                        if (docSnap.exists()) {
+                            // SI EL PSICÓLOGO EXISTE, REDIRIGIR A LA PÁGINA DE EDICIÓN DE PERFIL CON EL ID DEL PSICÓLOGO
+                            window.location.href = `./public/html/editar-perfil.html?id=${userId}`;
                         } else {
-                            alert('Usuario no encontrado en psicologos.json');
+                            alert('Usuario no encontrado en la base de datos.');
                         }
                     })
                     .catch((error) => {
+                        // MOSTRAR MENSAJE DE ERROR SI OCURRE UN PROBLEMA CON EL LOGIN
                         const errorMessage = error.message;
                         document.getElementById('login-error').textContent = `Error: ${errorMessage}`;
                     });
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-    const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
+        // MANEJAR LA FUNCIÓN DE MOSTRAR/OCULTAR CONTRASEÑA
+        document.addEventListener('DOMContentLoaded', function () {
+            const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#password');
 
-    togglePassword.addEventListener('click', function (e) {
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
-        this.textContent = type === 'password' ? 'Mostrar' : 'Ocultar';
-    });
-});
+            // CAMBIAR ENTRE VISUALIZAR CONTRASEÑA O NO
+            togglePassword.addEventListener('click', function (e) {
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                this.textContent = type === 'password' ? 'Mostrar' : 'Ocultar';
+            });
+        });
+
+        // MENÚ DE HAMBURGUESA (ABRIR)
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.add('active');
+        });
+
+        // MENÚ DE HAMBURGUESA (CERRAR)
+        document.querySelector('.close-menu').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.remove('active');
+        });
     </script>
 </head>
+
 <body>
 
+    <!-- INICIO DEL ENCABEZADO -->
     <header>
+        <!-- SECCIÓN DE LOGO -->
         <div class="logo">
-            <img src="public/img/marca/logo cuatro.png" alt="Logo">
+            <img src="public/img/marca/icono 2.png" alt="Logo">
         </div>
-        <!-- Menú de Navegación Principal -->
-        <nav>
+        <!-- ICONO DE HAMBURGUESA -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+        <nav class="nav-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="psicologos.html">Psicólogos Disponibles</a></li>
-                <li><a href="historia.html">Tu Historia</a></li>
-                <li><a href="reseñas.html">Reseñas</a></li>
-                <li><a href="ofertas.html">Ofertas Laborales</a></li>
-                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
-            </ul>
-            <!-- Iconos de Navegación (Versión Compacta/Móvil) -->
-            <ul class="nav-icons">
-                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                <li><a href="psicologos.html"><i class="fas fa-user-md"></i></a></li>
-                <li><a href="historia.html"><i class="fas fa-book"></i></a></li>
-                <li><a href="reseñas.html"><i class="fa-solid fa-comments"></i></a></li>
-                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i></a></li>
-                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
+                <li><a href="reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
+                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+                <li><a href="./public/html/register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
             </ul>
         </nav>
     </header>
+    <!-- FIN DEL ENCABEZADO -->
 
+    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
     <main>
+        <!-- FORMULARIO DE INICIO DE SESIÓN -->
         <div id="login-form">
             <h2>¡INICIA SESIÓN AQUÍ!</h2>
             <form id="loginForm">
+                <!-- CAMPO DE CORREO ELECTRÓNICO -->
                 <div class="input-group">
                     <label for="email">Correo Electrónico:</label>
                     <div class="input-wrapper">
@@ -112,36 +143,49 @@
                         <input type="email" id="email" required>
                     </div>
                 </div>
+                <!-- CAMPO DE CONTRASEÑA -->
                 <div class="input-group">
                     <label for="password">Contraseña:</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="password" required>
+                        <!-- BOTÓN PARA MOSTRAR U OCULTAR LA CONTRASEÑA -->
                         <button type="button" id="togglePassword" class="toggle-password">Mostrar</button>
                     </div>
                 </div>
+                <!-- BOTÓN PARA INICIAR SESIÓN -->
                 <button type="submit">Iniciar Sesión ></button>
             </form>
+            <!-- SECCIÓN PARA MOSTRAR ERRORES DE LOGIN -->
             <div id="login-error"></div>
         </div>
     </main>
+    <!-- FIN DEL CONTENIDO PRINCIPAL -->
 
+    <!-- INICIO DEL PIE DE PÁGINA -->
     <footer>
+        <!-- CONTENEDOR PRINCIPAL DEL PIE DE PÁGINA -->
         <div class="footer-container">
+            <!-- MENÚ DE NAVEGACIÓN DEL PIE DE PÁGINA -->
             <div class="footer-nav">
                 <a href="#">EMPRESAS</a>
-                <a href="https://forms.gle/xZERw5gE8yzQELDc8">REGISTRARSE</a>
+                <a href="#">REGISTRARSE</a>
                 <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
                 <a href="#">QUIENES SOMOS</a>
             </div>
+            <!-- SECCIÓN DE REDES SOCIALES -->
             <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
+        <!-- TEXTO INFERIOR DEL PIE DE PÁGINA -->
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
     </footer>
+    <!-- FIN DEL PIE DE PÁGINA -->
 
 </body>
+
 </html>

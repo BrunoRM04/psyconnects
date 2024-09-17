@@ -1,132 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Meta Tags -->
+    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la Página -->
+    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN LA PESTAÑA DEL NAVEGADOR -->
     <title>PsyConnects | Inicio</title>
-    <!-- Enlaces a CSS -->
+    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="public/css/styles.css">
+    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="public/img/marca/icono.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <!-- Inicio del Encabezado -->
+    <!-- INICIO DEL ENCABEZADO PRINCIPAL -->
     <header>
-        <div class="account-access">
-            <a href="login.html">
-                <i class="fas fa-user-circle"></i> Ingresar a mi cuenta
-            </a>
-        </div>
+        <!-- SECCIÓN DE LOGO -->
         <div class="logo">
-            <img src="public/img/marca/logo cuatro.png" alt="Logo">
+            <img src="public/img/marca/icono 2.png" alt="Logo">
         </div>
-        <!-- Menú de Navegación Principal -->
-        <nav>
+        <!-- ICONO DE HAMBURGUESA -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+        <nav class="nav-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="psicologos.html">Psicólogos Disponibles</a></li>
-                <li><a href="historia.html">Tu Historia</a></li>
-                <li><a href="reseñas.html">Reseñas</a></li>
-                <li><a href="ofertas.html">Ofertas Laborales</a></li>
-                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7">Registrarse</a></li>
-            </ul>
-            <!-- Iconos de Navegación (Versión Compacta/Móvil) -->
-            <ul class="nav-icons">
-                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                <li><a href="psicologos.html"><i class="fas fa-user-md"></i></a></li>
-                <li><a href="historia.html"><i class="fas fa-book"></i></a></li>
-                <li><a href="reseñas.html"><i class="fa-solid fa-comments"></i></a></li>
-                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i></a></li>
-                <li><a href="https://forms.gle/XNqhQksUqjXX6B4p7"><i class="fas fa-user-plus"></i></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
+                <li><a href="reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
+                <li><a href="ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+                <li><a href="./public/html/register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Fin del Encabezado -->
+    <!-- FIN DEL ENCABEZADO PRINCIPAL -->
 
-    <!-- Inicio del Contenido Principal -->
+    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
     <main>
 
-        <!-- Sección de Reseñas -->
+        <!-- SECCIÓN DE RESEÑAS DE USUARIOS -->
         <section class="hero-section sección-index-2">
-            <img src="public/img/banner/banner-2.jpg" alt="Imagen de Fondo Blanco" class="background-image sección-index-2-img">
+            <!-- IMAGEN DE FONDO PARA LA SECCIÓN DE RESEÑAS -->
+            <img src="public/img/banner/banner-2.jpg" alt="Imagen de Fondo Blanco"
+                class="background-image sección-index-2-img">
+            <!-- CAPA DE SUPERPOSICIÓN SOBRE LA IMAGEN DE FONDO -->
             <div class="overlay sección-index-2-overlay"></div>
+            <!-- CONTENIDO PRINCIPAL DE LA SECCIÓN DE RESEÑAS -->
             <div class="content sección-index-2-content">
                 <h1 class="sección-index-2-h1">RESEÑAS DE USUARIOS</h1>
-                <p class="sección-index-2-p">Descubre lo que otros usuarios opinan sobre los psicólogos registrados en nuestra plataforma. Cada reseña es auténtica y refleja la experiencia personal de quienes han confiado en nuestros profesionales para mejorar su bienestar.</p>
-                <p class="sección-index-2-p">Explora valoraciones, comentarios y testimonios para tomar una decisión informada al seleccionar el psicólogo adecuado para ti.</p>
+                <p class="sección-index-2-p">Descubre lo que otros usuarios opinan sobre los psicólogos registrados en
+                    nuestra plataforma. Cada reseña es auténtica y refleja la experiencia personal de quienes han
+                    confiado en nuestros profesionales para mejorar su bienestar.</p>
+                <p class="sección-index-2-p">Explora valoraciones, comentarios y testimonios para tomar una decisión
+                    informada al seleccionar el psicólogo adecuado para ti.</p>
                 <a href="reseñas.html" class="btn sección-index-2-btn">Reseñas Aquí ></a>
             </div>
         </section>
-        <!-- Fin de la Sección de Reseñas -->
+        <!-- FIN DE LA SECCIÓN DE RESEÑAS DE USUARIOS -->
 
-        <!-- Sección de Psicólogos Disponibles -->
+        <!-- SECCIÓN DE PSICÓLOGOS DISPONIBLES -->
         <section class="hero-section sección-index">
+            <!-- IMAGEN DE FONDO PARA LA SECCIÓN DE PSICÓLOGOS -->
             <img src="public/img/banner/banner-1.jpg" alt="Imagen de Fondo" class="background-image sección-index-img">
+            <!-- CAPA DE SUPERPOSICIÓN SOBRE LA IMAGEN DE FONDO -->
             <div class="overlay sección-index-overlay"></div>
+            <!-- CONTENIDO PRINCIPAL DE LA SECCIÓN DE PSICÓLOGOS -->
             <div class="content sección-index-content">
                 <h1 class="sección-index-h1">PSICÓLOGOS DISPONIBLES</h1>
-                <p class="sección-index-p">Te ofrecemos una plataforma donde puedes buscar y conectar con psicólogos de todo el mundo que se han registrado en nuestro sitio.</p>
-                <p class="sección-index-p">Explora perfiles detallados, revisa sus especialidades y elige al psicólogo que mejor se adapte a tus preferencias y necesidades.</p>
+                <p class="sección-index-p">Te ofrecemos una plataforma donde puedes buscar y conectar con psicólogos de
+                    todo el mundo que se han registrado en nuestro sitio.</p>
+                <p class="sección-index-p">Explora perfiles detallados, revisa sus especialidades y elige al psicólogo
+                    que mejor se adapte a tus preferencias y necesidades.</p>
                 <a href="psicologos.html" class="btn sección-index-btn">Disponibles Aquí ></a>
             </div>
         </section>
-        <!-- Fin de la Sección de Psicólogos Disponibles -->
+        <!-- FIN DE LA SECCIÓN DE PSICÓLOGOS DISPONIBLES -->
 
-        <!-- Sección "Tu Historia" -->
+        <!-- SECCIÓN "TU HISTORIA" -->
         <section class="hero-section sección-index-2">
-            <img src="public/img/banner/banner-2.jpg" alt="Imagen de Fondo Blanco" class="background-image sección-index-2-img">
+            <!-- IMAGEN DE FONDO PARA LA SECCIÓN "TU HISTORIA" -->
+            <img src="public/img/banner/banner-2.jpg" alt="Imagen de Fondo Blanco"
+                class="background-image sección-index-2-img">
+            <!-- CAPA DE SUPERPOSICIÓN SOBRE LA IMAGEN DE FONDO -->
             <div class="overlay sección-index-2-overlay"></div>
+            <!-- CONTENIDO PRINCIPAL DE LA SECCIÓN "TU HISTORIA" -->
             <div class="content sección-index-2-content">
                 <h1 class="sección-index-2-h1">TU HISTORIA AQUÍ</h1>
-                <p class="sección-index-2-p">En "Tu historia", te brindamos un espacio seguro donde puedes desahogarte y recibir apoyo tanto de nuestra comunidad como de profesionales registrados. Comparte lo que estás viviendo y permítenos acompañarte en tu proceso.</p>
-                <p class="sección-index-2-p">Al compartir tu experiencia, habilitas la posibilidad de que psicólogos especializados te ofrezcan ayuda. Tendrás control sobre quiénes pueden contactarte según tus preferencias de edad, experiencia, y más.</p>
-                <a href="https://forms.gle/BJcbCPkQL8eTUR1i6" target="_blank" class="btn sección-index-2-btn">Crear Historia Aquí ></a>
+                <p class="sección-index-2-p">En "Tu historia", te brindamos un espacio seguro donde puedes desahogarte y
+                    recibir apoyo tanto de nuestra comunidad como de profesionales registrados. Comparte lo que estás
+                    viviendo y permítenos acompañarte en tu proceso.</p>
+                <p class="sección-index-2-p">Al compartir tu experiencia, habilitas la posibilidad de que psicólogos
+                    especializados te ofrezcan ayuda. Tendrás control sobre quiénes pueden contactarte según tus
+                    preferencias de edad, experiencia, y más.</p>
+                <a href="https://forms.gle/BJcbCPkQL8eTUR1i6" target="_blank" class="btn sección-index-2-btn">Crear
+                    Historia Aquí ></a>
             </div>
         </section>
-        <!-- Fin de la Sección "Tu Historia" -->
+        <!-- FIN DE LA SECCIÓN "TU HISTORIA" -->
 
-        <!-- Sección de Ofertas Laborales -->
+        <!-- SECCIÓN DE OFERTAS LABORALES -->
         <section class="hero-section sección-index">
+            <!-- IMAGEN DE FONDO PARA LA SECCIÓN DE OFERTAS LABORALES -->
             <img src="public/img/banner/banner-3.jpg" alt="Imagen de Fondo" class="background-image sección-index-img">
+            <!-- CAPA DE SUPERPOSICIÓN SOBRE LA IMAGEN DE FONDO -->
             <div class="overlay sección-index-overlay"></div>
+            <!-- CONTENIDO PRINCIPAL DE LA SECCIÓN DE OFERTAS LABORALES -->
             <div class="content sección-index-content">
                 <h1 class="sección-index-h1">OFERTAS LABORALES</h1>
-                <p class="sección-index-p">Oportunidades laborales especialmente dirigidas a profesionales de la psicología. Cada oferta ha sido cuidadosamente seleccionada para asegurar que cumpla con los estándares de calidad y profesionalismo que nuestros usuarios merecen.</p>
-                <p class="sección-index-p">Explora las diferentes ofertas disponibles, revisa los requisitos y beneficios, y encuentra la oportunidad que mejor se adapte a tu perfil y aspiraciones profesionales.</p>
+                <p class="sección-index-p">Oportunidades laborales especialmente dirigidas a profesionales de la
+                    psicología. Cada oferta ha sido cuidadosamente seleccionada para asegurar que cumpla con los
+                    estándares de calidad y profesionalismo que nuestros usuarios merecen.</p>
+                <p class="sección-index-p">Explora las diferentes ofertas disponibles, revisa los requisitos y
+                    beneficios, y encuentra la oportunidad que mejor se adapte a tu perfil y aspiraciones profesionales.
+                </p>
                 <a href="ofertas.html" class="btn sección-index-btn">Ofertas Aquí ></a>
             </div>
         </section>
-        <!-- Fin de la Sección de Ofertas Laborales -->
+        <!-- FIN DE LA SECCIÓN DE OFERTAS LABORALES -->
 
     </main>
-    <!-- Fin del Contenido Principal -->
+    <!-- FIN DEL CONTENIDO PRINCIPAL -->
 
-    <!-- Inicio del Pie de Página -->
+    <!-- INICIO DEL PIE DE PÁGINA -->
     <footer>
+        <!-- CONTENEDOR PRINCIPAL DEL PIE DE PÁGINA -->
         <div class="footer-container">
+            <!-- MENÚ DE NAVEGACIÓN DEL PIE DE PÁGINA -->
             <div class="footer-nav">
                 <a href="#">EMPRESAS</a>
-                <a href="https://forms.gle/xZERw5gE8yzQELDc8">REGISTRARSE</a>
+                <a href="#">REGISTRARSE</a>
                 <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
                 <a href="#">QUIENES SOMOS</a>
             </div>
+            <!-- ÍCONO DE REDES SOCIALES DEL PIE DE PÁGINA -->
             <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
+        <!-- TEXTO INFERIOR DEL PIE DE PÁGINA -->
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
     </footer>
-    <!-- Fin del Pie de Página -->
+    <!-- FIN DEL PIE DE PÁGINA -->
 
-    <!-- Script JS (Vacío por ahora) -->
+    <!-- SECCIÓN PARA INCLUIR SCRIPTS JAVASCRIPT (VACÍA POR AHORA) -->
     <script>
-        
+        // MENÚ DE HAMBURGUESA (ABRIR)
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.add('active');
+        });
+
+        // MENÚ DE HAMBURGUESA (CERRAR)
+        document.querySelector('.close-menu').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.remove('active');
+        });
     </script>
 
 </body>
+
 </html>

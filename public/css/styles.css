@@ -18,7 +18,7 @@ body {
 /* HEADER */
 header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #1358B4;
@@ -29,40 +29,75 @@ header {
 
 .logo img {
     max-height: 80px;
-    margin-top: 10px;
 }
 
-nav {
-    margin-top: 30px;
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: block;
 }
 
-.nav-links,
-.nav-icons {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(19, 89, 180, 0.95);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 10px;
+    height: 100%;
 }
 
 .nav-links li {
-    list-style: none;
-    margin: 0 15px;
+    margin: 15px 0;
 }
 
 .nav-links li a {
     color: white;
     text-decoration: none;
+    font-size: 24px;
     padding: 8px 12px;
-    position: relative;
+    display: flex;
+    align-items: center;
     transition: color 0.3s ease, background-color 0.3s ease;
     background-color: transparent;
     border-radius: 15px;
+}
+
+.nav-links li a i {
+    margin-right: 10px;
 }
 
 .nav-links li a:hover {
@@ -70,122 +105,66 @@ nav {
     background-color: white;
 }
 
-.nav-icons {
-    display: none;
-    justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1358B4;
-    padding: 15px 0;
-}
-
-.nav-icons li {
-    list-style: none;
-}
-
-.nav-icons li a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 8px 8px;
-    position: relative;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    background-color: transparent;
-    border-radius: 20px;
-}
-
-.nav-icons li a:hover {
-    color: #1358B4;
-    background-color: white;
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 10px 10px;
-    }
-
-    .logo img {
-        max-height: 45px;
-        margin-top: 10px;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .nav-icons {
-        display: flex;
-    }
-}
-
-.account-access {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.account-access a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.account-access a i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-/* Estilos responsivos */
 @media (max-width: 1024px) {
-    .account-access a {
-        font-size: 13px;
+    .menu-toggle {
+        font-size: 26px;
     }
-
-    .account-access a i {
-        font-size: 17px;
+    
+    .nav-links li a {
+        font-size: 22px;
     }
 }
 
 @media (max-width: 768px) {
-    .account-access {
-        margin-bottom: 15px;
+    .logo img {
+        max-height: 60px;
     }
 
-    .account-access a {
-        font-size: 12px;
+    .menu-toggle {
+        font-size: 24px;
     }
 
-    .account-access a i {
-        font-size: 16px;
-        margin-right: 6px;
+    .nav-links li a {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .account-access {
-        margin-bottom: 10px;
+    .logo img {
+        max-height: 45px;
     }
 
-    .account-access a {
-        font-size: 11px;
+    .menu-toggle {
+        font-size: 22px;
     }
 
-    .account-access a i {
-        font-size: 15px;
-        margin-right: 5px;
+    .nav-links li a {
+        font-size: 18px;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo img {
+        max-height: 40px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 16px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
     }
 }
 /* HEADER */
-
 
 /* RESEÑAS */
 .max-w-lg {
@@ -392,6 +371,7 @@ img.rounded-full {
     }
 }
 /* SECCIÓN INDEX 1 */
+
 /* SECCIÓN INDEX 2 */
 .sección-index-2 {
     position: relative;
@@ -540,7 +520,6 @@ img.rounded-full {
 }
 /* SECCIÓN INDEX 2 */
 
-
 /* TITULOS */
 .titulo-con-linea {
     text-align: center;
@@ -585,7 +564,6 @@ img.rounded-full {
     }
 }
 /* TITULOS */
-
 
 /* FILTROS */
 .filter-container {
@@ -680,7 +658,6 @@ img.rounded-full {
     }
 }
 /* FILTROS */
-
 
 /* PSICOLOGOS DISPONIBLES */
 #contenedor-tarjetas {
@@ -877,7 +854,6 @@ img.rounded-full {
 }
 /* PSICOLOGOS DISPONIBLES */
 
-
 /* PERFILES */
 .perfil-container {
     display: flex;
@@ -898,6 +874,16 @@ img.rounded-full {
     width: 40%;
     text-align: center;
 }
+
+.perfil-imagen img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 4px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
 
 .perfil-info h2 {
     margin: 10px 0;
@@ -1343,11 +1329,517 @@ img.rounded-full {
 }
 /* INVESTIGACIONES */
 
+/* CARRUSEL DESTACADOS PSICOLOGOS */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
 
+.carousel-track-container {
+    overflow: hidden;
+    width: 60%;
+    margin: auto;
+}
 
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
+.carousel-track li {
+    list-style-type: none;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    min-width: calc(100% / 4); 
+}
 
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1358B4;
+    margin: 5px;
+}
+
+.profile-description {
+    font-size: 1rem;
+    color: black;
+    margin-top: 5px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.carousel-nav button {
+    background-color: white;
+    border: 2px solid #1358B4;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-nav .active {
+    background-color: #1358B4;
+}
+
+@media (max-width: 1024px) {
+    .carousel-track li {
+        min-width: calc(100% / 3); 
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-track li {
+        min-width: calc(100% / 2);
+    }
+    .profile-img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 425px) {
+    .carousel-track li {
+        min-width: calc(100% / 1); 
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 320px) {
+    .carousel-container {
+        padding: 5px;
+    }
+}
+/* CARRUSEL DESTACADOS PSICOLOGOS */
+
+/* REGISTER */
+.edit-profile-container .social-media-label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #1358B4;
+}
+
+.edit-profile-container .social-media-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom: 2px solid #1358B4;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.edit-profile-container .social-media-input:hover,
+.edit-profile-container .social-media-input:focus {
+    border-bottom: 2px solid #0D3A75;
+}
+
+.social-media-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-media-icon {
+    font-size: 1.5rem;
+    color: #1358B4;
+}
+
+.social-media-input:focus {
+    border-bottom-color: #0D3A75;
+}
+
+@media (max-width: 768px) {
+    .social-media-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-media-icon {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.edit-profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1358B4;
+    font-size: 2rem;
+}
+
+.edit-profile-container label {
+    display: block;
+    margin-bottom: 1rem; 
+    color: #1358B4;
+    font-weight: bold;
+}
+
+.edit-profile-container input[type="text"],
+.edit-profile-container input[type="email"],
+.edit-profile-container input[type="tel"],
+.edit-profile-container input[type="number"],
+.edit-profile-container input[type="password"],
+.edit-profile-container input[type="date"],
+.edit-profile-container input[type="file"],
+.edit-profile-container textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem; 
+    border: none;
+    border-bottom: 2px solid #1358B4;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+}
+
+.edit-profile-container textarea {
+    resize: none;
+    height: 100px;
+}
+
+.edit-profile-container select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem; 
+    border: none;
+    border-bottom: 2px solid #1358B4;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+    color: #1358B4;
+}
+
+.idiomas-checkboxes label {
+    display: block;
+    margin-bottom: 0.75rem; 
+    font-size: 1rem;
+    color: #1358B4;
+}
+
+.idiomas-checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#tiposTerapia label {
+    display: block;
+    margin-bottom: 0.75rem; 
+    font-size: 1rem;
+    color: #1358B4;
+}
+
+#tiposTerapia input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.edit-profile-container button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-container button[type="submit"]:hover {
+    background-color: white;
+    color: #1358B4;
+    border: solid 1px #1358B4;
+}
+
+.edit-profile-container h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1358B4;
+    font-size: 1.5rem;
+}
+
+#experiencia-container,
+#certificaciones-container {
+    margin-bottom: 1rem;
+}
+
+.experiencia-entry,
+.certificacion-entry {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(236, 236, 236);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.experiencia-entry input,
+.certificacion-entry input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #1358B4;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+}
+
+.experiencia-entry label,
+.certificacion-entry label {
+    flex-basis: 100%;
+    font-weight: bold;
+}
+
+.eliminar-experiencia,
+.eliminar-certificacion {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar-experiencia::before,
+.eliminar-certificacion::before {
+    content: "✕"; 
+    font-size: 18px;
+    color: white;
+}
+
+#agregar-experiencia,
+#agregar-certificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: white;
+    color: #1358B4;
+    border: 2px solid #1358B4;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#agregar-experiencia:hover,
+#agregar-certificacion:hover {
+    background-color: #1358B4;
+    color: white;
+}
+
+#agregar-experiencia::before,
+#agregar-certificacion::before {
+    content: "+";
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .edit-profile-container {
+        padding: 1rem;
+    }
+
+    .experiencia-entry,
+    .certificacion-entry {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-profile-container {
+        max-width: 90%;
+        padding: 0.5rem;
+    }
+
+    .edit-profile-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .edit-profile-container button[type="submit"],
+    #agregar-experiencia,
+    #agregar-certificacion {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .eliminar-experiencia,
+    .eliminar-certificacion {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+    .experiencia-entry input,
+    .certificacion-entry input {
+        font-size: 0.9rem;
+    }
+
+    .edit-profile-container textarea {
+        height: 80px;
+    }
+}
+/* REGISTER */
+
+/* LOGIN */
+#login-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+#login-form h2 {
+    text-align: center;
+    color: #1358B4;
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1358B4;
+    font-weight: bold;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 10px;
+    color: #1358B4;
+    font-size: 1rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 70px 10px 30px; 
+    border: 1px solid #1358B4;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; 
+    background: none;
+    border: none;
+    color: #1358B4;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    height: 100%;
+}
+
+#loginForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button[type="submit"]:hover {
+    background-color: white;
+    color: #1358B4;
+    border: solid 1px #1358B4;
+}
+
+#login-error {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    #login-form {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    #login-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-wrapper input {
+        padding: 8px 70px 8px 30px; 
+        font-size: 0.9rem;
+    }
+
+    #loginForm button[type="submit"] {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .toggle-password {
+        font-size: 0.8rem;
+    }
+}
+/* LOGIN */
 
 
 
@@ -1654,533 +2146,23 @@ footer {
 }
 /* CARGAR PANTALLA */
 
-/* CARRUSEL DESTACADOS PSICOLOGOS */
-.carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 50px;
-    overflow: hidden;
-}
 
-.carousel-track-container {
-    overflow: hidden;
-    width: 60%;
-    margin: auto;
-}
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
 
-.carousel-track li {
-    list-style-type: none;
-    text-align: center;
-    padding: 0 10px;
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    min-width: calc(100% / 4); 
-}
 
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-}
 
-.profile-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1358B4;
-    margin: 5px;
-}
 
-.profile-description {
-    font-size: 1rem;
-    color: black;
-    margin-top: 5px;
-}
 
-.carousel-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
 
-.carousel-nav button {
-    background-color: white;
-    border: 2px solid #1358B4;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    cursor: pointer;
-}
 
-.carousel-nav .active {
-    background-color: #1358B4;
-}
 
-@media (max-width: 1024px) {
-    .carousel-track li {
-        min-width: calc(100% / 3); 
-    }
-}
 
-@media (max-width: 768px) {
-    .carousel-track li {
-        min-width: calc(100% / 2);
-    }
-    .profile-img {
-        width: 90px;
-        height: 90px;
-    }
-}
 
-@media (max-width: 425px) {
-    .carousel-track li {
-        min-width: calc(100% / 1); 
-    }
-    .profile-img {
-        width: 80px;
-        height: 80px;
-    }
-}
 
-@media (max-width: 320px) {
-    .carousel-container {
-        padding: 5px;
-    }
-}
-/* CARRUSEL DESTACADOS PSICOLOGOS */
 
-/* TU HISTORIA */
-.story-container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
 
-.story-card {
-    background-color: white;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-}
 
-.story-header {
-    background-color: #1358B4;
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
 
-.story-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
-    object-fit: cover;
-    border: 2px solid white;
-}
 
-.story-info {
-    flex: 1;
-}
 
-.story-status {
-    font-size: 14px;
-    color: white;
-    margin: 5px auto;
-}
 
-.story-author {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: white;
-}
-
-.story-content {
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-    color: black;
-    white-space: pre-wrap;
-    text-align: justify;
-}
-
-.story-button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #1358B4;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.story-button:hover {
-    background-color: white;
-    color: #1358B4;
-    border: solid 1px #1358B4;
-}
-/* TU HISTORIA */
-
-
-
-
-
-
-
-
-
-/* Contenedor principal */
-.edit-profile-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: white;
-}
-
-/* Títulos */
-.edit-profile-container h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #1358B4;
-    font-size: 2rem;
-}
-
-/* Etiquetas */
-.edit-profile-container label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #1358B4;
-    font-weight: bold;
-}
-
-/* Entradas de texto */
-.edit-profile-container input[type="text"],
-.edit-profile-container input[type="email"],
-.edit-profile-container input[type="tel"],
-.edit-profile-container input[type="number"] {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-bottom: 2px solid #1358B4;
-    font-size: 1rem;
-    background: none;
-    outline: none;
-}
-
-/* Área de texto */
-.edit-profile-container textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-bottom: 2px solid #1358B4;
-    font-size: 1rem;
-    background: none;
-    outline: none;
-    resize: none;
-    height: 100px;
-}
-
-/* Botón de enviar */
-.edit-profile-container button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #1358B4;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover en el botón de enviar */
-.edit-profile-container button[type="submit"]:hover {
-    background-color: white;
-    color: #1358B4;
-    border: solid 1px #1358B4;
-}
-
-/* Subtítulos */
-.edit-profile-container h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    color: #1358B4;
-    font-size: 1.5rem;
-}
-
-/* Contenedores de experiencia y certificaciones */
-#experiencia-container,
-#certificaciones-container {
-    margin-bottom: 1rem;
-}
-
-/* Entrada de experiencia y certificación */
-.experiencia-entry,
-.certificacion-entry {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    background-color: rgb(236, 236, 236);
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-/* Inputs dentro de la experiencia y certificaciones */
-.experiencia-entry input,
-.certificacion-entry input {
-    flex: 1;
-    padding: 0.5rem;
-    border: none;
-    border-bottom: 2px solid #1358B4;
-    font-size: 1rem;
-    background: none;
-    outline: none;
-}
-
-/* Etiquetas de experiencia y certificación */
-.experiencia-entry label,
-.certificacion-entry label {
-    flex-basis: 100%;
-    font-weight: bold;
-}
-
-/* Botón de eliminar */
-.eliminar-experiencia,
-.eliminar-certificacion {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 24px;
-    height: 24px;
-    background-color: #1358B4;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 18px;
-    text-align: center;
-    line-height: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.eliminar-experiencia::before,
-.eliminar-certificacion::before {
-    content: "✕"; /* Unicode para cruz */
-    font-size: 18px;
-    color: white;
-}
-
-/* Botones de agregar experiencia y certificación */
-#agregar-experiencia,
-#agregar-certificacion {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0.75rem;
-    background-color: white;
-    color: #1358B4;
-    border: 2px solid #1358B4;
-    border-radius: 15px;
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-/* Hover en los botones de agregar */
-#agregar-experiencia:hover,
-#agregar-certificacion:hover {
-    background-color: #1358B4;
-    color: white;
-}
-
-#agregar-experiencia::before,
-#agregar-certificacion::before {
-    content: "+";
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-}
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .edit-profile-container {
-        padding: 1rem;
-    }
-
-    .experiencia-entry,
-    .certificacion-entry {
-        flex-direction: column;
-    }
-}
-
-/* Ajustes para pantallas aún más pequeñas (320px) */
-@media (max-width: 480px) {
-    .edit-profile-container {
-        max-width: 90%;
-        padding: 0.5rem;
-    }
-
-    .edit-profile-container h2 {
-        font-size: 1.5rem;
-    }
-
-    .edit-profile-container button[type="submit"],
-    #agregar-experiencia,
-    #agregar-certificacion {
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
-
-    .eliminar-experiencia,
-    .eliminar-certificacion {
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        font-size: 16px;
-    }
-
-    .experiencia-entry input,
-    .certificacion-entry input {
-        font-size: 0.9rem;
-    }
-
-    .edit-profile-container textarea {
-        height: 80px;
-    }
-}
-
-
-
-
-
-
-
-
-
-#login-form {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-}
-
-#login-form h2 {
-    text-align: center;
-    color: #1358B4;
-    margin-bottom: 50px;
-    font-size: 1.8rem;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #1358B4;
-    font-weight: bold;
-}
-
-.input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.input-wrapper i {
-    position: absolute;
-    left: 10px;
-    color: #1358B4;
-    font-size: 1rem;
-}
-
-.input-wrapper input {
-    width: 100%;
-    padding: 10px 70px 10px 30px; 
-    border: 1px solid #1358B4;
-    border-radius: 10px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-.toggle-password {
-    position: absolute;
-    right: 10px; 
-    background: none;
-    border: none;
-    color: #1358B4;
-    font-size: 0.9rem;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-    height: 100%;
-}
-
-#loginForm button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #1358B4;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#loginForm button[type="submit"]:hover {
-    background-color: white;
-    color: #1358B4;
-    border: solid 1px #1358B4;
-}
-
-#login-error {
-    text-align: center;
-    color: red;
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    #login-form {
-        margin: 20px auto;
-        padding: 15px;
-    }
-
-    #login-form h2 {
-        font-size: 1.5rem;
-    }
-
-    .input-wrapper input {
-        padding: 8px 70px 8px 30px; 
-        font-size: 0.9rem;
-    }
-
-    #loginForm button[type="submit"] {
-        padding: 8px;
-        font-size: 1rem;
-    }
-
-    .toggle-password {
-        font-size: 0.8rem;
-    }
-}
