@@ -2,28 +2,302 @@
 <html lang="en">
 
 <head>
-    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN EL NAVEGADOR -->
     <title>PsyConnects | Mi Perfil</title>
-    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="../../public/css/styles.css">
-    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
-    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    <!-- SCRIPT PARA CARGAR Y EDITAR DATOS DEL PSICÓLOGO USANDO FIREBASE -->
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../../public/img/marca/icono 2.png" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="../../psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
+                <li><a href="../../investigaciones.html"><i class="fas fa-comments"></i> Investigaciones</a></li>
+                <li><a href="../../ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
+                <li><a href="../../login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+                <li><a href="register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="bienvenida">
+            <h2 id="titulo-bienvenida">¡Bienvenido a tu perfil!</h2>
+            <p style="color: white;">Aquí encontrarás más información de tu interés.</p>
+        </div>
+        <div class="contenedor-editar-perfil">
+            <div class="perfil-usuario">
+                <div class="foto-edicion-perfil">
+                    <img id="imagen-perfil" src="ruta/a/tu/foto/default.jpg" alt="Foto de Perfil">
+                    <label for="fotoPerfil" class="boton-subir-foto" title="Cambiar Foto">
+                        📷
+                    </label>
+                    <input type="file" id="fotoPerfil" accept="image/*" style="display: none;">
+                    <div id="upload-spinner" class="spinner" style="display: none;">
+                        ⏳
+                    </div>
+                </div>
+                <div class="informacion-perfil">
+                    <div class="campo-perfil">
+                        <label for="nombre">👤 Nombre:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="campo-perfil">
+                        <label for="apellido">👥 Apellido:</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+                    <div class="campo-perfil">
+                        <label for="correoElectronico">📧 Correo Electrónico:</label>
+                        <input type="email" id="correoElectronico" required disabled>
+                    </div>
+                    <div class="campo-perfil">
+                        <label for="telefono">📞 Teléfono:</label>
+                        <input type="tel" id="telefono" required>
+                    </div>
+                    <div class="campo-perfil">
+                        <label for="pais">🌍 País:</label>
+                        <select id="pais" required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="España">España</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="México">México</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Perú">Perú</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="República Dominicana">República Dominicana</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Venezuela">Venezuela</option>
+                        </select>
+                    </div>
+                    <div class="campo-perfil">
+                        <label for="fechaNacimiento">🎂 Fecha de Nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detalles-profesionales card">
+                <h3>Detalles Profesionales</h3>
+                <div class="campo-detalle">
+                    <div class="campo-detalle-item">
+                        <label for="añosExperiencia">🕒 Años de Experiencia:</label>
+                        <input type="number" id="añosExperiencia" required>
+                    </div>
+                    <div class="campo-detalle-item">
+                        <label for="precioServicioHora">💲 Precio por Hora (USD):</label>
+                        <input type="number" id="precioServicioHora" required>
+                    </div>
+                    <div class="campo-detalle-item">
+                        <label for="descripcion">📝 Descripción:</label>
+                        <textarea id="descripcion" required></textarea>
+                    </div>
+                    <div class="campo-detalle-item">
+                        <label>💼 Tipos de Terapias:</label>
+                        <div id="tiposTerapia" class="lista-checkbox personalizada">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia Cognitivo-Conductual">
+                                <span>Terapia Cognitivo-Conductual</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia Humanista">
+                                <span>Terapia Humanista</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia Psicoanalítica">
+                                <span>Terapia Psicoanalítica</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia Gestalt">
+                                <span>Terapia Gestalt</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia de Aceptación y Compromiso">
+                                <span>Terapia de Aceptación y Compromiso</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia Familiar">
+                                <span>Terapia Familiar</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia de Pareja">
+                                <span>Terapia de Pareja</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia de Juego">
+                                <span>Terapia de Juego</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="tipo-terapia" value="Terapia EMDR">
+                                <span>Terapia EMDR</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="campo-detalle-item">
+                        <label>🗣️ Idiomas:</label>
+                        <div id="idiomas" class="lista-checkbox personalizada">
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Español">
+                                <span>Español</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Inglés">
+                                <span>Inglés</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Portugués">
+                                <span>Portugués</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Francés">
+                                <span>Francés</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Italiano">
+                                <span>Italiano</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Alemán">
+                                <span>Alemán</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Chino">
+                                <span>Chino</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Japonés">
+                                <span>Japonés</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="idiomas" value="Árabe">
+                                <span>Árabe</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experiencia-certificaciones card">
+                <h3>Experiencia y Certificaciones</h3>
+                <div class="seccion">
+                    <h4>Experiencia Profesional 🏢</h4>
+                    <div id="experiencia-container"></div>
+                    <button type="button" id="agregar-experiencia" class="boton-agregar">➕ Agregar Experiencia</button>
+                </div>
+                <div class="seccion">
+                    <h4>Certificaciones 📑</h4>
+                    <div id="certificaciones-container"></div>
+                    <button type="button" id="agregar-certificacion" class="boton-agregar">➕ Agregar
+                        Certificación</button>
+                </div>
+            </div>
+
+            <div class="redes-sociales card">
+                <h3>Redes Sociales</h3>
+                <div class="campo-red-social">
+                    <span class="icono-red-social"><i class="fab fa-instagram"></i></span>
+                    <label for="instagram">Instagram:</label>
+                    <input type="url" id="instagram" placeholder="https://www.instagram.com/tuusuario">
+                </div>
+                <div class="campo-red-social">
+                    <span class="icono-red-social"><i class="fab fa-facebook"></i></span>
+                    <label for="facebook">Facebook:</label>
+                    <input type="url" id="facebook" placeholder="https://www.facebook.com/tuusuario">
+                </div>
+                <div class="campo-red-social">
+                    <span class="icono-red-social"><i class="fab fa-linkedin"></i></span>
+                    <label for="linkedin">LinkedIn:</label>
+                    <input type="url" id="linkedin" placeholder="https://www.linkedin.com/in/tuusuario">
+                </div>
+                <div class="campo-red-social">
+                    <span class="icono-red-social"><i class="fab fa-tiktok"></i></span>
+                    <label for="tiktok">TikTok:</label>
+                    <input type="url" id="tiktok" placeholder="https://www.tiktok.com/@tuusuario">
+                </div>
+            </div>
+
+            <button type="submit" id="guardarCambios" class="boton-guardar">Guardar Cambios</button>
+        </div>
+
+        <div class="datos-generales-perfil">
+            <h2 id="titulo-datos-generales-perfil">Datos sobre tu perfil 📊</h2>
+        </div>
+
+        <div class="contador-visitas">
+            <div class="numero-visitas-container">
+                <span id="numero-visitas">0</span>
+            </div>
+            <p class="etiqueta-visitas">Número de visitas al perfil</p>
+        </div>
+
+        <div class="datos-generales-perfil">
+            <h2 id="titulo-datos-generales-perfil">Calendario de disponibilidad 📅</h2>
+        </div>
+
+        <div class="seccion-calendario card">
+            <div id="calendar">
+            </div>
+        </div>
+
+        <div id="alert-container"></div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="#">EMPRESAS</a>
+                <a href="#">REGISTRARSE</a>
+                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">QUIENES SOMOS</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
+        </div>
+
+    </footer>
+
     <script type="module">
-        // IMPORTAR FUNCIONES DE FIREBASE Y FIRESTORE
+
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+        import { getFirestore, doc, onSnapshot, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
         import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
 
-        // CONFIGURACIÓN DE FIREBASE
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
             authDomain: "psyconnects-7be13.firebaseapp.com",
@@ -34,121 +308,173 @@
             measurementId: "G-FKC5P4PE6V"
         };
 
-        // INICIALIZAR FIREBASE
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         const storage = getStorage(app);
 
-        // FUNCIÓN QUE SE EJECUTA CUANDO LA PÁGINA SE CARGA
+        function cargarEntradas(dataArray, containerId, entryClass, isExperience = false) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            dataArray.forEach((data, index) => {
+                agregarEntrada(containerId, entryClass, data, index, isExperience);
+            });
+        }
+
+        function agregarEntrada(containerId, entryClass, data = {}, index, isExperience = false) {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.classList.add(entryClass);
+
+            if (isExperience) {
+                div.innerHTML = `
+                    <label>Puesto:</label>
+                    <input type="text" value="${data.puesto || ''}" required>
+                    <label>Institución:</label>
+                    <input type="text" value="${data.institucion || ''}" required>
+                    <label>Año de Inicio:</label>
+                    <input type="number" value="${data.añoInicio || ''}" required>
+                    <label>Año de Fin:</label>
+                    <input type="number" class="añoFin" value="${data.añoFin || ''}" ${data.actualidad ? 'disabled' : ''}>
+                    <label>Actualidad:</label>
+                    <input type="checkbox" class="actualidad" ${data.actualidad ? 'checked' : ''}>
+                    <button type="button" class="eliminar" title="Eliminar">×</button>
+                `;
+                const añoFinInput = div.querySelector('.añoFin');
+                const actualidadCheckbox = div.querySelector('.actualidad');
+
+                actualidadCheckbox.addEventListener('change', function () {
+                    if (actualidadCheckbox.checked) {
+                        añoFinInput.disabled = true;
+                        añoFinInput.value = '';
+                    } else {
+                        añoFinInput.disabled = false;
+                    }
+                });
+            } else {
+                div.innerHTML = `
+                    <label>Nombre de Certificación:</label>
+                    <input type="text" value="${data.nombre || ''}" required>
+                    <label>Institución:</label>
+                    <input type="text" value="${data.institucion || ''}" required>
+                    <label>Año:</label>
+                    <input type="number" value="${data.año || ''}" required>
+                    <button type="button" class="eliminar" title="Eliminar">×</button>
+                `;
+            }
+
+            container.appendChild(div);
+            div.querySelector('.eliminar').addEventListener('click', () => div.remove());
+        }
+
+        function mostrarAlerta(tipo, titulo, mensaje) {
+            return new Promise((resolve) => {
+                const alertContainer = document.getElementById('alert-container');
+
+                const alert = document.createElement('div');
+                alert.classList.add('alert');
+                alert.classList.add(tipo === 'success' ? 'alert-success' : 'alert-error');
+
+                alert.innerHTML = `
+                    <div>
+                        <strong>${titulo}</strong><br>
+                        <span>${mensaje}</span>
+                    </div>
+                    <button class="close-btn">&times;</button>
+                `;
+
+                alertContainer.appendChild(alert);
+
+                const closeBtn = alert.querySelector('.close-btn');
+                closeBtn.addEventListener('click', () => cerrarAlerta(alert, resolve));
+
+                setTimeout(() => cerrarAlerta(alert, resolve), 5000);
+            });
+        }
+
+        function cerrarAlerta(alert, resolve) {
+            alert.style.animation = 'slide-out 0.5s forwards';
+            alert.addEventListener('animationend', () => {
+                alert.remove();
+                resolve();
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', async function () {
-            // OBTENER ID DEL PSICÓLOGO DESDE LA URL
             const urlParams = new URLSearchParams(window.location.search);
             const psicologoId = urlParams.get('id');
 
             if (!psicologoId) {
-                alert('ID de psicólogo no encontrado en la URL.');
+                mostrarAlerta('error', 'Error', 'ID de psicólogo no encontrado en la URL.');
                 return;
             }
 
-            // OBTENER Y MOSTRAR DATOS DEL PSICÓLOGO DESDE FIRESTORE
             const docRef = doc(db, "psicologos", psicologoId);
-            const docSnap = await getDoc(docRef);
 
-            if (docSnap.exists()) {
-                const psicologo = docSnap.data();
+            onSnapshot(docRef, (docSnap) => {
+                if (docSnap.exists()) {
+                    const psicologo = docSnap.data();
 
-                // RELLENAR LOS CAMPOS DEL FORMULARIO CON LA INFORMACIÓN EXISTENTE
-                document.getElementById('nombre').value = psicologo.nombre;
-                document.getElementById('apellido').value = psicologo.apellido;
-                document.getElementById('pais').value = psicologo.pais;
-                document.getElementById('correoElectronico').value = psicologo.correoElectronico;
-                document.getElementById('telefono').value = psicologo.telefono;
-                document.getElementById('fechaNacimiento').value = psicologo.fechaNacimiento;
-                document.getElementById('añosExperiencia').value = psicologo.añosExperiencia;
-                document.getElementById('precioServicioHora').value = psicologo.precioServicioHora;
-                document.getElementById('descripcion').value = psicologo.descripcion;
+                    document.getElementById('nombre').value = psicologo.nombre || '';
+                    document.getElementById('apellido').value = psicologo.apellido || '';
+                    document.getElementById('pais').value = psicologo.pais || '';
+                    document.getElementById('correoElectronico').value = psicologo.correoElectronico || '';
+                    document.getElementById('telefono').value = psicologo.telefono || '';
+                    document.getElementById('fechaNacimiento').value = psicologo.fechaNacimiento || '';
+                    document.getElementById('añosExperiencia').value = psicologo.añosExperiencia || '';
+                    document.getElementById('precioServicioHora').value = psicologo.precioServicioHora || '';
+                    document.getElementById('descripcion').value = psicologo.descripcion || '';
 
-                // PRELLENAR CHECKBOXES DE IDIOMAS Y TIPOS DE TERAPIA
-                psicologo.idiomas.forEach(idioma => {
-                    const checkbox = document.querySelector(`input[name="idiomas"][value="${idioma}"]`);
-                    if (checkbox) checkbox.checked = true;
-                });
+                    if (psicologo.idiomas) {
+                        document.querySelectorAll('#idiomas input[name="idiomas"]').forEach(checkbox => {
+                            checkbox.checked = psicologo.idiomas.includes(checkbox.value);
+                        });
+                    }
 
-                psicologo.tiposTerapia.forEach(terapia => {
-                    const checkbox = document.querySelector(`input[class="tipo-terapia"][value="${terapia}"]`);
-                    if (checkbox) checkbox.checked = true;
-                });
+                    if (psicologo.tiposTerapia) {
+                        document.querySelectorAll('.tipo-terapia').forEach(checkbox => {
+                            checkbox.checked = psicologo.tiposTerapia.includes(checkbox.value);
+                        });
+                    }
 
-                // PRELLENAR LAS EXPERIENCIAS Y CERTIFICACIONES
-                cargarEntradas(psicologo.experiencia, 'experiencia-container', 'experiencia-entry', true);
-                cargarEntradas(psicologo.certificaciones, 'certificaciones-container', 'certificacion-entry');
+                    if (psicologo.experiencia) {
+                        cargarEntradas(psicologo.experiencia, 'experiencia-container', 'experiencia-entry', true);
+                    } else {
+                        document.getElementById('experiencia-container').innerHTML = '';
+                    }
+                    if (psicologo.certificaciones) {
+                        cargarEntradas(psicologo.certificaciones, 'certificaciones-container', 'certificacion-entry');
+                    } else {
+                        document.getElementById('certificaciones-container').innerHTML = '';
+                    }
 
-                // PRELLENAR LAS REDES SOCIALES
-                document.getElementById('instagram').value = psicologo.redesSociales?.instagram || '';
-                document.getElementById('facebook').value = psicologo.redesSociales?.facebook || '';
-                document.getElementById('linkedin').value = psicologo.redesSociales?.linkedin || '';
-                document.getElementById('tiktok').value = psicologo.redesSociales?.tiktok || '';
-            } else {
-                alert('Psicólogo no encontrado en la base de datos.');
-            }
+                    document.getElementById('instagram').value = psicologo.redesSociales?.instagram || '';
+                    document.getElementById('facebook').value = psicologo.redesSociales?.facebook || '';
+                    document.getElementById('linkedin').value = psicologo.redesSociales?.linkedin || '';
+                    document.getElementById('tiktok').value = psicologo.redesSociales?.tiktok || '';
 
-            // FUNCIÓN PARA CARGAR ENTRADAS DINÁMICAS (EXPERIENCIAS/CERTIFICACIONES)
-            function cargarEntradas(dataArray, containerId, entryClass, isExperience = false) {
-                const container = document.getElementById(containerId);
-                container.innerHTML = ''; // LIMPIAR EL CONTENEDOR
-                dataArray.forEach((data, index) => {
-                    agregarEntrada(containerId, entryClass, data, index, isExperience);
-                });
-            }
+                    const imagenPerfil = document.getElementById('imagen-perfil');
+                    if (psicologo.fotoPerfil) {
+                        imagenPerfil.src = psicologo.fotoPerfil;
+                    } else {
+                        imagenPerfil.src = 'ruta/a/tu/foto/default.jpg';
+                    }
 
-            // FUNCIÓN PARA AGREGAR NUEVA EXPERIENCIA O CERTIFICACIÓN
-            function agregarEntrada(containerId, entryClass, data = {}, index, isExperience = false) {
-                const container = document.getElementById(containerId);
-                const div = document.createElement('div');
-                div.classList.add(entryClass);
+                    const tituloBienvenida = document.getElementById('titulo-bienvenida');
+                    if (tituloBienvenida) {
+                        tituloBienvenida.textContent = `¡Bienvenido ${psicologo.nombre} a tu perfil!`;
+                    }
 
-                if (isExperience) {
-                    div.innerHTML = `
-                        <label>Puesto:</label>
-                        <input type="text" value="${data.puesto || ''}" required>
-                        <label>Institución:</label>
-                        <input type="text" value="${data.institucion || ''}" required>
-                        <label>Año de Inicio:</label>
-                        <input type="number" value="${data.añoInicio || ''}" required>
-                        <label>Año de Fin:</label>
-                        <input type="number" class="añoFin" value="${data.añoFin || ''}" ${data.actualidad ? 'disabled' : ''}>
-                        <label>Actualidad:</label>
-                        <input type="checkbox" class="actualidad" ${data.actualidad ? 'checked' : ''}>
-                        <button type="button" class="eliminar">Eliminar</button>
-                    `;
-                    const añoFinInput = div.querySelector('.añoFin');
-                    const actualidadCheckbox = div.querySelector('.actualidad');
+                    const numeroVisitasElement = document.getElementById('numero-visitas');
+                    if (numeroVisitasElement) {
+                        const visitas = psicologo.visitas || 0;
+                        numeroVisitasElement.innerText = visitas;
+                    }
 
-                    actualidadCheckbox.addEventListener('change', function () {
-                        if (actualidadCheckbox.checked) {
-                            añoFinInput.disabled = true;
-                            añoFinInput.value = ''; // LIMPIAR VALOR SI ESTÁ MARCADO "ACTUALIDAD"
-                        } else {
-                            añoFinInput.disabled = false;
-                        }
-                    });
                 } else {
-                    div.innerHTML = `
-                        <label>Nombre de Certificación:</label>
-                        <input type="text" value="${data.nombre || ''}" required>
-                        <label>Institución:</label>
-                        <input type="text" value="${data.institucion || ''}" required>
-                        <label>Año:</label>
-                        <input type="number" value="${data.año || ''}" required>
-                        <button type="button" class="eliminar">Eliminar</button>
-                    `;
+                    mostrarAlerta('error', 'Error', 'Psicólogo no encontrado en la base de datos.');
                 }
+            });
 
-                container.appendChild(div);
-                div.querySelector('.eliminar').addEventListener('click', () => div.remove());
-            }
-
-            // MANEJAR BOTONES DE AGREGAR EXPERIENCIA Y CERTIFICACIONES
             document.getElementById('agregar-experiencia').addEventListener('click', () => {
                 agregarEntrada('experiencia-container', 'experiencia-entry', {}, document.querySelectorAll('.experiencia-entry').length, true);
             });
@@ -157,306 +483,402 @@
                 agregarEntrada('certificaciones-container', 'certificacion-entry');
             });
 
-            // GUARDAR CAMBIOS EN FIRESTORE
+            const fotoPerfilInput = document.getElementById('fotoPerfil');
+            const imagenPerfil = document.getElementById('imagen-perfil');
+            const uploadSpinner = document.getElementById('upload-spinner');
+
+            fotoPerfilInput.addEventListener('change', function () {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        imagenPerfil.src = e.target.result;
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            });
+
             document.getElementById('guardarCambios').addEventListener('click', async function (event) {
                 event.preventDefault();
 
-                const nombre = document.getElementById('nombre').value;
-                const apellido = document.getElementById('apellido').value;
+                let isUploading = false;
+
+                const nombre = document.getElementById('nombre').value.trim();
+                const apellido = document.getElementById('apellido').value.trim();
+                const telefono = document.getElementById('telefono').value.trim();
                 const pais = document.getElementById('pais').value;
-                const telefono = document.getElementById('telefono').value;
                 const fechaNacimiento = document.getElementById('fechaNacimiento').value;
                 const añosExperiencia = document.getElementById('añosExperiencia').value;
                 const precioServicioHora = document.getElementById('precioServicioHora').value;
-                const descripcion = document.getElementById('descripcion').value;
+                const descripcion = document.getElementById('descripcion').value.trim();
+
+                if (!nombre || !apellido || !telefono || !pais || !fechaNacimiento || !añosExperiencia || !precioServicioHora || !descripcion) {
+                    mostrarAlerta('error', 'Campos incompletos', 'Por favor, completa todos los campos requeridos.');
+                    return;
+                }
+
                 const idiomas = Array.from(document.querySelectorAll('#idiomas input:checked')).map(cb => cb.value);
                 const tiposTerapia = Array.from(document.querySelectorAll('.tipo-terapia:checked')).map(cb => cb.value);
 
                 const experiencia = Array.from(document.querySelectorAll('.experiencia-entry')).map(entry => ({
-                    puesto: entry.querySelector('input[type="text"]').value,
-                    institucion: entry.querySelectorAll('input[type="text"]')[1].value,
-                    añoInicio: entry.querySelector('input[type="number"]').value,
-                    añoFin: entry.querySelector('.añoFin').disabled ? 'Actualidad' : entry.querySelector('.añoFin').value,
+                    puesto: entry.querySelector('input[type="text"]').value.trim(),
+                    institucion: entry.querySelectorAll('input[type="text"]')[1].value.trim(),
+                    añoInicio: entry.querySelector('input[type="number"]').value.trim(),
+                    añoFin: entry.querySelector('.añoFin').disabled ? 'Actualidad' : entry.querySelector('.añoFin').value.trim(),
                     actualidad: entry.querySelector('.actualidad').checked
                 }));
 
                 const certificaciones = Array.from(document.querySelectorAll('.certificacion-entry')).map(entry => ({
-                    nombre: entry.querySelector('input[type="text"]').value,
-                    institucion: entry.querySelectorAll('input[type="text"]')[1].value,
-                    año: entry.querySelector('input[type="number"]').value
+                    nombre: entry.querySelector('input[type="text"]').value.trim(),
+                    institucion: entry.querySelectorAll('input[type="text"]')[1].value.trim(),
+                    año: entry.querySelector('input[type="number"]').value.trim()
                 }));
 
-                // OBTENER REDES SOCIALES
-                const instagram = document.getElementById('instagram').value || null;
-                const facebook = document.getElementById('facebook').value || null;
-                const linkedin = document.getElementById('linkedin').value || null;
-                const tiktok = document.getElementById('tiktok').value || null;
+                const instagram = document.getElementById('instagram').value.trim() || null;
+                const facebook = document.getElementById('facebook').value.trim() || null;
+                const linkedin = document.getElementById('linkedin').value.trim() || null;
+                const tiktok = document.getElementById('tiktok').value.trim() || null;
 
-                const fotoPerfilInput = document.getElementById('fotoPerfil').files[0];
+                const fotoPerfilFile = document.getElementById('fotoPerfil').files[0];
 
-                // SUBIR IMAGEN SI SE SELECCIONA UNA NUEVA
-                if (fotoPerfilInput) {
-                    const storageRef = ref(storage, `perfil_fotos/${psicologoId}`);
-                    const uploadTask = uploadBytesResumable(storageRef, fotoPerfilInput);
+                try {
+                    if (fotoPerfilFile) {
+                        isUploading = true;
+                        uploadSpinner.style.display = 'flex';
 
-                    uploadTask.on('state_changed',
-                        (snapshot) => { },
-                        (error) => {
-                            console.error("Error al subir la imagen: ", error);
-                        },
-                        async () => {
-                            const fotoPerfilUrl = await getDownloadURL(uploadTask.snapshot.ref);
-                            // ACTUALIZAR FIRESTORE CON LA NUEVA IMAGEN
-                            await updateDoc(docRef, {
-                                nombre,
-                                apellido,
-                                pais,
-                                telefono,
-                                fechaNacimiento,
-                                añosExperiencia,
-                                precioServicioHora,
-                                descripcion,
-                                idiomas,
-                                tiposTerapia,
-                                experiencia,
-                                certificaciones,
-                                fotoPerfil: fotoPerfilUrl, // ACTUALIZA LA URL DE LA IMAGEN
-                                redesSociales: {
-                                    instagram,
-                                    facebook,
-                                    linkedin,
-                                    tiktok
-                                }
-                            });
-                            alert('Cambios guardados correctamente.');
-                            window.location.href = '../../psicologos.html'; // REDIRIGIR AL GUARDAR
-                        }
-                    );
-                } else {
-                    // ACTUALIZAR OTROS CAMPOS SI NO SE SUBE UNA NUEVA IMAGEN
-                    await updateDoc(docRef, {
-                        nombre,
-                        apellido,
-                        pais,
-                        telefono,
-                        fechaNacimiento,
-                        añosExperiencia,
-                        precioServicioHora,
-                        descripcion,
-                        idiomas,
-                        tiposTerapia,
-                        experiencia,
-                        certificaciones,
-                        redesSociales: {
-                            instagram,
-                            facebook,
-                            linkedin,
-                            tiktok
-                        }
-                    });
-                    alert('Cambios guardados correctamente.');
-                    window.location.href = '../../psicologos.html';
+                        const storageRef = ref(storage, `perfil_fotos/${psicologoId}`);
+                        const uploadTask = uploadBytesResumable(storageRef, fotoPerfilFile);
+
+                        uploadTask.on('state_changed',
+                            (snapshot) => { },
+                            (error) => {
+                                console.error("Error al subir la imagen: ", error);
+                                mostrarAlerta('error', 'Error', 'Hubo un error al subir la imagen. Por favor, intenta de nuevo.');
+                                uploadSpinner.style.display = 'none';
+                                isUploading = false;
+                            },
+                            async () => {
+                                const fotoPerfilUrl = await getDownloadURL(uploadTask.snapshot.ref);
+                                await updateDoc(docRef, {
+                                    nombre,
+                                    apellido,
+                                    pais,
+                                    telefono,
+                                    fechaNacimiento,
+                                    añosExperiencia,
+                                    precioServicioHora,
+                                    descripcion,
+                                    idiomas,
+                                    tiposTerapia,
+                                    experiencia,
+                                    certificaciones,
+                                    fotoPerfil: fotoPerfilUrl,
+                                    redesSociales: {
+                                        instagram,
+                                        facebook,
+                                        linkedin,
+                                        tiktok
+                                    }
+                                });
+                                mostrarAlerta('success', '¡Cambios Realizados!', 'Sigue disfrutando de PsyConnects. 😍').then(() => {
+                                    window.location.href = '../../psicologos.html';
+                                });
+                            }
+                        );
+                    } else {
+                        await updateDoc(docRef, {
+                            nombre,
+                            apellido,
+                            pais,
+                            telefono,
+                            fechaNacimiento,
+                            añosExperiencia,
+                            precioServicioHora,
+                            descripcion,
+                            idiomas,
+                            tiposTerapia,
+                            experiencia,
+                            certificaciones,
+                            redesSociales: {
+                                instagram,
+                                facebook,
+                                linkedin,
+                                tiktok
+                            }
+                        });
+                        mostrarAlerta('success', '¡Cambios Realizados!', 'Sigue disfrutando de PsyConnects. 😍').then(() => {
+                            window.location.href = '../../psicologos.html';
+                        });
+                    }
+                } catch (error) {
+                    console.error("Error al guardar los cambios: ", error);
+                    mostrarAlerta('error', 'Error', 'Hubo un error al guardar los cambios. Por favor, intenta de nuevo.');
+                } finally {
+                    if (isUploading) {
+                        uploadSpinner.style.display = 'none';
+                        isUploading = false;
+                    }
                 }
             });
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function () {
+                    navMenu.classList.add('active');
+                });
+            }
+
+            const closeMenu = document.querySelector('.close-menu');
+
+            if (closeMenu && navMenu) {
+                closeMenu.addEventListener('click', function () {
+                    navMenu.classList.remove('active');
+                });
+            }
+
+            const disponibilidadRef = doc(db, "psicologos", psicologoId);
+
+            const calendar = document.getElementById('calendar');
+            const monthNames = [
+                "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+            ];
+            let currentMonth = new Date().getMonth();
+            let currentYear = new Date().getFullYear();
+
+            function createLeftArrowSVG() {
+                return `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    `;
+            }
+
+            function createRightArrowSVG() {
+                return `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    `;
+            }
+
+            function renderCalendar(month, year) {
+                calendar.innerHTML = '';
+
+                const header = document.createElement('div');
+                header.classList.add('calendar-header');
+
+                const prevBtn = document.createElement('button');
+                prevBtn.classList.add('nav-btn', 'prev-btn');
+                prevBtn.setAttribute('aria-label', 'Mes Anterior');
+                prevBtn.innerHTML = createLeftArrowSVG();
+                prevBtn.addEventListener('click', () => {
+                    currentMonth--;
+                    if (currentMonth < 0) {
+                        currentMonth = 11;
+                        currentYear--;
+                    }
+                    renderCalendar(currentMonth, currentYear);
+                });
+
+                const nextBtn = document.createElement('button');
+                nextBtn.classList.add('nav-btn', 'next-btn');
+                nextBtn.setAttribute('aria-label', 'Mes Siguiente');
+                nextBtn.innerHTML = createRightArrowSVG();
+                nextBtn.addEventListener('click', () => {
+                    currentMonth++;
+                    if (currentMonth > 11) {
+                        currentMonth = 0;
+                        currentYear++;
+                    }
+                    renderCalendar(currentMonth, currentYear);
+                });
+
+                const monthYear = document.createElement('div');
+                monthYear.classList.add('month-year');
+                monthYear.innerHTML = `<span class="month-name">${monthNames[month]}</span> <span class="year">${year}</span>`;
+
+                header.appendChild(prevBtn);
+                header.appendChild(monthYear);
+                header.appendChild(nextBtn);
+                calendar.appendChild(header);
+
+                const grid = document.createElement('div');
+                grid.classList.add('calendar-grid');
+
+                const daysOfWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+                daysOfWeek.forEach(day => {
+                    const dayElem = document.createElement('div');
+                    dayElem.classList.add('calendar-day-name');
+                    dayElem.innerHTML = `<strong>${day}</strong>`;
+                    grid.appendChild(dayElem);
+                });
+
+                const firstDay = new Date(year, month, 1).getDay();
+                const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
+
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                for (let i = 0; i < adjustedFirstDay; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.classList.add('calendar-day', 'disabled');
+                    grid.appendChild(emptyCell);
+                }
+
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = new Date(year, month, day);
+                    const dayCell = document.createElement('div');
+                    dayCell.classList.add('calendar-day');
+                    dayCell.textContent = day;
+
+                    const formattedDate = date.toISOString().split('T')[0];
+
+                    const disponibilidadDia = disponibilidadData[formattedDate] || [];
+
+                    if (disponibilidadDia.length > 0) {
+                        dayCell.classList.add('marked');
+                    }
+
+                    dayCell.addEventListener('click', () => openHoursPopup(date, dayCell));
+
+                    grid.appendChild(dayCell);
+                }
+
+                calendar.appendChild(grid);
+            }
+
+            let disponibilidadData = {};
+
+            function getDisponibilidad() {
+                onSnapshot(disponibilidadRef, (docSnap) => {
+                    if (docSnap.exists()) {
+                        const data = docSnap.data();
+                        disponibilidadData = data.disponibilidad || {};
+                        renderCalendar(currentMonth, currentYear);
+                    } else {
+                        setDoc(disponibilidadRef, { disponibilidad: {} });
+                        disponibilidadData = {};
+                        renderCalendar(currentMonth, currentYear);
+                    }
+                }, (error) => {
+                    console.error("Error al obtener la disponibilidad: ", error);
+                    mostrarAlerta('error', 'Error', 'Hubo un error al obtener la disponibilidad.');
+                });
+            }
+
+            function openHoursPopup(date, dayCell) {
+                const formattedDate = date.toISOString().split('T')[0];
+
+                const overlay = document.createElement('div');
+                overlay.classList.add('overlay');
+
+                const popup = document.createElement('div');
+                popup.classList.add('hours-popup');
+
+                const horasExistentes = disponibilidadData[formattedDate] || [];
+
+                popup.innerHTML = `
+        <h4>${formattedDate}</h4>
+        <div id="horas-lista">
+            ${horasExistentes.map(hora => `<div class="hora-item">
+                <span>${hora}</span>
+                <button class="eliminar-hora" data-hora="${hora}">&times;</button>
+            </div>`).join('')}
+        </div>
+        <input type="time" id="nueva-hora" placeholder="Selecciona una hora">
+        <div class="buttons">
+            <button class="save-btn">Guardar</button>
+            <button class="close-btn">Cerrar</button>
+        </div>
+    `;
+
+                overlay.appendChild(popup);
+                document.body.appendChild(overlay);
+
+                const eliminarBtns = popup.querySelectorAll('.eliminar-hora');
+                eliminarBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const hora = btn.getAttribute('data-hora');
+                        const index = horasExistentes.indexOf(hora);
+                        if (index > -1) {
+                            horasExistentes.splice(index, 1);
+                            disponibilidadData[formattedDate] = horasExistentes;
+                            updateFirestore(formattedDate, horasExistentes);
+                            popup.querySelector('#horas-lista').innerHTML = horasExistentes.map(h => `<div class="hora-item">
+                    <span>${h}</span>
+                    <button class="eliminar-hora" data-hora="${h}">&times;</button>
+                </div>`).join('');
+                        }
+                    });
+                });
+
+                const nuevaHoraInput = popup.querySelector('#nueva-hora');
+                const saveBtn = popup.querySelector('.save-btn');
+                const closeBtn = popup.querySelector('.close-btn');
+
+                saveBtn.addEventListener('click', () => {
+                    const nuevaHora = nuevaHoraInput.value;
+                    if (nuevaHora && !horasExistentes.includes(nuevaHora)) {
+                        horasExistentes.push(nuevaHora);
+                        disponibilidadData[formattedDate] = horasExistentes;
+                        updateFirestore(formattedDate, horasExistentes);
+                        popup.querySelector('#horas-lista').innerHTML += `
+                <div class="hora-item">
+                    <span>${nuevaHora}</span>
+                    <button class="eliminar-hora" data-hora="${nuevaHora}">&times;</button>
+                </div>
+            `;
+                        const newEliminarBtn = popup.querySelector(`.eliminar-hora[data-hora="${nuevaHora}"]`);
+                        newEliminarBtn.addEventListener('click', () => {
+                            const hora = newEliminarBtn.getAttribute('data-hora');
+                            const index = horasExistentes.indexOf(hora);
+                            if (index > -1) {
+                                horasExistentes.splice(index, 1);
+                                disponibilidadData[formattedDate] = horasExistentes;
+                                updateFirestore(formattedDate, horasExistentes);
+                                popup.querySelector('#horas-lista').innerHTML = horasExistentes.map(h => `<div class="hora-item">
+                        <span>${h}</span>
+                        <button class="eliminar-hora" data-hora="${h}">&times;</button>
+                    </div>`).join('');
+                            }
+                        });
+                        nuevaHoraInput.value = '';
+                        dayCell.classList.add('marked');
+                    }
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    document.body.removeChild(overlay);
+                });
+
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        document.body.removeChild(overlay);
+                    }
+                });
+            }
+
+            async function updateFirestore(fecha, horas) {
+                try {
+                    await updateDoc(disponibilidadRef, {
+                        [`disponibilidad.${fecha}`]: horas
+                    });
+                    mostrarAlerta('success', 'Disponibilidad Actualizada', `Horas disponibles para el ${fecha} han sido actualizadas.`);
+                    renderCalendar(currentMonth, currentYear);
+                } catch (error) {
+                    console.error("Error al actualizar la disponibilidad: ", error);
+                    mostrarAlerta('error', 'Error', 'Hubo un error al actualizar la disponibilidad. Por favor, intenta de nuevo.');
+                }
+            }
+
+            getDisponibilidad();
         });
 
-        // MENÚ DE HAMBURGUESA (ABRIR)
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.add('active');
-        });
-
-        // MENÚ DE HAMBURGUESA (CERRAR)
-        document.querySelector('.close-menu').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.remove('active');
-        });
     </script>
-</head>
-
-<body
-    style="background: linear-gradient(rgba(19, 89, 180, 0.932), rgba(19, 89, 180, 0.932)), url('../../public/img/banner/banner-1.jpg') no-repeat center center fixed; background-size: cover;">
-
-    <!-- INICIO DEL ENCABEZADO -->
-    <header>
-        <!-- SECCIÓN DE LOGO -->
-        <div class="logo">
-            <img src="../../public/img/marca/icono 2.png" alt="Logo">
-        </div>
-        <!-- ICONO DE HAMBURGUESA -->
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
-        <nav class="nav-menu">
-            <div class="close-menu">
-                <i class="fas fa-times"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="../../psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
-                <li><a href="../../reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
-                <li><a href="../../ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
-                <li><a href="../../login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
-                <li><a href="register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- FIN DEL ENCABEZADO -->
-
-    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
-    <main>
-        <div class="edit-profile-container">
-            <h2>¡EDITA TU PERFIL AQUÍ!</h2>
-            <form id="editarPerfilForm">
-                <!-- CAMPOS DE EDICIÓN -->
-                <label for="fotoPerfil">Subir Foto de Perfil:</label>
-                <input type="file" id="fotoPerfil" accept="image/*">
-
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" required>
-
-                <label for="pais">País:</label>
-                <select id="pais" required>
-                    <option value="">Selecciona tu país</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Bolivia">Bolivia</option>
-                    <option value="Brasil">Brasil</option>
-                    <option value="Chile">Chile</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Costa Rica">Costa Rica</option>
-                    <option value="Cuba">Cuba</option>
-                    <option value="Ecuador">Ecuador</option>
-                    <option value="El Salvador">El Salvador</option>
-                    <option value="Guatemala">Guatemala</option>
-                    <option value="Honduras">Honduras</option>
-                    <option value="México">México</option>
-                    <option value="Nicaragua">Nicaragua</option>
-                    <option value="Panamá">Panamá</option>
-                    <option value="Paraguay">Paraguay</option>
-                    <option value="Perú">Perú</option>
-                    <option value="República Dominicana">República Dominicana</option>
-                    <option value="Uruguay">Uruguay</option>
-                    <option value="Venezuela">Venezuela</option>
-                </select>
-
-                <label for="correoElectronico">Correo Electrónico:</label>
-                <input type="email" id="correoElectronico" required disabled>
-
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" required>
-
-                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fechaNacimiento" required>
-
-                <label for="añosExperiencia">Años de Experiencia:</label>
-                <input type="number" id="añosExperiencia" required>
-
-                <label for="tiposTerapia">Tipos de Terapias:</label>
-                <div id="tiposTerapia">
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Cognitivo-Conductual"> Terapia
-                        Cognitivo-Conductual</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Psicoanalítica"> Terapia
-                        Psicoanalítica</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Humanista"> Terapia
-                        Humanista</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Gestalt"> Terapia
-                        Gestalt</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Comportamiento Dialéctico">
-                        Terapia de Comportamiento Dialéctico</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Familiar"> Terapia
-                        Familiar</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Grupo"> Terapia de
-                        Grupo</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Juego"> Terapia de
-                        Juego</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia EMDR"> Terapia EMDR</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Aceptación y Compromiso">
-                        Terapia de Aceptación y Compromiso</label><br>
-                </div>
-
-                <label for="idiomas">Idiomas:</label>
-                <div id="idiomas" class="idiomas-checkboxes">
-                    <label><input type="checkbox" name="idiomas" value="Español"> Español</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Inglés"> Inglés</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Portugués"> Portugués</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Francés"> Francés</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Mandarín"> Mandarín</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Árabe"> Árabe</label><br>
-                </div>
-
-                <label for="precioServicioHora">Precio por Hora (USD):</label>
-                <input type="number" id="precioServicioHora" required>
-
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" required></textarea>
-
-                <h3>Experiencia</h3>
-                <div id="experiencia-container"></div>
-                <button type="button" id="agregar-experiencia">Agregar Experiencia</button>
-
-                <h3>Certificaciones</h3>
-                <div id="certificaciones-container"></div>
-                <button type="button" id="agregar-certificacion">Agregar Certificación</button>
-
-                <h3>Redes Sociales</h3>
-                <!-- REDES SOCIALES -->
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-instagram"></i></span>
-                    <label for="instagram" class="social-media-label">Instagram:</label>
-                    <input type="url" id="instagram" class="social-media-input"
-                        placeholder="https://www.instagram.com/tuusuario">
-                </div>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-facebook"></i></span>
-                    <label for="facebook" class="social-media-label">Facebook:</label>
-                    <input type="url" id="facebook" class="social-media-input"
-                        placeholder="https://www.facebook.com/tuusuario">
-                </div>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-linkedin"></i></span>
-                    <label for="linkedin" class="social-media-label">LinkedIn:</label>
-                    <input type="url" id="linkedin" class="social-media-input"
-                        placeholder="https://www.linkedin.com/in/tuusuario">
-                </div>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-tiktok"></i></span>
-                    <label for="tiktok" class="social-media-label">TikTok:</label>
-                    <input type="url" id="tiktok" class="social-media-input"
-                        placeholder="https://www.tiktok.com/@tuusuario">
-                </div>
-
-                <button type="submit" id="guardarCambios">Guardar Cambios ></button>
-            </form>
-        </div>
-    </main>
-    <!-- FIN DEL CONTENIDO PRINCIPAL -->
-
-    <!-- INICIO DEL PIE DE PÁGINA -->
-    <footer>
-        <div class="footer-container">
-            <!-- NAVEGACIÓN DEL PIE DE PÁGINA -->
-            <div class="footer-nav">
-                <a href="#">EMPRESAS</a>
-                <a href="#">REGISTRARSE</a>
-                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
-                <a href="#">QUIENES SOMOS</a>
-            </div>
-            <!-- SECCIÓN DE REDES SOCIALES EN EL PIE DE PÁGINA -->
-            <div class="footer-social">
-                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
-        </div>
-    </footer>
-    <!-- FIN DEL PIE DE PÁGINA -->
 
 </body>
 

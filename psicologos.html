@@ -2,16 +2,11 @@
 <html lang="en">
 
 <head>
-    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN EL NAVEGADOR -->
     <title>PsyConnects | Psicólogos Disponibles</title>
-    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="public/css/styles.css">
-    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="public/img/marca/icono.png">
-    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,17 +14,14 @@
 
 <body>
 
-    <!-- INICIO DEL ENCABEZADO -->
     <header>
-        <!-- SECCIÓN DE LOGO -->
+
         <div class="logo">
             <img src="public/img/marca/icono 2.png" alt="Logo">
         </div>
-        <!-- ICONO DE HAMBURGUESA -->
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
         <nav class="nav-menu">
             <div class="close-menu">
                 <i class="fas fa-times"></i>
@@ -37,148 +29,108 @@
             <ul class="nav-links">
                 <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
-                <li><a href="reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
+                <li><a href="investigaciones.html"><i class="fas fa-comments"></i> Investigaciones</a></li>
                 <li><a href="ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
                 <li><a href="login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
                 <li><a href="./public/html/register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
             </ul>
         </nav>
+
     </header>
-    <!-- FIN DEL ENCABEZADO -->
 
-    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
     <main>
-        <!-- SECCIÓN OCULTA DE PSICÓLOGOS DESTACADOS (COMENTADA) -->
-        <!-- 
-        <div class="titulo-con-linea">
-            <h1 class="titulo">PSICÓLOGOS DESTACADOS</h1>
-        </div>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-track-container">
-                    <ul class="carousel-track">
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="carousel-nav">
-                
-            </div>
-        </div>
-        -->
 
-        <!-- TÍTULO DE LA SECCIÓN PRINCIPAL -->
         <div class="titulo-con-linea">
             <h1 class="titulo">PSICÓLOGOS DISPONIBLES</h1>
         </div>
 
-        <!-- INICIO DE LA SECCIÓN DE FILTROS PARA PSICÓLOGOS -->
         <section class="filter-container">
-            <!-- FILTRO POR EDAD -->
-            <div>
-                <label for="filter-age">Filtrar por Edad:</label>
-                <select id="filter-age">
-                    <option value="">Seleccionar</option>
-                    <option value="menor">Menor a Mayor</option>
-                    <option value="mayor">Mayor a Menor</option>
-                </select>
-            </div>
-            <!-- FILTRO POR PRECIO -->
-            <div>
-                <label for="filter-price">Filtrar por Precio:</label>
-                <select id="filter-price">
-                    <option value="">Seleccionar</option>
-                    <option value="menor">Menor a Mayor</option>
-                    <option value="mayor">Mayor a Menor</option>
-                </select>
-            </div>
-            <!-- FILTRO POR EXPERIENCIA -->
-            <div>
-                <label for="filter-experience">Filtrar por Experiencia:</label>
-                <select id="filter-experience">
-                    <option value="">Seleccionar</option>
-                    <option value="menor">Menor a Mayor</option>
-                    <option value="mayor">Mayor a Menor</option>
-                </select>
-            </div>
-            <!-- FILTRO POR PAÍS -->
-            <div>
-                <label for="filter-country">Filtrar por País:</label>
-                <select id="filter-country">
-                    <option value="">Seleccionar</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Bolivia">Bolivia</option>
-                    <option value="Brasil">Brasil</option>
-                    <option value="Chile">Chile</option>
-                    <!-- OPCIONES DE PAÍSES DISPONIBLES -->
-                    <option value="Colombia">Colombia</option>
-                    <option value="Costa Rica">Costa Rica</option>
-                    <option value="Cuba">Cuba</option>
-                    <option value="Ecuador">Ecuador</option>
-                    <option value="El Salvador">El Salvador</option>
-                    <option value="España">España</option>
-                    <option value="Guatemala">Guatemala</option>
-                    <option value="Honduras">Honduras</option>
-                    <option value="México">México</option>
-                    <option value="Nicaragua">Nicaragua</option>
-                    <option value="Panamá">Panamá</option>
-                    <option value="Paraguay">Paraguay</option>
-                    <option value="Perú">Perú</option>
-                    <option value="República Dominicana">República Dominicana</option>
-                    <option value="Uruguay">Uruguay</option>
-                    <option value="Venezuela">Venezuela</option>
-                </select>
-            </div>
-        </section>
-        <!-- FIN DE LA SECCIÓN DE FILTROS -->
+            <select id="filter-age" aria-label="Filtrar por Edad">
+                <option value="" disabled selected>Edad</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
 
-        <!-- INICIO DE LA SECCIÓN DE LISTA DE PSICÓLOGOS -->
+            <select id="filter-price" aria-label="Filtrar por Precio">
+                <option value="" disabled selected>Precio</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
+
+            <select id="filter-experience" aria-label="Filtrar por Experiencia">
+                <option value="" disabled selected>Experiencia</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
+
+            <select id="filter-country" aria-label="Filtrar por País">
+                <option value="" disabled selected>País</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="España">España</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+        </section>
+
         <section id="psicologos-list">
         </section>
-        <!-- CONTENEDOR PARA LAS TARJETAS DE PSICÓLOGOS -->
-        <div id="contenedor-tarjetas"></div>
+        <div id="contenedor-tarjetas">
+        </div>
 
-        <!-- INDICADOR DE CARGA MIENTRAS SE CARGAN MÁS PSICÓLOGOS -->
         <div id="loading-indicator" class="loading-hidden">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
 
-    </main>
-    <!-- FIN DEL CONTENIDO PRINCIPAL -->
+        <div id="loader" class="loader">
+            <img src="./public/img/marca/icono 2.png" alt="Logo de la Web" class="loader-logo">
+            <p class="loader-text">Cargando... 🚀</p>
+        </div>
 
-    <!-- INICIO DEL PIE DE PÁGINA -->
+    </main>
+
     <footer>
-        <!-- CONTENEDOR PRINCIPAL DEL PIE DE PÁGINA -->
+
         <div class="footer-container">
-            <!-- MENÚ DE NAVEGACIÓN DEL PIE DE PÁGINA -->
             <div class="footer-nav">
                 <a href="#">EMPRESAS</a>
                 <a href="#">REGISTRARSE</a>
                 <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
                 <a href="#">QUIENES SOMOS</a>
             </div>
-            <!-- SECCIÓN DE REDES SOCIALES -->
             <div class="footer-social">
                 <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
-        <!-- TEXTO INFERIOR DEL PIE DE PÁGINA -->
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
+
     </footer>
-    <!-- FIN DEL PIE DE PÁGINA -->
 
-    <!-- INICIO DEL SCRIPT JAVASCRIPT -->
     <script type="module">
-        // IMPORTAR FUNCIONES NECESARIAS DESDE FIREBASE
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-        // CONFIGURACIÓN INICIAL DE FIREBASE
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore, collection, getDocs, updateDoc, doc, increment } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
             authDomain: "psyconnects-7be13.firebaseapp.com",
@@ -189,11 +141,9 @@
             measurementId: "G-FKC5P4PE6V"
         };
 
-        // INICIALIZAR LA APP DE FIREBASE Y OBTENER FIRESTORE
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // AL CARGAR EL DOM, OBTENER LA LISTA DE PSICÓLOGOS
         document.addEventListener("DOMContentLoaded", async () => {
             const filterAge = document.getElementById("filter-age");
             const filterPrice = document.getElementById("filter-price");
@@ -201,56 +151,53 @@
             const filterCountry = document.getElementById("filter-country");
             const contenedor = document.getElementById('contenedor-tarjetas');
             const loadingIndicator = document.getElementById('loading-indicator');
+            const loader = document.getElementById('loader');
 
-            // VARIABLES INICIALES PARA PSICÓLOGOS Y FILTRADO
+
             let psicologos = [];
             let currentIndex = 0;
-            const increment = 20;
+            const incrementCount = 20;
 
-            // OBTENER DATOS DE PSICÓLOGOS DESDE FIREBASE
             const querySnapshot = await getDocs(collection(db, "psicologos"));
             psicologos = querySnapshot.docs.map(doc => {
                 const data = doc.data();
                 return {
                     ...data,
-                    edad: calcularEdad(data.fechaNacimiento) // CALCULAR EDAD DEL PSICÓLOGO
+                    id: doc.id,
+                    edad: calcularEdad(data.fechaNacimiento)
                 };
             });
 
-            // DESORDENAR EL ARRAY DE PSICÓLOGOS ALEATORIAMENTE
             shuffleArray(psicologos);
             displayPsicologos();
 
-            // APLICAR FILTROS CUANDO CAMBIE EL VALOR DE LOS SELECTS
             filterAge.addEventListener("change", () => applyFilters());
             filterPrice.addEventListener("change", () => applyFilters());
             filterExperience.addEventListener("change", () => applyFilters());
             filterCountry.addEventListener("change", () => applyFilters());
 
-            // FUNCION PARA APLICAR TODOS LOS FILTROS SELECCIONADOS
             function applyFilters() {
                 currentIndex = 0;
                 contenedor.innerHTML = "";
                 displayPsicologos();
             }
 
-            // MOSTRAR PSICÓLOGOS EN PANTALLA
             function displayPsicologos() {
                 loadingIndicator.classList.remove('loading-hidden');
 
                 setTimeout(() => {
                     const filteredPsicologos = applyAllFilters(psicologos);
-                    const psicologosToDisplay = filteredPsicologos.slice(currentIndex, currentIndex + increment);
+                    const psicologosToDisplay = filteredPsicologos.slice(currentIndex, currentIndex + incrementCount);
 
                     psicologosToDisplay.forEach(psicologo => {
                         const tarjeta = document.createElement('div');
                         tarjeta.className = 'tarjeta';
                         tarjeta.innerHTML = `
                             <div class="cabecera-tarjeta">
-                                <img src="${psicologo.fotoPerfil || 'public/img/default-profile.png'}" alt="${psicologo.nombre} ${psicologo.apellido}" class="foto-perfil">
                             </div>
+                            <img src="${psicologo.fotoPerfil || 'public/img/default-profile.png'}" alt="${psicologo.nombre} ${psicologo.apellido}" class="foto-perfil">
                             <div class="cuerpo-tarjeta">
-                                <h2>${psicologo.nombre} ${psicologo.apellido}</h2>
+                                <h2>${psicologo.nombre} ${psicologo.apellido} 🧠</h2>
                                 <div class="detalles">
                                     <span class="insignia">${psicologo.edad} Años</span>
                                     <span class="insignia">${psicologo.pais}</span>
@@ -258,18 +205,38 @@
                                 <div class="especialidades">
                                     ${psicologo.tiposTerapia ? psicologo.tiposTerapia.map(terapia => `<div class="especialidad">${terapia}</div>`).join('') : ''}
                                 </div>
-                                <a href="public/html/perfil.html?id=${psicologo.id}" class="boton">Ver Perfil ></a>
+                                <a href="#" class="boton ver-perfil" data-id="${psicologo.id}">Ver Perfil 👉</a>
                             </div>
                         `;
+                        tarjeta.querySelector('.ver-perfil').addEventListener('click', async function (event) {
+                            event.preventDefault();
+                            const id = this.getAttribute('data-id');
+
+                            loader.classList.add('active');
+
+                            try {
+                                await incrementVisitCount(id);
+                                window.location.href = `public/html/perfil.html?id=${id}`;
+                            } catch (error) {
+                                console.error('Error al incrementar el contador de visitas:', error);
+                                window.location.href = `public/html/perfil.html?id=${id}`;
+                            }
+                        });
                         contenedor.appendChild(tarjeta);
                     });
 
-                    currentIndex += increment;
+                    currentIndex += incrementCount;
                     loadingIndicator.classList.add('loading-hidden');
                 }, 1000);
             }
 
-            // APLICAR LOS FILTROS A LA LISTA DE PSICÓLOGOS
+            function incrementVisitCount(psicologoId) {
+                const psicologoRef = doc(db, "psicologos", psicologoId);
+                return updateDoc(psicologoRef, {
+                    visitas: increment(1)
+                });
+            }
+
             function applyAllFilters(psicologos) {
                 let filteredPsicologos = [...psicologos];
                 const ageOrder = filterAge.value;
@@ -277,22 +244,18 @@
                 const experienceOrder = filterExperience.value;
                 const countryFilter = filterCountry.value;
 
-                // FILTRAR POR EDAD
                 if (ageOrder) {
                     filteredPsicologos.sort((a, b) => ageOrder === 'menor' ? a.edad - b.edad : b.edad - a.edad);
                 }
 
-                // FILTRAR POR PRECIO
                 if (priceOrder) {
                     filteredPsicologos.sort((a, b) => priceOrder === 'menor' ? a.precioServicioHora - b.precioServicioHora : b.precioServicioHora - a.precioServicioHora);
                 }
 
-                // FILTRAR POR EXPERIENCIA
                 if (experienceOrder) {
                     filteredPsicologos.sort((a, b) => experienceOrder === 'menor' ? a.añosExperiencia - b.añosExperiencia : b.añosExperiencia - a.añosExperiencia);
                 }
 
-                // FILTRAR POR PAÍS
                 if (countryFilter) {
                     filteredPsicologos = filteredPsicologos.filter(psicologo => psicologo.pais === countryFilter);
                 }
@@ -300,14 +263,12 @@
                 return filteredPsicologos;
             }
 
-            // DETECTAR CUANDO SE HACE SCROLL AL FINAL DE LA PÁGINA Y CARGAR MÁS PSICÓLOGOS
             window.addEventListener('scroll', () => {
                 if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
                     displayPsicologos();
                 }
             });
 
-            // FUNCIÓN PARA CALCULAR LA EDAD DEL PSICÓLOGO A PARTIR DE LA FECHA DE NACIMIENTO
             function calcularEdad(fechaNacimiento) {
                 const hoy = new Date();
                 const fechaNac = new Date(fechaNacimiento);
@@ -319,7 +280,6 @@
                 return edad;
             }
 
-            // FUNCIÓN PARA DESORDENAR EL ARRAY DE PSICÓLOGOS ALEATORIAMENTE
             function shuffleArray(array) {
                 for (let i = array.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
@@ -328,17 +288,15 @@
             }
         });
 
-        // MENÚ DE HAMBURGUESA (ABRIR)
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.add('active');
         });
 
-        // MENÚ DE HAMBURGUESA (CERRAR)
         document.querySelector('.close-menu').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.remove('active');
         });
+
     </script>
-    <!-- FIN DEL SCRIPT JAVASCRIPT -->
 
 </body>
 

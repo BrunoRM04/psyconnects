@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN EL NAVEGADOR -->
     <title>PsyConnects | Ofertas Laborales</title>
-    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="public/css/styles.css">
-    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="public/img/marca/icono.png">
-    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-    <!-- INICIO DEL ENCABEZADO -->
     <header>
-        <!-- SECCIÓN DE LOGO -->
         <div class="logo">
             <img src="public/img/marca/icono 2.png" alt="Logo">
         </div>
-        <!-- ICONO DE HAMBURGUESA -->
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
         <nav class="nav-menu">
             <div class="close-menu">
                 <i class="fas fa-times"></i>
@@ -33,63 +28,56 @@
             <ul class="nav-links">
                 <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
-                <li><a href="reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
+                <li><a href="investigaciones.html"><i class="fas fa-comments"></i> Investigaciones</a></li>
                 <li><a href="ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
                 <li><a href="login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
                 <li><a href="./public/html/register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
             </ul>
         </nav>
     </header>
-    <!-- FIN DEL ENCABEZADO -->
 
-    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
     <main>
-        <!-- MENSAJE DE ERROR 404 CUANDO NO HAY OFERTAS LABORALES DISPONIBLES -->
+
         <div class="container-404">
             <h1>404</h1>
             <p>No hay ofertas disponibles actualmente</p>
-            <!-- ENLACE PARA VOLVER A LA PÁGINA DE INICIO -->
             <a href="index.html">Volver al inicio ></a>
         </div>
-    </main>
-    <!-- FIN DEL CONTENIDO PRINCIPAL -->
 
-    <!-- INICIO DEL PIE DE PÁGINA -->
+    </main>
+
     <footer>
-        <!-- CONTENEDOR PRINCIPAL DEL PIE DE PÁGINA -->
+
         <div class="footer-container">
-            <!-- MENÚ DE NAVEGACIÓN DEL PIE DE PÁGINA -->
             <div class="footer-nav">
                 <a href="#">EMPRESAS</a>
                 <a href="#">REGISTRARSE</a>
                 <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
                 <a href="#">QUIENES SOMOS</a>
             </div>
-            <!-- SECCIÓN DE REDES SOCIALES -->
             <div class="footer-social">
                 <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
-        <!-- TEXTO INFERIOR DEL PIE DE PÁGINA -->
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
-    </footer>
-    <!-- FIN DEL PIE DE PÁGINA -->
 
-    <!-- ENLACE AL ARCHIVO JAVASCRIPT EXTERNO -->
+    </footer>
+
     <script>
-        // MENÚ DE HAMBURGUESA (ABRIR)
+
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.add('active');
         });
 
-        // MENÚ DE HAMBURGUESA (CERRAR)
         document.querySelector('.close-menu').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.remove('active');
         });
+
     </script>
 
 </body>
+
 </html>

@@ -2,29 +2,326 @@
 <html lang="en">
 
 <head>
-    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN EL NAVEGADOR -->
     <title>PsyConnects | Registrarse</title>
-    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="../../public/css/styles.css">
-    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
-    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    <!-- SCRIPT PARA MANEJAR EL REGISTRO DE USUARIOS Y SUBIR DATOS A FIREBASE -->
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="../../public/img/marca/icono 2.png" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="../../psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
+                <li><a href="../../investigaciones.html"><i class="fas fa-comments"></i> Investigaciones</a></li>
+                <li><a href="../../ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
+                <li><a href="../../login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+                <li><a href="register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="bienvenida-overlay" class="bienvenida-overlay">
+        <div class="bienvenida-contenido">
+            <h1 id="mensaje-bienvenida">¡Bienvenid@ a PsyConnects!</h1>
+            <p class="mensaje-espera">Espere unos segundos mientras creamos su perfil.</p>
+        </div>
+    </div>
+
+    <div class="registro-header">
+        <h1 class="registro-header-titulo">¡Regístrate como psicólogo/a aquí! 🤩</h1>
+        <p class="registro-header-descripcion">Una vez registrado, tendrás acceso a las siguientes acciones:</p>
+        <ul class="registro-lista">
+            <li>👉 Perfil personal con acceso libre.</li>
+            <li>👉 Edita tu perfil cuando lo desees.</li>
+            <li>👉 Datos de visitas al perfil y de qué país provienen.</li>
+            <li>👉 Crea tu calendario marcando los días y horas que estás disponible.</li>
+            <li>👉 Acceso gratuito a cualquier taller, actividad, charlas, que realice PsyConnects.</li>
+        </ul>
+    </div>
+
+    <main class="principal-registro">
+
+        <div class="contenedor-registro">
+            <div class="imagen-columna">
+                <img src="../../public/img/banner/banner-register.png" alt="Imagen Formulario" loading="lazy">
+            </div>
+            <div class="formulario-columna">
+                <h2 class="titulo-registro">¡Únete a PsyConnects! 📝</h2>
+                <div class="barra-progreso">
+                    <div class="paso-conector">
+                        <div class="paso activo" data-titulo="Personal">👤</div>
+                        <div class="linea"></div>
+                    </div>
+                    <div class="paso-conector">
+                        <div class="paso" data-titulo="Contacto">📞</div>
+                        <div class="linea"></div>
+                    </div>
+                    <div class="paso-conector">
+                        <div class="paso" data-titulo="Profesional">💼</div>
+                        <div class="linea"></div>
+                    </div>
+                    <div class="paso-conector">
+                        <div class="paso" data-titulo="Especialidades">🩺</div>
+                        <div class="linea"></div>
+                    </div>
+                    <div class="paso-conector">
+                        <div class="paso" data-titulo="Servicios">🛎️</div>
+                    </div>
+                </div>
+
+                <form id="formularioRegistro" class="formulario-registro" enctype="multipart/form-data">
+                    <div class="paso-formulario activo">
+                        <div class="grupo-formulario">
+                            <label for="nombre" class="etiqueta-formulario">Nombre 👇</label>
+                            <input type="text" id="nombre" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="apellido" class="etiqueta-formulario">Apellido 👇</label>
+                            <input type="text" id="apellido" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="documento" class="etiqueta-formulario">N° de Documento 📄</label>
+                            <input type="text" id="documento">
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="correoElectronico" class="etiqueta-formulario">Correo Electrónico 📧</label>
+                            <input type="email" id="correoElectronico" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="contraseña" class="etiqueta-formulario">Contraseña 🔒</label>
+                            <div style="position: relative;">
+                                <input type="password" id="contraseña" required minlength="6">
+                                <button type="button" id="toggle-contraseña"
+                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+                                    👁️
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="botones-navegacion">
+                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                        </div>
+                    </div>
+
+                    <div class="paso-formulario">
+
+                        <div class="grupo-formulario">
+                            <label for="fechaNacimiento" class="etiqueta-formulario">Fecha de Nacimiento 🎂</label>
+                            <input type="date" id="fechaNacimiento" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="pais" class="etiqueta-formulario">País 🌎</label>
+                            <select id="pais" required>
+                                <option value="" disabled selected>Selecciona tu país</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Cuba">Cuba</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="España">España</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Honduras">Honduras</option>
+                                <option value="México">México</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Panamá">Panamá</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Perú">Perú</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="República Dominicana">República Dominicana</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Venezuela">Venezuela</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="telefono" class="etiqueta-formulario">Teléfono (Con Código de País) 📱</label>
+                            <input type="tel" id="telefono" required>
+                        </div>
+
+                        <div class="botones-navegacion">
+                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
+                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                        </div>
+                    </div>
+
+                    <div class="paso-formulario">
+                        <div class="grupo-formulario">
+                            <label for="añosExperiencia" class="etiqueta-formulario">Años de Experiencia 🗓️</label>
+                            <input type="number" id="añosExperiencia" required min="0">
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="fotoPerfil" class="etiqueta-formulario">Foto de Perfil 📷</label>
+                            <input type="file" id="fotoPerfil" accept="image/*" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="descripcion" class="etiqueta-formulario">Descripción 📝</label>
+                            <textarea id="descripcion" required></textarea>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario">Experiencia Profesional 🏢</label>
+                            <div id="contenedor-experiencia"></div>
+                            <button type="button" id="agregar-experiencia" class="btn-formulario">Agregar Experiencia
+                                ➕</button>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario">Certificaciones 📑</label>
+                            <div id="contenedor-certificaciones"></div>
+                            <button type="button" id="agregar-certificacion" class="btn-formulario">Agregar
+                                Certificación ➕</button>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="precioServicioHora" class="etiqueta-formulario">Precio por Hora (USD) 💲</label>
+                            <input type="number" id="precioServicioHora" required min="0" step="0.01">
+                        </div>
+
+                        <div class="botones-navegacion">
+                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
+                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                        </div>
+                    </div>
+
+                    <div class="paso-formulario">
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario">Tipos de Terapia 🧠 (Seleccionar 3 tipos)</label>
+                            <div class="grupo-botones">
+                                <button type="button" class="boton-opcion" data-valor="Terapia Cognitivo-Conductual">🧠
+                                    Terapia Cognitivo-Conductual</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Humanista">💗 Terapia
+                                    Humanista</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Psicoanalítica">🛋️
+                                    Terapia Psicoanalítica</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Gestalt">🌈 Terapia
+                                    Gestalt</button>
+                                <button type="button" class="boton-opcion"
+                                    data-valor="Terapia de Aceptación y Compromiso">🤝 Terapia de Aceptación y
+                                    Compromiso</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Familiar">👨‍👩‍👧‍👦
+                                    Terapia Familiar</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia de Pareja">❤️ Terapia de
+                                    Pareja</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia de Juego">🎲 Terapia de
+                                    Juego</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia EMDR">👁️ Terapia
+                                    EMDR</button>
+                            </div>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario">Idiomas 🗣️</label>
+                            <div class="grupo-botones">
+                                <button type="button" class="boton-opcion" data-valor="Español">🇪🇸 Español</button>
+                                <button type="button" class="boton-opcion" data-valor="Inglés">🇬🇧 Inglés</button>
+                                <button type="button" class="boton-opcion" data-valor="Portugués">🇵🇹
+                                    Portugués</button>
+                                <button type="button" class="boton-opcion" data-valor="Francés">🇫🇷 Francés</button>
+                                <button type="button" class="boton-opcion" data-valor="Italiano">🇮🇹 Italiano</button>
+                                <button type="button" class="boton-opcion" data-valor="Alemán">🇩🇪 Alemán</button>
+                                <button type="button" class="boton-opcion" data-valor="Chino">🇨🇳 Chino</button>
+                                <button type="button" class="boton-opcion" data-valor="Japonés">🇯🇵 Japonés</button>
+                                <button type="button" class="boton-opcion" data-valor="Árabe">🇸🇦 Árabe</button>
+                            </div>
+                        </div>
+
+                        <div class="botones-navegacion">
+                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
+                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                        </div>
+                    </div>
+
+                    <div class="paso-formulario">
+
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario">Redes Sociales 🌐</label>
+                            <div class="grupo-redes-sociales">
+                                <div class="item-red-social">
+                                    <i class="fab fa-instagram"></i>
+                                    <input type="url" id="instagram" placeholder="https://www.instagram.com/@tuusuario">
+                                </div>
+                                <div class="item-red-social">
+                                    <i class="fab fa-facebook"></i>
+                                    <input type="url" id="facebook" placeholder="https://www.facebook.com/@tuusuario">
+                                </div>
+                                <div class="item-red-social">
+                                    <i class="fab fa-linkedin"></i>
+                                    <input type="url" id="linkedin" placeholder="https://www.linkedin.com/@tuusuario">
+                                </div>
+                                <div class="item-red-social">
+                                    <i class="fab fa-tiktok"></i>
+                                    <input type="url" id="tiktok" placeholder="https://www.tiktok.com/@tuusuario">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="botones-navegacion">
+                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
+                            <button type="submit" class="btn-formulario boton-envio">Registrar ✅</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="#">EMPRESAS</a>
+                <a href="#">REGISTRARSE</a>
+                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">QUIENES SOMOS</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
+        </div>
+        
+    </footer>
+
     <script type="module">
-        // IMPORTAR FUNCIONES DE FIREBASE, FIRESTORE Y STORAGE
+
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
         import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
         import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
-        // CONFIGURACIÓN DE FIREBASE
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
             authDomain: "psyconnects-7be13.firebaseapp.com",
@@ -35,430 +332,313 @@
             measurementId: "G-FKC5P4PE6V"
         };
 
-        // INICIALIZAR FIREBASE, FIRESTORE, STORAGE Y AUTH
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         const storage = getStorage(app);
         const auth = getAuth(app);
 
-        // FUNCIÓN QUE SE EJECUTA CUANDO EL DOCUMENTO SE HA CARGADO
         document.addEventListener('DOMContentLoaded', function () {
-            // FUNCIÓN PARA AGREGAR ENTRADAS DE EXPERIENCIA
             function agregarEntradaExperiencia(exp = {}, index) {
-                const experienciaContainer = document.getElementById('experiencia-container');
+                const contenedor = document.getElementById('contenedor-experiencia');
                 const div = document.createElement('div');
-                div.classList.add('experiencia-entry');
+                div.classList.add('entrada-dinamica', 'experiencia-entry');
                 div.innerHTML = `
-                    <label for="experiencia-puesto-${index}">Puesto:</label>
-                    <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
+                        <div class="grupo-formulario">
+                            <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
+                            <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                            <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
+                            <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
+                            <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
+                            <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
+                        </div>
+                        <button type="button" class="boton-eliminar">×</button>
+                    `;
+                contenedor.appendChild(div);
 
-                    <label for="experiencia-institucion-${index}">Institución:</label>
-                    <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
-
-                    <label for="experiencia-añoInicio-${index}">Año de Inicio:</label>
-                    <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required>
-
-                    <label for="experiencia-añoFin-${index}">Año de Fin:</label>
-                    <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''}>
-
-                    <label for="experiencia-actualidad-${index}">Actualidad:</label>
-                    <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
-
-                    <button type="button" class="eliminar-experiencia"></button>
-                `;
-                experienciaContainer.appendChild(div);
-
-                // MANEJAR LA VISIBILIDAD DEL CAMPO "AÑO DE FIN" BASADO EN EL CHECKBOX DE "ACTUALIDAD"
-                const checkboxActualidad = div.querySelector(`#experiencia-actualidad-${index}`);
+                const checkbox = div.querySelector(`#experiencia-actualidad-${index}`);
                 const añoFinInput = div.querySelector(`#experiencia-añoFin-${index}`);
 
-                checkboxActualidad.addEventListener('change', function () {
-                    if (checkboxActualidad.checked) {
-                        añoFinInput.disabled = true;
-                        añoFinInput.value = '';  // LIMPIAR EL VALOR SI ESTÁ SELECCIONADO "ACTUALIDAD"
-                    } else {
-                        añoFinInput.disabled = false;
-                    }
-                });
-
-                // FUNCIÓN PARA ELIMINAR ENTRADA DE EXPERIENCIA
-                div.querySelector('.eliminar-experiencia').addEventListener('click', function () {
-                    div.remove();
-                });
-            }
-
-            // FUNCIÓN PARA AGREGAR ENTRADAS DE CERTIFICACIÓN
-            function agregarEntradaCertificacion(cert = {}, index) {
-                const certificacionesContainer = document.getElementById('certificaciones-container');
-                const div = document.createElement('div');
-                div.classList.add('certificacion-entry');
-                div.innerHTML = `
-                    <label for="certificacion-nombre-${index}">Nombre de Certificación:</label>
-                    <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
-
-                    <label for="certificacion-institucion-${index}">Institución:</label>
-                    <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
-
-                    <label for="certificacion-año-${index}">Año:</label>
-                    <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required>
-
-                    <button type="button" class="eliminar-certificacion"></button>
-                `;
-                certificacionesContainer.appendChild(div);
-
-                // AGREGAR FUNCIONALIDAD DE ELIMINAR ENTRADA DE CERTIFICACIÓN
-                div.querySelector('.eliminar-certificacion').addEventListener('click', function () {
-                    div.remove();
-                });
-            }
-
-            // VALIDACIÓN PARA PERMITIR SELECCIONAR SOLO 3 TIPOS DE TERAPIA
-            const tipoTerapiaCheckboxes = document.querySelectorAll('.tipo-terapia');
-            let tiposTerapiaSeleccionados = [];
-
-            tipoTerapiaCheckboxes.forEach(checkbox => {
                 checkbox.addEventListener('change', function () {
-                    tiposTerapiaSeleccionados = Array.from(tipoTerapiaCheckboxes)
-                        .filter(checkbox => checkbox.checked)
-                        .map(checkbox => checkbox.value);
+                    añoFinInput.disabled = this.checked;
+                    if (this.checked) añoFinInput.value = '';
+                });
 
-                    if (tiposTerapiaSeleccionados.length > 3) {
-                        this.checked = false; // DESMARCAR EL ÚLTIMO SI SE SELECCIONAN MÁS DE 3
-                        alert('Solo puedes seleccionar hasta 3 tipos de terapia.');
+                div.querySelector('.boton-eliminar').addEventListener('click', () => div.remove());
+            }
+
+            function agregarEntradaCertificacion(cert = {}, index) {
+                const contenedor = document.getElementById('contenedor-certificaciones');
+                const div = document.createElement('div');
+                div.classList.add('entrada-dinamica', 'certificacion-entry');
+                div.innerHTML = `
+                        <div class="grupo-formulario">
+                            <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
+                            <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                            <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
+                            <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
+                        </div>
+                        <button type="button" class="boton-eliminar">×</button>
+                    `;
+                contenedor.appendChild(div);
+
+                div.querySelector('.boton-eliminar').addEventListener('click', () => div.remove());
+            }
+
+            const botonesOpcion = document.querySelectorAll('.boton-opcion');
+            botonesOpcion.forEach(boton => {
+                boton.addEventListener('click', () => {
+                    boton.classList.toggle('activo');
+
+                    const grupoFormulario = boton.closest('.grupo-formulario');
+                    const label = grupoFormulario.querySelector('label');
+                    if (label && label.textContent.includes("Tipos de Terapia")) {
+                        const seleccionados = Array.from(grupoFormulario.querySelectorAll('.boton-opcion.activo'));
+                        if (seleccionados.length > 3) {
+                            boton.classList.remove('activo');
+                            alert('Solo puedes seleccionar hasta 3 tipos de terapia.');
+                        }
                     }
                 });
             });
 
-            // MANEJAR LOS BOTONES PARA AGREGAR ENTRADAS DE EXPERIENCIA Y CERTIFICACIÓN
-            document.getElementById('agregar-experiencia').addEventListener('click', function () {
-                agregarEntradaExperiencia({}, document.querySelectorAll('.experiencia-entry').length);
+            document.getElementById('agregar-experiencia').addEventListener('click', () => {
+                const index = document.querySelectorAll('.experiencia-entry').length + 1;
+                agregarEntradaExperiencia({}, index);
             });
 
-            document.getElementById('agregar-certificacion').addEventListener('click', function () {
-                agregarEntradaCertificacion({}, document.querySelectorAll('.certificacion-entry').length);
+            document.getElementById('agregar-certificacion').addEventListener('click', () => {
+                const index = document.querySelectorAll('.certificacion-entry').length + 1;
+                agregarEntradaCertificacion({}, index);
             });
 
-            // FUNCIÓN PARA GUARDAR LOS DATOS DEL FORMULARIO EN FIREBASE
-            document.getElementById('registerForm').addEventListener('submit', async function (event) {
+            document.getElementById('formularioRegistro').addEventListener('submit', async function (event) {
                 event.preventDefault();
 
-                const nombre = document.getElementById('nombre').value;
-                const apellido = document.getElementById('apellido').value;
+                const nombre = document.getElementById('nombre').value.trim();
+                const apellido = document.getElementById('apellido').value.trim();
+                const documento = document.getElementById('documento').value.trim(); // Nuevo campo capturado
                 const pais = document.getElementById('pais').value;
-                const correoElectronico = document.getElementById('correoElectronico').value;
-                const telefono = document.getElementById('telefono').value;
+                const correoElectronico = document.getElementById('correoElectronico').value.trim();
+                const telefono = document.getElementById('telefono').value.trim();
                 const añosExperiencia = document.getElementById('añosExperiencia').value;
-                const idiomas = Array.from(document.querySelectorAll('#idiomas input:checked')).map(checkbox => checkbox.value);
                 const precioServicioHora = document.getElementById('precioServicioHora').value;
-                const descripcion = document.getElementById('descripcion').value;
+                const descripcion = document.getElementById('descripcion').value.trim();
                 const fechaNacimiento = document.getElementById('fechaNacimiento').value;
                 const contraseña = document.getElementById('contraseña').value;
 
-                // CAPTURAR REDES SOCIALES
-                const instagram = document.getElementById('instagram').value || null;
-                const facebook = document.getElementById('facebook').value || null;
-                const linkedin = document.getElementById('linkedin').value || null;
-                const tiktok = document.getElementById('tiktok').value || null;
+                const instagram = document.getElementById('instagram').value.trim() || null;
+                const facebook = document.getElementById('facebook').value.trim() || null;
+                const linkedin = document.getElementById('linkedin').value.trim() || null;
+                const tiktok = document.getElementById('tiktok').value.trim() || null;
 
-                const tiposTerapia = tiposTerapiaSeleccionados;
+                let tiposTerapia = [];
+                let idiomas = [];
 
-                // VALIDAR QUE SE HAYA SUBIDO UNA IMAGEN DE PERFIL
+                const gruposFormulario = document.querySelectorAll('#formularioRegistro .grupo-formulario');
+                gruposFormulario.forEach(grupo => {
+                    const label = grupo.querySelector('label');
+                    if (label) {
+                        if (label.textContent.includes('Tipos de Terapia')) {
+                            tiposTerapia = Array.from(grupo.querySelectorAll('.boton-opcion.activo')).map(btn => btn.dataset.valor);
+                        }
+                        if (label.textContent.includes('Idiomas')) {
+                            idiomas = Array.from(grupo.querySelectorAll('.boton-opcion.activo')).map(btn => btn.dataset.valor);
+                        }
+                    }
+                });
+
+                if (tiposTerapia.length > 3) {
+                    alert('Solo puedes seleccionar hasta 3 tipos de terapia.');
+                    return;
+                }
+
                 const fotoPerfilInput = document.getElementById('fotoPerfil').files[0];
                 if (!fotoPerfilInput) {
                     alert("Por favor, sube una imagen de perfil.");
                     return;
                 }
 
-                // CREAR EL USUARIO EN FIREBASE AUTH Y SUBIR LOS DATOS
-                createUserWithEmailAndPassword(auth, correoElectronico, contraseña)
-                    .then(async (userCredential) => {
-                        const user = userCredential.user;
-                        const psicologoId = user.uid;
+                try {
+                    const userCredential = await createUserWithEmailAndPassword(auth, correoElectronico, contraseña);
+                    const user = userCredential.user;
+                    const psicologoId = user.uid;
 
-                        // SUBIR LA FOTO DE PERFIL A FIREBASE STORAGE
-                        const storageRef = ref(storage, `perfil_fotos/${psicologoId}`);
-                        const uploadTask = uploadBytesResumable(storageRef, fotoPerfilInput);
+                    const storageRef = ref(storage, `perfil_fotos/${psicologoId}`);
+                    const uploadTask = uploadBytesResumable(storageRef, fotoPerfilInput);
 
-                        uploadTask.on('state_changed',
-                            (snapshot) => { },
-                            (error) => {
-                                console.error("Error al subir la imagen: ", error);
-                            },
-                            async () => {
-                                const fotoPerfilUrl = await getDownloadURL(uploadTask.snapshot.ref);
+                    uploadTask.on('state_changed',
+                        null,
+                        (error) => {
+                            console.error("Error al subir la imagen: ", error);
+                            alert("Hubo un error al subir la imagen de perfil. Por favor, intenta de nuevo.");
+                        },
+                        async () => {
+                            const fotoPerfilUrl = await getDownloadURL(uploadTask.snapshot.ref);
 
-                                const experiencia = [];
-                                document.querySelectorAll('.experiencia-entry').forEach(entry => {
-                                    const puesto = entry.querySelector('.experiencia-puesto').value;
-                                    const institucion = entry.querySelector('.experiencia-institucion').value;
-                                    const añoInicio = entry.querySelector('.experiencia-añoInicio').value;
-                                    const añoFin = entry.querySelector('.experiencia-añoFin').disabled ? 'Actualidad' : entry.querySelector('.experiencia-añoFin').value;
-                                    const actualidad = entry.querySelector('.experiencia-actualidad').checked;
-                                    experiencia.push({ puesto, institucion, añoInicio, añoFin, actualidad });
+                            const experiencia = Array.from(document.querySelectorAll('.experiencia-entry')).map(entry => ({
+                                puesto: entry.querySelector('.experiencia-puesto').value.trim(),
+                                institucion: entry.querySelector('.experiencia-institucion').value.trim(),
+                                añoInicio: entry.querySelector('.experiencia-añoInicio').value,
+                                añoFin: entry.querySelector('.experiencia-actualidad').checked ? 'Actualidad' : entry.querySelector('.experiencia-añoFin').value,
+                                actualidad: entry.querySelector('.experiencia-actualidad').checked
+                            }));
+
+                            const certificaciones = Array.from(document.querySelectorAll('.certificacion-entry')).map(entry => ({
+                                nombre: entry.querySelector('.certificacion-nombre').value.trim(),
+                                institucion: entry.querySelector('.certificacion-institucion').value.trim(),
+                                año: entry.querySelector('.certificacion-año').value
+                            }));
+
+                            try {
+                                const docRef = doc(db, "psicologos", psicologoId);
+                                await setDoc(docRef, {
+                                    id: psicologoId,
+                                    nombre,
+                                    apellido,
+                                    documento,
+                                    pais,
+                                    correoElectronico,
+                                    telefono,
+                                    añosExperiencia,
+                                    idiomas,
+                                    precioServicioHora,
+                                    descripcion,
+                                    fechaNacimiento,
+                                    experiencia,
+                                    certificaciones,
+                                    tiposTerapia,
+                                    fotoPerfil: fotoPerfilUrl,
+                                    redesSociales: {
+                                        instagram,
+                                        facebook,
+                                        linkedin,
+                                        tiktok
+                                    }
                                 });
 
-                                const certificaciones = [];
-                                document.querySelectorAll('.certificacion-entry').forEach(entry => {
-                                    const nombreCert = entry.querySelector('.certificacion-nombre').value;
-                                    const institucionCert = entry.querySelector('.certificacion-institucion').value;
-                                    const añoCert = entry.querySelector('.certificacion-año').value;
-                                    certificaciones.push({ nombre: nombreCert, institucion: institucionCert, año: añoCert });
-                                });
+                                mostrarBienvenida(nombre, apellido);
 
-                                // GUARDAR LOS DATOS EN FIRESTORE
-                                try {
-                                    const docRef = doc(db, "psicologos", psicologoId);
-                                    await setDoc(docRef, {
-                                        id: psicologoId,
-                                        nombre,
-                                        apellido,
-                                        pais,
-                                        correoElectronico,
-                                        telefono,
-                                        añosExperiencia,
-                                        idiomas,
-                                        precioServicioHora,
-                                        descripcion,
-                                        fechaNacimiento,
-                                        experiencia,
-                                        certificaciones,
-                                        tiposTerapia,
-                                        fotoPerfil: fotoPerfilUrl,
-                                        redesSociales: {
-                                            instagram,
-                                            facebook,
-                                            linkedin,
-                                            tiktok
-                                        }
-                                    });
-                                    alert('Registro exitoso');
-                                    window.location.href = "../../psicologos.html";
-                                } catch (error) {
-                                    console.error("Error al registrar: ", error);
-                                }
+                            } catch (error) {
+                                console.error("Error al registrar en Firestore: ", error);
+                                alert("Hubo un error al guardar tus datos. Por favor, intenta de nuevo.");
                             }
-                        );
-                    })
-                    .catch((error) => {
-                        console.error("Error al registrar: ", error.message);
-                    });
+                        }
+                    );
+                } catch (error) {
+                    console.error("Error al registrar en Auth: ", error.message);
+                    alert("Hubo un error al crear tu cuenta. Por favor, verifica tus datos e intenta de nuevo.");
+                }
+            });
+
+            function mostrarBienvenida(nombre, apellido) {
+                const overlay = document.getElementById('bienvenida-overlay');
+                const mensaje = document.getElementById('mensaje-bienvenida');
+                mensaje.textContent = `¡Bienvenid@ ${nombre} ${apellido} a PsyConnects!`;
+                overlay.classList.add('mostrar');
+
+                setTimeout(() => {
+                    window.location.href = "../../psicologos.html";
+                }, 7000);
+
+                overlay.addEventListener('click', () => {
+                    window.location.href = "../../psicologos.html";
+                }, { once: true });
+            }
+
+            const subirArchivo = document.querySelector('.subir-archivo input[type="file"]');
+            const placeholderArchivo = document.querySelector('.placeholder-archivo');
+
+            if (subirArchivo && placeholderArchivo) {
+                subirArchivo.addEventListener('change', () => {
+                    placeholderArchivo.textContent = subirArchivo.files.length > 0 ? subirArchivo.files[0].name : 'Selecciona una imagen';
+                });
+            }
+
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.add('active');
+            });
+
+            document.querySelector('.close-menu').addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+
+            const formulario = document.getElementById('formularioRegistro');
+            const pasosFormulario = document.querySelectorAll('.paso-formulario');
+            const pasosBarra = document.querySelectorAll('.barra-progreso .paso');
+            const botonesSiguiente = document.querySelectorAll('.boton-siguiente');
+            const botonesAnterior = document.querySelectorAll('.boton-anterior');
+
+            let pasoActual = 0;
+
+            botonesSiguiente.forEach(boton => {
+                boton.addEventListener('click', () => {
+                    if (validarPaso(pasoActual)) {
+                        pasosFormulario[pasoActual].classList.remove('activo');
+                        pasosBarra[pasoActual].classList.remove('activo');
+                        pasoActual++;
+                        pasosFormulario[pasoActual].classList.add('activo');
+                        pasosBarra[pasoActual].classList.add('activo');
+                        actualizarBarraProgreso();
+                    }
+                });
+            });
+
+            botonesAnterior.forEach(boton => {
+                boton.addEventListener('click', () => {
+                    pasosFormulario[pasoActual].classList.remove('activo');
+                    pasosBarra[pasoActual].classList.remove('activo');
+                    pasoActual--;
+                    pasosFormulario[pasoActual].classList.add('activo');
+                    pasosBarra[pasoActual].classList.add('activo');
+                    actualizarBarraProgreso();
+                });
+            });
+
+            function validarPaso(paso) {
+                let valido = true;
+                const campos = pasosFormulario[paso].querySelectorAll('input, select, textarea');
+                campos.forEach(campo => {
+                    if (campo.type !== 'button' && !campo.checkValidity()) {
+                        campo.reportValidity();
+                        valido = false;
+                    }
+                });
+                return valido;
+            }
+
+            function actualizarBarraProgreso() {
+                pasosBarra.forEach((paso, indice) => {
+                    paso.classList.toggle('activo', indice <= pasoActual);
+                });
+            }
+
+            document.getElementById('toggle-contraseña').addEventListener('click', function () {
+                const passwordInput = document.getElementById('contraseña');
+                const isPasswordVisible = passwordInput.type === 'text';
+                passwordInput.type = isPasswordVisible ? 'password' : 'text';
+                this.textContent = isPasswordVisible ? '👁️' : '🙈';
             });
         });
 
-        // MENÚ DE HAMBURGUESA (ABRIR)
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.add('active');
-        });
-
-        // MENÚ DE HAMBURGUESA (CERRAR)
-        document.querySelector('.close-menu').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.remove('active');
-        });
     </script>
-</head>
-
-<!-- CUERPO CON UN FONDO GRADIENTE -->
-
-<body
-    style="background: linear-gradient(rgba(19, 89, 180, 0.932), rgba(19, 89, 180, 0.932)), url('../../public/img/banner/banner-1.jpg') no-repeat center center fixed; background-size: cover;">
-
-    <!-- INICIO DEL ENCABEZADO -->
-    <header>
-        <!-- SECCIÓN DE LOGO -->
-        <div class="logo">
-            <img src="../../public/img/marca/icono 2.png" alt="Logo">
-        </div>
-        <!-- ICONO DE HAMBURGUESA -->
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
-        <nav class="nav-menu">
-            <div class="close-menu">
-                <i class="fas fa-times"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="../../psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
-                <li><a href="../../reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
-                <li><a href="../../ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
-                <li><a href="../../login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
-                <li><a href="register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- FIN DEL ENCABEZADO -->
-
-    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
-    <main>
-        <div class="edit-profile-container">
-            <h2>¡REGÍSTRATE AQUÍ!</h2>
-            <form id="registerForm">
-                <!-- FORMULARIO DE REGISTRO -->
-
-                <!-- SUBIR FOTO DE PERFIL -->
-                <label for="fotoPerfil">Subir Foto de Perfil:</label>
-                <input type="file" id="fotoPerfil" accept="image/*" required>
-
-                <!-- CAMPOS DE TEXTO BÁSICOS DEL FORMULARIO -->
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" required>
-
-                <label for="pais">País:</label>
-                <select id="pais" required>
-                    <option value="">Selecciona tu país</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Bolivia">Bolivia</option>
-                    <option value="Brasil">Brasil</option>
-                    <option value="Chile">Chile</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Costa Rica">Costa Rica</option>
-                    <option value="Cuba">Cuba</option>
-                    <option value="Ecuador">Ecuador</option>
-                    <option value="El Salvador">El Salvador</option>
-                    <option value="Guatemala">Guatemala</option>
-                    <option value="Honduras">Honduras</option>
-                    <option value="México">México</option>
-                    <option value="Nicaragua">Nicaragua</option>
-                    <option value="Panamá">Panamá</option>
-                    <option value="Paraguay">Paraguay</option>
-                    <option value="Perú">Perú</option>
-                    <option value="República Dominicana">República Dominicana</option>
-                    <option value="Uruguay">Uruguay</option>
-                    <option value="Venezuela">Venezuela</option>
-                </select>
-
-                <!-- EMAIL Y CONTRASEÑA PARA REGISTRARSE -->
-                <label for="correoElectronico">Correo Electrónico:</label>
-                <input type="email" id="correoElectronico" required>
-
-                <label for="contraseña">Crear Contraseña:</label>
-                <input type="password" id="contraseña" required minlength="6">
-
-                <!-- OTROS CAMPOS DE INFORMACIÓN -->
-                <label for="telefono">Teléfono: (Con Código De País)</label>
-                <input type="tel" id="telefono" required>
-
-                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fechaNacimiento" required>
-
-                <label for="añosExperiencia">Años de Experiencia:</label>
-                <input type="number" id="añosExperiencia" required>
-
-                <!-- SELECCIÓN DE TIPOS DE TERAPIA -->
-                <label for="tiposTerapia">Tipos de Terapias Que Utiliza (Seleccionar solo 3):</label>
-                <div id="tiposTerapia">
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Cognitivo-Conductual"> Terapia
-                        Cognitivo-Conductual</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Psicoanalítica"> Terapia
-                        Psicoanalítica</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Humanista"> Terapia
-                        Humanista</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Gestalt"> Terapia
-                        Gestalt</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Comportamiento Dialéctico">
-                        Terapia de Comportamiento Dialéctico</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia Familiar"> Terapia
-                        Familiar</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Grupo"> Terapia de
-                        Grupo</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Juego"> Terapia de
-                        Juego</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia EMDR"> Terapia EMDR</label><br>
-                    <label><input type="checkbox" class="tipo-terapia" value="Terapia de Aceptación y Compromiso">
-                        Terapia de Aceptación y Compromiso</label><br>
-                </div>
-
-                <!-- SELECCIÓN DE IDIOMAS -->
-                <label for="idiomas">Idiomas:</label>
-                <div id="idiomas" class="idiomas-checkboxes">
-                    <label><input type="checkbox" name="idiomas" value="Español"> Español</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Inglés"> Inglés</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Portugués"> Portugués</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Francés"> Francés</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Mandarín"> Mandarín</label><br>
-                    <label><input type="checkbox" name="idiomas" value="Árabe"> Árabe</label><br>
-                </div>
-
-                <label for="precioServicioHora">Precio por Hora (USD):</label>
-                <input type="number" id="precioServicioHora" required>
-
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" required></textarea>
-
-                <!-- SECCIÓN DE EXPERIENCIA -->
-                <h3>Experiencia</h3>
-                <div id="experiencia-container"></div>
-                <button type="button" id="agregar-experiencia">Agregar Experiencia</button>
-
-                <!-- SECCIÓN DE CERTIFICACIONES -->
-                <h3>Certificaciones</h3>
-                <div id="certificaciones-container"></div>
-                <button type="button" id="agregar-certificacion">Agregar Certificación</button>
-
-                <!-- REDES SOCIALES -->
-                <h3>Redes Sociales</h3>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-instagram"></i></span>
-                    <label for="instagram" class="social-media-label">Instagram:</label>
-                    <input type="url" id="instagram" class="social-media-input"
-                        placeholder="https://www.instagram.com/tuusuario">
-                </div>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-facebook"></i></span>
-                    <label for="facebook" class="social-media-label">Facebook:</label>
-                    <input type="url" id="facebook" class="social-media-input"
-                        placeholder="https://www.facebook.com/tuusuario">
-                </div>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-linkedin"></i></span>
-                    <label for="linkedin" class="social-media-label">LinkedIn:</label>
-                    <input type="url" id="linkedin" class="social-media-input"
-                        placeholder="https://www.linkedin.com/in/tuusuario">
-                </div>
-
-                <div class="social-media-container">
-                    <span class="social-media-icon"><i class="fab fa-tiktok"></i></span>
-                    <label for="tiktok" class="social-media-label">TikTok:</label>
-                    <input type="url" id="tiktok" class="social-media-input"
-                        placeholder="https://www.tiktok.com/@tuusuario">
-                </div>
-
-                <!-- BOTÓN PARA ENVIAR EL FORMULARIO -->
-                <button type="submit">Registrar ></button>
-
-            </form>
-    </main>
-    <!-- FIN DEL CONTENIDO PRINCIPAL -->
-
-    <!-- INICIO DEL PIE DE PÁGINA -->
-    <footer>
-        <div class="footer-container">
-            <!-- MENÚ DE NAVEGACIÓN DEL PIE DE PÁGINA -->
-            <div class="footer-nav">
-                <a href="#">EMPRESAS</a>
-                <a href="#">REGISTRARSE</a>
-                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
-                <a href="#">QUIENES SOMOS</a>
-            </div>
-            <!-- SECCIÓN DE REDES SOCIALES -->
-            <div class="footer-social">
-                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
-            </div>
-        </div>
-        <!-- TEXTO INFERIOR DEL PIE DE PÁGINA -->
-        <div class="footer-bottom">
-            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
-        </div>
-    </footer>
-    <!-- FIN DEL PIE DE PÁGINA -->
 
 </body>
 

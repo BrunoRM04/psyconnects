@@ -3,3 +3,9 @@
 -- white --
 -- #1358B4 --
 ---------------------------------
+
+
+Mañana: 
+- Crear todo lo que se debe para investigaciones.html.
+- Limpiar todos los HTMLS de notas.
+- Pruebas.

@@ -2,216 +2,26 @@
 <html lang="en">
 
 <head>
-    <!-- METADATOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO DE LA PÁGINA MOSTRADO EN EL NAVEGADOR -->
     <title>PsyConnects | Perfil</title>
-    <!-- ENLACE AL ARCHIVO DE ESTILOS CSS PRINCIPAL -->
     <link rel="stylesheet" href="../../public/css/styles.css">
-    <!-- ICONO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR (FAVICON) -->
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
-    <!-- ENLACE A LOS ICONOS DE FONT AWESOME PARA USAR ICONOS EN LA PÁGINA -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- SCRIPT PARA CARGAR Y MOSTRAR DATOS DEL PSICÓLOGO USANDO FIREBASE -->
-    <script type="module">
-        // IMPORTAR FUNCIONES DE FIREBASE
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore, doc, getDoc, addDoc, collection, query, orderBy, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-
-        // CONFIGURACIÓN DE FIREBASE
-        const firebaseConfig = {
-            apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
-            authDomain: "psyconnects-7be13.firebaseapp.com",
-            projectId: "psyconnects-7be13",
-            storageBucket: "psyconnects-7be13.appspot.com",
-            messagingSenderId: "299531221809",
-            appId: "1:299531221809:web:c6bba4831be2d70d910e10",
-            measurementId: "G-FKC5P4PE6V"
-        };
-
-        // INICIALIZAR FIREBASE Y FIRESTORE
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        // FUNCIÓN QUE SE EJECUTA CUANDO LA PÁGINA SE CARGA
-        document.addEventListener('DOMContentLoaded', async function () {
-            // OBTENER ID DEL PSICÓLOGO DESDE LA URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const psicologoId = urlParams.get('id');
-
-            if (!psicologoId) {
-                alert('Psicólogo no encontrado en la URL.');
-                return;
-            }
-
-            // OBTENER Y MOSTRAR DATOS DEL PSICÓLOGO DESDE FIREBASE
-            try {
-                const docRef = doc(db, "psicologos", psicologoId); // ELIMINADO EL PREFIJO `psicologo_`
-                const docSnap = await getDoc(docRef);
-
-                if (docSnap.exists()) {
-                    const psicologo = docSnap.data();
-
-                    // MOSTRAR IMAGEN DE PERFIL
-                    const fotoPerfilElement = document.getElementById('fotoPerfil');
-                    fotoPerfilElement.src = psicologo.fotoPerfil || '../../public/img/default-profile.png';
-
-                    // MOSTRAR DATOS EN LA PÁGINA
-                    document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
-                    document.getElementById('edad').textContent = `${calcularEdad(psicologo.fechaNacimiento)} Años`;
-                    document.getElementById('pais').textContent = psicologo.pais;
-                    document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
-                    document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
-
-                    const telefonoElement = document.getElementById('telefono');
-                    telefonoElement.textContent = psicologo.telefono;
-                    telefonoElement.href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.`;
-
-                    document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
-                    document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
-                    document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
-                    document.getElementById('descripcion').textContent = psicologo.descripcion;
-
-                    // MOSTRAR EXPERIENCIA
-                    const experienciaList = document.getElementById('experiencia');
-                    experienciaList.innerHTML = '';
-                    psicologo.experiencia.forEach(exp => {
-                        const li = document.createElement('li');
-                        li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
-                        experienciaList.appendChild(li);
-                    });
-
-                    // MOSTRAR CERTIFICACIONES
-                    const certificacionesList = document.getElementById('certificaciones');
-                    certificacionesList.innerHTML = '';
-                    psicologo.certificaciones.forEach(cert => {
-                        const li = document.createElement('li');
-                        li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
-                        certificacionesList.appendChild(li);
-                    });
-
-                    // MOSTRAR REDES SOCIALES
-                    const socialMedia = ['linkedin', 'facebook', 'twitter', 'instagram', 'youtube', 'whatsapp', 'tiktok', 'snapchat'];
-                    socialMedia.forEach(media => {
-                        const element = document.getElementById(media);
-                        if (psicologo.redesSociales && psicologo.redesSociales[media]) {
-                            element.href = psicologo.redesSociales[media];
-                        } else {
-                            element.style.display = 'none';
-                        }
-                    });
-
-                    // BOTÓN PARA RESERVAR CITA POR WHATSAPP
-                    const reservarCitaBtn = document.getElementById('reservar-cita');
-                    reservarCitaBtn.addEventListener('click', function () {
-                        const mensajeWhatsApp = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=Buenas,%20encontré%20su%20perfil%20en%20PsyConnects.%20Me%20gustaría%20reservar%20una%20cita.`;
-                        window.location.href = mensajeWhatsApp;
-                    });
-
-                    // CARGAR COMENTARIOS
-                    loadComments(psicologoId);
-                } else {
-                    alert('Psicólogo no encontrado en la base de datos.');
-                }
-            } catch (error) {
-                console.error("Error al obtener los datos del psicólogo desde Firestore: ", error);
-                alert('Error al obtener los datos del psicólogo.');
-            }
-
-            // FUNCIÓN PARA CALCULAR EDAD
-            function calcularEdad(fechaNacimiento) {
-                const hoy = new Date();
-                const fechaNac = new Date(fechaNacimiento);
-                let edad = hoy.getFullYear() - fechaNac.getFullYear();
-                const mes = hoy.getMonth() - fechaNac.getMonth();
-                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
-                    edad--;
-                }
-                return edad;
-            }
-
-            // GUARDAR COMENTARIO EN FIREBASE
-            document.getElementById('commentForm').addEventListener('submit', async function (event) {
-                event.preventDefault();
-
-                const name = document.getElementById('name').value;
-                const country = document.getElementById('country').value;
-                const comment = document.getElementById('comment').value;
-                const newComment = { name, country, comment, timestamp: serverTimestamp() };
-
-                try {
-                    await addDoc(collection(db, 'comments', psicologoId, 'commentsList'), newComment); // SIN PREFIJO
-                    appendComment(newComment);
-                    document.getElementById('commentForm').reset();
-                } catch (error) {
-                    console.error("Error adding comment: ", error);
-                }
-            });
-
-            // CARGAR COMENTARIOS DESDE FIREBASE
-            async function loadComments(psicologoId) {
-                const q = query(collection(db, 'comments', psicologoId, 'commentsList'), orderBy('timestamp')); // SIN PREFIJO
-                const querySnapshot = await getDocs(q);
-                querySnapshot.forEach((doc) => {
-                    appendComment(doc.data());
-                });
-            }
-
-            // MOSTRAR COMENTARIOS EN LA PÁGINA
-            function appendComment(comment) {
-                const commentList = document.getElementById('commentList');
-                const commentItem = document.createElement('div');
-                commentItem.className = 'comment-item';
-
-                const commentHeader = document.createElement('div');
-                commentHeader.className = 'comment-item-header';
-
-                const commentName = document.createElement('strong');
-                commentName.textContent = `${comment.name}`;
-
-                const commentCountry = document.createElement('small');
-                commentCountry.innerHTML = `<i class="fas fa-globe"></i> ${comment.country}`;
-
-                const commentText = document.createElement('p');
-                commentText.textContent = comment.comment;
-
-                commentHeader.appendChild(commentName);
-                commentHeader.appendChild(commentCountry);
-                commentItem.appendChild(commentHeader);
-                commentItem.appendChild(commentText);
-
-                commentList.appendChild(commentItem);
-            }
-        });
-
-        // MENÚ DE HAMBURGUESA (ABRIR)
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.add('active');
-        });
-
-        // MENÚ DE HAMBURGUESA (CERRAR)
-        document.querySelector('.close-menu').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.remove('active');
-        });
-    </script>
 </head>
 
 <body>
-    <!-- INICIO DEL ENCABEZADO -->
+
     <header>
-        <!-- SECCIÓN DE LOGO -->
+
         <div class="logo">
             <img src="../../public/img/marca/icono 2.png" alt="Logo">
         </div>
-        <!-- ICONO DE HAMBURGUESA -->
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-        <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
         <nav class="nav-menu">
             <div class="close-menu">
                 <i class="fas fa-times"></i>
@@ -219,26 +29,23 @@
             <ul class="nav-links">
                 <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="../../psicologos.html"><i class="fas fa-user-md"></i> Psicólogos Disponibles</a></li>
-                <li><a href="../../reseñas.html"><i class="fas fa-comments"></i> Reseñas</a></li>
+                <li><a href="../../investigaciones.html"><i class="fas fa-comments"></i> Investigaciones</a></li>
                 <li><a href="../../ofertas.html"><i class="fas fa-briefcase"></i> Ofertas Laborales</a></li>
                 <li><a href="../../login.html"><i class="fas fa-user"></i> Mi Cuenta</a></li>
                 <li><a href="register.html"><i class="fas fa-user-plus"></i> Registrarse</a></li>
             </ul>
         </nav>
-    </header>
-    <!-- FIN DEL ENCABEZADO -->
 
-    <!-- INICIO DEL CONTENIDO PRINCIPAL -->
+    </header>
+
     <main>
+
         <div class="perfil-container">
-            <!-- CONTENEDOR PARA MOSTRAR LA INFORMACIÓN DEL PSICÓLOGO -->
             <div class="perfil-info">
-                <!-- MOSTRAR IMAGEN DE PERFIL DEL PSICÓLOGO -->
                 <div class="perfil-imagen">
                     <img id="fotoPerfil" src="../../public/img/default-profile.png" alt="Imagen de perfil del psicólogo"
                         class="imagen-perfil">
                 </div>
-                <!-- MOSTRAR NOMBRE, EDAD, PAÍS Y MÁS DETALLES -->
                 <h2 id="nombre"></h2>
                 <div class="detalles-container">
                     <div class="detalles-inline">
@@ -252,22 +59,20 @@
                     <div class="detalles" id="idiomas"></div>
                     <div class="detalles" id="precioServicioHora"></div>
                 </div>
-                <!-- BOTÓN PARA RESERVAR CITA -->
-                <button id="reservar-cita" class="reservar-btn">Reservar Cita ></button>
-                <!-- MOSTRAR REDES SOCIALES DEL PSICÓLOGO -->
+                <button id="reservar-cita" class="reservar-btn">Reservar Cita &rarr;</button>
                 <div class="redes-sociales">
-                    <a id="linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a id="facebook" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a id="twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a id="instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a id="youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a id="whatsapp" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a id="tiktok" href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a id="snapchat" href="#" target="_blank"><i class="fab fa-snapchat"></i></a>
+                    <a id="linkedin" href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a id="facebook" href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a id="twitter" href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a id="instagram" href="#" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a id="youtube" href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a id="whatsapp" href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a id="tiktok" href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a id="snapchat" href="#" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
                 </div>
             </div>
 
-            <!-- SECCIÓN DE DESCRIPCIÓN, EXPERIENCIA Y CERTIFICACIONES -->
             <div class="perfil-descripcion">
                 <h3>Descripción</h3>
                 <p id="descripcion"></p>
@@ -278,40 +83,94 @@
             </div>
         </div>
 
-        <!-- SECCIÓN PARA COMENTARIOS Y VALORACIONES -->
         <div class="comment-box-section">
             <h2 class="comment-box-title">Valorar Psicólogo/a</h2>
             <form id="commentForm" class="comment-form">
                 <div class="input-group comment-input-group">
-                    <i class="fas fa-user comment-icon"></i>
+                    <span class="comment-emoji">👤</span>
                     <input type="text" id="name" class="comment-input" placeholder="Nombre y apellido" required>
                 </div>
                 <div class="input-group comment-input-group">
-                    <i class="fas fa-globe comment-icon"></i>
+                    <span class="comment-emoji">🌍</span>
                     <input type="text" id="country" class="comment-input" placeholder="País" required>
                 </div>
                 <div class="input-group comment-input-group">
-                    <i class="fas fa-comment comment-icon"></i>
+                    <span class="comment-emoji">💬</span>
                     <textarea id="comment" class="comment-textarea" placeholder="Comentario" required></textarea>
                 </div>
-                <button type="submit" class="comment-submit">Valorar ></button>
+                <button type="submit" class="comment-submit">Valorar &rarr;</button>
             </form>
             <div id="commentList" class="comment-list"></div>
         </div>
-    </main>
-    <!-- FIN DEL CONTENIDO PRINCIPAL -->
 
-    <!-- INICIO DEL PIE DE PÁGINA -->
+
+        <div id="modalCalendario" class="modal" aria-hidden="true" role="dialog"
+            aria-labelledby="tituloModalCalendario">
+            <div class="modal-content">
+                <button class="close" aria-label="Cerrar modal">&times;</button>
+                <div class="contenido-calendario">
+                    <div class="seccion-izquierda">
+                        <div id="detalleFecha" class="detalle-fecha">
+                            <div id="numeroFecha" class="numero-fecha">--</div>
+                            <div id="nombreDia" class="nombre-dia-seleccionado">Selecciona un día</div>
+                            <div id="textoSeleccionar" class="texto-seleccionar">
+                                Selecciona una fecha y hora para tu cita.
+                            </div>
+                        </div>
+
+                        <div id="selectorHora" class="selector-hora" style="display: none;">
+                            <label for="horaSeleccionada">Selecciona una Hora:</label>
+                            <select id="horaSeleccionada" required>
+                                <option value="" disabled selected>-- Selecciona una hora --</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group modal-input-group">
+                            <label for="nombrePaciente">Nombre y Apellido:</label>
+                            <input type="text" id="nombrePaciente" required>
+                        </div>
+                        <div class="input-group modal-input-group">
+                            <label for="correoPaciente">Correo Electrónico:</label>
+                            <input type="email" id="correoPaciente" required>
+                        </div>
+                        <div class="input-group modal-input-group">
+                            <label for="telefonoPaciente">Número de Teléfono:</label>
+                            <input type="tel" id="telefonoPaciente" placeholder="+1234567890"
+                                pattern="\+\d{1,3}\s?\d{4,14}(?:x.+)?$" required>
+                        </div>
+
+                        <button id="reservarCitaAhora" class="reservar-btn-2" style="display: none;" disabled>
+                            Reservar Cita Ahora &rarr;
+                        </button>
+                        <button id="consultarDisponibilidad" class="consultar-btn" style="display: none;" disabled>
+                            Consultar Disponibilidad &rarr;
+                        </button>
+                    </div>
+
+                    <div class="seccion-derecha">
+                        <h2 id="tituloModalCalendario">Selecciona el día de la cita 📅</h2>
+                        <div class="navegacion-calendario">
+                            <button id="mesAnterior" aria-label="Mes anterior">&lt;</button>
+                            <span id="mesAnio"></span>
+                            <button id="mesSiguiente" aria-label="Mes siguiente">&gt;</button>
+                        </div>
+                        <div id="calendario"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
     <footer>
+
         <div class="footer-container">
-            <!-- NAVEGACIÓN DEL PIE DE PÁGINA -->
             <div class="footer-nav">
                 <a href="#">EMPRESAS</a>
                 <a href="#">REGISTRARSE</a>
                 <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
                 <a href="#">QUIENES SOMOS</a>
             </div>
-            <!-- SECCIÓN DE REDES SOCIALES EN EL PIE DE PÁGINA -->
             <div class="footer-social">
                 <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
@@ -320,8 +179,608 @@
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
+
     </footer>
-    <!-- FIN DEL PIE DE PÁGINA -->
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore, doc, getDoc, addDoc, collection, query, orderBy, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
+            authDomain: "psyconnects-7be13.firebaseapp.com",
+            projectId: "psyconnects-7be13",
+            storageBucket: "psyconnects-7be13.appspot.com",
+            messagingSenderId: "299531221809",
+            appId: "1:299531221809:web:c6bba4831be2d70d910e10",
+            measurementId: "G-FKC5P4PE6V"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const psicologoId = urlParams.get('id');
+
+            if (!psicologoId) {
+                alert('Psicólogo no encontrado en la URL.');
+                return;
+            }
+
+            let psicologo;
+            let disponibilidadData = {};
+
+            try {
+                const docRef = doc(db, "psicologos", psicologoId);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    psicologo = docSnap.data();
+
+                    disponibilidadData = psicologo.disponibilidad || {};
+
+                    const fotoPerfilElement = document.getElementById('fotoPerfil');
+                    fotoPerfilElement.src = psicologo.fotoPerfil || '../../public/img/default-profile.png';
+
+                    document.getElementById('nombre').textContent = `${psicologo.nombre} ${psicologo.apellido}`;
+                    document.getElementById('edad').textContent = `${calcularEdad(psicologo.fechaNacimiento)} Años`;
+                    document.getElementById('pais').textContent = psicologo.pais;
+                    document.getElementById('fechaNacimiento').textContent = psicologo.fechaNacimiento;
+                    document.getElementById('correoElectronico').textContent = psicologo.correoElectronico;
+                    document.getElementById('telefono').textContent = psicologo.telefono;
+                    document.getElementById('telefono').href = `https://wa.me/${psicologo.telefono.replace(/[^0-9]/g, '')}?text=${encodeURIComponent("Buenas, encontré su perfil en PsyConnects.")}`;
+                    document.getElementById('añosExperiencia').textContent = `${psicologo.añosExperiencia} años de experiencia`;
+                    document.getElementById('idiomas').textContent = psicologo.idiomas.join(' - ');
+                    document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
+                    document.getElementById('descripcion').textContent = psicologo.descripcion;
+
+                    const experienciaList = document.getElementById('experiencia');
+                    experienciaList.innerHTML = '';
+                    psicologo.experiencia.forEach(exp => {
+                        const li = document.createElement('li');
+                        li.textContent = `${exp.puesto} en ${exp.institucion} (${exp.añoInicio}-${exp.añoFin})`;
+                        experienciaList.appendChild(li);
+                    });
+
+                    const certificacionesList = document.getElementById('certificaciones');
+                    certificacionesList.innerHTML = '';
+                    psicologo.certificaciones.forEach(cert => {
+                        const li = document.createElement('li');
+                        li.textContent = `${cert.nombre} - ${cert.institucion} (${cert.año})`;
+                        certificacionesList.appendChild(li);
+                    });
+
+                    const socialMedia = ['linkedin', 'facebook', 'twitter', 'instagram', 'youtube', 'whatsapp', 'tiktok', 'snapchat'];
+                    socialMedia.forEach(media => {
+                        const element = document.getElementById(media);
+                        if (psicologo.redesSociales && psicologo.redesSociales[media]) {
+                            element.href = psicologo.redesSociales[media];
+                        } else {
+                            element.style.display = 'none';
+                        }
+                    });
+
+                    loadComments(psicologoId);
+                } else {
+                    alert('Psicólogo no encontrado en la base de datos.');
+                }
+            } catch (error) {
+                console.error("Error al obtener los datos del psicólogo desde Firestore: ", error);
+                alert('Error al obtener los datos del psicólogo.');
+            }
+
+            function calcularEdad(fechaNacimiento) {
+                const hoy = new Date();
+                const fechaNac = new Date(fechaNacimiento);
+                let edad = hoy.getFullYear() - fechaNac.getFullYear();
+                const mes = hoy.getMonth() - fechaNac.getMonth();
+                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                    edad--;
+                }
+                return edad;
+            }
+
+            document.getElementById('commentForm').addEventListener('submit', async function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const country = document.getElementById('country').value;
+                const comment = document.getElementById('comment').value;
+                const newComment = { name, phone, country, comment, timestamp: serverTimestamp() };
+
+                try {
+                    await addDoc(collection(db, 'comments', psicologoId, 'commentsList'), newComment); 
+                    appendComment(newComment);
+                    document.getElementById('commentForm').reset();
+                } catch (error) {
+                    console.error("Error adding comment: ", error);
+                }
+            });
+
+            async function loadComments(psicologoId) {
+                const q = query(collection(db, 'comments', psicologoId, 'commentsList'), orderBy('timestamp')); 
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                    appendComment(doc.data());
+                });
+            }
+
+            function appendComment(comment) {
+                const commentList = document.getElementById('commentList');
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+
+                const commentHeader = document.createElement('div');
+                commentHeader.className = 'comment-item-header';
+
+                const commentName = document.createElement('strong');
+                commentName.textContent = `${comment.name}`;
+
+                const commentPhone = document.createElement('small');
+                commentPhone.innerHTML = `<i class="fas fa-phone"></i> ${comment.phone}`;
+
+                const commentCountry = document.createElement('small');
+                commentCountry.innerHTML = `<i class="fas fa-globe"></i> ${comment.country}`;
+
+                const commentText = document.createElement('p');
+                commentText.textContent = comment.comment;
+
+                commentHeader.appendChild(commentName);
+                commentHeader.appendChild(commentPhone);
+                commentHeader.appendChild(commentCountry);
+                commentItem.appendChild(commentHeader);
+                commentItem.appendChild(commentText);
+
+                commentList.appendChild(commentItem);
+            }
+
+            const modal = document.getElementById("modalCalendario");
+            const btnReservarCita = document.getElementById("reservar-cita");
+            const spanCerrar = document.querySelector(".close");
+            const calendarioDiv = document.getElementById("calendario");
+            const btnReservarCitaAhora = document.getElementById("reservarCitaAhora");
+            const btnConsultarDisponibilidad = document.getElementById("consultarDisponibilidad");
+            const selectorHoraDiv = document.getElementById('selectorHora');
+            const horaInput = document.getElementById('horaSeleccionada');
+            const mesAnioSpan = document.getElementById('mesAnio');
+            const mesAnteriorBtn = document.getElementById('mesAnterior');
+            const mesSiguienteBtn = document.getElementById('mesSiguiente');
+
+            const numeroFechaDiv = document.getElementById('numeroFecha');
+            const nombreDiaDiv = document.getElementById('nombreDia');
+            const textoSeleccionarDiv = document.getElementById('textoSeleccionar');
+
+            const nombrePacienteInput = document.getElementById('nombrePaciente');
+            const correoPacienteInput = document.getElementById('correoPaciente');
+            const telefonoPacienteInput = document.getElementById('telefonoPaciente');
+
+            let fechaSeleccionadaGlobal = null;
+            let horasDisponibles = [];
+
+            const fechaInicial = new Date();
+            let mesActual = fechaInicial.getMonth();
+            let anioActual = fechaInicial.getFullYear();
+
+            const hoy = new Date();
+
+            function actualizarMesAnio() {
+                const opciones = { month: 'long', year: 'numeric' };
+                const fecha = new Date(anioActual, mesActual);
+                mesAnioSpan.textContent = fecha.toLocaleDateString('es-ES', opciones);
+            }
+
+            function actualizarBotonMesAnterior() {
+                if (anioActual > fechaInicial.getFullYear() || (anioActual === fechaInicial.getFullYear() && mesActual > fechaInicial.getMonth())) {
+                    mesAnteriorBtn.disabled = false;
+                    mesAnteriorBtn.style.cursor = 'pointer';
+                    mesAnteriorBtn.style.opacity = '1';
+                } else {
+                    mesAnteriorBtn.disabled = true;
+                    mesAnteriorBtn.style.cursor = 'not-allowed';
+                    mesAnteriorBtn.style.opacity = '0.5';
+                }
+            }
+
+            function generarCalendario(mes, anio) {
+                calendarioDiv.innerHTML = '';
+
+                const diasSemana = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+                diasSemana.forEach(dia => {
+                    const diaHeader = document.createElement('div');
+                    diaHeader.className = 'nombre-dia';
+                    diaHeader.textContent = dia;
+                    calendarioDiv.appendChild(diaHeader);
+                });
+
+                const primerDia = new Date(anio, mes, 1).getDay();
+                const diasEnMes = new Date(anio, mes + 1, 0).getDate();
+
+                const esMesActual = (mes === fechaInicial.getMonth()) && (anio === fechaInicial.getFullYear());
+
+                for (let i = 0; i < primerDia; i++) {
+                    const espacio = document.createElement('div');
+                    calendarioDiv.appendChild(espacio);
+                }
+
+                for (let dia = 1; dia <= diasEnMes; dia++) {
+                    const diaDiv = document.createElement('div');
+                    diaDiv.className = 'dia-calendario';
+                    diaDiv.textContent = dia;
+
+                    const fechaDia = new Date(anio, mes, dia);
+                    const fechaFormateada = fechaDia.toISOString().split('T')[0];
+
+                    if (disponibilidadData[fechaFormateada] && disponibilidadData[fechaFormateada].length > 0) {
+                        diaDiv.classList.add('dia-disponible');
+                    }
+
+                    if (esMesActual && dia < hoy.getDate()) {
+                        diaDiv.classList.add('dia-disabled');
+                        diaDiv.style.pointerEvents = 'none';
+                    } else {
+                        diaDiv.addEventListener('click', function () {
+                            seleccionarDia(diaDiv, anio, mes, dia, fechaFormateada);
+                        });
+                    }
+
+                    if (esMesActual && dia === hoy.getDate()) {
+                        diaDiv.classList.add('dia-hoy');
+                    }
+
+                    calendarioDiv.appendChild(diaDiv);
+                }
+
+                actualizarBotonMesAnterior();
+            }
+
+            function seleccionarDia(diaDiv, anio, mes, dia, fechaFormateada) {
+                const diasSeleccionables = document.querySelectorAll('.dia-calendario');
+                diasSeleccionables.forEach(d => d.classList.remove('dia-seleccionado'));
+
+                diaDiv.classList.add('dia-seleccionado');
+
+                fechaSeleccionadaGlobal = new Date(anio, mes, dia);
+                selectorHoraDiv.style.display = "flex";
+                btnReservarCitaAhora.style.display = "none";
+                btnConsultarDisponibilidad.style.display = "none";
+
+                horasDisponibles = disponibilidadData[fechaFormateada] || [];
+
+                actualizarDetalleFecha();
+
+                if (horasDisponibles.length > 0) {
+                    generarOpcionesHoras();
+                    horaInput.style.display = "block";
+                    btnConsultarDisponibilidad.style.display = "none";
+                } else {
+                    horaInput.style.display = "none";
+                    btnConsultarDisponibilidad.style.display = "inline-block";
+                }
+
+                verificarCamposModal();
+            }
+
+            function actualizarDetalleFecha() {
+                if (fechaSeleccionadaGlobal) {
+                    const dia = fechaSeleccionadaGlobal.getDate();
+                    const mes = fechaSeleccionadaGlobal.getMonth();
+                    const anio = fechaSeleccionadaGlobal.getFullYear();
+                    const nombreDia = fechaSeleccionadaGlobal.toLocaleDateString('es-ES', { weekday: 'long' });
+
+                    numeroFechaDiv.textContent = dia.toString().padStart(2, '0');
+                    nombreDiaDiv.textContent = nombreDia.charAt(0).toUpperCase() + nombreDia.slice(1);
+                    actualizarTextoSeleccionar();
+                } else {
+                    numeroFechaDiv.textContent = '--';
+                    nombreDiaDiv.textContent = 'Selecciona un día';
+                    textoSeleccionarDiv.textContent = 'Selecciona una fecha y hora para tu cita.';
+                }
+            }
+
+            function actualizarTextoSeleccionar() {
+                if (fechaSeleccionadaGlobal && horaInput.value) {
+                    const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
+                    const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                    const anio = fechaSeleccionadaGlobal.getFullYear();
+                    const hora = horaInput.value;
+
+                    const fechaFormateada = `${dia}/${mes}/${anio}`;
+                    const horaFormateada = hora;
+
+                    textoSeleccionarDiv.textContent = `Seleccionar cita para el ${fechaFormateada} (${nombreDiaDiv.textContent}) a las ${horaFormateada}.`;
+                } else if (fechaSeleccionadaGlobal) {
+                    const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
+                    const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                    const anio = fechaSeleccionadaGlobal.getFullYear();
+                    const nombreDia = fechaSeleccionadaGlobal.toLocaleDateString('es-ES', { weekday: 'long' });
+
+                    const fechaFormateada = `${dia}/${mes}/${anio}`;
+
+                    textoSeleccionarDiv.textContent = `Seleccionar cita para el ${fechaFormateada} (${nombreDia.charAt(0).toUpperCase() + nombreDia.slice(1)}) a las --:--.`;
+                } else {
+                    textoSeleccionarDiv.textContent = 'Selecciona una fecha y hora para tu cita.';
+                }
+            }
+
+            function generarOpcionesHoras() {
+                const horaSeleccionada = document.getElementById('horaSeleccionada');
+                horaSeleccionada.innerHTML = '';
+
+                if (horasDisponibles.length > 0) {
+                    const defaultOption = document.createElement('option');
+                    defaultOption.value = '';
+                    defaultOption.disabled = true;
+                    defaultOption.selected = true;
+                    defaultOption.textContent = '-- Selecciona una hora --';
+                    horaSeleccionada.appendChild(defaultOption);
+
+                    horasDisponibles.forEach(hora => {
+                        const option = document.createElement('option');
+                        option.value = hora;
+                        option.textContent = hora;
+                        horaSeleccionada.appendChild(option);
+                    });
+                    horaSeleccionada.disabled = false;
+                } else {
+                    const option = document.createElement('option');
+                    option.value = '';
+                    option.textContent = 'No hay horas disponibles';
+                    horaSeleccionada.appendChild(option);
+                    horaSeleccionada.disabled = true;
+                }
+            }
+
+            generarCalendario(mesActual, anioActual);
+            actualizarMesAnio();
+
+            mesAnteriorBtn.addEventListener('click', function () {
+                if (mesActual > fechaInicial.getMonth() || anioActual > fechaInicial.getFullYear()) {
+                    if (mesActual === 0) {
+                        mesActual = 11;
+                        anioActual--;
+                    } else {
+                        mesActual--;
+                    }
+                    actualizarMesAnio();
+                    generarCalendario(mesActual, anioActual);
+                    resetModal();
+                }
+            });
+
+            mesSiguienteBtn.addEventListener('click', function () {
+                mesActual++;
+                if (mesActual > 11) {
+                    mesActual = 0;
+                    anioActual++;
+                }
+                actualizarMesAnio();
+                generarCalendario(mesActual, anioActual);
+                resetModal();
+            });
+
+            btnReservarCita.addEventListener('click', function () {
+                modal.style.display = "block";
+                verificarCamposModal();
+            });
+
+            spanCerrar.addEventListener('click', function () {
+                modal.style.display = "none";
+                resetModal();
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    resetModal();
+                }
+            });
+
+            horaInput.addEventListener('change', function () {
+                if (horaInput.value && fechaSeleccionadaGlobal) {
+                    btnReservarCitaAhora.style.display = "inline-block";
+                } else {
+                    btnReservarCitaAhora.style.display = "none";
+                }
+                actualizarTextoSeleccionar();
+                verificarCamposModal();
+            });
+
+            nombrePacienteInput.addEventListener('input', verificarCamposModal);
+            correoPacienteInput.addEventListener('input', verificarCamposModal);
+            telefonoPacienteInput.addEventListener('input', verificarCamposModal);
+
+            async function registrarReserva(actionType, nombrePaciente, correoPaciente, telefonoPaciente) {
+                try {
+                    await addDoc(collection(db, 'reservas'), {
+                        psicologoId: psicologoId,
+                        actionType: actionType,
+                        timestamp: serverTimestamp(),
+                        fechaSeleccionada: fechaSeleccionadaGlobal ? fechaSeleccionadaGlobal.toISOString().split('T')[0] : null,
+                        horaSeleccionada: horaInput.value || null,
+                        nombrePaciente: nombrePaciente,
+                        correoPaciente: correoPaciente,
+                        telefonoPaciente: telefonoPaciente,
+                        correoPsicologo: psicologo.correoElectronico || null,
+                        userAgent: navigator.userAgent
+                    });
+                    console.log(`Acción '${actionType}' registrada exitosamente.`);
+                } catch (error) {
+                    console.error("Error al registrar la acción de reserva: ", error);
+                }
+            }
+
+            btnConsultarDisponibilidad.addEventListener('click', async function () {
+                const nombrePaciente = nombrePacienteInput.value.trim();
+                const correoPaciente = correoPacienteInput.value.trim();
+                const telefonoPaciente = telefonoPacienteInput.value.trim();
+
+                if (!nombrePaciente || !correoPaciente || !telefonoPaciente) {
+                    alert('Por favor, completa tu nombre, correo electrónico y número de teléfono.');
+                    return;
+                }
+
+                if (!fechaSeleccionadaGlobal) {
+                    alert('Por favor, selecciona una fecha para consultar disponibilidad.');
+                    return;
+                }
+
+                const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
+                const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                const anio = fechaSeleccionadaGlobal.getFullYear();
+
+                const fechaFormateada = `${dia}/${mes}/${anio}`;
+
+                const mensaje = encodeURIComponent(`Buenas, encontré su perfil en PsyConnects. Me gustaría consultar la disponibilidad para una cita el ${fechaFormateada}.`);
+
+                if (typeof psicologo === 'undefined' || !psicologo.telefono) {
+                    alert('Número de teléfono del psicólogo no está definido.');
+                    return;
+                }
+
+                const numeroWhatsApp = psicologo.telefono.replace(/[^0-9]/g, '');
+                const mensajeWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+                if (numeroWhatsApp.length < 10) {
+                    alert('Número de WhatsApp inválido.');
+                    return;
+                }
+
+                await registrarReserva('consultar disponibilidad', nombrePaciente, correoPaciente, telefonoPaciente);
+
+                modal.style.display = "none";
+                resetModal();
+
+                window.open(mensajeWhatsApp, '_blank');
+            });
+
+            btnReservarCitaAhora.addEventListener('click', async function () {
+                const nombrePaciente = nombrePacienteInput.value.trim();
+                const correoPaciente = correoPacienteInput.value.trim();
+                const telefonoPaciente = telefonoPacienteInput.value.trim();
+
+                if (!nombrePaciente || !correoPaciente || !telefonoPaciente) {
+                    alert('Por favor, completa tu nombre, correo electrónico y número de teléfono.');
+                    return;
+                }
+
+                if (!fechaSeleccionadaGlobal) {
+                    alert('Por favor, selecciona una fecha para tu cita.');
+                    return;
+                }
+
+                if (!horaInput.value) {
+                    alert('Por favor, selecciona una hora para tu cita.');
+                    return;
+                }
+
+                const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
+                const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                const anio = fechaSeleccionadaGlobal.getFullYear();
+                const hora = horaInput.value;
+
+                const fechaFormateada = `${dia}/${mes}/${anio}`;
+                const horaFormateada = hora;
+
+                const mensaje = encodeURIComponent(`Buenas, encontré su perfil en PsyConnects. Me gustaría reservar una cita para el ${fechaFormateada} a las ${horaFormateada}.`);
+
+                if (typeof psicologo === 'undefined' || !psicologo.telefono) {
+                    alert('Número de teléfono del psicólogo no está definido.');
+                    return;
+                }
+
+                const numeroWhatsApp = psicologo.telefono.replace(/[^0-9]/g, '');
+                const mensajeWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+                if (numeroWhatsApp.length < 10) {
+                    alert('Número de WhatsApp inválido.');
+                    return;
+                }
+
+                await registrarReserva('reservar ahora', nombrePaciente, correoPaciente, telefonoPaciente);
+
+                modal.style.display = "none";
+                resetModal();
+
+                window.open(mensajeWhatsApp, '_blank');
+            });
+
+            function resetModal() {
+                const diasSeleccionables = document.querySelectorAll('.dia-calendario');
+                diasSeleccionables.forEach(d => {
+                    d.classList.remove('dia-seleccionado');
+                    d.style.pointerEvents = '';
+                });
+
+                selectorHoraDiv.style.display = "none";
+                btnReservarCitaAhora.style.display = "none";
+                btnConsultarDisponibilidad.style.display = "none";
+
+                fechaSeleccionadaGlobal = null;
+                horasDisponibles = [];
+                horaInput.innerHTML = '';
+                horaInput.value = "";
+
+                nombrePacienteInput.value = '';
+                correoPacienteInput.value = '';
+                telefonoPacienteInput.value = '';
+
+                actualizarDetalleFecha();
+
+                btnReservarCitaAhora.disabled = true;
+                btnConsultarDisponibilidad.disabled = true;
+            }
+
+            document.querySelector('.menu-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.add('active');
+            });
+
+            document.querySelector('.close-menu').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+
+            function verificarCamposModal() {
+                const nombrePaciente = nombrePacienteInput.value.trim();
+                const correoPaciente = correoPacienteInput.value.trim();
+                const telefonoPaciente = telefonoPacienteInput.value.trim();
+
+                const camposLlenos = nombrePaciente && correoPaciente && telefonoPaciente;
+
+                if (camposLlenos) {
+                    if (horasDisponibles.length > 0 && horaInput.value) {
+                        btnReservarCitaAhora.disabled = false;
+                        btnConsultarDisponibilidad.disabled = true;
+                    } else if (horasDisponibles.length === 0) {
+                        btnConsultarDisponibilidad.disabled = false;
+                        btnReservarCitaAhora.disabled = true;
+                    } else if (horasDisponibles.length > 0 && !horaInput.value) {
+                        btnReservarCitaAhora.disabled = true;
+                        btnConsultarDisponibilidad.disabled = true;
+                    }
+                } else {
+                    btnReservarCitaAhora.disabled = true;
+                    btnConsultarDisponibilidad.disabled = true;
+                }
+            }
+
+            nombrePacienteInput.addEventListener('input', verificarCamposModal);
+            correoPacienteInput.addEventListener('input', verificarCamposModal);
+            telefonoPacienteInput.addEventListener('input', verificarCamposModal);
+
+            horaInput.addEventListener('change', verificarCamposModal);
+
+            document.querySelector('.menu-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.add('active');
+            });
+
+            document.querySelector('.close-menu').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+
+    </script>
 
 </body>
 
