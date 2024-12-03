@@ -1243,8 +1243,15 @@ img.rounded-full {
     margin-top: 10px;
 }
 
+.selector-hora {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
 .selector-hora label {
-    margin-bottom: 5px;
+    margin-bottom: 10px; 
     color: white;
     font-weight: bold;
 }
@@ -1259,16 +1266,6 @@ img.rounded-full {
     background-color: white;
     cursor: pointer;
     border-radius: 4px;
-}
-
-.selector-hora select:disabled {
-    background-color: white;
-    color: #a0a0a0;
-    cursor: not-allowed;
-}
-
-.selector-hora {
-    margin-top: 20px;
 }
 
 .reservar-btn-2 {
@@ -1546,6 +1543,65 @@ img.rounded-full {
     }
 }
 
+.precio-sesion-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px; 
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: white;
+    color: #1358B4;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 0.6em;
+}
+
+.precio-sesion-titulo {
+    font-size: 1em;
+    color: #1358B4;
+    margin-bottom: 5px;
+}
+
+.precio-sesion-valor {
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .precio-sesion-modal {
+        max-width: 180px;
+        padding: 8px 12px;
+    }
+
+    .precio-sesion-titulo {
+        font-size: 0.95em;
+    }
+
+    .precio-sesion-valor {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .precio-sesion-modal {
+        max-width: 160px;
+        padding: 6px 10px;
+    }
+
+    .precio-sesion-titulo {
+        font-size: 0.9em;
+    }
+
+    .precio-sesion-valor {
+        font-size: 1.2em;
+    }
+}
+
 /* PERFILES */
 
 
@@ -1617,16 +1673,16 @@ img.rounded-full {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    box-sizing: border-box; /* Añadido para asegurar que el padding no exceda el max-width */
-    flex: 0 1 320px; /* Añadido para evitar que la tarjeta se estire más allá de 320px */
+    box-sizing: border-box; 
+    flex: 0 1 320px;
 }
 
 .imagen-portada-investigacion {
     width: 100%;
-    height: auto; /* Modificado para que la altura sea automática */
-    aspect-ratio: 16 / 9; /* Añadido para mantener la proporción 16:9 */
+    height: auto; 
+    aspect-ratio: 16 / 9; 
     object-fit: cover;
-    object-position: center; /* Añadido para centrar la imagen */
+    object-position: center; 
     margin-bottom: 20px;
 }
 
@@ -1681,12 +1737,12 @@ img.rounded-full {
     .tarjeta-investigacion {
         max-width: 280px;
         padding: 18px;
-        flex: 0 1 280px; /* Ajustado para el nuevo max-width */
+        flex: 0 1 280px; 
     }
 
     .imagen-portada-investigacion {
-        height: auto; /* Mantiene la altura automática */
-        aspect-ratio: 16 / 9; /* Mantiene la proporción */
+        height: auto; 
+        aspect-ratio: 16 / 9; 
     }
 
     .titulo-investigacion {
@@ -1716,12 +1772,12 @@ img.rounded-full {
     .tarjeta-investigacion {
         max-width: 260px;
         padding: 16px;
-        flex: 0 1 260px; /* Ajustado para el nuevo max-width */
+        flex: 0 1 260px;
     }
 
     .imagen-portada-investigacion {
-        height: auto; /* Mantiene la altura automática */
-        aspect-ratio: 16 / 9; /* Mantiene la proporción */
+        height: auto;
+        aspect-ratio: 16 / 9; 
     }
 
     .titulo-investigacion {
@@ -1751,12 +1807,12 @@ img.rounded-full {
     .tarjeta-investigacion {
         max-width: 240px;
         padding: 14px;
-        flex: 0 1 240px; /* Ajustado para el nuevo max-width */
+        flex: 0 1 240px; 
     }
 
     .imagen-portada-investigacion {
-        height: auto; /* Mantiene la altura automática */
-        aspect-ratio: 16 / 9; /* Mantiene la proporción */
+        height: auto;
+        aspect-ratio: 16 / 9; 
     }
 
     .titulo-investigacion {
@@ -1786,12 +1842,12 @@ img.rounded-full {
     .tarjeta-investigacion {
         max-width: 200px;
         padding: 10px;
-        flex: 0 1 200px; /* Ajustado para el nuevo max-width */
+        flex: 0 1 200px; 
     }
 
     .imagen-portada-investigacion {
-        height: auto; /* Mantiene la altura automática */
-        aspect-ratio: 16 / 9; /* Mantiene la proporción */
+        height: auto; 
+        aspect-ratio: 16 / 9;
     }
 
     .titulo-investigacion {
@@ -2466,6 +2522,75 @@ textarea {
     select,
     textarea {
         font-size: 0.9rem;
+    }
+}
+
+.terminos-psyc {
+    margin: 3rem auto;
+    padding: 1rem;
+    max-width: 800px; 
+    width: 90%; 
+    box-sizing: border-box; 
+    text-align: justify;
+}
+
+.titulo-terminos {
+    font-size: 1.5rem;
+    color: #1358B4;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.contenido-terminos {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .terminos-psyc {
+        max-width: 700px;
+        padding: 1.2rem;
+    }
+
+    .titulo-terminos {
+        font-size: 1.4rem;
+    }
+
+    .contenido-terminos {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .terminos-psyc {
+        max-width: 600px;
+        padding: 1rem;
+    }
+
+    .titulo-terminos {
+        font-size: 1.3rem;
+    }
+
+    .contenido-terminos {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminos-psyc {
+        max-width: 100%;
+        padding: 0.8rem;
+        margin: 1.5rem 0.5rem;
+    }
+
+    .titulo-terminos {
+        font-size: 1.2rem;
+    }
+
+    .contenido-terminos {
+        font-size: 0.85rem;
     }
 }
 
@@ -3647,7 +3772,6 @@ textarea {
         font-size: 0.9em;
     }
 }
-
 /* EDITAR PERFIL - MI PERFIL */
 
 

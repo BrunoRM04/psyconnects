@@ -246,8 +246,8 @@
             </div>
 
             <button type="submit" id="guardarCambios" class="boton-guardar">Guardar Cambios</button>
+            <button type="button" id="eliminarPerfil" class="boton-guardar">Eliminar Perfil</button>
         </div>
-
         <div class="datos-generales-perfil">
             <h2 id="titulo-datos-generales-perfil">Datos sobre tu perfil 📊</h2>
         </div>
@@ -295,9 +295,10 @@
     <script type="module">
 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getFirestore, doc, onSnapshot, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-        import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
-
+        import { getFirestore, doc, onSnapshot, updateDoc, deleteDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+        import { getStorage, ref, uploadBytesResumable, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
+        import { getAuth, deleteUser } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+    
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
             authDomain: "psyconnects-7be13.firebaseapp.com",
@@ -307,11 +308,12 @@
             appId: "1:299531221809:web:c6bba4831be2d70d910e10",
             measurementId: "G-FKC5P4PE6V"
         };
-
+    
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         const storage = getStorage(app);
-
+        const auth = getAuth(app);
+    
         function cargarEntradas(dataArray, containerId, entryClass, isExperience = false) {
             const container = document.getElementById(containerId);
             container.innerHTML = '';
@@ -319,12 +321,12 @@
                 agregarEntrada(containerId, entryClass, data, index, isExperience);
             });
         }
-
+    
         function agregarEntrada(containerId, entryClass, data = {}, index, isExperience = false) {
             const container = document.getElementById(containerId);
             const div = document.createElement('div');
             div.classList.add(entryClass);
-
+    
             if (isExperience) {
                 div.innerHTML = `
                     <label>Puesto:</label>
@@ -341,7 +343,7 @@
                 `;
                 const añoFinInput = div.querySelector('.añoFin');
                 const actualidadCheckbox = div.querySelector('.actualidad');
-
+    
                 actualidadCheckbox.addEventListener('change', function () {
                     if (actualidadCheckbox.checked) {
                         añoFinInput.disabled = true;
@@ -361,19 +363,19 @@
                     <button type="button" class="eliminar" title="Eliminar">×</button>
                 `;
             }
-
+    
             container.appendChild(div);
             div.querySelector('.eliminar').addEventListener('click', () => div.remove());
         }
-
+    
         function mostrarAlerta(tipo, titulo, mensaje) {
             return new Promise((resolve) => {
                 const alertContainer = document.getElementById('alert-container');
-
+    
                 const alert = document.createElement('div');
                 alert.classList.add('alert');
                 alert.classList.add(tipo === 'success' ? 'alert-success' : 'alert-error');
-
+    
                 alert.innerHTML = `
                     <div>
                         <strong>${titulo}</strong><br>
@@ -381,16 +383,16 @@
                     </div>
                     <button class="close-btn">&times;</button>
                 `;
-
+    
                 alertContainer.appendChild(alert);
-
+    
                 const closeBtn = alert.querySelector('.close-btn');
                 closeBtn.addEventListener('click', () => cerrarAlerta(alert, resolve));
-
+    
                 setTimeout(() => cerrarAlerta(alert, resolve), 5000);
             });
         }
-
+    
         function cerrarAlerta(alert, resolve) {
             alert.style.animation = 'slide-out 0.5s forwards';
             alert.addEventListener('animationend', () => {
@@ -398,22 +400,22 @@
                 resolve();
             });
         }
-
+    
         document.addEventListener('DOMContentLoaded', async function () {
             const urlParams = new URLSearchParams(window.location.search);
             const psicologoId = urlParams.get('id');
-
+    
             if (!psicologoId) {
                 mostrarAlerta('error', 'Error', 'ID de psicólogo no encontrado en la URL.');
                 return;
             }
-
+    
             const docRef = doc(db, "psicologos", psicologoId);
-
+    
             onSnapshot(docRef, (docSnap) => {
                 if (docSnap.exists()) {
                     const psicologo = docSnap.data();
-
+    
                     document.getElementById('nombre').value = psicologo.nombre || '';
                     document.getElementById('apellido').value = psicologo.apellido || '';
                     document.getElementById('pais').value = psicologo.pais || '';
@@ -423,19 +425,19 @@
                     document.getElementById('añosExperiencia').value = psicologo.añosExperiencia || '';
                     document.getElementById('precioServicioHora').value = psicologo.precioServicioHora || '';
                     document.getElementById('descripcion').value = psicologo.descripcion || '';
-
+    
                     if (psicologo.idiomas) {
                         document.querySelectorAll('#idiomas input[name="idiomas"]').forEach(checkbox => {
                             checkbox.checked = psicologo.idiomas.includes(checkbox.value);
                         });
                     }
-
+    
                     if (psicologo.tiposTerapia) {
                         document.querySelectorAll('.tipo-terapia').forEach(checkbox => {
                             checkbox.checked = psicologo.tiposTerapia.includes(checkbox.value);
                         });
                     }
-
+    
                     if (psicologo.experiencia) {
                         cargarEntradas(psicologo.experiencia, 'experiencia-container', 'experiencia-entry', true);
                     } else {
@@ -446,65 +448,65 @@
                     } else {
                         document.getElementById('certificaciones-container').innerHTML = '';
                     }
-
+    
                     document.getElementById('instagram').value = psicologo.redesSociales?.instagram || '';
                     document.getElementById('facebook').value = psicologo.redesSociales?.facebook || '';
                     document.getElementById('linkedin').value = psicologo.redesSociales?.linkedin || '';
                     document.getElementById('tiktok').value = psicologo.redesSociales?.tiktok || '';
-
+    
                     const imagenPerfil = document.getElementById('imagen-perfil');
                     if (psicologo.fotoPerfil) {
                         imagenPerfil.src = psicologo.fotoPerfil;
                     } else {
                         imagenPerfil.src = 'ruta/a/tu/foto/default.jpg';
                     }
-
+    
                     const tituloBienvenida = document.getElementById('titulo-bienvenida');
                     if (tituloBienvenida) {
                         tituloBienvenida.textContent = `¡Bienvenido ${psicologo.nombre} a tu perfil!`;
                     }
-
+    
                     const numeroVisitasElement = document.getElementById('numero-visitas');
                     if (numeroVisitasElement) {
                         const visitas = psicologo.visitas || 0;
                         numeroVisitasElement.innerText = visitas;
                     }
-
+    
                 } else {
                     mostrarAlerta('error', 'Error', 'Psicólogo no encontrado en la base de datos.');
                 }
             });
-
+    
             document.getElementById('agregar-experiencia').addEventListener('click', () => {
                 agregarEntrada('experiencia-container', 'experiencia-entry', {}, document.querySelectorAll('.experiencia-entry').length, true);
             });
-
+    
             document.getElementById('agregar-certificacion').addEventListener('click', () => {
                 agregarEntrada('certificaciones-container', 'certificacion-entry');
             });
-
+    
             const fotoPerfilInput = document.getElementById('fotoPerfil');
             const imagenPerfil = document.getElementById('imagen-perfil');
             const uploadSpinner = document.getElementById('upload-spinner');
-
+    
             fotoPerfilInput.addEventListener('change', function () {
                 const file = this.files[0];
                 if (file) {
                     const reader = new FileReader();
-
+    
                     reader.onload = function (e) {
                         imagenPerfil.src = e.target.result;
                     };
-
+    
                     reader.readAsDataURL(file);
                 }
             });
-
+    
             document.getElementById('guardarCambios').addEventListener('click', async function (event) {
                 event.preventDefault();
-
+    
                 let isUploading = false;
-
+    
                 const nombre = document.getElementById('nombre').value.trim();
                 const apellido = document.getElementById('apellido').value.trim();
                 const telefono = document.getElementById('telefono').value.trim();
@@ -513,15 +515,15 @@
                 const añosExperiencia = document.getElementById('añosExperiencia').value;
                 const precioServicioHora = document.getElementById('precioServicioHora').value;
                 const descripcion = document.getElementById('descripcion').value.trim();
-
+    
                 if (!nombre || !apellido || !telefono || !pais || !fechaNacimiento || !añosExperiencia || !precioServicioHora || !descripcion) {
                     mostrarAlerta('error', 'Campos incompletos', 'Por favor, completa todos los campos requeridos.');
                     return;
                 }
-
+    
                 const idiomas = Array.from(document.querySelectorAll('#idiomas input:checked')).map(cb => cb.value);
                 const tiposTerapia = Array.from(document.querySelectorAll('.tipo-terapia:checked')).map(cb => cb.value);
-
+    
                 const experiencia = Array.from(document.querySelectorAll('.experiencia-entry')).map(entry => ({
                     puesto: entry.querySelector('input[type="text"]').value.trim(),
                     institucion: entry.querySelectorAll('input[type="text"]')[1].value.trim(),
@@ -529,28 +531,28 @@
                     añoFin: entry.querySelector('.añoFin').disabled ? 'Actualidad' : entry.querySelector('.añoFin').value.trim(),
                     actualidad: entry.querySelector('.actualidad').checked
                 }));
-
+    
                 const certificaciones = Array.from(document.querySelectorAll('.certificacion-entry')).map(entry => ({
                     nombre: entry.querySelector('input[type="text"]').value.trim(),
                     institucion: entry.querySelectorAll('input[type="text"]')[1].value.trim(),
                     año: entry.querySelector('input[type="number"]').value.trim()
                 }));
-
+    
                 const instagram = document.getElementById('instagram').value.trim() || null;
                 const facebook = document.getElementById('facebook').value.trim() || null;
                 const linkedin = document.getElementById('linkedin').value.trim() || null;
                 const tiktok = document.getElementById('tiktok').value.trim() || null;
-
+    
                 const fotoPerfilFile = document.getElementById('fotoPerfil').files[0];
-
+    
                 try {
                     if (fotoPerfilFile) {
                         isUploading = true;
                         uploadSpinner.style.display = 'flex';
-
+    
                         const storageRef = ref(storage, `perfil_fotos/${psicologoId}`);
                         const uploadTask = uploadBytesResumable(storageRef, fotoPerfilFile);
-
+    
                         uploadTask.on('state_changed',
                             (snapshot) => { },
                             (error) => {
@@ -622,26 +624,26 @@
                     }
                 }
             });
-
+    
             const menuToggle = document.querySelector('.menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
-
+    
             if (menuToggle && navMenu) {
                 menuToggle.addEventListener('click', function () {
                     navMenu.classList.add('active');
                 });
             }
-
+    
             const closeMenu = document.querySelector('.close-menu');
-
+    
             if (closeMenu && navMenu) {
                 closeMenu.addEventListener('click', function () {
                     navMenu.classList.remove('active');
                 });
             }
-
+    
             const disponibilidadRef = doc(db, "psicologos", psicologoId);
-
+    
             const calendar = document.getElementById('calendar');
             const monthNames = [
                 "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -649,7 +651,7 @@
             ];
             let currentMonth = new Date().getMonth();
             let currentYear = new Date().getFullYear();
-
+    
             function createLeftArrowSVG() {
                 return `
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -657,7 +659,7 @@
         </svg>
     `;
             }
-
+    
             function createRightArrowSVG() {
                 return `
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -665,13 +667,13 @@
         </svg>
     `;
             }
-
+    
             function renderCalendar(month, year) {
                 calendar.innerHTML = '';
-
+    
                 const header = document.createElement('div');
                 header.classList.add('calendar-header');
-
+    
                 const prevBtn = document.createElement('button');
                 prevBtn.classList.add('nav-btn', 'prev-btn');
                 prevBtn.setAttribute('aria-label', 'Mes Anterior');
@@ -684,7 +686,7 @@
                     }
                     renderCalendar(currentMonth, currentYear);
                 });
-
+    
                 const nextBtn = document.createElement('button');
                 nextBtn.classList.add('nav-btn', 'next-btn');
                 nextBtn.setAttribute('aria-label', 'Mes Siguiente');
@@ -697,19 +699,19 @@
                     }
                     renderCalendar(currentMonth, currentYear);
                 });
-
+    
                 const monthYear = document.createElement('div');
                 monthYear.classList.add('month-year');
                 monthYear.innerHTML = `<span class="month-name">${monthNames[month]}</span> <span class="year">${year}</span>`;
-
+    
                 header.appendChild(prevBtn);
                 header.appendChild(monthYear);
                 header.appendChild(nextBtn);
                 calendar.appendChild(header);
-
+    
                 const grid = document.createElement('div');
                 grid.classList.add('calendar-grid');
-
+    
                 const daysOfWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
                 daysOfWeek.forEach(day => {
                     const dayElem = document.createElement('div');
@@ -717,42 +719,42 @@
                     dayElem.innerHTML = `<strong>${day}</strong>`;
                     grid.appendChild(dayElem);
                 });
-
+    
                 const firstDay = new Date(year, month, 1).getDay();
                 const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
-
+    
                 const daysInMonth = new Date(year, month + 1, 0).getDate();
-
+    
                 for (let i = 0; i < adjustedFirstDay; i++) {
                     const emptyCell = document.createElement('div');
                     emptyCell.classList.add('calendar-day', 'disabled');
                     grid.appendChild(emptyCell);
                 }
-
+    
                 for (let day = 1; day <= daysInMonth; day++) {
                     const date = new Date(year, month, day);
                     const dayCell = document.createElement('div');
                     dayCell.classList.add('calendar-day');
                     dayCell.textContent = day;
-
+    
                     const formattedDate = date.toISOString().split('T')[0];
-
+    
                     const disponibilidadDia = disponibilidadData[formattedDate] || [];
-
+    
                     if (disponibilidadDia.length > 0) {
                         dayCell.classList.add('marked');
                     }
-
+    
                     dayCell.addEventListener('click', () => openHoursPopup(date, dayCell));
-
+    
                     grid.appendChild(dayCell);
                 }
-
+    
                 calendar.appendChild(grid);
             }
-
+    
             let disponibilidadData = {};
-
+    
             function getDisponibilidad() {
                 onSnapshot(disponibilidadRef, (docSnap) => {
                     if (docSnap.exists()) {
@@ -769,36 +771,36 @@
                     mostrarAlerta('error', 'Error', 'Hubo un error al obtener la disponibilidad.');
                 });
             }
-
+    
             function openHoursPopup(date, dayCell) {
                 const formattedDate = date.toISOString().split('T')[0];
-
+    
                 const overlay = document.createElement('div');
                 overlay.classList.add('overlay');
-
+    
                 const popup = document.createElement('div');
                 popup.classList.add('hours-popup');
-
+    
                 const horasExistentes = disponibilidadData[formattedDate] || [];
-
+    
                 popup.innerHTML = `
-        <h4>${formattedDate}</h4>
-        <div id="horas-lista">
-            ${horasExistentes.map(hora => `<div class="hora-item">
-                <span>${hora}</span>
-                <button class="eliminar-hora" data-hora="${hora}">&times;</button>
-            </div>`).join('')}
-        </div>
-        <input type="time" id="nueva-hora" placeholder="Selecciona una hora">
-        <div class="buttons">
-            <button class="save-btn">Guardar</button>
-            <button class="close-btn">Cerrar</button>
-        </div>
-    `;
-
+            <h4>${formattedDate}</h4>
+            <div id="horas-lista">
+                ${horasExistentes.map(hora => `<div class="hora-item">
+                    <span>${hora}</span>
+                    <button class="eliminar-hora" data-hora="${hora}">&times;</button>
+                </div>`).join('')}
+            </div>
+            <input type="time" id="nueva-hora" placeholder="Selecciona una hora">
+            <div class="buttons">
+                <button class="save-btn">Guardar</button>
+                <button class="close-btn">Cerrar</button>
+            </div>
+        `;
+    
                 overlay.appendChild(popup);
                 document.body.appendChild(overlay);
-
+    
                 const eliminarBtns = popup.querySelectorAll('.eliminar-hora');
                 eliminarBtns.forEach(btn => {
                     btn.addEventListener('click', () => {
@@ -809,17 +811,17 @@
                             disponibilidadData[formattedDate] = horasExistentes;
                             updateFirestore(formattedDate, horasExistentes);
                             popup.querySelector('#horas-lista').innerHTML = horasExistentes.map(h => `<div class="hora-item">
-                    <span>${h}</span>
-                    <button class="eliminar-hora" data-hora="${h}">&times;</button>
-                </div>`).join('');
+                        <span>${h}</span>
+                        <button class="eliminar-hora" data-hora="${h}">&times;</button>
+                    </div>`).join('');
                         }
                     });
                 });
-
+    
                 const nuevaHoraInput = popup.querySelector('#nueva-hora');
                 const saveBtn = popup.querySelector('.save-btn');
                 const closeBtn = popup.querySelector('.close-btn');
-
+    
                 saveBtn.addEventListener('click', () => {
                     const nuevaHora = nuevaHoraInput.value;
                     if (nuevaHora && !horasExistentes.includes(nuevaHora)) {
@@ -841,27 +843,27 @@
                                 disponibilidadData[formattedDate] = horasExistentes;
                                 updateFirestore(formattedDate, horasExistentes);
                                 popup.querySelector('#horas-lista').innerHTML = horasExistentes.map(h => `<div class="hora-item">
-                        <span>${h}</span>
-                        <button class="eliminar-hora" data-hora="${h}">&times;</button>
-                    </div>`).join('');
+                            <span>${h}</span>
+                            <button class="eliminar-hora" data-hora="${h}">&times;</button>
+                        </div>`).join('');
                             }
                         });
                         nuevaHoraInput.value = '';
                         dayCell.classList.add('marked');
                     }
                 });
-
+    
                 closeBtn.addEventListener('click', () => {
                     document.body.removeChild(overlay);
                 });
-
+    
                 overlay.addEventListener('click', (e) => {
                     if (e.target === overlay) {
                         document.body.removeChild(overlay);
                     }
                 });
             }
-
+    
             async function updateFirestore(fecha, horas) {
                 try {
                     await updateDoc(disponibilidadRef, {
@@ -874,12 +876,66 @@
                     mostrarAlerta('error', 'Error', 'Hubo un error al actualizar la disponibilidad. Por favor, intenta de nuevo.');
                 }
             }
-
+    
             getDisponibilidad();
+    
+            const eliminarPerfilBtn = document.getElementById('eliminarPerfil');
+            eliminarPerfilBtn.addEventListener('click', async () => {
+                const confirmacion = confirm("¿Estás seguro? Queremos seguir compartiendo experiencias contigo 😊");
+    
+                if (confirmacion) {
+                    try {
+                        const user = auth.currentUser;
+                        if (!user) {
+                            mostrarAlerta('error', 'Error', 'No hay un usuario autenticado.');
+                            return;
+                        }
+    
+                        const psicologoId = user.uid;
+    
+                        const fotoPerfilUrl = document.getElementById('imagen-perfil').src;
+                        if (fotoPerfilUrl && !fotoPerfilUrl.includes('default.jpg')) {
+                            const fotoRef = ref(storage, `perfil_fotos/${psicologoId}`);
+                            await deleteObject(fotoRef);
+                        }
+    
+                        const userDocRef = doc(db, "psicologos", psicologoId);
+                        await deleteDoc(userDocRef);
+    
+                        await deleteUser(user);
+    
+                        mostrarAlerta('success', 'Perfil Eliminado', 'Tu perfil ha sido eliminado con éxito.');
+    
+                        setTimeout(() => {
+                            window.location.href = 'ruta/a/la/página/de/inicio';
+                        }, 3000);
+    
+                    } catch (error) {
+                        console.error("Error al eliminar el perfil: ", error);
+                        mostrarAlerta('error', 'Error', 'Hubo un problema al eliminar tu perfil. Por favor, intenta de nuevo.');
+                    }
+                }
+            });
         });
-
+    
+        function createLeftArrowSVG() {
+            return `
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    `;
+        }
+    
+        function createRightArrowSVG() {
+            return `
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    `;
+        }
+        
     </script>
-
+    
 </body>
 
 </html>

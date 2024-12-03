@@ -5,7 +5,21 @@
 ---------------------------------
 
 
-Mañana: 
-- Crear todo lo que se debe para investigaciones.html.
-- Limpiar todos los HTMLS de notas.
-- Pruebas.
+ideas:
+
+- Las citas que queden registradas en edita-perfil y despues que pasen un mes se borren o tachen. ❌
+- Boton de "eliminar perfil" en editar-perfil. ✅
+- Cambiar boton de Whatsapp al de mail de psyconnects. ✅
+- Cambiar "seleccionar hora" más abajo ✅
+- Poner precio en total de la terapia en la casilla donde selecciono hora. ✅
+- Aviso en el registro de que el psicologo cuenta con paypal y que sabe que se le sacará tanto % de su sesión.
+- Crear "Psicologos Activos Ahora".
+
+
+---------------------------
+
+Chat. Quiero lograr lo siguiente en mi sitio web: Actualmente en perfil.html, tengo un botón que es de reserva que te lleva a
+Un calendario con días y selección de horas en algunos casos. Y al seleccionar y rellenar todo te envia al whatsapp del psicólogo.
+Deseo un caambio, y en vez de que ese botón tanto de reserva como de consulta haga lo siguiente. Usando formsubmit, quiero que tome
+los datos que se rellenaron en ese formulario y los envie al gmail sesionespsyconnects@gmail.com. Quiero todos los datos del paciente, y el
+numero de uid o el nombre, correo eléctronico del psicólogo. ¿se entiende lo que deseo?

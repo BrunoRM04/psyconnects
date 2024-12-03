@@ -145,6 +145,10 @@
                         <button id="consultarDisponibilidad" class="consultar-btn" style="display: none;" disabled>
                             Consultar Disponibilidad &rarr;
                         </button>
+
+                        <div id="precioSesionModal" class="precio-sesion-modal"
+                            style="margin-top: 20px; font-weight: bold;">
+                        </div>
                     </div>
 
                     <div class="seccion-derecha">
@@ -158,6 +162,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div id="loader" class="loader">
+            <img src="../../public/img/marca/icono 2.png" alt="Logo de la Web" class="loader-logo">
+            <p class="loader-text">Cargando... 🚀</p>
         </div>
 
     </main>
@@ -186,6 +197,8 @@
 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
         import { getFirestore, doc, getDoc, addDoc, collection, query, orderBy, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+        import { getStorage } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
@@ -199,13 +212,48 @@
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
+        const storage = getStorage(app);
+        const auth = getAuth(app);
+
+        function mostrarAlerta(tipo, titulo, mensaje) {
+            return new Promise((resolve) => {
+                const alertContainer = document.getElementById('alert-container');
+
+                const alert = document.createElement('div');
+                alert.classList.add('alert');
+                alert.classList.add(tipo === 'success' ? 'alert-success' : 'alert-error');
+
+                alert.innerHTML = `
+                    <div>
+                        <strong>${titulo}</strong><br>
+                        <span>${mensaje}</span>
+                    </div>
+                    <button class="close-btn">&times;</button>
+                `;
+
+                alertContainer.appendChild(alert);
+
+                const closeBtn = alert.querySelector('.close-btn');
+                closeBtn.addEventListener('click', () => cerrarAlerta(alert, resolve));
+
+                setTimeout(() => cerrarAlerta(alert, resolve), 5000);
+            });
+        }
+
+        function cerrarAlerta(alert, resolve) {
+            alert.style.animation = 'slide-out 0.5s forwards';
+            alert.addEventListener('animationend', () => {
+                alert.remove();
+                resolve();
+            });
+        }
 
         document.addEventListener('DOMContentLoaded', async function () {
             const urlParams = new URLSearchParams(window.location.search);
             const psicologoId = urlParams.get('id');
 
             if (!psicologoId) {
-                alert('Psicólogo no encontrado en la URL.');
+                mostrarAlerta('error', 'Error', 'Psicólogo no encontrado en la URL.');
                 return;
             }
 
@@ -236,6 +284,11 @@
                     document.getElementById('precioServicioHora').textContent = `${psicologo.precioServicioHora} USD x Hora`;
                     document.getElementById('descripcion').textContent = psicologo.descripcion;
 
+                    const precioSesionModal = document.getElementById('precioSesionModal');
+                    if (precioSesionModal) {
+                        precioSesionModal.textContent = `Precio de sesión: ${psicologo.precioServicioHora} USD`;
+                    }
+
                     const experienciaList = document.getElementById('experiencia');
                     experienciaList.innerHTML = '';
                     psicologo.experiencia.forEach(exp => {
@@ -264,11 +317,11 @@
 
                     loadComments(psicologoId);
                 } else {
-                    alert('Psicólogo no encontrado en la base de datos.');
+                    mostrarAlerta('error', 'Error', 'Psicólogo no encontrado en la base de datos.');
                 }
             } catch (error) {
                 console.error("Error al obtener los datos del psicólogo desde Firestore: ", error);
-                alert('Error al obtener los datos del psicólogo.');
+                mostrarAlerta('error', 'Error', 'Error al obtener los datos del psicólogo.');
             }
 
             function calcularEdad(fechaNacimiento) {
@@ -286,22 +339,23 @@
                 event.preventDefault();
 
                 const name = document.getElementById('name').value;
-                const phone = document.getElementById('phone').value;
                 const country = document.getElementById('country').value;
                 const comment = document.getElementById('comment').value;
-                const newComment = { name, phone, country, comment, timestamp: serverTimestamp() };
+                const newComment = { name, country, comment, timestamp: serverTimestamp() };
 
                 try {
-                    await addDoc(collection(db, 'comments', psicologoId, 'commentsList'), newComment); 
+                    await addDoc(collection(db, 'comments', psicologoId, 'commentsList'), newComment);
                     appendComment(newComment);
                     document.getElementById('commentForm').reset();
+                    mostrarAlerta('success', 'Comentario Agregado', 'Tu comentario ha sido agregado exitosamente.');
                 } catch (error) {
                     console.error("Error adding comment: ", error);
+                    mostrarAlerta('error', 'Error', 'Hubo un error al agregar tu comentario. Por favor, intenta de nuevo.');
                 }
             });
 
             async function loadComments(psicologoId) {
-                const q = query(collection(db, 'comments', psicologoId, 'commentsList'), orderBy('timestamp')); 
+                const q = query(collection(db, 'comments', psicologoId, 'commentsList'), orderBy('timestamp'));
                 const querySnapshot = await getDocs(q);
                 querySnapshot.forEach((doc) => {
                     appendComment(doc.data());
@@ -319,9 +373,6 @@
                 const commentName = document.createElement('strong');
                 commentName.textContent = `${comment.name}`;
 
-                const commentPhone = document.createElement('small');
-                commentPhone.innerHTML = `<i class="fas fa-phone"></i> ${comment.phone}`;
-
                 const commentCountry = document.createElement('small');
                 commentCountry.innerHTML = `<i class="fas fa-globe"></i> ${comment.country}`;
 
@@ -329,7 +380,6 @@
                 commentText.textContent = comment.comment;
 
                 commentHeader.appendChild(commentName);
-                commentHeader.appendChild(commentPhone);
                 commentHeader.appendChild(commentCountry);
                 commentItem.appendChild(commentHeader);
                 commentItem.appendChild(commentText);
@@ -433,6 +483,7 @@
                     calendarioDiv.appendChild(diaDiv);
                 }
 
+                actualizarMesAnio();
                 actualizarBotonMesAnterior();
             }
 
@@ -483,7 +534,7 @@
             function actualizarTextoSeleccionar() {
                 if (fechaSeleccionadaGlobal && horaInput.value) {
                     const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
-                    const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                    const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0');
                     const anio = fechaSeleccionadaGlobal.getFullYear();
                     const hora = horaInput.value;
 
@@ -493,7 +544,7 @@
                     textoSeleccionarDiv.textContent = `Seleccionar cita para el ${fechaFormateada} (${nombreDiaDiv.textContent}) a las ${horaFormateada}.`;
                 } else if (fechaSeleccionadaGlobal) {
                     const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
-                    const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                    const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0');
                     const anio = fechaSeleccionadaGlobal.getFullYear();
                     const nombreDia = fechaSeleccionadaGlobal.toLocaleDateString('es-ES', { weekday: 'long' });
 
@@ -609,52 +660,11 @@
                     console.log(`Acción '${actionType}' registrada exitosamente.`);
                 } catch (error) {
                     console.error("Error al registrar la acción de reserva: ", error);
+                    mostrarAlerta('error', 'Error', 'Hubo un error al registrar tu reserva. Por favor, intenta de nuevo.');
                 }
             }
 
-            btnConsultarDisponibilidad.addEventListener('click', async function () {
-                const nombrePaciente = nombrePacienteInput.value.trim();
-                const correoPaciente = correoPacienteInput.value.trim();
-                const telefonoPaciente = telefonoPacienteInput.value.trim();
-
-                if (!nombrePaciente || !correoPaciente || !telefonoPaciente) {
-                    alert('Por favor, completa tu nombre, correo electrónico y número de teléfono.');
-                    return;
-                }
-
-                if (!fechaSeleccionadaGlobal) {
-                    alert('Por favor, selecciona una fecha para consultar disponibilidad.');
-                    return;
-                }
-
-                const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
-                const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
-                const anio = fechaSeleccionadaGlobal.getFullYear();
-
-                const fechaFormateada = `${dia}/${mes}/${anio}`;
-
-                const mensaje = encodeURIComponent(`Buenas, encontré su perfil en PsyConnects. Me gustaría consultar la disponibilidad para una cita el ${fechaFormateada}.`);
-
-                if (typeof psicologo === 'undefined' || !psicologo.telefono) {
-                    alert('Número de teléfono del psicólogo no está definido.');
-                    return;
-                }
-
-                const numeroWhatsApp = psicologo.telefono.replace(/[^0-9]/g, '');
-                const mensajeWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-
-                if (numeroWhatsApp.length < 10) {
-                    alert('Número de WhatsApp inválido.');
-                    return;
-                }
-
-                await registrarReserva('consultar disponibilidad', nombrePaciente, correoPaciente, telefonoPaciente);
-
-                modal.style.display = "none";
-                resetModal();
-
-                window.open(mensajeWhatsApp, '_blank');
-            });
+            const loader = document.getElementById('loader');
 
             btnReservarCitaAhora.addEventListener('click', async function () {
                 const nombrePaciente = nombrePacienteInput.value.trim();
@@ -662,49 +672,138 @@
                 const telefonoPaciente = telefonoPacienteInput.value.trim();
 
                 if (!nombrePaciente || !correoPaciente || !telefonoPaciente) {
-                    alert('Por favor, completa tu nombre, correo electrónico y número de teléfono.');
+                    mostrarAlerta('error', 'Campos Incompletos', 'Por favor, completa tu nombre, correo electrónico y número de teléfono.');
                     return;
                 }
 
                 if (!fechaSeleccionadaGlobal) {
-                    alert('Por favor, selecciona una fecha para tu cita.');
+                    mostrarAlerta('error', 'Fecha No Seleccionada', 'Por favor, selecciona una fecha para tu cita.');
                     return;
                 }
 
                 if (!horaInput.value) {
-                    alert('Por favor, selecciona una hora para tu cita.');
+                    mostrarAlerta('error', 'Hora No Seleccionada', 'Por favor, selecciona una hora para tu cita.');
                     return;
                 }
 
                 const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
-                const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0'); 
+                const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0');
                 const anio = fechaSeleccionadaGlobal.getFullYear();
                 const hora = horaInput.value;
 
                 const fechaFormateada = `${dia}/${mes}/${anio}`;
                 const horaFormateada = hora;
 
-                const mensaje = encodeURIComponent(`Buenas, encontré su perfil en PsyConnects. Me gustaría reservar una cita para el ${fechaFormateada} a las ${horaFormateada}.`);
-
-                if (typeof psicologo === 'undefined' || !psicologo.telefono) {
-                    alert('Número de teléfono del psicólogo no está definido.');
-                    return;
-                }
-
-                const numeroWhatsApp = psicologo.telefono.replace(/[^0-9]/g, '');
-                const mensajeWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-
-                if (numeroWhatsApp.length < 10) {
-                    alert('Número de WhatsApp inválido.');
-                    return;
-                }
+                loader.classList.add('active');
 
                 await registrarReserva('reservar ahora', nombrePaciente, correoPaciente, telefonoPaciente);
 
-                modal.style.display = "none";
-                resetModal();
+                const formData = {
+                    name: nombrePaciente,
+                    email: correoPaciente,
+                    phone: telefonoPaciente,
+                    appointment_date: fechaFormateada,
+                    appointment_time: horaFormateada,
+                    psychologist_id: psicologoId,
+                    psychologist_name: `${psicologo.nombre} ${psicologo.apellido}`,
+                    psychologist_email: psicologo.correoElectronico,
+                    _template: 'table'
+                };
 
-                window.open(mensajeWhatsApp, '_blank');
+                const urlEncodedData = new URLSearchParams(formData);
+
+                fetch('https://formsubmit.co/ajax/sesionespsyconnects@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Accept': 'application/json'
+                    },
+                    body: urlEncodedData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            mostrarAlerta('success', 'Reserva Exitosa', 'Muchas gracias por tu reserva, te enviaremos más información a tu correo electrónico 😊');
+                        } else {
+                            throw new Error(data.message || 'Error desconocido');
+                        }
+
+                        modal.style.display = "none";
+                        resetModal();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        mostrarAlerta('error', 'Error en la Reserva', 'Ocurrió un error al enviar el formulario. Por favor, intenta nuevamente.');
+                    })
+                    .finally(() => {
+                        loader.classList.remove('active');
+                    });
+            });
+
+            btnConsultarDisponibilidad.addEventListener('click', async function () {
+                const nombrePaciente = nombrePacienteInput.value.trim();
+                const correoPaciente = correoPacienteInput.value.trim();
+                const telefonoPaciente = telefonoPacienteInput.value.trim();
+
+                if (!nombrePaciente || !correoPaciente || !telefonoPaciente) {
+                    mostrarAlerta('error', 'Campos Incompletos', 'Por favor, completa tu nombre, correo electrónico y número de teléfono.');
+                    return;
+                }
+
+                if (!fechaSeleccionadaGlobal) {
+                    mostrarAlerta('error', 'Fecha No Seleccionada', 'Por favor, selecciona una fecha para consultar disponibilidad.');
+                    return;
+                }
+
+                const dia = fechaSeleccionadaGlobal.getDate().toString().padStart(2, '0');
+                const mes = (fechaSeleccionadaGlobal.getMonth() + 1).toString().padStart(2, '0');
+                const anio = fechaSeleccionadaGlobal.getFullYear();
+
+                const fechaFormateada = `${dia}/${mes}/${anio}`;
+
+                loader.classList.add('active');
+
+                await registrarReserva('consultar disponibilidad', nombrePaciente, correoPaciente, telefonoPaciente);
+
+                const formData = {
+                    name: nombrePaciente,
+                    email: correoPaciente,
+                    phone: telefonoPaciente,
+                    requested_date: fechaFormateada,
+                    psychologist_id: psicologoId,
+                    psychologist_name: `${psicologo.nombre} ${psicologo.apellido}`,
+                    psychologist_email: psicologo.correoElectronico,
+                    _template: 'table'
+                };
+
+                const urlEncodedData = new URLSearchParams(formData);
+
+                fetch('https://formsubmit.co/ajax/sesionespsyconnects@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Accept': 'application/json'
+                    },
+                    body: urlEncodedData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            mostrarAlerta('success', 'Consulta Exitosa', 'Muchas gracias por tu consulta, te enviaremos más información a tu correo electrónico 😊');
+                        } else {
+                            throw new Error(data.message || 'Error desconocido');
+                        }
+
+                        modal.style.display = "none";
+                        resetModal();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        mostrarAlerta('error', 'Error en la Consulta', 'Ocurrió un error al enviar el formulario. Por favor, intenta nuevamente.');
+                    })
+                    .finally(() => {
+                        loader.classList.remove('active');
+                    });
             });
 
             function resetModal() {
@@ -731,15 +830,13 @@
 
                 btnReservarCitaAhora.disabled = true;
                 btnConsultarDisponibilidad.disabled = true;
+
+                // **Limpiar el precio de sesión en el modal**
+                const precioSesionModal = document.getElementById('precioSesionModal');
+                if (precioSesionModal) {
+                    precioSesionModal.textContent = `Precio de sesión (1 hora): ${psicologo.precioServicioHora} USD`;
+                }
             }
-
-            document.querySelector('.menu-toggle').addEventListener('click', function () {
-                document.querySelector('.nav-menu').classList.add('active');
-            });
-
-            document.querySelector('.close-menu').addEventListener('click', function () {
-                document.querySelector('.nav-menu').classList.remove('active');
-            });
 
             function verificarCamposModal() {
                 const nombrePaciente = nombrePacienteInput.value.trim();
