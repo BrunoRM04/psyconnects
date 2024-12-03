@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsyConnects | Psicólogos Activos</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="shortcut icon" href="public/img/marca/icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="public/img/marca/icono 2.png" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="psicologos.html">🧠 Psicólogos Disponibles</a></li>
+                <li><a href="investigaciones.html">📡 Investigaciones</a></li>
+                <li><a href="ofertas.html">💼 Ofertas Laborales</a></li>
+                <li><a href="login.html">👤 Mi Cuenta</a></li>
+                <li><a href="./public/html/register.html">🆕 Registrarse</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="titulo-con-linea">
+            <h1 class="titulo">PSICÓLOGOS DISPONIBLES ESTE MES</h1>
+        </div>
+
+        <section class="filter-container">
+            <select id="filter-age" aria-label="Filtrar por Edad">
+                <option value="" disabled selected>Edad</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
+
+            <select id="filter-price" aria-label="Filtrar por Precio">
+                <option value="" disabled selected>Precio</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
+
+            <select id="filter-experience" aria-label="Filtrar por Experiencia">
+                <option value="" disabled selected>Experiencia</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
+
+            <select id="filter-country" aria-label="Filtrar por País">
+                <option value="" disabled selected>País</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="España">España</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+        </section>
+
+        <section id="psicologos-list">
+        </section>
+        <div id="contenedor-tarjetas">
+        </div>
+
+        <div id="loading-indicator" class="loading-hidden">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div id="loader" class="loader">
+            <img src="./public/img/marca/icono 2.png" alt="Logo de la Web" class="loader-logo">
+            <p class="loader-text">Cargando... 🚀</p>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+            <div class="footer-nav">
+                <a href="#">EMPRESAS</a>
+                <a href="#">REGISTRARSE</a>
+                <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
+                <a href="#">QUIENES SOMOS</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
+        </div>
+
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getFirestore, collection, getDocs, updateDoc, doc, increment } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3YzDZbNdjZJL5siTvV9N2n1-z_tI5BvQ",
+            authDomain: "psyconnects-7be13.firebaseapp.com",
+            projectId: "psyconnects-7be13",
+            storageBucket: "psyconnects-7be13.appspot.com",
+            messagingSenderId: "299531221809",
+            appId: "1:299531221809:web:c6bba4831be2d70d910e10",
+            measurementId: "G-FKC5P4PE6V"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const filterAge = document.getElementById("filter-age");
+            const filterPrice = document.getElementById("filter-price");
+            const filterExperience = document.getElementById("filter-experience");
+            const filterCountry = document.getElementById("filter-country");
+            const contenedor = document.getElementById('contenedor-tarjetas');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const loader = document.getElementById('loader');
+
+            let psicologos = [];
+            let currentIndex = 0;
+            const incrementCount = 20;
+
+            const hoy = new Date();
+            const yyyy = hoy.getFullYear();
+            const mm = String(hoy.getMonth() + 1).padStart(2, '0'); 
+            const dd = String(hoy.getDate()).padStart(2, '0');
+            const fechaHoy = `${yyyy}-${mm}-${dd}`;
+
+            const querySnapshot = await getDocs(collection(db, "psicologos"));
+            psicologos = querySnapshot.docs.map(doc => {
+                const data = doc.data();
+                return {
+                    ...data,
+                    id: doc.id,
+                    edad: calcularEdad(data.fechaNacimiento)
+                };
+            });
+
+            psicologos = psicologos.filter(psicologo => {
+                if (psicologo.disponibilidad) {
+                    const fechasDisponibles = Object.keys(psicologo.disponibilidad);
+                    return fechasDisponibles.some(fecha => fecha >= fechaHoy);
+                }
+                return false;
+            });
+
+            shuffleArray(psicologos); 
+            displayPsicologos();
+
+            filterAge.addEventListener("change", () => applyFilters());
+            filterPrice.addEventListener("change", () => applyFilters());
+            filterExperience.addEventListener("change", () => applyFilters());
+            filterCountry.addEventListener("change", () => applyFilters());
+
+            function applyFilters() {
+                currentIndex = 0;
+                contenedor.innerHTML = "";
+                displayPsicologos();
+            }
+
+            function displayPsicologos() {
+                loadingIndicator.classList.remove('loading-hidden');
+
+                setTimeout(() => {
+                    const filteredPsicologos = applyAllFilters(psicologos);
+                    const psicologosToDisplay = filteredPsicologos.slice(currentIndex, currentIndex + incrementCount);
+
+                    psicologosToDisplay.forEach(psicologo => {
+                        const tarjeta = document.createElement('div');
+                        tarjeta.className = 'tarjeta';
+                        tarjeta.innerHTML = `
+                            <div class="cabecera-tarjeta">
+                            </div>
+                            <img src="${psicologo.fotoPerfil || 'public/img/default-profile.png'}" alt="${psicologo.nombre} ${psicologo.apellido}" class="foto-perfil">
+                            <div class="cuerpo-tarjeta">
+                                <h2>${psicologo.nombre} ${psicologo.apellido} 🧠</h2>
+                                <div class="detalles">
+                                    <span class="insignia">${psicologo.edad} Años</span>
+                                    <span class="insignia">${psicologo.pais}</span>
+                                </div>
+                                <div class="especialidades">
+                                    ${psicologo.tiposTerapia ? psicologo.tiposTerapia.map(terapia => `<div class="especialidad">${terapia}</div>`).join('') : ''}
+                                </div>
+                                <a href="#" class="boton ver-perfil" data-id="${psicologo.id}">Ver Perfil 👉</a>
+                            </div>
+                        `;
+                        tarjeta.querySelector('.ver-perfil').addEventListener('click', async function (event) {
+                            event.preventDefault();
+                            const id = this.getAttribute('data-id');
+
+                            loader.classList.add('active');
+
+                            try {
+                                await incrementVisitCount(id);
+                                window.location.href = `public/html/perfil.html?id=${id}`;
+                            } catch (error) {
+                                console.error('Error al incrementar el contador de visitas:', error);
+                                window.location.href = `public/html/perfil.html?id=${id}`;
+                            }
+                        });
+                        contenedor.appendChild(tarjeta);
+                    });
+
+                    currentIndex += incrementCount;
+                    loadingIndicator.classList.add('loading-hidden');
+                }, 1000);
+            }
+
+            function incrementVisitCount(psicologoId) {
+                const psicologoRef = doc(db, "psicologos", psicologoId);
+                return updateDoc(psicologoRef, {
+                    visitas: increment(1)
+                });
+            }
+
+            function applyAllFilters(psicologos) {
+                let filteredPsicologos = [...psicologos];
+                const ageOrder = filterAge.value;
+                const priceOrder = filterPrice.value;
+                const experienceOrder = filterExperience.value;
+                const countryFilter = filterCountry.value;
+
+                if (ageOrder) {
+                    filteredPsicologos.sort((a, b) => ageOrder === 'menor' ? a.edad - b.edad : b.edad - a.edad);
+                }
+
+                if (priceOrder) {
+                    filteredPsicologos.sort((a, b) => priceOrder === 'menor' ? a.precioServicioHora - b.precioServicioHora : b.precioServicioHora - a.precioServicioHora);
+                }
+
+                if (experienceOrder) {
+                    filteredPsicologos.sort((a, b) => experienceOrder === 'menor' ? a.añosExperiencia - b.añosExperiencia : b.añosExperiencia - a.añosExperiencia);
+                }
+
+                if (countryFilter) {
+                    filteredPsicologos = filteredPsicologos.filter(psicologo => psicologo.pais === countryFilter);
+                }
+
+                return filteredPsicologos;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                    displayPsicologos();
+                }
+            });
+
+            function calcularEdad(fechaNacimiento) {
+                const hoy = new Date();
+                const fechaNac = new Date(fechaNacimiento);
+                let edad = hoy.getFullYear() - fechaNac.getFullYear();
+                const mes = hoy.getMonth() - fechaNac.getMonth();
+                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                    edad--;
+                }
+                return edad;
+            }
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            document.querySelector('.menu-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.add('active');
+            });
+
+            document.querySelector('.close-menu').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+
+        });
+        
+    </script>
+
+</body>
+
+</html>
