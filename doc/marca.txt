@@ -13,4 +13,7 @@ ideas:
 - Cambiar "seleccionar hora" más abajo ✅
 - Poner precio en total de la terapia en la casilla donde selecciono hora. ✅
 - Aviso en el registro de que el psicologo cuenta con paypal y que sabe que se le sacará tanto % de su sesión. ✅
-- Crear "Psicologos Activos Ahora".
+- Crear "Psicologos Activos Ahora". ✅
+- Añadir pais y que automaticamente ponga el codigo anexo para solicitar cita. ✅
+- Chatbot que recomiende Psicologos.
+- Publicistas, dar espacio de publicidad en la web.

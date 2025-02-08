@@ -133,6 +133,34 @@
                             <label for="correoPaciente">Correo Electrónico:</label>
                             <input type="email" id="correoPaciente" required>
                         </div>
+                        <!-- NUEVO: Selector de País para el paciente -->
+                        <div class="input-group modal-input-group">
+                            <label for="paisPaciente">País:</label>
+                            <select id="paisPaciente" required>
+                                <option value="" disabled selected>Seleccione su país</option>
+                                <option value="+54">Argentina (+54)</option>
+                                <option value="+591">Bolivia (+591)</option>
+                                <option value="+55">Brasil (+55)</option>
+                                <option value="+56">Chile (+56)</option>
+                                <option value="+57">Colombia (+57)</option>
+                                <option value="+506">Costa Rica (+506)</option>
+                                <option value="+53">Cuba (+53)</option>
+                                <option value="+1">República Dominicana (+1)</option>
+                                <option value="+593">Ecuador (+593)</option>
+                                <option value="+503">El Salvador (+503)</option>
+                                <option value="+502">Guatemala (+502)</option>
+                                <option value="+509">Haití (+509)</option>
+                                <option value="+504">Honduras (+504)</option>
+                                <option value="+52">México (+52)</option>
+                                <option value="+505">Nicaragua (+505)</option>
+                                <option value="+507">Panamá (+507)</option>
+                                <option value="+595">Paraguay (+595)</option>
+                                <option value="+51">Perú (+51)</option>
+                                <option value="+598">Uruguay (+598)</option>
+                                <option value="+58">Venezuela (+58)</option>
+                            </select>
+                        </div>
+                        <!-- FIN selector de país -->
                         <div class="input-group modal-input-group">
                             <label for="telefonoPaciente">Número de Teléfono:</label>
                             <input type="tel" id="telefonoPaciente" placeholder="+1234567890"
@@ -406,6 +434,7 @@
             const nombrePacienteInput = document.getElementById('nombrePaciente');
             const correoPacienteInput = document.getElementById('correoPaciente');
             const telefonoPacienteInput = document.getElementById('telefonoPaciente');
+            const paisPacienteSelect = document.getElementById('paisPaciente');
 
             let fechaSeleccionadaGlobal = null;
             let horasDisponibles = [];
@@ -643,6 +672,13 @@
             correoPacienteInput.addEventListener('input', verificarCamposModal);
             telefonoPacienteInput.addEventListener('input', verificarCamposModal);
 
+            paisPacienteSelect.addEventListener('change', function () {
+                const selectedPrefix = paisPacienteSelect.value;
+                if (!telefonoPacienteInput.value.startsWith(selectedPrefix)) {
+                    telefonoPacienteInput.value = selectedPrefix;
+                }
+            });
+
             async function registrarReserva(actionType, nombrePaciente, correoPaciente, telefonoPaciente) {
                 try {
                     await addDoc(collection(db, 'reservas'), {
@@ -825,13 +861,15 @@
                 nombrePacienteInput.value = '';
                 correoPacienteInput.value = '';
                 telefonoPacienteInput.value = '';
+                if (paisPacienteSelect) {
+                    paisPacienteSelect.selectedIndex = 0;
+                }
 
                 actualizarDetalleFecha();
 
                 btnReservarCitaAhora.disabled = true;
                 btnConsultarDisponibilidad.disabled = true;
 
-                // **Limpiar el precio de sesión en el modal**
                 const precioSesionModal = document.getElementById('precioSesionModal');
                 if (precioSesionModal) {
                     precioSesionModal.textContent = `Precio de sesión (1 hora): ${psicologo.precioServicioHora} USD`;
