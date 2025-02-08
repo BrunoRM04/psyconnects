@@ -39,20 +39,23 @@
     </header>
 
     <main>
-
-        <section class="hero-section sección-index">
+        <section id="section1" class="hero-section sección-index">
             <div class="content sección-index-content">
                 <h1 class="sección-index-h1">📅 Psicólogos Activos del Mes</h1>
-                <p class="sección-index-p">Conecta con profesionales que han actualizado recientemente su calendario y están disponibles para ofrecer sus servicios. Encuentra ayuda personalizada cuando más lo necesites.</p>
-                <p class="sección-index-p">Explora perfiles actualizados y descubre psicólogos preparados para apoyarte en tu bienestar mental.</p>
+                <p class="sección-index-p">Conecta con profesionales que han actualizado recientemente su calendario y
+                    están disponibles para ofrecer sus servicios. Encuentra ayuda personalizada cuando más lo necesites.
+                </p>
+                <p class="sección-index-p">Explora perfiles actualizados y descubre psicólogos preparados para apoyarte
+                    en tu bienestar mental.</p>
                 <a href="activos.html" class="btn sección-index-btn">🕛 Reservar Cita Ahora ></a>
             </div>
         </section>
 
-        <section class="hero-section sección-index-2">
+        <section id="section2" class="hero-section sección-index-2">
             <div class="content sección-index-2-content">
                 <h1 class="sección-index-2-h1">👥 Psicólogos Disponibles</h1>
-                <p class="sección-index-2-p">Te ofrecemos una plataforma donde puedes buscar y conectar con psicólogos de
+                <p class="sección-index-2-p">Te ofrecemos una plataforma donde puedes buscar y conectar con psicólogos
+                    de
                     todo el mundo que se han registrado en nuestro sitio.</p>
                 <p class="sección-index-2-p">Explora perfiles detallados, revisa sus especialidades y elige al psicólogo
                     que mejor se adapte a tus preferencias y necesidades.</p>
@@ -60,25 +63,30 @@
             </div>
         </section>
 
-        <section class="hero-section sección-index">
+        <section id="section3" class="hero-section sección-index">
             <div class="content sección-index-content">
                 <h1 class="sección-index-h1">📝 Regístrate como Psicólogo</h1>
-                <p class="sección-index-p">Únete a nuestra plataforma y forma parte de una comunidad de profesionales dedicados al bienestar mental. Comparte tu experiencia, conocimientos y ayuda a quienes lo necesitan.</p>
-                <p class="sección-index-p">Crea tu perfil, muestra tus especialidades y amplía tu alcance al conectar con personas de toda América Latina que buscan tus servicios</p>
+                <p class="sección-index-p">Únete a nuestra plataforma y forma parte de una comunidad de profesionales
+                    dedicados al bienestar mental. Comparte tu experiencia, conocimientos y ayuda a quienes lo
+                    necesitan.</p>
+                <p class="sección-index-p">Crea tu perfil, muestra tus especialidades y amplía tu alcance al conectar
+                    con personas de toda América Latina que buscan tus servicios</p>
                 <a href="./public/html/register.html" class="btn sección-index-btn">🚀 Comenzar Registro ></a>
             </div>
         </section>
 
-        <section class="hero-section sección-index-2">
+        <section id="section4" class="hero-section sección-index-2">
             <div class="content sección-index-2-content">
                 <h1 class="sección-index-2-h1">📖 Investigaciones Recientes</h1>
-                <p class="sección-index-2-p">Descubre una amplia colección de investigaciones y ensayos psicológicos realizados por profesionales de todo el mundo.</p>
-                <p class="sección-index-2-p">Accede a contenido detallado sobre diferentes ramas de la psicología, desde estudios teóricos hasta casos prácticos.</p>
+                <p class="sección-index-2-p">Descubre una amplia colección de investigaciones y ensayos psicológicos
+                    realizados por profesionales de todo el mundo.</p>
+                <p class="sección-index-2-p">Accede a contenido detallado sobre diferentes ramas de la psicología, desde
+                    estudios teóricos hasta casos prácticos.</p>
                 <a href="investigaciones.html" class="btn sección-index-2-btn">📚 Ver Investigaciones ></a>
             </div>
         </section>
 
-        <section class="hero-section sección-index">
+        <section id="section5" class="hero-section sección-index">
             <div class="content sección-index-content">
                 <h1 class="sección-index-h1">💼 Ofertas Laborales</h1>
                 <p class="sección-index-p">Oportunidades laborales especialmente dirigidas a profesionales de la
@@ -95,8 +103,17 @@
             <img src="./public/img/marca/icono 2.png" alt="Logo de la Web" class="loader-logo">
             <p class="loader-text">Cargando... 🚀</p>
         </div>
-
     </main>
+
+    <nav class="scroll-navigation">
+        <a href="#section1" class="scroll-dot active"></a>
+        <a href="#section2" class="scroll-dot"></a>
+        <a href="#section3" class="scroll-dot"></a>
+        <a href="#section4" class="scroll-dot"></a>
+        <a href="#section5" class="scroll-dot"></a>
+    </nav>
+
+
 
     <footer>
 
@@ -119,7 +136,7 @@
     </footer>
 
     <script>
-        
+
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.add('active');
         });
@@ -143,6 +160,54 @@
                 setTimeout(function () {
                     window.location.href = href;
                 }, 1000);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.hero-section');
+            const observerFade = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(sec => {
+                sec.classList.add('fade-in');
+                observerFade.observe(sec);
+            });
+
+            const navDots = document.querySelectorAll('.scroll-dot');
+            const observerNav = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navDots.forEach(dot => dot.classList.remove('active'));
+                        let currentId = '#' + entry.target.id;
+                        let activeDot = document.querySelector(`.scroll-navigation a[href="${currentId}"]`);
+                        if (activeDot) {
+                            activeDot.classList.add('active');
+                        }
+                    }
+                });
+            }, { threshold: 0.51 });
+
+            sections.forEach(section => {
+                observerNav.observe(section);
+            });
+
+            document.querySelectorAll('.scroll-navigation a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        window.scrollTo({
+                            top: targetEl.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         });
 
