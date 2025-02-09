@@ -179,7 +179,7 @@
 
                         <div class="grupo-formulario">
                             <label for="fotoPerfil" class="etiqueta-formulario">Foto de Perfil 📷</label>
-                            <input type="file" id="fotoPerfil" accept="image/*" required>
+                            <input type="file" id="fotoPerfil" class="input-crop" accept="image/*" required>
                         </div>
 
                         <div class="grupo-formulario">
@@ -294,20 +294,48 @@
         </div>
     </main>
 
+    <div id="modalCrop">
+        <div class="modalCrop-content">
+            <div class="cropper-container">
+                <img id="imageToCrop" alt="Imagen a recortar">
+            </div>
+
+            <div class="preview-container" id="previewContainer">
+                <img id="previewImage" alt="Vista previa circular">
+            </div>
+
+            <div class="btn-cropper">
+                <button id="cancelCrop">Cancelar</button>
+                <button id="confirmCrop">Recortar</button>
+            </div>
+        </div>
+    </div>
+
     <div class="terminos-psyc">
         <h3 class="titulo-terminos">Términos Y Condiciones De PsyConnects</h3>
         <p class="contenido-terminos">
-            Al registrarte en <span style="font-weight: bold;">PsyConnects</span>, aceptas nuestros <span style="font-weight: bold;">términos y condiciones</span>. 
-            <span style="font-weight: bold;">Para completar tu registro</span>, es necesario contar con una <span style="font-weight: bold;">cuenta PayPal válida</span> o 
-            residir en un territorio que acepte <span style="font-weight: bold;">transferencias a través de PayPal</span>. 
-            Este acuerdo incluye, pero no se limita a, el <span style="font-weight: bold;">uso responsable de la plataforma</span>, el 
-            <span style="font-weight: bold;">respeto a la privacidad de otros usuarios</span> y el <span style="font-weight: bold;">cumplimiento de las leyes aplicables</span>. 
-            <span style="font-weight: bold;">Cada vez que se realiza una reserva</span> a través de PsyConnects, la plataforma retiene un 
-            <span style="font-weight: bold;">12% del total de la sesión</span> como comisión por el uso de nuestros servicios. 
-            La información proporcionada será tratada de acuerdo con nuestra <span style="font-weight: bold;">política de privacidad</span>. 
-            <span style="font-weight: bold;">PsyConnects no se hace responsable</span> de las acciones fuera de la plataforma. 
-            Es tu responsabilidad <span style="font-weight: bold;">verificar la autenticidad de los servicios ofrecidos por terceros</span>. 
-            Además, te comprometes a <span style="font-weight: bold;">mantener la confidencialidad de tus credenciales de acceso</span> y a 
+            Al registrarte en <span style="font-weight: bold;">PsyConnects</span>, aceptas nuestros <span
+                style="font-weight: bold;">términos y condiciones</span>.
+            <span style="font-weight: bold;">Para completar tu registro</span>, es necesario contar con una <span
+                style="font-weight: bold;">cuenta PayPal válida</span> o
+            residir en un territorio que acepte <span style="font-weight: bold;">transferencias a través de
+                PayPal</span>.
+            Este acuerdo incluye, pero no se limita a, el <span style="font-weight: bold;">uso responsable de la
+                plataforma</span>, el
+            <span style="font-weight: bold;">respeto a la privacidad de otros usuarios</span> y el <span
+                style="font-weight: bold;">cumplimiento de las leyes aplicables</span>.
+            <span style="font-weight: bold;">Cada vez que se realiza una reserva</span> a través de PsyConnects, la
+            plataforma retiene un
+            <span style="font-weight: bold;">12% del total de la sesión</span> como comisión por el uso de nuestros
+            servicios.
+            La información proporcionada será tratada de acuerdo con nuestra <span style="font-weight: bold;">política
+                de privacidad</span>.
+            <span style="font-weight: bold;">PsyConnects no se hace responsable</span> de las acciones fuera de la
+            plataforma.
+            Es tu responsabilidad <span style="font-weight: bold;">verificar la autenticidad de los servicios ofrecidos
+                por terceros</span>.
+            Además, te comprometes a <span style="font-weight: bold;">mantener la confidencialidad de tus credenciales
+                de acceso</span> y a
             <span style="font-weight: bold;">notificar cualquier uso no autorizado de tu cuenta</span>.</a>
         </p>
     </div>
@@ -329,11 +357,12 @@
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
-        
+
     </footer>
 
+    <link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.css" />
+    <script src="https://unpkg.com/cropperjs/dist/cropper.js"></script>
     <script type="module">
-
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
         import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
         import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
@@ -354,34 +383,113 @@
         const storage = getStorage(app);
         const auth = getAuth(app);
 
+        let cropper = null;
+        let croppedFile = null;
+
         document.addEventListener('DOMContentLoaded', function () {
+
+            const fileInput = document.getElementById('fotoPerfil');
+            const modalCrop = document.getElementById('modalCrop');
+            const imageToCrop = document.getElementById('imageToCrop');
+            const previewContainer = document.getElementById('previewContainer');
+            const previewImage = document.getElementById('previewImage');
+            const cancelCropBtn = document.getElementById('cancelCrop');
+            const confirmCropBtn = document.getElementById('confirmCrop');
+
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                croppedFile = null;
+
+                modalCrop.classList.add('active');
+
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    imageToCrop.src = event.target.result;
+
+                    imageToCrop.onload = function () {
+                        if (cropper) {
+                            cropper.destroy();
+                        }
+                        cropper = new Cropper(imageToCrop, {
+                            aspectRatio: 1,
+                            viewMode: 1,
+                            preview: previewContainer,
+                            ready() {
+                                previewContainer.style.display = 'block';
+                            },
+                            crop(event) {
+                                const canvas = cropper.getCroppedCanvas({
+                                    width: 200,
+                                    height: 200
+                                });
+                                previewImage.src = canvas.toDataURL('image/jpeg');
+                            }
+                        });
+                    };
+                };
+                reader.readAsDataURL(file);
+            });
+
+            cancelCropBtn.addEventListener('click', () => {
+                modalCrop.classList.remove('active');
+                fileInput.value = "";
+                if (cropper) {
+                    cropper.destroy();
+                    cropper = null;
+                }
+            });
+
+            confirmCropBtn.addEventListener('click', () => {
+                if (cropper) {
+                    const canvas = cropper.getCroppedCanvas({
+                        width: 300,
+                        height: 300
+                    });
+
+                    canvas.toBlob((blob) => {
+                        if (blob) {
+                            const file = new File([blob], 'perfil_recortado.jpg', { type: 'image/jpeg' });
+                            croppedFile = file;
+                        }
+                    }, 'image/jpeg', 0.9);
+
+                    modalCrop.classList.remove('active');
+                    if (cropper) {
+                        cropper.destroy();
+                        cropper = null;
+                    }
+                }
+            });
+
             function agregarEntradaExperiencia(exp = {}, index) {
                 const contenedor = document.getElementById('contenedor-experiencia');
                 const div = document.createElement('div');
                 div.classList.add('entrada-dinamica', 'experiencia-entry');
                 div.innerHTML = `
-                        <div class="grupo-formulario">
-                            <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
-                            <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
-                            <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
-                            <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
-                            <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
-                            <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
-                        </div>
-                        <button type="button" class="boton-eliminar">×</button>
-                    `;
+                    <div class="grupo-formulario">
+                        <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
+                        <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                        <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
+                        <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
+                        <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
+                        <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
+                    </div>
+                    <button type="button" class="boton-eliminar">×</button>
+                `;
                 contenedor.appendChild(div);
 
                 const checkbox = div.querySelector(`#experiencia-actualidad-${index}`);
@@ -400,20 +508,20 @@
                 const div = document.createElement('div');
                 div.classList.add('entrada-dinamica', 'certificacion-entry');
                 div.innerHTML = `
-                        <div class="grupo-formulario">
-                            <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
-                            <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
-                            <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
-                            <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
-                        </div>
-                        <button type="button" class="boton-eliminar">×</button>
-                    `;
+                    <div class="grupo-formulario">
+                        <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
+                        <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                        <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
+                        <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
+                    </div>
+                    <button type="button" class="boton-eliminar">×</button>
+                `;
                 contenedor.appendChild(div);
 
                 div.querySelector('.boton-eliminar').addEventListener('click', () => div.remove());
@@ -487,11 +595,13 @@
                     return;
                 }
 
-                const fotoPerfilInput = document.getElementById('fotoPerfil').files[0];
-                if (!fotoPerfilInput) {
+                const originalFile = document.getElementById('fotoPerfil').files[0];
+                if (!originalFile) {
                     alert("Por favor, sube una imagen de perfil.");
                     return;
                 }
+
+                const fileToUpload = croppedFile || originalFile;
 
                 try {
                     const userCredential = await createUserWithEmailAndPassword(auth, correoElectronico, contraseña);
@@ -499,7 +609,7 @@
                     const psicologoId = user.uid;
 
                     const storageRef = ref(storage, `perfil_fotos/${psicologoId}`);
-                    const uploadTask = uploadBytesResumable(storageRef, fotoPerfilInput);
+                    const uploadTask = uploadBytesResumable(storageRef, fileToUpload);
 
                     uploadTask.on('state_changed',
                         null,
@@ -654,7 +764,7 @@
                 this.textContent = isPasswordVisible ? '👁️' : '🙈';
             });
         });
-
+        
     </script>
 
 </body>
