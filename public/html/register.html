@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PsyConnects | Registrarse</title>
+
+    <title>PsyConnects | Regístrate como Psicólogo</title>
+
+    <meta name="description"
+        content="Únete a PsyConnects y crea tu perfil profesional como psicólogo en América Latina. Regístrate gratis, edita tu perfil y conecta con futuros pacientes de forma sencilla.">
+    <meta name="keywords"
+        content="registrarse, registro, psicólogo, perfil, PsyConnects, salud mental, terapia, América Latina, psicólogos">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PsyConnects">
+    <link rel="canonical" href="https://www.psyconnects.com/public/html/register.html">
+
+    <meta property="og:title" content="PsyConnects | Regístrate como Psicólogo">
+    <meta property="og:description"
+        content="Únete a PsyConnects, crea tu perfil profesional y expande tu red de clientes en América Latina.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.psyconnects.com/public/html/register.html">
+    <meta property="og:image" content="https://www.psyconnects.com/public/img/marca/icono.png">
+
     <link rel="stylesheet" href="../../public/css/styles.css">
     <link rel="shortcut icon" href="../../public/img/marca/icono.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,27 +30,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+
 <body>
 
     <header>
 
         <div class="logo">
-            <img src="../../public/img/marca/icono 2.png" alt="Logo">
+            <img src="../../public/img/marca/icono 2.png" alt="Logo de PsyConnects" title="PsyConnects">
         </div>
-        <div class="menu-toggle">
+        <div class="menu-toggle" role="button" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </div>
-        <nav class="nav-menu">
-            <div class="close-menu">
+        <nav class="nav-menu" aria-label="Menú principal">
+            <div class="close-menu" role="button" aria-label="Cerrar menú">
                 <i class="fas fa-times"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="../../index.html">🏠 Inicio</a></li>
-                <li><a href="../../psicologos.html">🧠 Psicólogos Disponibles</a></li>
-                <li><a href="../../investigaciones.html">📡 Investigaciones</a></li>
-                <li><a href="../../ofertas.html">💼 Ofertas Laborales</a></li>
-                <li><a href="../../login.html">👤 Mi Cuenta</a></li>
-                <li><a href="register.html">🆕 Registrarse</a></li>
+                <li><a href="../../index.html" title="Inicio">🏠 Inicio</a></li>
+                <li><a href="../../psicologos.html" title="Psicólogos Disponibles">🧠 Psicólogos Disponibles</a></li>
+                <li><a href="../../investigaciones.html" title="Investigaciones">📡 Investigaciones</a></li>
+                <li><a href="../../ofertas.html" title="Ofertas Laborales">💼 Ofertas Laborales</a></li>
+                <li><a href="../../login.html" title="Mi Cuenta">👤 Mi Cuenta</a></li>
+                <li><a href="register.html" title="Registrarse">🆕 Registrarse</a></li>
             </ul>
         </nav>
 
@@ -61,29 +80,30 @@
 
         <div class="contenedor-registro">
             <div class="imagen-columna">
-                <img src="../../public/img/banner/banner-register.png" alt="Imagen Formulario" loading="lazy">
+                <img src="../../public/img/banner/banner-register.png" alt="Imagen del formulario de registro"
+                    title="Formulario de registro" loading="lazy">
             </div>
             <div class="formulario-columna">
                 <h2 class="titulo-registro">¡Únete a PsyConnects! 📝</h2>
                 <div class="barra-progreso">
                     <div class="paso-conector">
-                        <div class="paso activo" data-titulo="Personal">👤</div>
+                        <div class="paso activo" data-titulo="Personal" title="Paso: Personal">👤</div>
                         <div class="linea"></div>
                     </div>
                     <div class="paso-conector">
-                        <div class="paso" data-titulo="Contacto">📞</div>
+                        <div class="paso" data-titulo="Contacto" title="Paso: Contacto">📞</div>
                         <div class="linea"></div>
                     </div>
                     <div class="paso-conector">
-                        <div class="paso" data-titulo="Profesional">💼</div>
+                        <div class="paso" data-titulo="Profesional" title="Paso: Profesional">💼</div>
                         <div class="linea"></div>
                     </div>
                     <div class="paso-conector">
-                        <div class="paso" data-titulo="Especialidades">🩺</div>
+                        <div class="paso" data-titulo="Especialidades" title="Paso: Especialidades">🩺</div>
                         <div class="linea"></div>
                     </div>
                     <div class="paso-conector">
-                        <div class="paso" data-titulo="Servicios">🛎️</div>
+                        <div class="paso" data-titulo="Servicios" title="Paso: Servicios">🛎️</div>
                     </div>
                 </div>
 
@@ -114,14 +134,14 @@
                             <div style="position: relative;">
                                 <input type="password" id="contraseña" required minlength="6">
                                 <button type="button" id="toggle-contraseña"
-                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
-                                    👁️
-                                </button>
+                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;"
+                                    title="Mostrar/Ocultar contraseña">👁️</button>
                             </div>
                         </div>
 
                         <div class="botones-navegacion">
-                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                            <button type="button" class="btn-formulario boton-siguiente" title="Siguiente">Siguiente
+                                ➡️</button>
                         </div>
                     </div>
 
@@ -166,8 +186,10 @@
                         </div>
 
                         <div class="botones-navegacion">
-                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
-                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                            <button type="button" class="btn-formulario boton-anterior" title="Anterior">⬅️
+                                Anterior</button>
+                            <button type="button" class="btn-formulario boton-siguiente" title="Siguiente">Siguiente
+                                ➡️</button>
                         </div>
                     </div>
 
@@ -190,15 +212,15 @@
                         <div class="grupo-formulario">
                             <label class="etiqueta-formulario">Experiencia Profesional 🏢</label>
                             <div id="contenedor-experiencia"></div>
-                            <button type="button" id="agregar-experiencia" class="btn-formulario">Agregar Experiencia
-                                ➕</button>
+                            <button type="button" id="agregar-experiencia" class="btn-formulario"
+                                title="Agregar experiencia">Agregar Experiencia ➕</button>
                         </div>
 
                         <div class="grupo-formulario">
                             <label class="etiqueta-formulario">Certificaciones 📑</label>
                             <div id="contenedor-certificaciones"></div>
-                            <button type="button" id="agregar-certificacion" class="btn-formulario">Agregar
-                                Certificación ➕</button>
+                            <button type="button" id="agregar-certificacion" class="btn-formulario"
+                                title="Agregar certificación">Agregar Certificación ➕</button>
                         </div>
 
                         <div class="grupo-formulario">
@@ -207,8 +229,10 @@
                         </div>
 
                         <div class="botones-navegacion">
-                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
-                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                            <button type="button" class="btn-formulario boton-anterior" title="Anterior">⬅️
+                                Anterior</button>
+                            <button type="button" class="btn-formulario boton-siguiente" title="Siguiente">Siguiente
+                                ➡️</button>
                         </div>
                     </div>
 
@@ -216,52 +240,62 @@
                         <div class="grupo-formulario">
                             <label class="etiqueta-formulario">Tipos de Terapia 🧠 (Seleccionar 3 tipos)</label>
                             <div class="grupo-botones">
-                                <button type="button" class="boton-opcion" data-valor="Terapia Cognitivo-Conductual">🧠
-                                    Terapia Cognitivo-Conductual</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia Humanista">💗 Terapia
-                                    Humanista</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia Psicoanalítica">🛋️
-                                    Terapia Psicoanalítica</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia Gestalt">🌈 Terapia
-                                    Gestalt</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Cognitivo-Conductual"
+                                    title="Terapia Cognitivo-Conductual">🧠 Terapia Cognitivo-Conductual</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Humanista"
+                                    title="Terapia Humanista">💗 Terapia Humanista</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Psicoanalítica"
+                                    title="Terapia Psicoanalítica">🛋️ Terapia Psicoanalítica</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Gestalt"
+                                    title="Terapia Gestalt">🌈 Terapia Gestalt</button>
                                 <button type="button" class="boton-opcion"
-                                    data-valor="Terapia de Aceptación y Compromiso">🤝 Terapia de Aceptación y
+                                    data-valor="Terapia de Aceptación y Compromiso"
+                                    title="Terapia de Aceptación y Compromiso">🤝 Terapia de Aceptación y
                                     Compromiso</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia Familiar">👨‍👩‍👧‍👦
-                                    Terapia Familiar</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia de Pareja">❤️ Terapia de
-                                    Pareja</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia de Juego">🎲 Terapia de
-                                    Juego</button>
-                                <button type="button" class="boton-opcion" data-valor="Terapia EMDR">👁️ Terapia
-                                    EMDR</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia Familiar"
+                                    title="Terapia Familiar">👨‍👩‍👧‍👦 Terapia Familiar</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia de Pareja"
+                                    title="Terapia de Pareja">❤️ Terapia de Pareja</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia de Juego"
+                                    title="Terapia de Juego">🎲 Terapia de Juego</button>
+                                <button type="button" class="boton-opcion" data-valor="Terapia EMDR"
+                                    title="Terapia EMDR">👁️ Terapia EMDR</button>
                             </div>
                         </div>
 
                         <div class="grupo-formulario">
                             <label class="etiqueta-formulario">Idiomas 🗣️</label>
                             <div class="grupo-botones">
-                                <button type="button" class="boton-opcion" data-valor="Español">🇪🇸 Español</button>
-                                <button type="button" class="boton-opcion" data-valor="Inglés">🇬🇧 Inglés</button>
-                                <button type="button" class="boton-opcion" data-valor="Portugués">🇵🇹
+                                <button type="button" class="boton-opcion" data-valor="Español" title="Español">🇪🇸
+                                    Español</button>
+                                <button type="button" class="boton-opcion" data-valor="Inglés" title="Inglés">🇬🇧
+                                    Inglés</button>
+                                <button type="button" class="boton-opcion" data-valor="Portugués" title="Portugués">🇵🇹
                                     Portugués</button>
-                                <button type="button" class="boton-opcion" data-valor="Francés">🇫🇷 Francés</button>
-                                <button type="button" class="boton-opcion" data-valor="Italiano">🇮🇹 Italiano</button>
-                                <button type="button" class="boton-opcion" data-valor="Alemán">🇩🇪 Alemán</button>
-                                <button type="button" class="boton-opcion" data-valor="Chino">🇨🇳 Chino</button>
-                                <button type="button" class="boton-opcion" data-valor="Japonés">🇯🇵 Japonés</button>
-                                <button type="button" class="boton-opcion" data-valor="Árabe">🇸🇦 Árabe</button>
+                                <button type="button" class="boton-opcion" data-valor="Francés" title="Francés">🇫🇷
+                                    Francés</button>
+                                <button type="button" class="boton-opcion" data-valor="Italiano" title="Italiano">🇮🇹
+                                    Italiano</button>
+                                <button type="button" class="boton-opcion" data-valor="Alemán" title="Alemán">🇩🇪
+                                    Alemán</button>
+                                <button type="button" class="boton-opcion" data-valor="Chino" title="Chino">🇨🇳
+                                    Chino</button>
+                                <button type="button" class="boton-opcion" data-valor="Japonés" title="Japonés">🇯🇵
+                                    Japonés</button>
+                                <button type="button" class="boton-opcion" data-valor="Árabe" title="Árabe">🇸🇦
+                                    Árabe</button>
                             </div>
                         </div>
 
                         <div class="botones-navegacion">
-                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
-                            <button type="button" class="btn-formulario boton-siguiente">Siguiente ➡️</button>
+                            <button type="button" class="btn-formulario boton-anterior" title="Anterior">⬅️
+                                Anterior</button>
+                            <button type="button" class="btn-formulario boton-siguiente" title="Siguiente">Siguiente
+                                ➡️</button>
                         </div>
                     </div>
 
                     <div class="paso-formulario">
-
                         <div class="grupo-formulario">
                             <label class="etiqueta-formulario">Redes Sociales 🌐</label>
                             <div class="grupo-redes-sociales">
@@ -285,28 +319,31 @@
                         </div>
 
                         <div class="botones-navegacion">
-                            <button type="button" class="btn-formulario boton-anterior">⬅️ Anterior</button>
-                            <button type="submit" class="btn-formulario boton-envio">Registrar ✅</button>
+                            <button type="button" class="btn-formulario boton-anterior" title="Anterior">⬅️
+                                Anterior</button>
+                            <button type="submit" class="btn-formulario boton-envio" title="Registrar">Registrar
+                                ✅</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        
     </main>
 
     <div id="modalCrop">
         <div class="modalCrop-content">
             <div class="cropper-container">
-                <img id="imageToCrop" alt="Imagen a recortar">
+                <img id="imageToCrop" alt="Imagen a recortar" title="Recorta tu imagen de perfil">
             </div>
 
             <div class="preview-container" id="previewContainer">
-                <img id="previewImage" alt="Vista previa circular">
+                <img id="previewImage" alt="Vista previa circular" title="Vista previa de tu imagen recortada">
             </div>
 
             <div class="btn-cropper">
-                <button id="cancelCrop">Cancelar</button>
-                <button id="confirmCrop">Recortar</button>
+                <button id="cancelCrop" title="Cancelar recorte">Cancelar</button>
+                <button id="confirmCrop" title="Confirmar recorte">Recortar</button>
             </div>
         </div>
     </div>
@@ -336,7 +373,7 @@
                 por terceros</span>.
             Además, te comprometes a <span style="font-weight: bold;">mantener la confidencialidad de tus credenciales
                 de acceso</span> y a
-            <span style="font-weight: bold;">notificar cualquier uso no autorizado de tu cuenta</span>.</a>
+            <span style="font-weight: bold;">notificar cualquier uso no autorizado de tu cuenta</span>.
         </p>
     </div>
 
@@ -344,14 +381,17 @@
 
         <div class="footer-container">
             <div class="footer-nav">
-                <a href="#">EMPRESAS</a>
-                <a href="#">REGISTRARSE</a>
-                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
-                <a href="#">QUIENES SOMOS</a>
+                <a href="#" title="Empresas">EMPRESAS</a>
+                <a href="#" title="Registrarse">REGISTRARSE</a>
+                <a href="../../doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf" title="Términos y Condiciones">TÉRMINOS
+                    Y CONDICIONES</a>
+                <a href="#" title="Quiénes Somos">QUIENES SOMOS</a>
             </div>
             <div class="footer-social">
-                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/psyconnects/" aria-label="Instagram de PsyConnects"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581" aria-label="Facebook de PsyConnects"><i
+                        class="fab fa-facebook"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -488,7 +528,7 @@
                         <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
                         <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
                     </div>
-                    <button type="button" class="boton-eliminar">×</button>
+                    <button type="button" class="boton-eliminar" title="Eliminar experiencia">×</button>
                 `;
                 contenedor.appendChild(div);
 
@@ -520,7 +560,7 @@
                         <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
                         <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
                     </div>
-                    <button type="button" class="boton-eliminar">×</button>
+                    <button type="button" class="boton-eliminar" title="Eliminar certificación">×</button>
                 `;
                 contenedor.appendChild(div);
 
@@ -559,7 +599,7 @@
 
                 const nombre = document.getElementById('nombre').value.trim();
                 const apellido = document.getElementById('apellido').value.trim();
-                const documento = document.getElementById('documento').value.trim(); // Nuevo campo capturado
+                const documento = document.getElementById('documento').value.trim();
                 const pais = document.getElementById('pais').value;
                 const correoElectronico = document.getElementById('correoElectronico').value.trim();
                 const telefono = document.getElementById('telefono').value.trim();
@@ -764,7 +804,6 @@
                 this.textContent = isPasswordVisible ? '👁️' : '🙈';
             });
         });
-        
     </script>
 
 </body>

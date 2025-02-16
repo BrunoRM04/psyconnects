@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>PsyConnects | Psicólogos Disponibles</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+
+    <meta name="description"
+        content="Descubre y conecta con psicólogos profesionales en América Latina. Filtra por edad, precio, experiencia y país para encontrar al profesional que se adapte a tus necesidades y presupuesto.">
+    <meta name="keywords"
+        content="psicólogos, psicólogos disponibles, terapia, salud mental, atención psicológica, consulta psicológica, bienestar emocional, América Latina">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PsyConnects">
+    <link rel="canonical" href="https://www.psyconnects.com/psicologos.html">
+
+    <meta property="og:title" content="PsyConnects | Psicólogos Disponibles">
+    <meta property="og:description"
+        content="Encuentra y reserva tu cita con psicólogos profesionales que se adaptan a tu economía, país y necesidades. Descubre profesionales en salud mental.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.psyconnects.com/psicologos.html">
+    <meta property="og:image" content="https://www.psyconnects.com/public/img/marca/icono.png">
+
     <link rel="shortcut icon" href="public/img/marca/icono.png">
+    <link rel="stylesheet" href="public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 
 <body>
 
     <header>
 
         <div class="logo">
-            <img src="public/img/marca/icono 2.png" alt="Logo">
+            <img src="public/img/marca/icono 2.png" alt="Logo de PsyConnects" title="PsyConnects">
         </div>
-        <div class="menu-toggle">
+        <div class="menu-toggle" role="button" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </div>
-        <nav class="nav-menu">
-            <div class="close-menu">
+        <nav class="nav-menu" aria-label="Menú principal">
+            <div class="close-menu" role="button" aria-label="Cerrar menú">
                 <i class="fas fa-times"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">🏠 Inicio</a></li>
-                <li><a href="psicologos.html">🧠 Psicólogos Disponibles</a></li>
-                <li><a href="investigaciones.html">📡 Investigaciones</a></li>
-                <li><a href="ofertas.html">💼 Ofertas Laborales</a></li>
-                <li><a href="login.html">👤 Mi Cuenta</a></li>
-                <li><a href="./public/html/register.html">🆕 Registrarse</a></li>
+                <li><a href="index.html" title="Inicio">🏠 Inicio</a></li>
+                <li><a href="psicologos.html" title="Psicólogos Disponibles">🧠 Psicólogos Disponibles</a></li>
+                <li><a href="investigaciones.html" title="Investigaciones">📡 Investigaciones</a></li>
+                <li><a href="ofertas.html" title="Ofertas Laborales">💼 Ofertas Laborales</a></li>
+                <li><a href="login.html" title="Mi Cuenta">👤 Mi Cuenta</a></li>
+                <li><a href="./public/html/register.html" title="Registrarse">🆕 Registrarse</a></li>
             </ul>
         </nav>
 
@@ -101,7 +119,7 @@
         </div>
 
         <div id="loader" class="loader">
-            <img src="./public/img/marca/icono 2.png" alt="Logo de la Web" class="loader-logo">
+            <img src="./public/img/marca/icono 2.png" alt="Logo de PsyConnects" class="loader-logo" title="Cargando">
             <p class="loader-text">Cargando... 🚀</p>
         </div>
 
@@ -111,14 +129,14 @@
 
         <div class="footer-container">
             <div class="footer-nav">
-                <a href="#">EMPRESAS</a>
-                <a href="#">REGISTRARSE</a>
-                <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
-                <a href="#">QUIENES SOMOS</a>
+                <a href="#" title="Empresas">EMPRESAS</a>
+                <a href="#" title="Registrarse">REGISTRARSE</a>
+                <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf" title="Términos y Condiciones">TÉRMINOS Y CONDICIONES</a>
+                <a href="#" title="Quiénes Somos">QUIENES SOMOS</a>
             </div>
             <div class="footer-social">
-                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/psyconnects/" aria-label="Instagram de PsyConnects"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581" aria-label="Facebook de PsyConnects"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -126,6 +144,21 @@
         </div>
 
     </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PsyConnects",
+        "url": "https://www.psyconnects.com/",
+        "logo": "https://www.psyconnects.com/public/img/marca/icono.png",
+        "sameAs": [
+        "https://www.instagram.com/psyconnects/",
+        "https://www.facebook.com/profile.php?id=61564496164581"
+        ],
+        "description": "PsyConnects es la plataforma líder en conectar personas que buscan apoyo psicológico con psicólogos profesionales en América Latina."
+    }
+    </script>
 
     <script type="module">
 
@@ -205,7 +238,7 @@
                                 <div class="especialidades">
                                     ${psicologo.tiposTerapia ? psicologo.tiposTerapia.map(terapia => `<div class="especialidad">${terapia}</div>`).join('') : ''}
                                 </div>
-                                <a href="#" class="boton ver-perfil" data-id="${psicologo.id}">Ver Perfil 👉</a>
+                                <a href="#" class="boton ver-perfil" data-id="${psicologo.id}" title="Ver perfil de ${psicologo.nombre} ${psicologo.apellido}">Ver Perfil 👉</a>
                             </div>
                         `;
                         tarjeta.querySelector('.ver-perfil').addEventListener('click', async function (event) {

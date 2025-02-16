@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PsyConnects | Iniciar Sesion</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+
+    <title>PsyConnects | Iniciar Sesión</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="description"
+        content="Inicia sesión en PsyConnects para acceder a tu cuenta y conectar con futuros pacientes.">
+    <meta name="keywords" content="login, iniciar sesión, PsyConnects, autenticación, cuenta, psicólogos">
+
     <link rel="shortcut icon" href="public/img/marca/icono.png">
+    <link rel="stylesheet" href="public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,31 +23,28 @@
 <body style="background-color: #1358B4;">
 
     <header>
-
         <div class="logo">
-            <img src="public/img/marca/icono 2.png" alt="Logo">
+            <img src="public/img/marca/icono 2.png" alt="Logo de PsyConnects" title="PsyConnects">
         </div>
-        <div class="menu-toggle">
+        <div class="menu-toggle" role="button" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </div>
-        <nav class="nav-menu">
-            <div class="close-menu">
+        <nav class="nav-menu" aria-label="Menú principal">
+            <div class="close-menu" role="button" aria-label="Cerrar menú">
                 <i class="fas fa-times"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">🏠 Inicio</a></li>
-                <li><a href="psicologos.html">🧠 Psicólogos Disponibles</a></li>
-                <li><a href="investigaciones.html">📡 Investigaciones</a></li>
-                <li><a href="ofertas.html">💼 Ofertas Laborales</a></li>
-                <li><a href="login.html">👤 Mi Cuenta</a></li>
-                <li><a href="./public/html/register.html">🆕 Registrarse</a></li>
+                <li><a href="index.html" title="Inicio">🏠 Inicio</a></li>
+                <li><a href="psicologos.html" title="Psicólogos Disponibles">🧠 Psicólogos Disponibles</a></li>
+                <li><a href="investigaciones.html" title="Investigaciones">📡 Investigaciones</a></li>
+                <li><a href="ofertas.html" title="Ofertas Laborales">💼 Ofertas Laborales</a></li>
+                <li><a href="login.html" title="Mi Cuenta">👤 Mi Cuenta</a></li>
+                <li><a href="./public/html/register.html" title="Registrarse">🆕 Registrarse</a></li>
             </ul>
         </nav>
-        
     </header>
 
     <main>
-
         <div id="formulario-inicio-sesion">
             <h1>¡Bienvenido de nuevo!</h1>
             <form id="formularioInicioSesion">
@@ -53,49 +58,45 @@
                     <label for="password">🔒 Contraseña</label>
                     <div class="envoltura-entrada">
                         <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
-                        <button type="button" id="alternarContraseña" class="boton-alternar-contraseña">👁️</button>
+                        <button type="button" id="alternarContraseña" class="boton-alternar-contraseña" aria-label="Mostrar/Ocultar contraseña">👁️</button>
                     </div>
                 </div>
                 <div class="olvido-contraseña">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#" title="Recuperar contraseña">¿Olvidaste tu contraseña?</a>
                 </div>
-                <button type="submit" class="boton-iniciar-sesion">🚪 Iniciar Sesión</button>
+                <button type="submit" class="boton-iniciar-sesion" title="Iniciar Sesión">🚪 Iniciar Sesión</button>
             </form>
             <div class="registrarse">
-                <p>¿No tienes una cuenta? <a href="./public/html/register.html">📝 Regístrate aquí</a></p>
+                <p>¿No tienes una cuenta? <a href="./public/html/register.html" title="Registrarse">📝 Regístrate aquí</a></p>
             </div>
             <div id="error-inicio-sesion"></div>
         </div>
 
         <div id="loader" class="loader">
-            <img src="./public/img/marca/icono 2.png" alt="Logo de la Web" class="loader-logo">
+            <img src="./public/img/marca/icono 2.png" alt="Logo de PsyConnects" class="loader-logo" title="Cargando">
             <p class="loader-text">Cargando... 🚀</p>
         </div>
-
     </main>
 
     <footer>
-
         <div class="footer-container">
             <div class="footer-nav">
-                <a href="#">EMPRESAS</a>
-                <a href="#">REGISTRARSE</a>
-                <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf">TÉRMINOS Y CONDICIONES</a>
-                <a href="#">QUIENES SOMOS</a>
+                <a href="#" title="Empresas">EMPRESAS</a>
+                <a href="#" title="Registrarse">REGISTRARSE</a>
+                <a href="doc/pdf/TÉRMINOS Y CONDICIONES - PSYCONNECTS.pdf" title="Términos y Condiciones">TÉRMINOS Y CONDICIONES</a>
+                <a href="#" title="Quiénes Somos">QUIENES SOMOS</a>
             </div>
             <div class="footer-social">
-                <a href="https://www.instagram.com/psyconnects/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61564496164581"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/psyconnects/" aria-label="Instagram de PsyConnects"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61564496164581" aria-label="Facebook de PsyConnects"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>Todos Los Derechos Reservados 2024 | @PsyConnects</p>
         </div>
-
     </footer>
 
     <script type="module">
-
         import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
         import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
@@ -115,12 +116,10 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const auth = getAuth();
-
             const loader = document.getElementById('loader');
 
             document.getElementById('formularioInicioSesion').addEventListener('submit', async function (event) {
                 event.preventDefault();
-
                 loader.classList.add('active');
 
                 const email = document.getElementById('email').value;
@@ -180,7 +179,6 @@
                 }
             }
         });
-
     </script>
 
 </body>
