@@ -1730,8 +1730,6 @@ header {
     color: #ffffff;
 }
 
-/* Responsivo */
-
 @media (max-width: 992px) {
     .titulo-principal-investigaciones {
         font-size: 2.2rem;
@@ -2601,7 +2599,7 @@ textarea {
 }
 
 #modalCrop {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -2614,7 +2612,7 @@ textarea {
 }
 
 #modalCrop.active {
-    display: flex; 
+    display: flex;
 }
 
 .modalCrop-content {
@@ -2637,7 +2635,7 @@ textarea {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
 .btn-cropper button {
@@ -2665,7 +2663,7 @@ textarea {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid #ccc;
-    display: none; 
+    display: none;
 }
 
 .preview-container img {
@@ -4416,3 +4414,97 @@ footer {
 }
 
 /* FILTROS */
+
+/* PUBLICIDAD */
+.ventana-anuncio {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contenido-anuncio {
+    position: relative;
+    background-color: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 600px;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.ventana-anuncio img,
+.ventana-anuncio video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.boton-cerrar-anuncio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #1358B4;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 1px 5px;
+    border-radius: 20px;
+}
+
+#contenedor-anuncio-banner {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 728px;
+    background: white;
+    box-shadow: 0 0 5px rgba(19, 88, 180, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.contenedor-banner-interno {
+    position: relative;
+}
+
+#contenedor-anuncio-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.boton-cerrar-banner {
+    background-color: #1358B4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 2px 6px;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .boton-cerrar-banner {
+        font-size: 14px;
+        padding: 1px 4px;
+    }
+}
+/* PUBLICIDAD */

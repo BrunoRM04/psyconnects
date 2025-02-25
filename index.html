@@ -53,12 +53,12 @@
                 <i class="fas fa-times"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" title="Inicio">🏠 Inicio</a></li>
-                <li><a href="psicologos.html" title="Psicólogos Disponibles">🧠 Psicólogos Disponibles</a></li>
-                <li><a href="investigaciones.html" title="Investigaciones">📡 Investigaciones</a></li>
-                <li><a href="ofertas.html" title="Ofertas Laborales">💼 Ofertas Laborales</a></li>
-                <li><a href="login.html" title="Mi Cuenta">👤 Mi Cuenta</a></li>
-                <li><a href="./public/html/register.html" title="Registrarse">🆕 Registrarse</a></li>
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="psicologos.html">🧠 Psicólogos Disponibles</a></li>
+                <li><a href="https://forms.gle/9U59hSXHtxS7qRbD8" target="_blank">📢 Anunciarte</a></li>
+                <li><a href="ofertas.html">💼 Ofertas Laborales</a></li>
+                <li><a href="login.html">👤 Mi Cuenta</a></li>
+                <li><a href="./public/html/register.html">🆕 Registrarse</a></li>
             </ul>
         </nav>
 
@@ -132,6 +132,19 @@
             <img src="./public/img/marca/icono 2.png" alt="Logo de PsyConnects" class="loader-logo" title="Cargando">
             <p class="loader-text">Cargando... 🚀</p>
         </div>
+
+        <!-- ANUNCIOS 
+
+        <div id="contenedor-anuncio-banner"></div>
+        <div class="ventana-anuncio" id="ventana-anuncio">
+            <div class="contenido-anuncio">
+                <button class="boton-cerrar-anuncio">&times;</button>
+                <div id="contenido-anuncio-emergente"></div>
+            </div>
+        </div>
+
+        -->
+
     </main>
 
     <nav class="scroll-navigation" aria-label="Navegación por secciones">
@@ -255,6 +268,103 @@
                 });
             });
         });
+
+
+
+        const anunciosFoto = [
+            { tipo: 'foto', ruta: 'foto 1.jpg', enlace: 'https://instagram.com', alt: 'Anuncio de Foto A' }
+        ];
+
+        const anunciosVideo = [
+            { tipo: 'video', ruta: 'video 1.mp4', enlace: 'https://facebook.com', alt: 'Anuncio de Video C' }
+        ];
+
+        const anunciosBanner = [
+            { tipo: 'banner', ruta: 'banner 1.jpg', enlace: 'https://whatsapp.com', alt: 'Anuncio de Banner E' }
+        ];
+        const anunciosEmergentes = anunciosFoto.concat(anunciosVideo);
+
+        function obtenerAnuncioAleatorio(arreglo) {
+            if (arreglo.length === 0) return null;
+            const indice = Math.floor(Math.random() * arreglo.length);
+            return arreglo[indice];
+        }
+
+        function generarContenidoAnuncio(anuncio) {
+            if (!anuncio) return '';
+
+            switch (anuncio.tipo) {
+                case 'video':
+                    return `
+    <a href="${anuncio.enlace}" target="_blank">
+        <video controls>
+        <source src="${anuncio.ruta}" type="video/mp4">
+        Tu navegador no soporta el video.
+        </video>
+    </a>
+    `;
+                case 'foto':
+                    return `
+    <a href="${anuncio.enlace}" target="_blank">
+        <img src="${anuncio.ruta}" alt="${anuncio.alt}">
+    </a>
+    `;
+                default:
+                    return '';
+            }
+        }
+        function mostrarAnuncioEmergente() {
+            if (anunciosEmergentes.length === 0) return;
+
+            const anuncio = obtenerAnuncioAleatorio(anunciosEmergentes);
+            const ventana = document.getElementById('ventana-anuncio');
+            const contenidoEmergente = document.getElementById('contenido-anuncio-emergente');
+
+            contenidoEmergente.innerHTML = generarContenidoAnuncio(anuncio);
+
+            ventana.style.display = 'flex';
+        }
+
+        document.querySelector('.boton-cerrar-anuncio').addEventListener('click', function () {
+            document.getElementById('ventana-anuncio').style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            const ventana = document.getElementById('ventana-anuncio');
+            if (event.target === ventana) {
+                ventana.style.display = 'none';
+            }
+        });
+        mostrarAnuncioEmergente();
+        setInterval(mostrarAnuncioEmergente, 60000);
+
+        function mostrarAnuncioBanner() {
+            if (anunciosBanner.length === 0) return;
+
+            const anuncioB = obtenerAnuncioAleatorio(anunciosBanner);
+            if (!anuncioB) return;
+
+            const contenedorBanner = document.getElementById('contenedor-anuncio-banner');
+
+            const contenido = `
+<div style="position: relative;">
+    <a href="${anuncioB.enlace}" target="_blank">
+    <img src="${anuncioB.ruta}" alt="${anuncioB.alt}">
+    </a>
+    <button class="boton-cerrar-banner">&times;</button>
+</div>
+`;
+            contenedorBanner.innerHTML = contenido;
+
+            contenedorBanner.style.display = 'block';
+
+            contenedorBanner.querySelector('.boton-cerrar-banner').addEventListener('click', function () {
+                contenedorBanner.style.display = 'none';
+            });
+        }
+
+        mostrarAnuncioBanner();
+        setInterval(mostrarAnuncioBanner, 90000);
 
     </script>
 
