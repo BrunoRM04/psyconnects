@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
+
 </head>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSP4J1Q9MP"></script>
@@ -336,14 +338,12 @@
                 </form>
             </div>
         </div>
-        
+
     </main>
 
     <div id="modalCrop">
         <div class="modalCrop-content">
-            <div class="cropper-container">
-                <img id="imageToCrop" alt="Imagen a recortar" title="Recorta tu imagen de perfil">
-            </div>
+            <div id="croppie-container"></div>
 
             <div class="preview-container" id="previewContainer">
                 <img id="previewImage" alt="Vista previa circular" title="Vista previa de tu imagen recortada">
@@ -408,8 +408,7 @@
 
     </footer>
 
-    <link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.css" />
-    <script src="https://unpkg.com/cropperjs/dist/cropper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
         import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
@@ -431,14 +430,16 @@
         const storage = getStorage(app);
         const auth = getAuth(app);
 
-        let cropper = null;
+        // Eliminamos la variable 'cropper' ya que usaremos Croppie
+        let croppieInstance = null;
         let croppedFile = null;
 
         document.addEventListener('DOMContentLoaded', function () {
 
             const fileInput = document.getElementById('fotoPerfil');
             const modalCrop = document.getElementById('modalCrop');
-            const imageToCrop = document.getElementById('imageToCrop');
+            // Se usa un contenedor para Croppie en lugar de la imagen original
+            const croppieContainer = document.getElementById('croppie-container');
             const previewContainer = document.getElementById('previewContainer');
             const previewImage = document.getElementById('previewImage');
             const cancelCropBtn = document.getElementById('cancelCrop');
@@ -451,31 +452,23 @@
                 croppedFile = null;
 
                 modalCrop.classList.add('active');
+                // Limpia el contenedor por si había un Croppie anterior
+                croppieContainer.innerHTML = '';
 
                 const reader = new FileReader();
                 reader.onload = function (event) {
-                    imageToCrop.src = event.target.result;
-
-                    imageToCrop.onload = function () {
-                        if (cropper) {
-                            cropper.destroy();
-                        }
-                        cropper = new Cropper(imageToCrop, {
-                            aspectRatio: 1,
-                            viewMode: 1,
-                            preview: previewContainer,
-                            ready() {
-                                previewContainer.style.display = 'block';
-                            },
-                            crop(event) {
-                                const canvas = cropper.getCroppedCanvas({
-                                    width: 200,
-                                    height: 200
-                                });
-                                previewImage.src = canvas.toDataURL('image/jpeg');
-                            }
-                        });
-                    };
+                    // Inicializa Croppie en el contenedor
+                    croppieInstance = new Croppie(croppieContainer, {
+                        viewport: { width: 200, height: 200, type: 'circle' },
+                        boundary: { width: 300, height: 300 },
+                        enableExif: true
+                    });
+                    croppieInstance.bind({
+                        url: event.target.result
+                    }).then(() => {
+                        console.log('Imagen cargada en Croppie');
+                    });
+                    previewContainer.style.display = 'block';
                 };
                 reader.readAsDataURL(file);
             });
@@ -483,61 +476,65 @@
             cancelCropBtn.addEventListener('click', () => {
                 modalCrop.classList.remove('active');
                 fileInput.value = "";
-                if (cropper) {
-                    cropper.destroy();
-                    cropper = null;
+                if (croppieInstance) {
+                    croppieInstance.destroy();
+                    croppieInstance = null;
                 }
             });
 
             confirmCropBtn.addEventListener('click', () => {
-                if (cropper) {
-                    const canvas = cropper.getCroppedCanvas({
-                        width: 300,
-                        height: 300
+                if (croppieInstance) {
+                    croppieInstance.result({
+                        type: 'blob',
+                        size: 'viewport',
+                        format: 'jpeg',
+                        quality: 1
+                    }).then(function (blob) {
+                        // Convierte el blob en File para poder enviarlo (por ejemplo, a Firebase)
+                        const file = new File([blob], 'perfil_recortado.jpg', { type: 'image/jpeg' });
+                        croppedFile = file;
+                        const url = URL.createObjectURL(blob);
+                        previewImage.src = url;
+                        previewImage.title = 'Imagen recortada';
+
+                        modalCrop.classList.remove('active');
+                        croppieInstance.destroy();
+                        croppieInstance = null;
                     });
-
-                    canvas.toBlob((blob) => {
-                        if (blob) {
-                            const file = new File([blob], 'perfil_recortado.jpg', { type: 'image/jpeg' });
-                            croppedFile = file;
-                        }
-                    }, 'image/jpeg', 0.9);
-
-                    modalCrop.classList.remove('active');
-                    if (cropper) {
-                        cropper.destroy();
-                        cropper = null;
-                    }
                 }
             });
+
+            // ------------------------------
+            // Funciones y código para experiencias, certificaciones y otros elementos
+            // ------------------------------
 
             function agregarEntradaExperiencia(exp = {}, index) {
                 const contenedor = document.getElementById('contenedor-experiencia');
                 const div = document.createElement('div');
                 div.classList.add('entrada-dinamica', 'experiencia-entry');
                 div.innerHTML = `
-                    <div class="grupo-formulario">
-                        <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
-                        <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
-                    </div>
-                    <div class="grupo-formulario">
-                        <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
-                        <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
-                    </div>
-                    <div class="grupo-formulario">
-                        <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
-                        <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
-                    </div>
-                    <div class="grupo-formulario">
-                        <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
-                        <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
-                    </div>
-                    <div class="grupo-formulario">
-                        <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
-                        <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
-                    </div>
-                    <button type="button" class="boton-eliminar" title="Eliminar experiencia">×</button>
-                `;
+              <div class="grupo-formulario">
+                  <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
+                  <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
+              </div>
+              <div class="grupo-formulario">
+                  <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                  <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
+              </div>
+              <div class="grupo-formulario">
+                  <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
+                  <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
+              </div>
+              <div class="grupo-formulario">
+                  <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
+                  <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
+              </div>
+              <div class="grupo-formulario">
+                  <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
+                  <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
+              </div>
+              <button type="button" class="boton-eliminar" title="Eliminar experiencia">×</button>
+          `;
                 contenedor.appendChild(div);
 
                 const checkbox = div.querySelector(`#experiencia-actualidad-${index}`);
@@ -556,20 +553,20 @@
                 const div = document.createElement('div');
                 div.classList.add('entrada-dinamica', 'certificacion-entry');
                 div.innerHTML = `
-                    <div class="grupo-formulario">
-                        <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
-                        <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
-                    </div>
-                    <div class="grupo-formulario">
-                        <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
-                        <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
-                    </div>
-                    <div class="grupo-formulario">
-                        <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
-                        <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
-                    </div>
-                    <button type="button" class="boton-eliminar" title="Eliminar certificación">×</button>
-                `;
+              <div class="grupo-formulario">
+                  <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
+                  <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
+              </div>
+              <div class="grupo-formulario">
+                  <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                  <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
+              </div>
+              <div class="grupo-formulario">
+                  <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
+                  <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
+              </div>
+              <button type="button" class="boton-eliminar" title="Eliminar certificación">×</button>
+          `;
                 contenedor.appendChild(div);
 
                 div.querySelector('.boton-eliminar').addEventListener('click', () => div.remove());

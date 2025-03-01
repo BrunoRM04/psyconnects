@@ -2610,7 +2610,6 @@ textarea {
     align-items: center;
     justify-content: center;
 }
-
 #modalCrop.active {
     display: flex;
 }
@@ -2668,8 +2667,8 @@ textarea {
 
 .preview-container img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* REGISTER */
