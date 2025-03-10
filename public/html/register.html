@@ -513,28 +513,28 @@
                 const div = document.createElement('div');
                 div.classList.add('entrada-dinamica', 'experiencia-entry');
                 div.innerHTML = `
-              <div class="grupo-formulario">
-                  <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
-                  <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
-              </div>
-              <div class="grupo-formulario">
-                  <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
-                  <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
-              </div>
-              <div class="grupo-formulario">
-                  <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
-                  <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
-              </div>
-              <div class="grupo-formulario">
-                  <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
-                  <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
-              </div>
-              <div class="grupo-formulario">
-                  <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
-                  <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
-              </div>
-              <button type="button" class="boton-eliminar" title="Eliminar experiencia">×</button>
-          `;
+                <div class="grupo-formulario">
+                    <label for="experiencia-puesto-${index}" class="etiqueta-formulario">Puesto:</label>
+                    <input type="text" class="experiencia-puesto" id="experiencia-puesto-${index}" value="${exp.puesto || ''}" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="experiencia-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                    <input type="text" class="experiencia-institucion" id="experiencia-institucion-${index}" value="${exp.institucion || ''}" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="experiencia-añoInicio-${index}" class="etiqueta-formulario">Año de Inicio:</label>
+                    <input type="number" class="experiencia-añoInicio" id="experiencia-añoInicio-${index}" value="${exp.añoInicio || ''}" required min="1900" max="2100">
+                </div>
+                <div class="grupo-formulario">
+                    <label for="experiencia-añoFin-${index}" class="etiqueta-formulario">Año de Fin:</label>
+                    <input type="number" class="experiencia-añoFin" id="experiencia-añoFin-${index}" value="${exp.añoFin || ''}" ${exp.actualidad ? 'disabled' : ''} min="1900" max="2100">
+                </div>
+                <div class="grupo-formulario">
+                    <label for="experiencia-actualidad-${index}" class="etiqueta-formulario">Actualidad:</label>
+                    <input type="checkbox" class="experiencia-actualidad" id="experiencia-actualidad-${index}" ${exp.actualidad ? 'checked' : ''}>
+                </div>
+                <button type="button" class="boton-eliminar" title="Eliminar experiencia">×</button>
+            `;
                 contenedor.appendChild(div);
 
                 const checkbox = div.querySelector(`#experiencia-actualidad-${index}`);
@@ -553,20 +553,20 @@
                 const div = document.createElement('div');
                 div.classList.add('entrada-dinamica', 'certificacion-entry');
                 div.innerHTML = `
-              <div class="grupo-formulario">
-                  <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
-                  <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
-              </div>
-              <div class="grupo-formulario">
-                  <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
-                  <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
-              </div>
-              <div class="grupo-formulario">
-                  <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
-                  <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
-              </div>
-              <button type="button" class="boton-eliminar" title="Eliminar certificación">×</button>
-          `;
+                <div class="grupo-formulario">
+                    <label for="certificacion-nombre-${index}" class="etiqueta-formulario">Nombre de Certificación:</label>
+                    <input type="text" class="certificacion-nombre" id="certificacion-nombre-${index}" value="${cert.nombre || ''}" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="certificacion-institucion-${index}" class="etiqueta-formulario">Institución:</label>
+                    <input type="text" class="certificacion-institucion" id="certificacion-institucion-${index}" value="${cert.institucion || ''}" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="certificacion-año-${index}" class="etiqueta-formulario">Año:</label>
+                    <input type="number" class="certificacion-año" id="certificacion-año-${index}" value="${cert.año || ''}" required min="1900" max="2100">
+                </div>
+                <button type="button" class="boton-eliminar" title="Eliminar certificación">×</button>
+            `;
                 contenedor.appendChild(div);
 
                 div.querySelector('.boton-eliminar').addEventListener('click', () => div.remove());
