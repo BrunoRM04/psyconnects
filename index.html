@@ -2,7 +2,8 @@
 <html lang="es">
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6422240426851251" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6422240426851251"
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -196,35 +197,44 @@
     </script>
 
     <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                const navMenu = document.querySelector('.nav-menu');
+                if (navMenu) {
+                    navMenu.classList.add('active');
+                }
+            });
+        }
 
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.add('active');
-        });
-
-        document.querySelector('.close-menu').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.remove('active');
-        });
+        const closeMenu = document.querySelector('.close-menu');
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function () {
+                const navMenu = document.querySelector('.nav-menu');
+                if (navMenu) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
 
         const loader = document.getElementById('loader');
-
         const buttons = document.querySelectorAll('a.btn');
+        if (loader) {
+            buttons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    loader.classList.add('active');
 
-        buttons.forEach(function (button) {
-            button.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                loader.classList.add('active');
-
-                const href = this.getAttribute('href');
-
-                setTimeout(function () {
-                    window.location.href = href;
-                }, 1000);
+                    const href = this.getAttribute('href');
+                    setTimeout(function () {
+                        window.location.href = href;
+                    }, 1000);
+                });
             });
-        });
-
+        }
         document.addEventListener("DOMContentLoaded", function () {
             const sections = document.querySelectorAll('.hero-section');
+
             const observerFade = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -270,9 +280,6 @@
                 });
             });
         });
-
-
-
         const anunciosFoto = [
             { tipo: 'foto', ruta: 'foto 1.jpg', enlace: 'https://instagram.com', alt: 'Anuncio de Foto A' }
         ];
@@ -284,6 +291,7 @@
         const anunciosBanner = [
             { tipo: 'banner', ruta: 'banner 1.jpg', enlace: 'https://whatsapp.com', alt: 'Anuncio de Banner E' }
         ];
+
         const anunciosEmergentes = anunciosFoto.concat(anunciosVideo);
 
         function obtenerAnuncioAleatorio(arreglo) {
@@ -294,23 +302,22 @@
 
         function generarContenidoAnuncio(anuncio) {
             if (!anuncio) return '';
-
             switch (anuncio.tipo) {
                 case 'video':
                     return `
-    <a href="${anuncio.enlace}" target="_blank">
-        <video controls>
-        <source src="${anuncio.ruta}" type="video/mp4">
-        Tu navegador no soporta el video.
-        </video>
-    </a>
-    `;
+                <a href="${anuncio.enlace}" target="_blank">
+                    <video controls>
+                    <source src="${anuncio.ruta}" type="video/mp4">
+                    Tu navegador no soporta el video.
+                    </video>
+                </a>
+                `;
                 case 'foto':
                     return `
-    <a href="${anuncio.enlace}" target="_blank">
-        <img src="${anuncio.ruta}" alt="${anuncio.alt}">
-    </a>
-    `;
+                <a href="${anuncio.enlace}" target="_blank">
+                    <img src="${anuncio.ruta}" alt="${anuncio.alt}">
+                </a>
+                `;
                 default:
                     return '';
             }
@@ -321,19 +328,24 @@
             const anuncio = obtenerAnuncioAleatorio(anunciosEmergentes);
             const ventana = document.getElementById('ventana-anuncio');
             const contenidoEmergente = document.getElementById('contenido-anuncio-emergente');
-
+            if (!ventana || !contenidoEmergente) return;
             contenidoEmergente.innerHTML = generarContenidoAnuncio(anuncio);
-
             ventana.style.display = 'flex';
         }
 
-        document.querySelector('.boton-cerrar-anuncio').addEventListener('click', function () {
-            document.getElementById('ventana-anuncio').style.display = 'none';
-        });
+        const botonCerrarAnuncio = document.querySelector('.boton-cerrar-anuncio');
+        if (botonCerrarAnuncio) {
+            botonCerrarAnuncio.addEventListener('click', function () {
+                const ventana = document.getElementById('ventana-anuncio');
+                if (ventana) {
+                    ventana.style.display = 'none';
+                }
+            });
+        }
 
         window.addEventListener('click', function (event) {
             const ventana = document.getElementById('ventana-anuncio');
-            if (event.target === ventana) {
+            if (ventana && event.target === ventana) {
                 ventana.style.display = 'none';
             }
         });
@@ -347,27 +359,28 @@
             if (!anuncioB) return;
 
             const contenedorBanner = document.getElementById('contenedor-anuncio-banner');
-
+            if (!contenedorBanner) return;
             const contenido = `
-<div style="position: relative;">
-    <a href="${anuncioB.enlace}" target="_blank">
-    <img src="${anuncioB.ruta}" alt="${anuncioB.alt}">
-    </a>
-    <button class="boton-cerrar-banner">&times;</button>
-</div>
-`;
+            <div style="position: relative;">
+                <a href="${anuncioB.enlace}" target="_blank">
+                <img src="${anuncioB.ruta}" alt="${anuncioB.alt}">
+                </a>
+                <button class="boton-cerrar-banner">&times;</button>
+            </div>
+            `;
             contenedorBanner.innerHTML = contenido;
-
             contenedorBanner.style.display = 'block';
 
-            contenedorBanner.querySelector('.boton-cerrar-banner').addEventListener('click', function () {
-                contenedorBanner.style.display = 'none';
-            });
+            const botonCerrarBanner = contenedorBanner.querySelector('.boton-cerrar-banner');
+            if (botonCerrarBanner) {
+                botonCerrarBanner.addEventListener('click', function () {
+                    contenedorBanner.style.display = 'none';
+                });
+            }
         }
 
         mostrarAnuncioBanner();
         setInterval(mostrarAnuncioBanner, 90000);
-
     </script>
 
 </body>

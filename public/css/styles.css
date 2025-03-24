@@ -2615,6 +2615,7 @@ textarea {
     align-items: center;
     justify-content: center;
 }
+
 #modalCrop.active {
     display: flex;
 }
@@ -4511,4 +4512,5 @@ footer {
         padding: 1px 4px;
     }
 }
+
 /* PUBLICIDAD */

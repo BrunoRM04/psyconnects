@@ -15,6 +15,6 @@ ideas:
 - Aviso en el registro de que el psicologo cuenta con paypal y que sabe que se le sacará tanto % de su sesión. ✅
 - Crear "Psicologos Activos Ahora". ✅
 - Añadir pais y que automaticamente ponga el codigo anexo para solicitar cita. ✅
-- Poner libreria de recorte a "registro" y "editar-perfil" para foto de perfil.
+- Poner libreria de recorte a "registro" y "editar-perfil" para foto de perfil. ✅
 - Chatbot que recomiende Psicologos.
-- Publicistas, dar espacio de publicidad en la web.
+- Publicistas, dar espacio de publicidad en la web. ✅
